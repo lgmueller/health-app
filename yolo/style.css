@@ -24,6 +24,17 @@ button {
   background-color: #8e95e7;
 }
 
+.submit_button {
+  font-family: "Raleway";
+  font-size: 1rem;
+  color: white;
+  width: 15rem;
+  height: 2rem;
+  font-weight: bold;
+  border-radius: 3rem;
+  background-color: #8e95e7;
+}
+
 .tabs {
   font-family: "Raleway";
   background-color: #b9bac3;

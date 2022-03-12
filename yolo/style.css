@@ -1,4 +1,4 @@
-@font-face{
+@font-face {
   font-family: "Raleway";
   src: url("raleway.woff");
 }
@@ -6,7 +6,7 @@
 body {
   font-family: "Raleway";
 }
-title{
+title {
   font-family: "Raleway";
 }
 button {
@@ -44,11 +44,16 @@ button {
 /* Add a green background color to the active link */
 .tabs a.active {
   font: "Raleway";
-  background-color: #04AA6D;
+  background-color: #04aa6d;
   color: white;
 }
 
 /* Hide the link that should open and close the navbar on small screens */
 .tabs .icon {
   display: none;
+}
+
+img {
+  width: 2rem;
+  height: 2rem;
 }

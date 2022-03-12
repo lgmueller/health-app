@@ -1,16 +1,24 @@
-h1 {
-  font-size: 3rem;
+@font-face{
+  font-family: "Raleway";
+  src: url("raleway.woff");
 }
 
+body {
+  font-family: "Raleway";
+}
+title{
+  font-family: "Raleway";
+}
 button {
-  font-size: 2rem;
+  font-family: "Raleway";
+  font-size: 1.2rem;
   width: 25rem;
   height: 4rem;
-  border-radius: 5rem;
-  font-weight: bold;
+  font-weight: bolds;
 }
 
 .tabs {
+  font-family: "Raleway";
   background-color: white;
   overflow: hidden;
   position: fixed;
@@ -19,21 +27,24 @@ button {
 }
 
 .tabs a {
+  font-family: "Raleway";
   color: blue;
   text-align: center;
   padding: 14px 16px;
   text-decoration: none;
-  font-size: 1.5rem;
+  font-size: 1.2rem;
 }
 
 .tabs a:hover {
+  font-family: "Raleway";
   background-color: #ddd;
   color: black;
 }
 
 /* Add a green background color to the active link */
 .tabs a.active {
-  background-color: hsl(278, 41%, 50%);
+  font: "Raleway";
+  background-color: #04AA6D;
   color: white;
 }
 

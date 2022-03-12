@@ -1,7 +1,13 @@
+h1 {
+  font-size: 3rem;
+}
+
 button {
-  font-size: 1.2rem;
+  font-size: 2rem;
   width: 25rem;
   height: 4rem;
+  border-radius: 5rem;
+  font-weight: bold;
 }
 
 .tabs {
@@ -13,12 +19,11 @@ button {
 }
 
 .tabs a {
-  margin: 0 auto;
   color: blue;
   text-align: center;
   padding: 14px 16px;
   text-decoration: none;
-  font-size: 1rem;
+  font-size: 1.5rem;
 }
 
 .tabs a:hover {
@@ -28,7 +33,7 @@ button {
 
 /* Add a green background color to the active link */
 .tabs a.active {
-  background-color: #04AA6D;
+  background-color: hsl(278, 41%, 50%);
   color: white;
 }
 

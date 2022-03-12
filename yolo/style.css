@@ -1,0 +1,23 @@
+button {
+  font-size: 1.2rem;
+  width: 25rem;
+  height: 4rem;
+}
+
+.tabs {
+  background-color: white;
+  overflow: hidden;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+}
+
+.tabs a {
+  float: left;
+  display: block;
+  color: blue;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 1rem;
+}

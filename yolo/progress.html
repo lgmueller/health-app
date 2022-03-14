@@ -2,25 +2,149 @@
 <html>
   <head>
     <title>YOLO</title>
-    <link href="style.css" rel="stylesheet" />
+    <link href="progress_style.css" rel="stylesheet" />
     <meta
       name="viewport"
       content="width=768px, height=1280px, initial-scale=1"
     />
+
+
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script type="text/javascript">
+      google.charts.load('current', {'packages':['corechart']});
+      google.charts.setOnLoadCallback(drawChart);
+
+      function drawChart() {
+        var data = google.visualization.arrayToDataTable([
+          ['Date', 'Weight'],
+          ['3/10',  120],
+          ['3/11',  120],
+          ['3/12',  121],
+          ['3/13',  119],
+          ['3/14',  121],
+          ['3/15',  122],
+          ['3/16',  122],
+          ['3/17',  122],
+          ['3/18',  123]
+        ]);
+
+        var options = {
+          title: 'Weight (lbs)',
+          curveType: 'function',
+          legend: 'none',
+          colors: ['#8e95e7']
+        };
+
+        var chart = new google.visualization.LineChart(document.getElementById('curve_chart'));
+
+        chart.draw(data, options);
+      }
+    </script>
+
   </head>
-  <a href="something" style="padding:100px" style="padding-top:25px"><img src="pictures/apple.png" height ="80" width="100" /></a>
+
+  
+
+  <div class="top_bar"> 
+    <ul>
+      <li class="profile"><a href="something"><img src="pictures/profile.png" height ="120" width="120" /></a> </li>
+      <li class="help"><a href="something"><img src="pictures/help.png" height ="120" width="120" /></a></span> </li> <br>
+    </ul>
+    
+  </div>
   <center>
     <h1>YOLO</h1>
+    <h2 class="home"><a href="index.html">HOME</a> </h2>
+    <h1 style="color: #8e95e7">Progress</h1>
+
+    <h2 style="color: #8e95e7"><a href="progress_nutrition.html" style="color: #8e95e7">Weight Tracking</a></h2>
+    <h2 style="color: #8e95e7"><a href="progress_nutrition.html" style="color: #8e95e7">Nutrition Tracking</a></h2>
+    <h2 style="color: #8e95e7"><a href="progress_nutrition.html" style="color: #8e95e7">Exercise Tracking</a></h2>
+
     
-    <button type="button">Nutrition</button> <br /><br />
 
-    <button type="button">Exercise</button> <br /><br />
+    <h1 style="color: #8e95e7">Summary</h1>
 
-    <button type="button">Reminders</button> <br /><br />
+    <div class ="weight">
+      <form action="go to some page">
+        <label for="curr_weight">Input Current Weight:</label><br>
+        <input type="text" id="curr_weight" name="curr_weight" value="120"><br>
+        <input type="submit" value="Submit">
+      </form> <br> 
 
-    <button type="button">Progress</button> <br />
-    <br /><br />
+      <form action="go to some page">
+        <label for="goal_weight">Input Goal Weight:</label><br>
+        <input type="text" id="goal_weight" name="goal_weight" value="130"><br>
+        <input type="submit" value="Submit">
+      </form>
 
+        <ul>
+          <li class="current">Current Weight: <span class="weight_num">120</span> </li>
+          <li class="goal">Goal Weight: <span class="weight_num">130 </span> </li> <br>
+        </ul>
+        
+    </div>
+
+    <div id="curve_chart" style="width: 900px; height: 500px"></div>
+
+    <div class="month">      
+      <ul>
+        <li class="next">&#10095;</li>
+        <li class="prev">&#10094;</li>
+        <li>
+          March<br>
+          <span style="font-size:30px">2022</span>
+        </li>
+      </ul>
+    </div>
+    
+    <ul class="weekdays">
+      <li>Mo</li>
+      <li>Tu</li>
+      <li>We</li>
+      <li>Th</li>
+      <li>Fr</li>
+      <li>Sa</li>
+      <li>Su</li>
+    </ul>
+    
+    <ul class="days">  
+      <li>1</li>
+      <li>2</li>
+      <li>3</li>
+      <li>4</li>
+      <li>5</li>
+      <li>6</li>
+      <li>7</li>
+      <li>8</li>
+      <li>9</li>
+      <li>10</li>
+      <li>11</li>
+      <li>12</li>
+      <li>13</li>
+      <li>14</li>
+      <li>15</li>
+      <li>16</li>
+      <li>17</li>
+      <li><span class="active">18</span></li>
+      <li>19</li>
+      <li>20</li>
+      <li>21</li>
+      <li>22</li>
+      <li>23</li>
+      <li>24</li>
+      <li>25</li>
+      <li>26</li>
+      <li>27</li>
+      <li>28</li>
+      <li>29</li>
+      <li>30</li>
+      <li>31</li>
+    </ul>
+    <br>
+    <br>
+    <br>
+    <br>
     <div class="tabs">
       <a href="#nutrition"
         >Nutrition
@@ -35,7 +159,7 @@
         <img src="pictures/clock.png" alt="" />
       </a>
       <a href="#progress"
-        >Progress
+        ><span class="active">Progress</span>
         <img src="pictures/progress.png" alt="" />
       </a>
     </div>

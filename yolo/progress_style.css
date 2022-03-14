@@ -1,0 +1,188 @@
+ul {list-style-type: none;}
+body {font-family: Verdana, sans-serif;}
+
+@font-face {
+  font-family: "Raleway";
+  src: url("raleway.woff");
+}
+
+body {
+  font-family: "Raleway";
+}
+title {
+  font-family: "Raleway";
+}
+
+h1 {
+  font-size: 4rem;
+}
+button {
+  font-family: "Raleway";
+  font-size: 3rem;
+  color: white;
+  width: 25rem;
+  height: 4rem;
+  font-weight: bold;
+  border-radius: 3rem;
+  background-color: #8e95e7;
+}
+
+.submit_button {
+  font-family: "Raleway";
+  font-size: 1rem;
+  color: white;
+  width: 15rem;
+  height: 2rem;
+  font-weight: bold;
+  border-radius: 3rem;
+  background-color: #8e95e7;
+}
+
+.tabs {
+  font-family: "Raleway";
+  background-color: #b9bac3;
+  overflow: hidden;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+}
+
+.tabs a {
+  font-family: "Raleway";
+  color: blue;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 1.2rem;
+}
+
+.tabs a:hover {
+  font-family: "Raleway";
+  background-color: #ddd;
+  color: black;
+}
+
+/* Add a green background color to the active link */
+.tabs a.active {
+  font: "Raleway";
+  background-color: #04aa6d;
+  color: white;
+}
+
+/* Hide the link that should open and close the navbar on small screens */
+.tabs .icon {
+  display: none;
+}
+
+img {
+  width: 2rem;
+  height: 2rem;
+}
+
+
+.month {
+  padding: 75px 50px;
+  background: #8e95e7;
+  text-align: center;
+}
+
+.month ul {
+  margin: 0;
+  padding: 0;
+}
+
+.month ul li {
+  color: white;
+  font-size: 50px;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+}
+
+.month .next {
+  float: right;
+  padding-top: 10px;
+}
+
+.month .prev {
+    float: left;
+    padding-top: 10px;
+}
+
+.weekdays {
+  margin: 0;
+  padding: 10px 0;
+  background-color: #ddd;
+}
+
+.weekdays li {
+  display: inline-block;
+  width: 13.6%;
+  color: rgb(22, 22, 22);
+  text-align: center;
+}
+
+.days {
+  padding: 10px 0;
+  background: #eee;
+  margin: 0;
+}
+
+.days li {
+  list-style-type: none;
+  display: inline-block;
+  width: 13.6%;
+  text-align: center;
+  margin-bottom: 20px;
+  font-size:20px;
+  color: rgb(22, 22, 22);
+}
+
+.days li .active {
+  padding: 5px;
+  background: #8e95e7;
+  color: white !important
+}
+
+.weight {
+    font-size: 20px;
+}
+
+.weight .current {
+    float: left;
+    margin-left: 250px;
+}
+
+.weight .goal {
+    float: right;
+    margin-right: 250px;
+}
+  
+.weight .goal .weight_num {
+    font-size: 25px;
+    font-family: Verdana, sans-serif;
+    color: #8e95e7
+}
+
+.weight .current .weight_num {
+    font-size: 25px;
+    font-family: Verdana, sans-serif;
+    color: #8e95e7
+}
+
+  .curve_chart {
+    stroke: #8e95e7;
+}  
+
+.top_bar .profile {
+    float: left;
+    margin-left: 50px;
+}
+
+.top_bar .help {
+    float: right;
+    margin-right: 50px;
+}
+
+.top_bar .home {
+    text-align: center;
+}

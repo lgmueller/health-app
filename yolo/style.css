@@ -4,8 +4,12 @@
 }
 
 body {
+  margin: auto;
+  max-width: 500px;
+  text-align: center;
   font-family: "Raleway";
 }
+
 title {
   font-family: "Raleway";
 }
@@ -22,6 +26,11 @@ button {
   font-weight: bold;
   border-radius: 3rem;
   background-color: #8e95e7;
+}
+
+.homeButton {
+  width: 15px;
+  background-image: url(./pictures/apple.png);
 }
 
 .submit_button {

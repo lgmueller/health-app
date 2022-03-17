@@ -14,34 +14,55 @@
     </style>
   </head>
 
-  <body>
-    <div class="main-block">
-      <form action="/">
-        <div class="title">
-          <i class="fas fa-pencil-alt"></i>
-          <h2>Edit Profile</h2>
-        </div>
-        <div class="info">
-          <input
-            class="fname"
-            type="text"
-            name="name"
-            placeholder="Full name"
-          />
-          <input type="text" name="age" placeholder="Age" />
-          <input type="text" name="height" placeholder="Height" />
+  <center>
+    <body>
+      <div class="main-block">
+        <form action="/">
+          <div class="title">
+            <i class="fas fa-pencil-alt"></i>
+            <h1>Edit Profile</h1>
+          </div>
+          <div class="info">
+            <input
+              class="fname"
+              type="text"
+              name="name"
+              placeholder="Full name"
+            />
+            <input type="text" name="age" placeholder="Age" />
+            <input type="text" name="height" placeholder="Height" />
 
-          <input type="password" name="gender" placeholder="Gender" />
-          <select>
-            <option value="level" selected>Beginner</option>
-            <option value="intermediate">Intermediate</option>
-            <option value="advanced">Advanced</option>
-          </select>
-        </div>
-        <button class="submit_button" type="submit" href="/">
-          Make Changes
-        </button>
-      </form>
+            <input type="password" name="gender" placeholder="Gender" />
+            <select>
+              <option value="level" selected>Beginner</option>
+              <option value="intermediate">Intermediate</option>
+              <option value="advanced">Advanced</option>
+            </select>
+          </div>
+          <br />
+          <button class="submit_button" type="submit" href="/">
+            Make Changes
+          </button>
+        </form>
+      </div>
+    </body>
+    <div class="tabs">
+      <a href="nutrition.html"
+        >Nutrition
+        <img src="pictures/apple.png" alt="" />
+      </a>
+      <a href="exercise.html"
+        >Exercise
+        <img src="pictures/weight.png" alt="" />
+      </a>
+      <a href="reminders.html"
+        >Reminders
+        <img src="pictures/clock.png" alt="" />
+      </a>
+      <a href="progress.html"
+        >Progress
+        <img src="pictures/progress.png" alt="" />
+      </a>
     </div>
-  </body>
+  </center>
 </html>

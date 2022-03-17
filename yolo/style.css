@@ -102,3 +102,11 @@ th,
 td {
   font-weight: bold;
 }
+
+input {
+  width: 25%;
+}
+
+div {
+  align-items: center;
+}

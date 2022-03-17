@@ -15,7 +15,7 @@ h1 {
 }
 button {
   font-family: "Raleway";
-  font-size: 3rem;
+  font-size: 2.5rem;
   color: white;
   width: 25rem;
   height: 4rem;
@@ -32,6 +32,17 @@ button {
   height: 2rem;
   font-weight: bold;
   border-radius: 3rem;
+  background-color: #8e95e7;
+}
+
+.reminders {
+  font-family: "Raleway";
+  font-size: 1rem;
+  color: white;
+  width: 13rem;
+  height: 2rem;
+  font-weight: bold;
+  border-radius: 1rem;
   background-color: #8e95e7;
 }
 
@@ -62,7 +73,7 @@ button {
 /* Add a green background color to the active link */
 .tabs a.active {
   font: "Raleway";
-  background-color: #04aa6d;
+  background-color: #8e95e7;
   color: white;
 }
 
@@ -76,3 +87,18 @@ img {
   height: 2rem;
 }
 
+.reminder_bell {
+  width: 1rem;
+  height: 1rem;
+}
+
+table {
+  background-color: #cbcdd6;
+  border-collapse: collapse;
+  color: black;
+}
+
+th,
+td {
+  font-weight: bold;
+}

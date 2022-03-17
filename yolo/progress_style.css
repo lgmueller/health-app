@@ -18,12 +18,13 @@ h1 {
 }
 button {
   font-family: "Raleway";
-  font-size: 3rem;
+  font-size: 2rem;
   color: white;
-  width: 25rem;
-  height: 4rem;
+  width: 15rem;
+  height: 8rem;
   font-weight: bold;
   border-radius: 3rem;
+  margin: 0 10px;
   background-color: #8e95e7;
 }
 
@@ -185,4 +186,9 @@ img {
 
 .top_bar .home {
     text-align: center;
+}
+
+.chart {
+  max-width: 800px;
+  margin: 50px auto;
 }

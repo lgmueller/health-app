@@ -1,0 +1,142 @@
+@font-face {
+    font-family: "Raleway";
+    src: url("raleway.woff");
+  }
+  
+  body {
+    margin: auto;
+    max-width: 500px;
+    text-align: center;
+    font-family: "Raleway";
+  }
+
+  title {
+    font-family: "Raleway";
+  }
+
+  .header { 
+    display: flex;
+    align-items: center;
+    text-align: center;
+  }
+  
+  h1 {
+    font-family: "Raleway";
+    font-size: 4rem;
+    margin: auto;
+  }
+  
+  button {
+    font-family: "Raleway";
+    font-size: 3rem;
+    /* color: white;
+    width: 25rem;
+    height: 4rem;
+    font-weight: bold;
+    border-radius: 3rem;
+    background-color: #8e95e7; */
+  }
+
+  .icon {
+    border-radius: 25px;
+    background-color: #8e95e7; /* Blue background */
+    border: none; /* Remove borders */
+    color: white; /* White text */
+    padding: 12px 16px; /* Some padding */
+    font-size: 16px; /* Set a font size */
+    cursor: pointer; /* Mouse pointer on hover */
+    position: fixed;
+    left: 0;
+
+  }
+
+  .workoutSelection {
+    border: thin;
+    border-style: solid;
+    border-color: black;
+    margin:auto;
+    padding: 2rem;
+  }
+
+  .workoutButtons {
+    display: inline-flex;
+    flex-wrap: nowrap;
+    gap: .8rem;
+    margin: auto;
+
+  }
+
+  .roundedButton {
+    width: 500px;
+    height: 60px;
+    border-color: black;
+    border-style: solid;
+    background-color: none;
+    font-size: 15px;
+    font-weight: 20px;
+    margin-top: 20px;
+  }
+
+  .buttonA {
+    border-radius: 25px;
+    width: 100px;
+    height: 100px;
+    background-color: #8e95e7;
+    font-size: 15px;
+    font-weight: 10px;
+    font-weight: bolder;
+  }
+
+  .tabs {
+    font-family: "Raleway";
+    background-color: #b9bac3;
+    overflow: hidden;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+  }
+  
+  .tabs a {
+    font-family: "Raleway";
+    color: blue;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 1.2rem;
+  }
+  
+  .tabs a:hover {
+    font-family: "Raleway";
+    background-color: #ddd;
+    color: black;
+  }
+  
+  /* Add a green background color to the active link */
+  .tabs a.active {
+    font: "Raleway";
+    background-color: #04aa6d;
+    color: white;
+  }
+  
+  /* Hide the link that should open and close the navbar on small screens */
+  .tabs .icon {
+    display: none;
+  }
+  
+  img {
+    width: 2rem;
+    height: 2rem;
+  }
+
+  .piechart {
+    display: block;
+    width: 150px;
+    height: 150px;
+    float: left;
+    margin: auto;
+    border-radius: 50%;
+    background-image: conic-gradient(
+        pink 70deg, 
+        lightblue 0 235deg, 
+        orange 0);
+}

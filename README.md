@@ -13,3 +13,5 @@ Adding files to a branch
 6) make sure there are no merge conflicts by scrolling down and making sure everything is green
 7) just keep clicking the green buttons to merge everything
 
+
+- trying to see if i can push from this new laptop

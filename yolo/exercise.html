@@ -4,15 +4,20 @@
 <head>
     <title>Exercise</title>
     <link href="style_exercise.css" rel="stylesheet" />
+    <meta
+      name="viewport"
+      content="width=768px, height=1280px, initial-scale=1"
+    />
 </head>
 
 <body>
     <div class="header">
-        <a class="icon" ref="something"><img src="pictures/home.png" width="20em" height="20em" /></a>
-        <h1><b>EXERCISE</b></h1>
+        <!-- <a class="icon" ref="something"><img src="pictures/home.png" width="50em" height="50em"/></a> -->
+        <h1 style="font-size: 100px; margin-top: 50px;"><b>EXERCISE</b></h1>
     </div>
+    
     <br>
-    <h2>Select A Workout</h2>
+    <h2 style="font-size:30px; margin-top: 70px;">Select A Workout</h2>
     <div class="workoutSelection">
         <div class="workoutButtons">
             <button class="buttonA">ARMS</button>
@@ -28,7 +33,32 @@
     
     <button class="roundedButton">View Progress</button>
 
-</body>
-
+    <div class="tabs">
+      <a href="#nutrition">
+        <img src="pictures/apple.png" alt=""/>
+        <br>
+        Nutrition
+      </a>
     
+      <a href="#exercise">
+        <img src="pictures/weight.png" alt="" />
+        <br>
+        Exercise
+      </a>
+      <a href="#reminders">
+        <img src="pictures/clock.png" alt="" />
+        <br>
+        Reminders
+      </a>
+      <a href="#progress">
+        <img src="pictures/progress.png" alt="" />
+        <br>
+        Progress
+      </a>
+    </div>
+
+</body>  
+
+
+
 </html>

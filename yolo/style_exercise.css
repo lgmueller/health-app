@@ -4,8 +4,13 @@
   }
 
 @font-face {
+<<<<<<< HEAD
   font-family: "Raleway-Bold";
   src: url("/Raleway/static/Raleway-Bold.ttf")
+=======
+  font-family: "Bold-Raleway";
+  src: url("/Raleway/Raleway-Bold.ttf")
+>>>>>>> 9668c54275e6eb619eebce9b5263c6a137d0c07b
 }
   
   body {
@@ -15,7 +20,11 @@
   }
 
   title {
+<<<<<<< HEAD
     font-family: "Raleway";
+=======
+    font-family: "Bold-Raleway";
+>>>>>>> 9668c54275e6eb619eebce9b5263c6a137d0c07b
     font-size: large;
   }
 

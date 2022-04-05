@@ -87,47 +87,58 @@
     font-weight: bolder;
   }
 
-  .tabs {
-    font-family: "Raleway";
-    background-color: #b9bac3;
-    overflow: hidden;
-    position: fixed;
-    bottom: 0;
-    width: 100%;
-  }
-  
-  .tabs a {
-    font-family: "Raleway";
-    color: blue;
-    text-align: center;
-    padding: 14px 16px;
-    text-decoration: none;
-    float: left;
-    font-size: 1.2rem;
-  }
-  
-  .tabs a:hover {
-    font-family: "Raleway";
-    background-color: #ddd;
-    color: black;
-  }
-  
-  /* Add a green background color to the active link */
-  .tabs a.active {
-    font: "Raleway";
-    background-color: #04aa6d;
-    color: white;
-  }
-  
-  /* Hide the link that should open and close the navbar on small screens */
-  .tabs .icon {
-    display: none;
-  }
-  
-  img {
-    width: 2rem;
-    height: 2rem;
-  }
+    
+.tabs {
+  font-family: "Raleway";
+  background-color: #b9bac3;
+  overflow: hidden;
+  position: fixed;
+  justify-content: space-around;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  display: inline-flex;
+  flex-wrap: nowrap;
+}
+
+.tabs a {
+  font-family: "Raleway";
+  color: black;
+  font-style: bold;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 1.2rem;
+}
+
+.tabs a:hover {
+  font-family: "Raleway";
+  background-color: #ddd;
+  color: black;
+}
+
+/* Add a green background color to the active link */
+.tabs a.active {
+  font: "Raleway";
+  background-color: #433495;
+  /* color: white; */
+}
+
+/* Hide the link that should open and close the navbar on small screens */
+.tabs .icon {
+  display: none;
+}
+
+.tabicon {
+  width: 4rem;
+  height: 4rem;
+}
+
+img {
+  max-width: 100%;  
+  height: auto;  
+}
 
   .piechart {
     display: block;

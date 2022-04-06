@@ -8,28 +8,51 @@
       content="width=768px, height=1280px, initial-scale=1"
     />
   </head>
+
   <center>
     <h1>YOLO</h1>
-    <button onclick="location.href='nutrition.html'" type="button">
-      Nutrition
-    </button>
-    <br /><br />
 
-    <button onclick="location.href='exercise.html'" type="button">
-      Exercise
-    </button>
-    <br /><br />
+    <body>
+      Welcome to YOLO!
 
-    <button onclick="location.href='reminders.html'" type="button">
-      Reminders
-    </button>
-    <br /><br />
+      <br />
+      <b>You only have one life so live a healthy one!</b>
+    </body>
 
-    <button onclick="location.href='progress.html'" type="button">
-      Progress
-    </button>
     <br />
-    <br /><br />
+    <br />
+    <div class="flex-container">
+      <div>
+        Nutrition
+        <div
+          role="progressbar"
+          aria-valuenow="65"
+          aria-valuemin="0"
+          aria-valuemax="100"
+          style="--value: 65"
+        ></div>
+      </div>
+      <div>
+        Calories
+        <div
+          role="progressbar"
+          aria-valuenow="45"
+          aria-valuemin="0"
+          aria-valuemax="100"
+          style="--value: 45"
+        ></div>
+      </div>
+      <div>
+        Exersice
+        <div
+          role="progressbar"
+          aria-valuenow="90"
+          aria-valuemin="0"
+          aria-valuemax="100"
+          style="--value: 90"
+        ></div>
+      </div>
+    </div>
   </center>
 
   <div class="tabs">

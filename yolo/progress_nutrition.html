@@ -11,45 +11,25 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.min.js"></script>
 
   </head>
-  <div class="top_bar"> 
-    <ul>
-      <li class="profile"><a href="something"><img src="pictures/profile.png" height ="120" width="120" /></a> </li>
-      <li class="help"><a href="something"><img src="pictures/help.png" height ="120" width="120" /></a></span> </li> <br>
-    </ul>
-    
-  </div>
+
+  <div class="backarrow"><a href="progress.html"><img src="pictures/backarrow.png" height ="35" width="35" /></a> </div>
+  <div class="profile"><a href="profile.html"><img src="pictures/profile.png" height ="40" width="40" /></a> </div>
   
   <center>
-
-    <h1 style="color: #8e95e7">Nutrition</h1>
-    <h2 style="color: #8e95e7"><a href="progress.html" style="color: #8e95e7">Back</a></h2>
-
-    <div class ="weight">
-        <form action="go to some page">
-          <label for="curr_weight">Input Current Weight:</label><br>
-          <input type="text" id="curr_weight" name="curr_weight" value="120"><br>
-          <input type="submit" value="Submit">
-        </form> <br> 
-  
-        <form action="go to some page">
-          <label for="goal_weight">Input Goal Weight:</label><br>
-          <input type="text" id="goal_weight" name="goal_weight" value="130"><br>
-          <input type="submit" value="Submit">
-        </form>
-  
-          <ul>
-            <li class="current">Current Weight: <span class="weight_num">120</span> </li>
-            <li class="goal">Goal Weight: <span class="weight_num">130 </span> </li> <br>
-          </ul>
-          
-      </div>
+    <br>
+    <h1 style="font-size: 100px; margin-top: 50px">NUTRITION</h1>
+    <hr>
+    <p>Track your nutrition goals below. Make sure you are reaching your daily calorie goal!</p>
 
     <div class="chart">
         <canvas id="bar-chart" width="800" height="450"></canvas>
     </div>
 
-    
-    
+    <div class="chart">
+      <canvas id="line-chart" width="800" height="450"></canvas>
+    </div>
+
+
     <script src="progress_nutrition.js"></script>
   
     <div class="tabs">

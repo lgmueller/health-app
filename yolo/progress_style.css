@@ -1,6 +1,3 @@
-ul {list-style-type: none;}
-body {font-family: Verdana, sans-serif;}
-
 @font-face {
   font-family: "Raleway";
   src: url("raleway.woff");
@@ -16,27 +13,58 @@ body {font-family: Verdana, sans-serif;}
   src: url("/Raleway/static/Raleway-Bold.ttf");
 } 
 
+
 body {
-  font-family: "Raleway";
+  margin: auto;
+  max-width: 500px;
+  text-align: center;
+  font-size: 2rem;
+  font-family: "raleway";
 }
+
+
+b { 
+  font-family: "Raleway-bold";
+}
+
 title {
   font-family: "Raleway";
 }
 
 h1 {
-  font-size: 4rem;
+  font-size: large;
+  font-family: "Raleway";
 }
+
 button {
   font-family: "Raleway";
   font-size: 2rem;
   color: white;
   width: 15rem;
-  height: 8rem;
+  height: 5rem;
   font-weight: bold;
   border-radius: 3rem;
   margin: 0 10px;
   background-color: #8e95e7;
 }
+
+.profile {
+  position: absolute;
+  margin-right: 30px;
+  margin-top: 30px;
+  right:0;
+  top:0;
+}
+
+.home {
+  /* float: left; */
+  position: absolute;
+  margin-left: 30px;
+  margin-top: 30px;
+  left:0;
+  top:0;
+}
+
 
 .submit_button {
   font-family: "Raleway";
@@ -102,68 +130,8 @@ img {
   height: auto;  
 }
 
-.month {
-  padding: 75px 50px;
-  background: #8e95e7;
-  text-align: center;
-}
 
-.month ul {
-  margin: 0;
-  padding: 0;
-}
 
-.month ul li {
-  color: white;
-  font-size: 50px;
-  text-transform: uppercase;
-  letter-spacing: 3px;
-}
-
-.month .next {
-  float: right;
-  padding-top: 10px;
-}
-
-.month .prev {
-    float: left;
-    padding-top: 10px;
-}
-
-.weekdays {
-  margin: 0;
-  padding: 10px 0;
-  background-color: #ddd;
-}
-
-.weekdays li {
-  display: inline-block;
-  width: 13.6%;
-  color: rgb(22, 22, 22);
-  text-align: center;
-}
-
-.days {
-  padding: 10px 0;
-  background: #eee;
-  margin: 0;
-}
-
-.days li {
-  list-style-type: none;
-  display: inline-block;
-  width: 13.6%;
-  text-align: center;
-  margin-bottom: 20px;
-  font-size:20px;
-  color: rgb(22, 22, 22);
-}
-
-.days li .active {
-  padding: 5px;
-  background: #8e95e7;
-  color: white !important
-}
 
 .weight {
     font-size: 20px;
@@ -201,3 +169,54 @@ img {
   max-width: 800px;
   margin: 50px auto;
 }
+
+
+/* Flex */ 
+
+
+
+.progress_chart {
+  background: #c6c9e7;
+  justify-content: flex-start;
+  border-radius: 100px;
+  align-items: center;
+  position: relative;
+  padding: 0 5px;
+  display: flex;
+  height: 40px;
+  width: 500px;
+}
+  .progress_chart span {
+      /* You can modify the value below to change the distance between the percentage number and the bar */
+      margin-left: 5px;
+      color: #433495;
+      font-weight: bolder;
+  }
+
+.progress_bar {
+  /* You can modify the total time used for the animation here */
+  animation: load 3s normal forwards;
+  /* 
+  Add a little spice by having a shadow below the bar.
+  Feel free to comment out this line below to have an even LITE version :D 
+  */
+  box-shadow: 0 10px 40px -10px #433495;
+
+  border-radius: 100px;
+  background: #433495;
+  height: 30px;
+  width: 0;
+} 
+
+
+
+@keyframes load {
+  0% {
+      width: 0;
+  }
+  100% {
+      /* You need to change the percentage below to match the value in the corresponding <span> */
+      width: 90%;
+  }
+}
+

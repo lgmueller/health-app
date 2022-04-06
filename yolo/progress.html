@@ -1,83 +1,59 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <link href="style.css" rel="stylesheet" />
+   
     <link href="progress_style.css" rel="stylesheet" />
+    <script type = "text/javascript" src="progress.js"></script>
     <meta
       name="viewport"
       content="width=768px, height=1280px, initial-scale=1"
     />
-
-
-    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
-    <script type="text/javascript">
-      google.charts.load('current', {'packages':['corechart']});
-      google.charts.setOnLoadCallback(drawChart);
-
-      function drawChart() {
-        var data = google.visualization.arrayToDataTable([
-          ['Date', 'Weight'],
-          ['3/10',  120],
-          ['3/11',  120],
-          ['3/12',  121],
-          ['3/13',  119],
-          ['3/14',  121],
-          ['3/15',  122],
-          ['3/16',  122],
-          ['3/17',  122],
-          ['3/18',  123]
-        ]);
-
-        var options = {
-          title: 'Weight (lbs)',
-          curveType: 'function',
-          legend: 'none',
-          colors: ['#8e95e7']
-        };
-
-        var chart = new google.visualization.LineChart(document.getElementById('curve_chart'));
-
-        chart.draw(data, options);
-      }
-    </script>
-
   </head>
 
 
-  <div class="top_bar"> 
-    <ul>
-      <li class="home"><a href="index.html"><img src="pictures/home.png" height ="35" width="35" /></a> </li>
-      <li class="profile"><a href="profile.html"><img src="pictures/profile.png" height ="40" width="40" /></a></span> </li> <br>
-    </ul>
-  </div>
+  
+  <div class="home"><a href="index.html"><img src="pictures/home.png" height ="35" width="35" /></a> </div>
+  <div class="profile"><a href="profile.html"><img src="pictures/profile.png" height ="40" width="40" /></a> </div>
+
   
   <center>
-    <h1 style="color: #8e95e7">Progress</h1>
-    <h2 class="home"><a href="index.html">HOME</a> </h2>
-
-    <h2>Track Your Progress!</h2>
-    <a href="progress_nutrition.html"><button type="button" data-inline="true">Nutrition <br> Tracking</button></a>
-    <a href="progress_weight.html"><button type="button" data-inline="true">Weight <br> Tracking</button></a>
-    <a href="progress_nutrition.html"><button type="button" data-inline="true">Exercise <br> Tracking</button></a>
-    
-
-    <h2 style="color: #8e95e7"><u>Summary</u></h2>
+    <br>
+    <h1 style="font-size: 100px; margin-top: 50px">PROGRESS</h1>
+    <h3>Track Your Progress Below!</h3>
+    <a href="track_goals.html"><button type="button" data-inline="true">Update Goals</button></a>
+   
+    <h2 style="color: #8e95e7"><b>Progress Summary</b></h2>
 
     
-    <div class ="weight">
-
-        <ul>
-          <li class="current">Current Weight: <span class="weight_num">120</span> </li>
-          <li class="goal">Goal Weight: <span class="weight_num">130 </span> </li> <br>
-          <li class="current">Current Calories: <span class="weight_num">1128</span> </li>
-          <li class="goal">Goal Calories: <span class="weight_num">2500 </span> </li> <br>
-          <li class="current">Current Activity Duration: <span class="weight_num">1 hr 15 min</span> </li>
-          <li class="goal">Goal Activity Duration: <span class="weight_num">2 hr </span> </li> <br>
-        </ul>
-        
+     
+    <h2 style="font-size: 75 px;">Nutrition</h2>
+    <div class="progress_chart">
+      <div class="progress_bar"></div>
+      <!-- Change the value below -->
+      <span id="value1">90</span>
     </div>
+    <h6>Current: <b>2,250</b> Calories <br> Goal: <b>2,500</b> Calories </h6>
 
+    <h2 style="font-size: 75 px;">Exercise</h2>
+    <div class="progress_chart">
+      <div class="progress_bar"></div>
+      <!-- Change the value below -->
+      <span id="--value">90</span>
+    </div>
+    <h6>Current: <b>90</b> Minutes <br> Goal: <b>100</b> Minutes </h6>
 
+    <h2 style="font-size: 75 px;">Weight</h2>
+    <div class="progress_chart">
+      <div class="progress_bar"></div>
+      <!-- Change the value below -->
+      <span id="value1">90</span>
+    </div>
+    <h6>Current: <b>135</b> Pounds <br> Goal: <b>150</b> Pounds </h6>
+
+    
+    <br>
+    <br>
+    <br>
     <br></br>
     
     

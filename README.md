@@ -2,6 +2,17 @@
 
 This app is named YOLO
 
+    Welcome to YOLO! Here you can track your nutrtion, exercise, and overall
+    progress! The nutrition tab will take you to a page where you can
+    input your daily food intake and it will track your daily calories and
+    macronutrients. The exercise tab will take you to a page where you
+    can log any exercise you complete. Here you will be able to select a workout
+    or even create you own workout! Finally, the progress tab will take
+    you to a page that tracks all your progress while using YOLO which includes
+    your exercise statistics, weight, and nutrition.
+    
+    You only have one life so live a healthy one!
+
 
 Adding files to a branch
 1) git checkout _name of the branch_

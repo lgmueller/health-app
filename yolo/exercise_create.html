@@ -26,7 +26,7 @@
         <div class="flex-container">
             <div class="flexbox-item-input">
                 <form>
-                    <input type="text" id="workout_name" name="workout_name" value="Name" style="text-align: center; width: 300px; height: 20px; font-size: 10px;">
+                    <input type="text" id="workout_name" name="workout_name" value="Name" style="text-align: center; width: 300px; height: 30px; font-size: 30px; padding: 10px;">
                     <br>
                 </form>
                 <table id="myTable"> 
@@ -56,7 +56,14 @@
           <input style="width: 300px; height:30px;" name="name" id="nameField" type="text">
           <br>
           
-          <input type="submit" onclick="addToList();">
+          <input type="submit" onclick="addToList(); 
+          var set = document.getElementById('sets');
+          var rep = document.getElementById('reps');
+          var my_name = document.getElementById('nameField');
+      
+          set.value = '';
+          rep.value = '';
+          my_name.value = '';">
         </div>
 
     </body>

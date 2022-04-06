@@ -66,8 +66,6 @@ button {
 }
 
 
-
-
 .submit_button {
   font-family: "Raleway";
   font-size: 1rem;
@@ -171,3 +169,54 @@ img {
   max-width: 800px;
   margin: 50px auto;
 }
+
+
+/* Flex */ 
+
+
+
+.progress_chart {
+  background: #c6c9e7;
+  justify-content: flex-start;
+  border-radius: 100px;
+  align-items: center;
+  position: relative;
+  padding: 0 5px;
+  display: flex;
+  height: 40px;
+  width: 500px;
+}
+  .progress_chart span {
+      /* You can modify the value below to change the distance between the percentage number and the bar */
+      margin-left: 5px;
+      color: #433495;
+      font-weight: bolder;
+  }
+
+.progress_bar {
+  /* You can modify the total time used for the animation here */
+  animation: load 3s normal forwards;
+  /* 
+  Add a little spice by having a shadow below the bar.
+  Feel free to comment out this line below to have an even LITE version :D 
+  */
+  box-shadow: 0 10px 40px -10px #433495;
+
+  border-radius: 100px;
+  background: #433495;
+  height: 30px;
+  width: 0;
+} 
+
+
+
+@keyframes load {
+  0% {
+      width: 0;
+  }
+  100% {
+      /* You need to change the percentage below to match the value in the corresponding <span> */
+      width: 90%;
+  }
+}
+

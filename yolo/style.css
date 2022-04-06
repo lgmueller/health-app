@@ -150,17 +150,6 @@ img {
   height: 1rem;
 }
 
-table {
-  background-color: #cbcdd6;
-  border-collapse: collapse;
-  color: black;
-}
-
-th,
-td {
-  font-weight: bold;
-}
-
 input {
   width: 25%;
 }
@@ -185,6 +174,7 @@ div {
   font-family: "raleway";
 }
 
+/* https://dev.to/shantanu_jana/circular-progress-bar-using-html-and-css-1oda */
 @keyframes growProgressBar {
   0%, 33% { --pgPercentage: 0; }
   100% { --pgPercentage: var(--value); }

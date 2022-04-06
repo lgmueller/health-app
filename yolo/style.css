@@ -3,6 +3,11 @@
   src: url("raleway.woff");
 }
 
+@font-face {
+  font-family: "Raleway-Bold";
+  src: url("/Raleway/static/Raleway-Bold.ttf")
+}
+
 body {
   margin: auto;
   max-width: 500px;
@@ -11,12 +16,16 @@ body {
   font-family: "raleway";
 }
 
+b { 
+  font-family: "Raleway-bold";
+}
+
 title {
   font-family: "Raleway";
 }
 
 h1 {
-  font-size: 4rem;
+  font-size: large;
   font-family: "Raleway";
 }
 button {

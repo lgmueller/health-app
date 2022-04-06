@@ -55,6 +55,11 @@ button {
   background-color: #8e95e7;
 }
 
+.explanation {
+  font-size: 1rem;
+  font-family: "raleway";
+}
+
 .reminders {
   font-family: "Raleway";
   font-size: 1rem;
@@ -68,7 +73,7 @@ button {
 
   
 .tabs {
-  font-family: "Raleway";
+  font-family: "Raleway-bold";
   background-color: #b9bac3;
   overflow: hidden;
   position: fixed;
@@ -82,7 +87,7 @@ button {
 }
 
 .tabs a {
-  font-family: "Raleway";
+  font-family: "Raleway-bold";
   color: black;
   font-style: bold;
   text-align: center;
@@ -92,14 +97,14 @@ button {
 }
 
 .tabs a:hover {
-  font-family: "Raleway";
+  font-family: "Raleway-bold";
   background-color: #ddd;
   color: black;
 }
 
 /* Add a purple background color to the active link */
 .tabs a.active {
-  font: "Raleway";
+  font: "Raleway-bold";
   background-color: #433495;
   color: white;
   font-style: bold;

@@ -3,6 +3,7 @@
     <head>
         <title>Create a Workout</title>
         <link href="style_exercise.css" rel="stylesheet" />
+        <script type = "text/javascript" src="exercise_create.js"></script>  
         <meta
           name="viewport"
           content="width=768px, height=1280px, initial-scale=1"
@@ -25,16 +26,39 @@
         <div class="flex-container">
             <div class="flexbox-item-input">
                 <form>
-                    <input type="text" id="workout_name" name="workout_name" value="Name" style="text-align: center; width: 300px; height: 20px; font-size: 20px;">
+                    <input type="text" id="workout_name" name="workout_name" value="Name" style="text-align: center; width: 300px; height: 20px; font-size: 10px;">
                     <br>
-                    
                 </form>
+                <table id="myTable"> 
+                  <thead>
+                    <th>Delete<br>/Edit</th>
+                    <th># Of Sets</th>
+                    <th># Of Reps</th>
+                    <th>Name of Exercise</th>
+                  </thead>
+                  
+                  
+                </table>
+                <div class="workout_list" id="workout_list" style="font-size:40px;">
+                  
+                </div>
             </div>
         </div>
-        <h3>Add</h3>
-        <form>
+        <h3>Input all Fields</h3>
+        <div class="field-input">
+          <label for="sets">Sets</label>
+          <input style="width: 80px; height:30px;" name="sets" id="sets" type="number">
+          <br>
+          <label for="reps">Reps</label>
+          <input style="width: 80px; height:30px;" name="reps" id="reps" type="number">
+          <br>
+          <label for="nameField">Name</label>
+          <input style="width: 300px; height:30px;" name="name" id="nameField" type="text">
+          <br>
+          
+          <input type="submit" onclick="addToList();">
+        </div>
 
-        </form>
     </body>
 
     <div class="tabs">

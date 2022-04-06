@@ -4,9 +4,15 @@
 }
 
 @font-face {
-  font-family: "Raleway-Bold";
-  src: url("/Raleway/static/Raleway-Bold.ttf")
+  font-family: "Raleway";
+  src: url("/Raleway/static/Raleway-Regular.ttf");
 }
+
+@font-face {
+  font-family: "Raleway-Bold";
+  src: url("/Raleway/static/Raleway-Bold.ttf");
+} 
+
 
 body {
   margin: auto;
@@ -37,6 +43,24 @@ button {
   font-weight: bold;
   border-radius: 3rem;
   background-color: #8e95e7;
+}
+
+.top_bar .home {
+  /* float: left; */
+  position: absolute;
+  margin-left: 30px;
+  margin-top: 30px;
+  left:0;
+  top:0;
+}
+
+
+.top_bar .profile {
+  position: absolute;
+  margin-right: 30px;
+  margin-top: 30px;
+  right:0;
+  top:0;
 }
 
 .homeButton {

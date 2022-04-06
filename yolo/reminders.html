@@ -3,149 +3,128 @@
   <head>
     <title>YOLO - Reminders</title>
     <link href="style.css" rel="stylesheet" />
+    <link href="style_reminders.css" rel="stylesheet" />
     <meta
       name="viewport"
       content="width=768px, height=1280px, initial-scale=1"
     />
   </head>
 
-  <div class="home"><a href="index.html"><img src="pictures/home.png" height ="35" width="35" /></a> </div>
-  <div class="profile"><a href="profile.html"><img src="pictures/profile.png" height ="40" width="40" /></a> </div>
-
-  <div class="top_bar"> 
-    <ul>
-      <li class="profile"><a href="something"><img src="pictures/profile.png" height ="120" width="120" /></a> </li>
-      <li class="help"><a href="something"><img src="pictures/help.png" height ="120" width="120" /></a></span> </li> <br>
-    </ul>
-    
+  <div class="home">
+    <a href="index.html"
+      ><img src="pictures/home.png" height="35" width="35"
+    /></a>
+  </div>
+  <div class="profile">
+    <a href="profile.html"
+      ><img src="pictures/profile.png" height="40" width="40"
+    /></a>
   </div>
 
-  <center>
-    <h1>Reminders</h1>
-    <a class="home" href="index.html">HOME</a> <br /><br />
+  <h1 style="font-size: 100px; margin-top: 50px">REMINDERS</h1>
 
-    <button type="button" class="reminders">Schedule a Meal</button>
+  <table>
+    <caption align="top">
+      <h2>April 2022</h2>
+    </caption>
+    <thead>
+      <tr>
+        <th>Sun</th>
+        <th>Mon</th>
+        <th>Tue</th>
+        <th>Wed</th>
+        <th>Thu</th>
+        <th>Fri</th>
+        <th>Sat</th>
+      </tr>
+    </thead>
 
-    <button type="button" class="reminders">Schedule Exercise</button>
+    <tbody>
+      <tr>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td>01</td>
+        <td>02</td>
+      </tr>
+      <tr></tr>
+      <tr>
+        <td>03</td>
+        <td class="event">04</td>
+        <td>05</td>
+        <td>06</td>
+        <td>07</td>
+        <td>08</td>
+        <td>09</td>
+      </tr>
+      <tr>
+        <td>10</td>
+        <td>11</td>
+        <td>12</td>
+        <td>13</td>
+        <td>14</td>
+        <td>15</td>
+        <td>16</td>
+      </tr>
+      <tr>
+        <td>17</td>
+        <td>18</td>
+        <td>19</td>
+        <td>20</td>
+        <td>21</td>
+        <td class="event">22</td>
+        <td>23</td>
+      </tr>
+      <tr>
+        <td>24</td>
+        <td>25</td>
+        <td>26</td>
+        <td>27</td>
+        <td>28</td>
+        <td>29</td>
+        <td>30</td>
+      </tr>
+      <tr>
+        <td>31</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
 
-    <button type="button" class="reminders">Set/Edit Reminders</button>
-    <br /><br />
+  <div class="tabs">
+    <a href="nutrition.html">
+      <img class="tabicon" src="pictures/apple.png" alt="" class="icon" />
+      <br />
+      Nutrition
+    </a>
 
-    <table align="center" cellspacing="21" cellpadding="21">
-      <caption align="top">
-        <h2>March 2022</h2>
-      </caption>
-      <thead>
-        <tr>
-          <th>Sun</th>
-          <th>Mon</th>
-          <th>Tue</th>
-          <th>Wed</th>
-          <th>Thu</th>
-          <th>Fri</th>
-          <th>Sat</th>
-        </tr>
-      </thead>
+    <a href="exercise.html">
+      <img class="tabicon" src="pictures/weight.png" alt="" class="icon" />
+      <br />
+      Exercise
+    </a>
+    <a href="reminders.html" class="active">
+      <img class="tabicon" src="pictures/clock.png" alt="" class="icon" />
+      <br />
+      Reminders
+    </a>
+    <a href="progress.html">
+      <img class="tabicon" src="pictures/progress.png" alt="" class="icon" />
+      <br />
+      Progress
+    </a>
+  </div>
 
-      <tbody>
-        <tr>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td>1</td>
-          <td>2</td>
-        </tr>
-        <tr></tr>
-        <tr>
-          <td>3</td>
-          <td>
-            4 <img class="reminder_bell" src="pictures/bell.png" alt="" />
-          </td>
-          <td>5</td>
-          <td>6</td>
-          <td>
-            7 <img class="reminder_bell" src="pictures/bell.png" alt="" />
-          </td>
-          <td>8</td>
-          <td>9</td>
-        </tr>
-        <tr>
-          <td>10</td>
-          <td>11</td>
-          <td>
-            12 <img class="reminder_bell" src="pictures/bell.png" alt="" />
-          </td>
-          <td>13</td>
-          <td>
-            14 <img class="reminder_bell" src="pictures/bell.png" alt="" />
-          </td>
-          <td>15</td>
-          <td>16</td>
-        </tr>
-        <tr>
-          <td>17</td>
-          <td>
-            18 <img class="reminder_bell" src="pictures/bell.png" alt="" />
-          </td>
-          <td>19</td>
-          <td>
-            20 <img class="reminder_bell" src="pictures/bell.png" alt="" />
-          </td>
-          <td>21</td>
-          <td>
-            22 <img class="reminder_bell" src="pictures/bell.png" alt="" />
-          </td>
-          <td>23</td>
-        </tr>
-        <tr>
-          <td>24</td>
-          <td>25</td>
-          <td>
-            26 <img class="reminder_bell" src="pictures/bell.png" alt="" />
-          </td>
-          <td>27</td>
-          <td>
-            28 <img class="reminder_bell" src="pictures/bell.png" alt="" />
-          </td>
-          <td>29</td>
-          <td>30</td>
-        </tr>
-        <tr>
-          <td>31</td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-        </tr>
-      </tbody>
-    </table>
+  <br /><br /><br />
 
-    <div class="tabs">
-      <a href="nutrition.html">
-        <img class="tabicon" src="pictures/apple.png" alt="" class="icon" />
-        <br />
-        Nutrition
-      </a>
-
-      <a href="exercise.html">
-        <img class="tabicon" src="pictures/weight.png" alt="" class="icon" />
-        <br />
-        Exercise
-      </a>
-      <a href="reminders.html" class="active">
-        <img class="tabicon" src="pictures/clock.png" alt="" class="icon" />
-        <br />
-        Reminders
-      </a>
-      <a href="progress.html">
-        <img class="tabicon" src="pictures/progress.png" alt="" class="icon" />
-        <br />
-        Progress
-      </a>
-    </div>
-  </center>
+  <button type="button">
+    <a href="set_reminders.html" class="link">Set/Edit Reminders</a>
+  </button>
 </html>

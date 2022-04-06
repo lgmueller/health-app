@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+
+<html lang="en">
+  <head>
+    <title>Set/Edit Reminders</title>
+    <link href="style.css" rel="stylesheet" />
+    <link href="style_reminders.css" rel="stylesheet" />
+    <meta
+      name="viewport"
+      content="width=768px, height=1280px, initial-scale=1"
+    />
+    <style>
+      .info {
+        display: flex;
+        flex-direction: column;
+      }
+    </style>
+  </head>
+
+  <div class="home">
+    <a href="reminders.html"
+      ><img src="pictures/backarrow.png" height="35" width="35"
+    /></a>
+  </div>
+  <div class="profile">
+    <a href="profile.html"
+      ><img src="pictures/profile.png" height="40" width="40"
+    /></a>
+  </div>
+
+  <body>
+    <div class="main-block">
+      <div class="title">
+        <i class="fas fa-pencil-alt"></i>
+        <h1 style="font-size: 100px; margin-top: 50px">Set/Edit Reminders</h1>
+      </div>
+
+      <button class="tablink" onclick="openPage('set', this)" id="defaultOpen">
+        Set
+      </button>
+      <button class="tablink" onclick="openPage('edit', this)">Edit</button>
+
+      <div id="set" class="tabcontent">
+        <br /><br />
+        <h2>Set a New Reminder</h2>
+        <div class="row">
+          <div class="column-left">
+            <label for="date">Day of Reminder:</label>
+          </div>
+          <div class="column-right">
+            <input type="date" id="date" name="date" />
+          </div>
+        </div>
+        <br />
+
+        <div class="row">
+          <div class="column-left">
+            <label for="reminder">Content for Reminder</label>
+          </div>
+          <div>
+            <textarea
+              id="reminder"
+              name="reminder"
+              placeholder="Write reminder here.."
+              style="height: 100px"
+            ></textarea>
+          </div>
+        </div>
+        <br />
+        <div class="row">
+          <div class="column-left">
+            <label for="time">Set time of Reminder</label>
+          </div>
+          <div class="column-right">
+            <input type="time" id="time" name="time" />
+          </div>
+        </div>
+
+        <br />
+        <button class="submit_button" type="submit" href="/">
+          Set Reminder
+        </button>
+      </div>
+
+      <div id="edit" class="tabcontent">
+        <br /><br />
+        <h2>Edit an Existing Reminder</h2>
+      </div>
+    </div>
+  </body>
+  <div class="tabs">
+    <a href="nutrition.html">
+      <img class="tabicon" src="pictures/apple.png" alt="" class="icon" />
+      <br />
+      Nutrition
+    </a>
+
+    <a href="exercise.html">
+      <img class="tabicon" src="pictures/weight.png" alt="" class="icon" />
+      <br />
+      Exercise
+    </a>
+    <a href="reminders.html">
+      <img class="tabicon" src="pictures/clock.png" alt="" class="icon" />
+      <br />
+      Reminders
+    </a>
+    <a href="progress.html">
+      <img class="tabicon" src="pictures/progress.png" alt="" class="icon" />
+      <br />
+      Progress
+    </a>
+  </div>
+  <script>
+    function openPage(pageName, elmnt) {
+      // Hide all elements with class="tabcontent" by default */
+      var i, tabcontent, tablinks;
+      tabcontent = document.getElementsByClassName("tabcontent");
+      for (i = 0; i < tabcontent.length; i++) {
+        tabcontent[i].style.display = "none";
+      }
+
+      // Remove the background color of all tablinks/buttons
+      tablinks = document.getElementsByClassName("tablink");
+      for (i = 0; i < tablinks.length; i++) {
+        tablinks[i].style.backgroundColor = "";
+      }
+
+      // Show the specific tab content
+      document.getElementById(pageName).style.display = "block";
+
+      // Add the specific color to the button used to open the tab content
+      elmnt.style.backgroundColor = "#433495";
+    }
+
+    // Get the element with id="defaultOpen" and click on it
+    document.getElementById("defaultOpen").click();
+  </script>
+</html>

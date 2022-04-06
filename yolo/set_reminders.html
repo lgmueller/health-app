@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 
-<html>
+<html lang="en">
   <head>
     <title>Set/Edit Reminders</title>
     <link href="style.css" rel="stylesheet" />
@@ -43,19 +43,42 @@
       <div id="set" class="tabcontent">
         <br /><br />
         <h2>Set a New Reminder</h2>
-        <div>
-          <label for="date">Day of Reminder:</label>
-          <input type="date" id="date" name="date" />
-          <br />
-          <label for="reminder">Content for Reminder</label>
-          <input type="text" id="reminder" name="reminder" />
-          <br />
-          <label for="time">Set time of Reminder</label>
-          <input type="time" id="time" name="time" />
+        <div class="row">
+          <div class="column-left">
+            <label for="date">Day of Reminder:</label>
+          </div>
+          <div class="column-right">
+            <input type="date" id="date" name="date" />
+          </div>
         </div>
         <br />
+
+        <div class="row">
+          <div class="column-left">
+            <label for="reminder">Content for Reminder</label>
+          </div>
+          <div>
+            <textarea
+              id="reminder"
+              name="reminder"
+              placeholder="Write reminder here.."
+              style="height: 100px"
+            ></textarea>
+          </div>
+        </div>
+        <br />
+        <div class="row">
+          <div class="column-left">
+            <label for="time">Set time of Reminder</label>
+          </div>
+          <div class="column-right">
+            <input type="time" id="time" name="time" />
+          </div>
+        </div>
+
+        <br />
         <button class="submit_button" type="submit" href="/">
-          Make Changes
+          Set Reminder
         </button>
       </div>
 

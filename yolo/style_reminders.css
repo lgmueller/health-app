@@ -83,3 +83,29 @@
     display: none;
     height: 100%;
   }
+
+  label { 
+    font-family: "Raleway-bold";
+    font-size: 1rem;
+    color: black;
+    width: 25rem;
+    height: 4rem;
+  }
+
+  .column-left {
+    float: left;
+    width: 20%;
+  }
+
+   .column-right {
+    float: right;
+    width: 80%;
+  }
+
+  
+  /* Clear floats after the columns */
+  .row:after {
+    content: "";
+    display: table;
+    clear: both;
+  }

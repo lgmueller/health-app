@@ -3,11 +3,21 @@
   src: url("raleway.woff");
 }
 
+@font-face {
+  font-family: "Raleway-Bold";
+  src: url("/Raleway/static/Raleway-Bold.ttf")
+}
+
 body {
   margin: auto;
   max-width: 500px;
   text-align: center;
-  font-family: "Raleway";
+  font-size: 2rem;
+  font-family: "raleway";
+}
+
+b { 
+  font-family: "Raleway-bold";
 }
 
 title {
@@ -15,7 +25,8 @@ title {
 }
 
 h1 {
-  font-size: 4rem;
+  font-size: large;
+  font-family: "Raleway";
 }
 button {
   font-family: "Raleway";
@@ -138,8 +149,15 @@ div {
   flex-direction: row;
   justify-content: space-around;
   font-size: 3rem;
-  gap: 2rem;
+  gap: 5rem;
   font-weight: bold;
+  font-family: "raleway";
+}
+
+.goal-index { 
+  text-align: left;
+  font-size: 2rem;
+  font-family: "raleway";
 }
 
 @keyframes growProgressBar {

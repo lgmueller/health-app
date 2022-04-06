@@ -9,6 +9,7 @@ class Exercise {
 
 var list = [];
 var text = [];
+
 var first = true;
 
 function addToList() {
@@ -77,5 +78,5 @@ function addToList() {
     
     table.appendChild(rowNode);
     list.push(rowNode);
-    
+
 }

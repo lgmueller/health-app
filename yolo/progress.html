@@ -3,6 +3,7 @@
   <head>
    
     <link href="progress_style.css" rel="stylesheet" />
+    <script type = "text/javascript" src="progress.js"></script>
     <meta
       name="viewport"
       content="width=768px, height=1280px, initial-scale=1"
@@ -16,27 +17,43 @@
 
   
   <center>
+    <br>
     <h1 style="font-size: 100px; margin-top: 50px">PROGRESS</h1>
     <h3>Track Your Progress Below!</h3>
     <a href="track_goals.html"><button type="button" data-inline="true">Update Goals</button></a>
    
-    <h2 style="color: #8e95e7"><b>Summary</b></h2>
+    <h2 style="color: #8e95e7"><b>Progress Summary</b></h2>
 
     
-    <div class ="weight">
-
-        <ul>
-          <li class="current">Current Weight: <span class="weight_num">120</span> </li>
-          <li class="goal">Goal Weight: <span class="weight_num">130 </span> </li> <br>
-          <li class="current">Current Calories: <span class="weight_num">1128</span> </li>
-          <li class="goal">Goal Calories: <span class="weight_num">2500 </span> </li> <br>
-          <li class="current">Current Activity Duration: <span class="weight_num">1 hr 15 min</span> </li>
-          <li class="goal">Goal Activity Duration: <span class="weight_num">2 hr </span> </li> <br>
-        </ul>
-        
+     
+    <h2 style="font-size: 75 px;">Nutrition</h2>
+    <div class="progress_chart">
+      <div class="progress_bar"></div>
+      <!-- Change the value below -->
+      <span id="value1">90</span>
     </div>
+    <h6>Current: <b>2,250</b> Calories <br> Goal: <b>2,500</b> Calories </h6>
 
+    <h2 style="font-size: 75 px;">Exercise</h2>
+    <div class="progress_chart">
+      <div class="progress_bar"></div>
+      <!-- Change the value below -->
+      <span id="--value">90</span>
+    </div>
+    <h6>Current: <b>90</b> Minutes <br> Goal: <b>100</b> Minutes </h6>
 
+    <h2 style="font-size: 75 px;">Weight</h2>
+    <div class="progress_chart">
+      <div class="progress_bar"></div>
+      <!-- Change the value below -->
+      <span id="value1">90</span>
+    </div>
+    <h6>Current: <b>135</b> Pounds <br> Goal: <b>150</b> Pounds </h6>
+
+    
+    <br>
+    <br>
+    <br>
     <br></br>
     
     

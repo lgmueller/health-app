@@ -48,3 +48,38 @@
 	right: -4px;
 	top: -4px;
 }
+
+.link {
+    font-family: "Raleway";
+    font-size: 2.5rem;
+    color: white;
+    width: 25rem;
+    height: 4rem;
+    font-weight: bold;
+    border-radius: 3rem;
+    text-decoration: none;
+  }
+  
+
+  /* Style tab links */
+.tablink {
+    background-color: #8e95e7;
+    color: white;
+    float: left;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    width: 50%;
+    border-radius: 0rem;
+  }
+  
+  .tablink:hover {
+    background-color: #433495;
+  }
+  
+  /* Style the tab content (and add height:100% for full page content) */
+  .tabcontent {
+    color: black;
+    display: none;
+    height: 100%;
+  }

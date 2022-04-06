@@ -6,6 +6,16 @@ body {font-family: Verdana, sans-serif;}
   src: url("raleway.woff");
 }
 
+@font-face {
+  font-family: "Raleway";
+  src: url("/Raleway/static/Raleway-Regular.ttf");
+}
+
+@font-face {
+  font-family: "Raleway-Bold";
+  src: url("/Raleway/static/Raleway-Bold.ttf");
+} 
+
 body {
   font-family: "Raleway";
 }
@@ -185,19 +195,7 @@ img {
     stroke: #8e95e7;
 }  
 
-.top_bar .profile {
-    float: left;
-    margin-left: 50px;
-}
 
-.top_bar .help {
-    float: right;
-    margin-right: 50px;
-}
-
-.top_bar .home {
-    text-align: center;
-}
 
 .chart {
   max-width: 800px;

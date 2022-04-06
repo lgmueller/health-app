@@ -192,3 +192,12 @@ img {
   color: black;
   overflow: auto;
 }
+
+.workout_list {
+  font-size: 30px;
+}
+
+td, th {
+  border: 1px solid #999;
+  padding: 0.2rem;
+}

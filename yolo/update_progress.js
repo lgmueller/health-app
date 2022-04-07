@@ -28,22 +28,57 @@ window.onload = function() {
 }
 */
 
-function getGoalWeight() {
-    var get_curr_weight = localStorage.getItem("GoalWeight");
-    document.getElementById("new_goal_weight").innerHTML =  get_curr_weight + " lbs";
+function updateProgressCircles () {
+  
+}
+
+
+function updateValues() {
+    var get_goal_weight = localStorage.getItem("GoalWeight");
+    if (localStorage.getItem("GoalWeight") == null) {
+      get_goal_weight = 150;
+    }
+    document.getElementById("new_goal_weight").innerHTML =  get_goal_weight + " lbs";
+    
     var get_curr_weight = localStorage.getItem("CurrWeight");
+    if (localStorage.getItem("CurrWeight") == null) {
+      get_curr_weight = 135;
+    }
     document.getElementById("new_curr_weight").innerHTML =  get_curr_weight + " lbs";
 
     var get_goal_cal = localStorage.getItem("GoalCal");
+    if (localStorage.getItem("GoalCal") == null) {
+      get_goal_cal = 2500;
+    }
     document.getElementById("new_goal_cal").innerHTML =  get_goal_cal + " Calories";
+
     var get_curr_cal = localStorage.getItem("CurrCal");
+    if (localStorage.getItem("CurrCal") == null) {
+      get_curr_cal = 2250;
+    }
     document.getElementById("new_curr_cal").innerHTML =  get_curr_cal + " Calories";
 
+    /*
+    document.getElementById("progress_circle_nutrition").setAttribute("aria-valuenow", get_curr_cal.toString());
+    document.getElementById("progress_circle_nutrition").setAttribute("style", "--value: "+get_curr_cal.toString());
+  */ 
+ /*
+    var test = document.getElementById("progress_circle_nutrition").getAttribute("aria-valuenow");
+    console.log(test)
+    document.getElementById("progress_circle_nutrition").getAttribute("style", "--value: 78");*/
+
     var get_goal_exer = localStorage.getItem("GoalExer");
+    if (localStorage.getItem("GoalExer") == null) {
+      get_goal_exer = 100;
+    }
     document.getElementById("new_goal_exer").innerHTML =  get_goal_exer + " Minutes";
+
     var get_curr_exer = localStorage.getItem("CurrExer");
+    if (localStorage.getItem("CurrExer") == null) {
+      get_curr_exer = 90;
+    }
     document.getElementById("new_curr_exer").innerHTML =  get_curr_exer + " Minutes";
-    
+
 
     
 }
@@ -96,3 +131,58 @@ function myExerFunction() {
     var table_curr_exer = document.getElementById("new_curr_exer");
     table_curr_exer.innerHTML = x + " Minutes";
   }
+
+
+  function updateNutritionValues() {
+    var get_goal_cal = localStorage.getItem("GoalCal");
+    document.getElementById("new_goal_cal").innerHTML =  get_goal_cal + " Calories";
+    var get_curr_cal = localStorage.getItem("CurrCal");
+    document.getElementById("new_curr_cal").innerHTML =  get_curr_cal + " Calories";
+  }
+  /*
+    NUTRITION PAGE
+  */
+
+  new Chart(document.getElementById("bar-chart"), {
+    type: 'bar',
+    data: {
+      labels: ["4/11", "4/12", "4/13", "4/14", "4/15", "4/16", "4/17"],
+      datasets: [
+        {
+          label: "Number of Calories",
+          backgroundColor: ["#8e95e7", "#8e95e7", "#8e95e7", "#8e95e7", "#8e95e7","#8e95e7", "#8e95e7"],
+          data: [2000, 2005, 1823, 2349, 2312, 1923, 2032]
+        }
+      ]
+    },
+    options: {
+      legend: { display: false },
+      title: {
+        display: true,
+        text: 'Weekly Number of Calories'
+      }
+    }
+});
+
+new Chart(document.getElementById("line-chart"), {
+  type: 'line',
+  data: {
+    text: "Weeks",
+    labels: ['Week 1','Week 2','Week 3','Week 4'],
+    datasets: [{ 
+        label: "Number of Calories",
+        data: [2192,2239, 2432, 2499],
+        borderColor: "#8e95e7",
+        fill: false
+      }
+    ]
+  },
+  options: {
+    title: {
+      display: true,
+      text: 'Monthly Calorie Count'
+    }
+  }
+});
+
+

@@ -54,12 +54,10 @@
   }
 
   input, select, textarea { 
-    width: 100%;
+    width: auto;
     padding: .1rem;
     border: 2px solid;
+    text-align: center;
   }
 
-  .input-height { 
-    float:left;
-  }
 

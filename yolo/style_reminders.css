@@ -86,7 +86,7 @@
 
   label { 
     font-family: "Raleway-bold";
-    font-size: 1rem;
+    font-size: 1.3rem;
     color: black;
     width: 25rem;
     height: 4rem;
@@ -96,6 +96,7 @@
     width: auto;
     padding: .5rem;
     border: 2px solid;
+    font-size: 1.3rem;
   }
 
   .column-left {

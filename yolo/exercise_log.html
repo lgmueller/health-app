@@ -14,67 +14,43 @@
     <div class="profile"><a href="profile.html"><img src="pictures/profile.png" height ="40" width="40" /></a> </div>
   
     
-    <body>
+    <body onload="logWorkout()">
       
         <div class="header">
             <!-- <a class="icon" ref="something"><img src="pictures/home.png" width="50em" height="50em"/></a> -->
-            <h1 style="font-size: 100px; margin-top: 50px;"><b>CREATE</b></h1>
+            <h1 style="font-size: 100px; margin-top: 50px;"><b>LOG</b></h1>
+            
         
         </div>
-        <br>
-        <br>
+        <h3>Check off the Exercises You Complete</h3>
+      
         <!-- <div class="flex-container">
             <div class="flexbox-item-wide">
                 <h2 style="font-family: 'Raleway-Bold'; font-size: 40px; color: white;">CREATE A WORKOUT</h2> 
             </div>
         </div> -->
-        <div class="field-input" style="font-size: 30px;">
-          <label for="workout-name">Workout Name</label>
-          <input type="text" class="rounded-input" id="workout-name" style="font-family: 'Raleway-Bold'; font-size: 40px; color:#8e95e7;"></h2> 
+        <h2 id="workout-header">Workout Name</h2>
         
-        </div>
-        <br>
         <div class="flex-container">
             <div class="flexbox-item-input">
                 <table class="rounded-table" id="myTable"> 
                   <thead>
-                    <th>Delete<br>/Edit</th>
+                    <th>Done?</th>
                     <th># Of Sets</th>
                     <th># Of Reps</th>
                     <th>Name of Exercise</th>
                   </thead>
-                  
-                  
                 </table>
               
             </div>
         </div>
-        <h3>Input all Fields</h3>
-        <div class="field-input">
-          <label for="sets">Sets</label>
-          <input class="rounded-input" style="width: 80px; height:30px;" name="sets" id="sets" type="number">
-          
-          <label for="reps">Reps</label>
-          <input class="rounded-input" style="width: 80px; height:30px;" name="reps" id="reps" type="number">
-          <br>
-          <label for="nameField">Name</label>
-          <input class="rounded-input" style="width: 300px; height:30px;" name="name" id="nameField" type="text">
-          <br>
-    
-          <input type="submit" onclick="addToList(); 
-          
-          var set = document.getElementById('sets');
-          var rep = document.getElementById('reps');
-          var my_name = document.getElementById('nameField');
-      
-          set.value = '';
-          rep.value = '';
-          my_name.value = '';" value="Add Exercise">
-          <br>
-          <br>
-          <input type="submit" class = "btn-submit" onclick="addWorkout();" value="Save New Workout">
+        <br>
+        <div class="roundedButton" id="startStopButton"
+        style="width:300px; height:50px; margin: auto; background-color:#30D158;" onclick="startStop()">Start</div>        
+        <div class="timer">Time Elapsed: 
+          <div id="stopwatch">00:00:00</div>
         </div>
-
+        
     </body>
 
     <div class="tabs">

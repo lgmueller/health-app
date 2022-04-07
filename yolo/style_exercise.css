@@ -25,14 +25,15 @@
   }
 
   .header { 
+    font-family: "Raleway";
     display: flex;
     align-items: center;
     text-align: center;
   }
   
   h1 {
+    font-size: large;
     font-family: "Raleway";
-    font-size: 4rem;
     margin: auto;
   }
 
@@ -94,8 +95,8 @@
     height: 150px;
     padding: 20px;
     font-family: "Raleway-Bold";
-    border-color: #433495;
-    border-style: solid;
+    /* border-color: #433495;
+    border-style: solid; */
     background-color:#433495;
     box-shadow: #b9bac3;
     color:white;
@@ -118,7 +119,7 @@
 
   
 .tabs {
-  font-family: "Raleway";
+  font-family: "Raleway-bold";
   background-color: #b9bac3;
   overflow: hidden;
   position: fixed;
@@ -132,7 +133,7 @@
 }
 
 .tabs a {
-  font-family: "Raleway";
+  font-family: "Raleway-bold";
   color: black;
   font-style: bold;
   text-align: center;
@@ -142,14 +143,14 @@
 }
 
 .tabs a:hover {
-  font-family: "Raleway";
+  font-family: "Raleway-bold";
   background-color: #ddd;
   color: #232324;
 }
 
 /* Add a green background color to the active link */
 .tabs a.active {
-  font: "Raleway";
+  font: "Raleway-bold";
   background-color: #433495;
   /* color: white; */
 }
@@ -218,7 +219,7 @@ img {
   height: 500px;
   border-radius: 10px;
   margin:auto;
-  border: 2px solid #232324;
+  /* border: 2px solid #232324; */
   background-color: #dddff7;;
   /* box-shadow: 15px 15px #bdc2f5; */
   font-size: 30px;
@@ -234,7 +235,7 @@ img {
 .rounded-table {
   margin: auto;
   border-collapse:separate;
-  border:solid #232324 1px;
+  /* border:solid #232324 1px; */
   border-radius:6px;
 }
 
@@ -331,3 +332,17 @@ input {
   line-height: normal;
 } */
 
+.button-complete {
+  width: 40px;
+  height: 40px;
+}
+
+.timer {
+  width: 400px;
+  height: 300px;
+  font-family: "Raleway-Regular";
+  font-size: 40px;
+  align-items: center;
+  margin-top: 60px;
+  display: inline-block;
+}

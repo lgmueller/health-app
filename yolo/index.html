@@ -17,7 +17,7 @@
   <center>
     <h1 style="font-size: 100px; margin-top: 50px">YOLO</h1>
     
-    <body onload = "updateValues()">
+    <body onload = "updateValues(); updateProgressCircles();">
       <!-- <
       Welcome to YOLO! Here you can track your nutrtion, exercise, and overall
       progress!
@@ -40,11 +40,12 @@
       <div>
         Nutrition
         <div
+          id="circle1"
           role="progressbar"
-          aria-valuenow="65"
+          aria-valuenow="95"
           aria-valuemin="0"
           aria-valuemax="100"
-          style="--value: 65"
+          style="--value: 95"
         ></div>
       </div>
       <div class="goal-index">
@@ -57,6 +58,7 @@
       <div>
         Exercise
         <div
+          id="circle2"
           role="progressbar"
           aria-valuenow="50"
           aria-valuemin="0"
@@ -74,6 +76,7 @@
       <div>
         Weight
         <div
+          id="circle3"
           role="progressbar"
           aria-valuenow="90"
           aria-valuemin="0"

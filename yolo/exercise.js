@@ -14,6 +14,9 @@ class Workout {
     }
 }
 
+// Preset Workouts for Arms, Legs, Abs
+
+
 
 var list = [];
 
@@ -112,7 +115,11 @@ function addWorkout() {
 }
 
 function saveWorkoutClicked(name) {
-    var workout = localStorage.setItem("lastClicked",name);
+    localStorage.setItem("lastClicked",name);
+}
+
+function saveLogWorkoutClicked(name) {
+    localStorage.setItem("lastClickedForLog",name);
 }
 
 function loadWorkout() {
@@ -185,4 +192,151 @@ function loadWorkout() {
         table.appendChild(rowNode);
     }
 
+}
+
+function logWorkout(name) {
+    var chosen_workout_name = localStorage.getItem("lastClickedForLog");
+    var workoutObj = JSON.parse(localStorage.getItem(chosen_workout_name));
+    localStorage.setItem("lastClickedForLog","");
+    var table = document.getElementById("myTable");
+
+    var top_name = document.getElementById("workout-header");
+    top_name.innerHTML = chosen_workout_name;
+    
+    var set;
+    var rep;
+    var my_name;
+
+    var completed = 0;
+
+    for (let exercise of workoutObj.exercises){
+        set = exercise.sets;
+        rep = exercise.reps;
+        my_name = exercise.my_name;
+
+        var rowNode = document.createElement("tr");
+
+        var cellNode = document.createElement("td");
+
+        var done_btn = document.createElement('input');
+        done_btn.type = "image";
+        done_btn.src = "pictures/incomplete2.png";
+        done_btn.id = "button-done";
+        var clicked = true;
+        done_btn.onclick = function() { 
+            if (clicked == true){
+                done_btn.src = "pictures/done2.png";
+                completed += 1;
+                clicked = false;
+            } else {
+                done_btn.src = "pictures/incomplete2.png";
+                completed -= 1;
+                clicked = true;
+            }
+            if (completed == workoutObj.exercises.length) {
+                alert("Congratulations! You Completed your Workout!");
+            }
+        };
+        
+        cellNode.appendChild(done_btn);
+
+        rowNode.appendChild(cellNode);
+
+        var set_cellNode = document.createElement("td");
+        var set_textNode = document.createTextNode(set);
+        set_cellNode.appendChild(set_textNode);
+        rowNode.appendChild(set_cellNode);
+
+        var rep_cellNode = document.createElement("td");
+        var rep_textNode = document.createTextNode(rep);
+        rep_cellNode.appendChild(rep_textNode);
+        rowNode.appendChild(rep_cellNode);
+
+        var name_cellNode = document.createElement("td");
+        var name_textNode = document.createTextNode(my_name);
+        name_cellNode.appendChild(name_textNode);
+        rowNode.appendChild(name_cellNode);
+        
+        table.appendChild(rowNode);
+    }
+    
+}
+
+function startStop(){
+    var btn = document.getElementById("startStopButton");
+    startTimer();
+    if (btn.innerHTML == "Start"){
+        btn.innerHTML = "Finish";
+        btn.style.backgroundColor = "#E74C3C";
+
+        resetTimer();
+        startTimer();
+    } else { 
+        btn.innerHTML = "Start";
+        btn.style.backgroundColor = "#30D158";
+        stopTimer();
+    }
+}
+
+var stoptime = true;
+
+function startTimer() {
+  if (stoptime == true) {
+        stoptime = false;
+        timerCycle();
+    }
+}
+function stopTimer() {
+  if (stoptime == false) {
+    stoptime = true;
+  }
+}
+
+var hr = 0;
+var min = 0;
+var sec = 0;
+
+function timerCycle() {
+    var timer = document.getElementById("stopwatch");
+
+    if (stoptime == false) {
+    sec = parseInt(sec);
+    min = parseInt(min);
+    hr = parseInt(hr);
+
+    sec = sec + 1;
+
+    if (sec == 60) {
+      min = min + 1;
+      sec = 0;
+    }
+    if (min == 60) {
+      hr = hr + 1;
+      min = 0;
+      sec = 0;
+    }
+
+    if (sec < 10 || sec == 0) {
+      sec = '0' + sec;
+    }
+    if (min < 10 || min == 0) {
+      min = '0' + min;
+    }
+    if (hr < 10 || hr == 0) {
+      hr = '0' + hr;
+    }
+
+    timer.innerHTML = hr + ':' + min + ':' + sec;
+
+    setTimeout("timerCycle()", 1000);
+  }
+}
+
+function resetTimer() {
+    var timer = document.getElementById("stopwatch");
+    timer.innerHTML = "00:00:00";
+    stoptime = true;
+    hr = 0;
+    sec = 0;
+    min = 0;
 }

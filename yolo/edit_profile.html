@@ -2,6 +2,7 @@
   <head>
     <title>Edit Profile</title>
     <link href="style.css" rel="stylesheet" />
+    <link href="style_profile.css" rel="stylesheet" />
     <meta
       name="viewport"
       content="width=768px, height=1280px, initial-scale=1"
@@ -17,31 +18,68 @@
   <center>
     <body>
       <div class="main-block">
-        <form action="/">
-          <div class="title">
-            <i class="fas fa-pencil-alt"></i>
-            <h1>Edit Profile</h1>
-          </div>
-          <div class="info">
-            <input
-              class="fname"
-              type="text"
-              name="name"
-              placeholder="Full name"
-            />
-            <input type="text" name="age" placeholder="Age" />
-            <input type="text" name="height" placeholder="Height" />
+        <div class="home">
+          <a href="profile.html"
+            ><img src="pictures/backarrow.png" height="35" width="35"
+          /></a>
+        </div>
+        <div class="profile">
+          <a href="profile.html"
+            ><img src="pictures/profile.png" height="40" width="40"
+          /></a>
+        </div>
 
-            <input type="password" name="gender" placeholder="Gender" />
-            <select>
-              <option value="level" selected>Beginner</option>
-              <option value="intermediate">Intermediate</option>
-              <option value="advanced">Advanced</option>
-            </select>
-          </div>
+        <h1 style="font-size: 100px; margin-top: 50px">EDIT PROFILE</h1>
+
+        <form action="/">
+          <table class="profile-table">
+            <tr>
+              <th class="category-edit">Age</th>
+              <th><input type="text" name="age" placeholder="Age" /></th>
+            </tr>
+            <tr>
+              <th class="category-edit">Height</th>
+              <th white-space="nowrap">
+                <div class="input-height">
+                  <input type="number" name="height-feet" placeholder="feet" width="50%" />
+                </div>
+                <div class="input-height">
+                  <input
+                    type="number"
+                    name="height-inches"
+                    placeholder="inches"
+                    width="50%"
+                  />
+                </div>
+              </th>
+            </tr>
+            <tr>
+              <th class="category-edit">Sex</th>
+              <th>
+                <select>
+                  <option value="sex" selected>Choose Sex</option>
+                  <option value="male">Male</option>
+                  <option value="female">Female</option>
+                </select>
+              </th>
+            </tr>
+            <tr>
+              <th class="category-edit">Birthday</th>
+              <th><input type="date" name="bday" /></th>
+            </tr>
+            <tr>
+              <th class="category-edit">Experience Level</th>
+              <th><select>
+                <option value="choose-level" selected>Choose Level</option>
+                <option value="beginner"></option>Beginner</option>
+                <option value="intermediate">Intermediate</option>
+                <option value="advanced">Advanced</option>
+              </select></th>
+            </tr>
+          </table>
           <br />
-          <button class="submit_button" type="submit" href="/">
-            Make Changes
+          <button type="button">
+            <a href="profile.html" class="link">Save Changes</a>
           </button>
         </form>
       </div>

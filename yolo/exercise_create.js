@@ -6,10 +6,15 @@ class Exercise {
     }
 }
 
+class Workout {
+    constructor(name, exercises){
+        this.name = name;
+        this.exercises = exercises;
+    }
+}
 
 var list = [];
-var text = [];
-var first = true;
+var workouts = [];
 
 function addToList() {
 
@@ -24,6 +29,7 @@ function addToList() {
     if (set != null && rep != null && my_name != null){
 
         list.push(new Exercise(set,rep,my_name));
+        
     } else {
         alert("Sorry! Double check that you've filled out all of the fields.")
         throw new Error("Invalid Input");
@@ -78,4 +84,24 @@ function addToList() {
     table.appendChild(rowNode);
     list.push(rowNode);
     
+}
+
+function addWorkout() {
+    var name = document.getElementById('workout-name').value;
+    var exercises = [];
+    var table = document.getElementById('myTable');
+    var num_set;
+    var num_rep;
+    var exercise_name;
+
+    for (let row of table.rows) {
+        //iterate through rows
+        //skipping first col b/c of edit
+        num_set = row[1];
+        num_rep = row[2];
+        exercise_name = row[3];
+        exercises.push(new Exercise(num_set,num_rep,exercise_name));
+     }
+    workouts.push(new Workout(name, exercises));
+    alert(workouts);
 }

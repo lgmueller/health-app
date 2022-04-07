@@ -30,9 +30,13 @@
         </div>
 
         <h1 style="font-size: 100px; margin-top: 50px">EDIT PROFILE</h1>
-
+        <br />
         <form action="/">
           <table class="profile-table">
+            <tr>
+              <th class="category-edit">Name</th>
+              <th><input type="text" name="name" placeholder="Average Joe" /></th>
+            </tr>
             <tr>
               <th class="category-edit">Age</th>
               <th><input type="text" name="age" placeholder="Age" /></th>
@@ -60,6 +64,7 @@
                   <option value="sex" selected>Choose Sex</option>
                   <option value="male">Male</option>
                   <option value="female">Female</option>
+                  <option value="other">Other</option>
                 </select>
               </th>
             </tr>

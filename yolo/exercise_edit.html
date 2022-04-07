@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>Create a Workout</title>
+        <title>Edit a Workout</title>
         <link href="style_exercise.css" rel="stylesheet" />
         <script type = "text/javascript" src="exercise.js"></script>  
         <meta
@@ -13,21 +13,17 @@
     <div class="home"><a href="index.html"><img src="pictures/home.png" height ="35" width="35" /></a> </div>
     <div class="profile"><a href="profile.html"><img src="pictures/profile.png" height ="40" width="40" /></a> </div>
   
-    
-    <body>
+    <!-- THIS IS TEMPORARY FIX , WILL ONLY WORK WITH WORKOUTS NAMED CUSTOM -->
+    <body onload="loadWorkout('Custom');">
       
         <div class="header">
             <!-- <a class="icon" ref="something"><img src="pictures/home.png" width="50em" height="50em"/></a> -->
-            <h1 style="font-size: 100px; margin-top: 50px;"><b>CREATE</b></h1>
+            <h1 style="font-size: 100px; margin-top: 50px;"><b>EDIT</b></h1>
         
         </div>
         <br>
         <br>
-        <!-- <div class="flex-container">
-            <div class="flexbox-item-wide">
-                <h2 style="font-family: 'Raleway-Bold'; font-size: 40px; color: white;">CREATE A WORKOUT</h2> 
-            </div>
-        </div> -->
+        
         <div class="field-input" style="font-size: 30px;">
           <label for="workout-name">Workout Name</label>
           <input type="text" class="rounded-input" id="workout-name" style="font-family: 'Raleway-Bold'; font-size: 40px; color:#8e95e7;"></h2> 

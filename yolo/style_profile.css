@@ -1,0 +1,63 @@
+@font-face {
+    font-family: "Raleway";
+    src: url("raleway.woff");
+  }
+  
+  @font-face {
+    font-family: "Raleway-semibold";
+    src: url("/Raleway/static/Raleway-SemiBold.ttf");
+  }
+  
+  @font-face {
+    font-family: "Raleway-Bold";
+    src: url("/Raleway/static/Raleway-Bold.ttf");
+  } 
+
+  .profile-pic {
+    max-width: 75%;  
+    height: auto;  
+    border-radius: 50%;
+  }
+
+  table, tr, th { 
+    background-color: white;
+    border-collapse: collapse;
+    color: black;
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    justify-content: left;
+    border-style: groove;
+    font-family: "raleway";
+    font-size: 2rem;
+    padding: 1rem;
+  }
+
+  .category { 
+    font-family: "raleway-bold";
+  }
+
+  .category-edit { 
+    font-family: "raleway-bold";
+    width: 20%;
+  }
+
+  .link {
+    font-family: "Raleway";
+    font-size: 2.5rem;
+    color: white;
+    width: 25rem;
+    height: 4rem;
+    font-weight: bold;
+    border-radius: 3rem;
+    text-decoration: none;
+  }
+
+  input, select, textarea { 
+    width: auto;
+    padding: .1rem;
+    border: 2px solid;
+    text-align: center;
+  }
+
+

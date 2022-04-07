@@ -1,10 +1,9 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>Exercise</title>
+        <title>Create a Workout</title>
         <link href="style_exercise.css" rel="stylesheet" />
         <script type = "text/javascript" src="exercise.js"></script>  
-        
         <meta
           name="viewport"
           content="width=768px, height=1280px, initial-scale=1"
@@ -14,33 +13,42 @@
     <div class="home"><a href="index.html"><img src="pictures/home.png" height ="35" width="35" /></a> </div>
     <div class="profile"><a href="profile.html"><img src="pictures/profile.png" height ="40" width="40" /></a> </div>
   
-
-    <body>
+    
+    <body onload="logWorkout()">
+      
         <div class="header">
             <!-- <a class="icon" ref="something"><img src="pictures/home.png" width="50em" height="50em"/></a> -->
-            <h1 style="font-size: 80px; margin-top: 50px;"><b>EDIT WORKOUT</b></h1>
+            <h1 style="font-size: 100px; margin-top: 50px;"><b>LOG</b></h1>
+            
+        
+        </div>
+        <h3>Check off the Exercises You Complete</h3>
+      
+        <!-- <div class="flex-container">
+            <div class="flexbox-item-wide">
+                <h2 style="font-family: 'Raleway-Bold'; font-size: 40px; color: white;">CREATE A WORKOUT</h2> 
+            </div>
+        </div> -->
+        <h2 id="workout-header">Workout Name</h2>
+        
+        <div class="flex-container">
+            <div class="flexbox-item-input">
+                <table class="rounded-table" id="myTable"> 
+                  <thead>
+                    <th>Done?</th>
+                    <th># Of Sets</th>
+                    <th># Of Reps</th>
+                    <th>Name of Exercise</th>
+                  </thead>
+                </table>
+              
+            </div>
         </div>
         <br>
-        <h2 style="font-size:30px; margin-top: 70px;">Select A Workout</h2>
-    
-        <div class="flex-container">
-            <div class="flexbox-item-box" id="arms" onClick="location.href='exercise_edit.html'; saveWorkoutClicked('Arms');">
-                <h2 style="font-family: 'Raleway-Bold'; font-size: 40px; color: white;">ARMS</h2>
-            </div>
-            <div class="flexbox-item-box" id="legs" onClick="location.href='exercise_edit.html'; saveWorkoutClicked('Legs');">
-                <h2 style="font-family: 'Raleway-Bold';font-size: 40px; color: white;">LEGS</h2>
-                
-            </div>
-        </div>
-        <div class="flex-container">
-            <div class="flexbox-item-box" id="abs" onClick="location.href='exercise_edit.html'; saveWorkoutClicked('Abs');">
-                <h2 style="font-family: 'Raleway-Bold'; font-size: 40px; color: white;">ABS</h2>
-                
-            </div>
-            <div class="flexbox-item-box" id="custom" onClick="location.href='exercise_edit.html'; saveWorkoutClicked('Custom');">
-                <h2 style="font-family: 'Raleway-Bold';font-size: 40px; color: white;">CUSTOM</h2>
-                
-            </div>
+        <div class="roundedButton" id="startStopButton"
+        style="width:300px; height:50px; margin: auto; background-color:#30D158;" onclick="startStop()">Start</div>        
+        <div class="timer">Time Elapsed: 
+          <div id="stopwatch">00:00:00</div>
         </div>
         
     </body>

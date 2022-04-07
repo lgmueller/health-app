@@ -3,7 +3,7 @@
   <head>
    
     <link href="progress_style.css" rel="stylesheet" />
-    <script type = "text/javascript" src="progress.js"></script>
+    <script type = "text/javascript" src="update_progress.js"></script>
     <meta
       name="viewport"
       content="width=768px, height=1280px, initial-scale=1"
@@ -17,7 +17,7 @@
 
   
   <center>
-  <body>
+  <body onload = "getGoalWeight()">
     <br>
     <h1 style="font-size: 100px; margin-top: 50px">PROGRESS</h1>
     <h3>Track Your Progress Below!</h3>
@@ -25,25 +25,27 @@
    
     <h2 style="color: #8e95e7"><b>Progress Summary</b></h2>
 
+    
     <!--Tabs for All Goal Tracking-->
     
 
     <div class="flex-container">
-      <div>1</div>
-      <div>2</div>
-      <div>3</div> 
+      <div><img src="pictures/apple.png" height ="50" width="50"></div>
+      <div><img src="pictures/weight.png"></div>
+      <div><img src="pictures/home.png"></div> 
     </div>
 
-<p>All direct children of a flexible container becomes flexible items.</p>
   
     <!----> 
     <h2 style="font-size: 75 px;">Nutrition</h2>
+
     <div class="progress_chart">
       <div class="progress_bar"></div>
       <!-- Change the value below -->
-      <span id="value1">90</span>
+      <span id="value1">80</span>
     </div>
-    <h6>Current: <b>2,250</b> Calories <br> Goal: <b>2,500</b> Calories </h6>
+
+    <h6 id = "cal_p1">Current: <b id = "new_curr_cal">2,250</b> Calories <br> Goal: <b id = "new_goal_cal">2,500</b> Calories </h6>
     <a href="progress_nutrition.html"><button type="button" data-inline="true">Track Nutrition</button></a>
 
     <h2 style="font-size: 75 px;">Exercise</h2>
@@ -52,7 +54,7 @@
       <!-- Change the value below -->
       <span id="--value">90</span>
     </div>
-    <h6>Current: <b>90</b> Minutes <br> Goal: <b>100</b> Minutes </h6>
+    <h6>Current: <b id = "new_curr_exer">90</b> Minutes <br> Goal: <b id = "new_goal_exer">100</b> Minutes </h6>
     <a href="progress_exercise.html"><button type="button" data-inline="true">Track Exercise</button></a>
 
     <h2 style="font-size: 75 px;">Weight</h2>
@@ -61,7 +63,7 @@
       <!-- Change the value below -->
       <span id="value1">90</span>
     </div>
-    <h6>Current: <b>135</b> Pounds <br> Goal: <b>150</b> Pounds </h6>
+    <h6>Current: <b id = "new_curr_weight"> 135</b> Pounds <br> Goal: <b id = "new_goal_weight">150</b> Pounds </h6>
     <a href="progress_weight.html"><button type="button" data-inline="true">Track Weight</button></a>
 
 

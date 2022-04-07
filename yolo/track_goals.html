@@ -17,7 +17,7 @@
 
   
   <center>
-  <body>
+  <body onload = "getGoalWeight()">
     <br>
     <h1 style="font-size: 100px; margin-top: 50px">UPDATE GOALS</h1>
     <h3 style="color: #433495"><b>Enter any new goals you may have! Possible functions:</b></h3>
@@ -37,18 +37,18 @@
       </tr>
       <tr>
         <td><b>Weight</b></td>
-        <td id = "weight_p1">135 lbs</td>
-        <td id = "weight_p">150 lbs</td>
+        <td id = "new_curr_weight">135 lbs</td>
+        <td id = "new_goal_weight">150 lbs</td>
       </tr>
       <tr>
         <td><b>Calories</b></td>
-        <td id ="cal_p1">2250 Calories</td>
-        <td id ="cal_p">2500 Calories</td>
+        <td id ="new_curr_cal">2250 Calories</td>
+        <td id = "new_goal_cal">2500 Calories</td>
       </tr>
       <tr>
         <td><b>Exercise Time</b></td>
-        <td id ="exer_p1">90 Minutes</td>
-        <td id ="exer_p">100 Minutes</td>
+        <td id ="new_curr_exer">90 Minutes</td>
+        <td id ="new_goal_exer">100 Minutes</td>
       </tr>
     </table>
 
@@ -59,7 +59,7 @@
       
 
 
-  <script type = "text/javascript" src="track_goals.js"></script>  
+  <script type = "text/javascript" src="update_progress.js"></script>  
 
   <h3 style="color: #433495"><u><b>Update Current Statistics</b></u></h3>
 
@@ -82,7 +82,7 @@
   <h3 style="color: #433495"><u><b>Change Goals</b></u></h3>
 
     <!--Add few elements to the form-->
-    <p style="font-size: 27px;">Input your Weight Goal</p>
+    <p style="font-size: 30px;">Input your Weight Goal</p>
     <input style="font-size: 25px; width: 140px; height:33px;" type="text" id="weight_text">
     <input class="goal-text" type ="submit" onclick="myWeightFunction()">
     <p id="weight_p"></p>

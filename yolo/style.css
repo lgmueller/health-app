@@ -4,8 +4,8 @@
 }
 
 @font-face {
-  font-family: "Raleway";
-  src: url("/Raleway/static/Raleway-Regular.ttf");
+  font-family: "Raleway-semibold";
+  src: url("/Raleway/static/Raleway-SemiBold.ttf");
 }
 
 @font-face {
@@ -69,11 +69,11 @@ button {
 }
 
 .submit_button {
-  font-family: "Raleway";
-  font-size: 1rem;
+  font-family: "Raleway-semibold";
+  font-size: 1.5rem;
   color: white;
   width: 15rem;
-  height: 2rem;
+  height: 2.5rem;
   font-weight: bold;
   border-radius: 3rem;
   background-color: #8e95e7;

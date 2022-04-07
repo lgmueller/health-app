@@ -1,52 +1,93 @@
-<!DOCTYPE html>
 <html>
   <head>
-    <title>YOLO</title>
-    <link href="progress_style.css" rel="stylesheet" />
+    <title>Profile</title>
+    <link href="style.css" rel="stylesheet" />
+    <link href="style_profile.css" rel="stylesheet" />
     <meta
       name="viewport"
       content="width=768px, height=1280px, initial-scale=1"
     />
-
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.min.js"></script>
-
+    <style>
+      .info {
+        display: flex;
+        flex-direction: column;
+      }
+    </style>
   </head>
-  <div class="top_bar"> 
-    <ul>
-        <li class="home"><a href="index.html"><img src="pictures/home.png" height ="35" width="35" /></a> </li>
-        <li class="profile"><a href="something"><img src="pictures/profile.png" height ="40" width="40" /></a></span> </li> <br>
-      </ul>
-  </div>
-  
+
   <center>
+    <body>
+      <div class="main-block">
+        <div class="home">
+          <a href="index.html"
+            ><img src="pictures/home.png" height="35" width="35"
+          /></a>
+        </div>
+        <div class="profile">
+          <a href="profile.html"
+            ><img src="pictures/profile.png" height="40" width="40"
+          /></a>
+        </div>
 
-    <h1 style="color: #8e95e7">Profile</h1>
+        <h1 style="font-size: 100px; margin-top: 50px">PROFILE</h1>
 
-    
+        <div class="flex-container">
+          <div>
+            <h2>Average Joe</h2>
+          </div>
+          <div>
+            <img class="profile-pic" src="pictures/profile.png" alt="" />
+          </div>
+        </div>
 
-    
-    <script src="progress_nutrition.js"></script>
-  
+        <table class="profile-table">
+          <tr>
+            <th class="category">Age</th>
+            <th>22</th>
+          </tr>
+          <tr>
+            <th class="category">Height</th>
+            <th>5ft 9in</th>
+          </tr>
+          <tr>
+            <th class="category">Sex</th>
+            <th>Male</th>
+          </tr>
+          <tr>
+            <th class="category">Birthday</th>
+            <th>November 2, 2001</th>
+          </tr>
+          <tr>
+            <th class="category">Experience Level</th>
+            <th>Beginner</th>
+          </tr>
+        </table>
+        <br />
+        <button type="button">
+          <a href="edit_profile.html" class="link">Edit Profile</a>
+        </button>
+      </div>
+    </body>
     <div class="tabs">
-      <a href="#nutrition">
-        <img class ="tabicon" src="pictures/apple.png" alt="" class="icon"/>
-        <br>
+      <a href="nutrition.html">
+        <img class="tabicon" src="pictures/apple.png" alt="" class="icon" />
+        <br />
         Nutrition
       </a>
-    
-      <a href="#exercise">
-        <img class ="tabicon" src="pictures/weight.png" alt="" class="icon"/>
-        <br>
+
+      <a href="exercise.html">
+        <img class="tabicon" src="pictures/weight.png" alt="" class="icon" />
+        <br />
         Exercise
       </a>
-      <a href="#reminders">
-        <img class ="tabicon" src="pictures/clock.png" alt="" class="icon" />
-        <br>
+      <a href="reminders.html">
+        <img class="tabicon" src="pictures/clock.png" alt="" class="icon" />
+        <br />
         Reminders
       </a>
-      <a href="#progress">
-        <img class ="tabicon" src="pictures/progress.png" alt="" class="icon"/>
-        <br>
+      <a href="progress.html">
+        <img class="tabicon" src="pictures/progress.png" alt="" class="icon" />
+        <br />
         Progress
       </a>
     </div>

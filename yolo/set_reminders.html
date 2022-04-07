@@ -42,7 +42,7 @@
 
       <div id="set" class="tabcontent">
         <br /><br />
-        <h2>Set a New Reminder</h2>
+        <h2>Set New Reminder</h2>
         <div class="row">
           <div class="column-left">
             <label for="date">Day of Reminder:</label>
@@ -72,7 +72,7 @@
             <label for="time">Set time of Reminder</label>
           </div>
           <div class="column-right">
-            <input type="time" id="time" name="time" />
+            <input type="time" id="time" name="time" value="00:00" />
           </div>
         </div>
 
@@ -84,7 +84,56 @@
 
       <div id="edit" class="tabcontent">
         <br /><br />
-        <h2>Edit an Existing Reminder</h2>
+        <h2>Edit Existing Reminder</h2>
+        <div class="row">
+          <div class="column-left">
+            <label for="existing-reminders"
+              >Choose Date of Existing Reminder(s)</label
+            >
+          </div>
+          <div class="column-right">
+            <select
+              name="existing-reminders"
+              id="existing-reminders"
+              onchange="changeVal()"
+            >
+              <option value="">--Please choose an option--</option>
+              <option value="option1">04/04/2022</option>
+              <option value="option2">04/19/2022</option>
+              <option value="option3">04/22/2022</option>
+            </select>
+          </div>
+        </div>
+        <br />
+        <div id="edit-reminders" class="hide">
+          <div class="row">
+            <div class="column-left">
+              <label for="reminder">Content of Reminder</label>
+            </div>
+            <div class="column-right">
+              <textarea
+                id="reminder-content"
+                name="reminder-content"
+                placeholder="Write reminder here.."
+                style="height: 100px"
+              ></textarea>
+            </div>
+          </div>
+          <br />
+          <div class="row">
+            <div class="column-left">
+              <label for="time">Set time of Reminder</label>
+            </div>
+            <div class="column-right">
+              <input type="time" id="reminder-time" name="time" value="00:00" />
+            </div>
+          </div>
+
+          <br />
+          <button class="submit_button" type="submit" href="/">
+            Edit Reminder
+          </button>
+        </div>
       </div>
     </div>
   </body>
@@ -112,6 +161,7 @@
     </a>
   </div>
   <script>
+    /* render pages corresponding to tabs */
     function openPage(pageName, elmnt) {
       // Hide all elements with class="tabcontent" by default */
       var i, tabcontent, tablinks;
@@ -135,5 +185,25 @@
 
     // Get the element with id="defaultOpen" and click on it
     document.getElementById("defaultOpen").click();
+
+    /* render information for existing reminders */
+    function changeVal() {
+      var r = document.getElementById("existing-reminders");
+      var opt = r.value;
+      if (opt == "option1") {
+        document.getElementById("reminder-content").placeholder =
+          "Make sure to go on a run today!";
+        document.getElementById("reminder-time").value = "09:00";
+      } else if (opt == "option2") {
+        document.getElementById("reminder-content").placeholder =
+          "Consistancy is key! Make sure to log all your meals!";
+        document.getElementById("reminder-time").value = "12:00";
+      } else {
+        document.getElementById("reminder-content").placeholder =
+          "Get up off your fat a$$ and do something you couch potato >:(";
+        document.getElementById("reminder-time").value = "14:00";
+      }
+      document.getElementById("edit-reminders").className = "show";
+    }
   </script>
 </html>

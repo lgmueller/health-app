@@ -52,7 +52,7 @@
       <tr></tr>
       <tr>
         <td>03</td>
-        <td class="event">04</td>
+        <td class="event" onclick="showReminder('option1')">04</td>
         <td>05</td>
         <td>06</td>
         <td>07</td>
@@ -71,10 +71,10 @@
       <tr>
         <td>17</td>
         <td>18</td>
-        <td>19</td>
+        <td class="event" onclick="showReminder('option2')">19</td>
         <td>20</td>
         <td>21</td>
-        <td class="event">22</td>
+        <td class="event" onclick="showReminder('option3')">22</td>
         <td>23</td>
       </tr>
       <tr>
@@ -97,6 +97,16 @@
       </tr>
     </tbody>
   </table>
+  <br />
+  <button type="button">
+    <a href="set_reminders.html" class="link">Set/Edit Reminders</a>
+  </button>
+
+  <div id="reminder" class="hide">
+    <h2 id="reminder-title"></h2>
+    <h3 id="reminder-content" text-weight="bold"></h3>
+    <h4 id="reminder-time"></h4>
+  </div>
 
   <div class="tabs">
     <a href="nutrition.html">
@@ -122,9 +132,31 @@
     </a>
   </div>
 
-  <br /><br /><br />
-
-  <button type="button">
-    <a href="set_reminders.html" class="link">Set/Edit Reminders</a>
-  </button>
+  <script>
+    /* render information for existing reminders */
+    function showReminder(opt) {
+      if (opt == "option1") {
+        document.getElementById("reminder-title").textContent = "April 4, 2022";
+        document.getElementById("reminder-content").textContent =
+          "Make sure to go on a run today!";
+        document.getElementById("reminder-time").textContent =
+          "Remind at 09:00 AM";
+      } else if (opt == "option2") {
+        document.getElementById("reminder-title").textContent =
+          "April 19, 2022";
+        document.getElementById("reminder-content").textContent =
+          "Consistancy is key! Make sure to log all your meals!";
+        document.getElementById("reminder-time").textContent =
+          "Remind at 12:00 PM";
+      } else {
+        document.getElementById("reminder-title").textContent =
+          "April 22, 2022";
+        document.getElementById("reminder-content").textContent =
+          "Get up off your fat a$$ and do something you couch potato >:(";
+        document.getElementById("reminder-time").textContent =
+          "Remind at 02:00 PM";
+      }
+      document.getElementById("reminder").className = "show";
+    }
+  </script>
 </html>

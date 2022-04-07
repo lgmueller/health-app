@@ -10,26 +10,33 @@
         />
     </head>
 
+    <div class="home"><a href="index.html"><img src="pictures/home.png" height ="35" width="35" /></a> </div>
+    <div class="profile"><a href="profile.html"><img src="pictures/profile.png" height ="40" width="40" /></a> </div>
+  
+    
     <body>
+      
         <div class="header">
             <!-- <a class="icon" ref="something"><img src="pictures/home.png" width="50em" height="50em"/></a> -->
-            <h1 style="font-size: 100px; margin-top: 50px;"><b>EXERCISE</b></h1>
+            <h1 style="font-size: 100px; margin-top: 50px;"><b>CREATE</b></h1>
+        
         </div>
         <br>
         <br>
-        <div class="flex-container">
+        <!-- <div class="flex-container">
             <div class="flexbox-item-wide">
                 <h2 style="font-family: 'Raleway-Bold'; font-size: 40px; color: white;">CREATE A WORKOUT</h2> 
             </div>
+        </div> -->
+        <div class="field-input" style="font-size: 30px;">
+          <label for="workout-name">Workout Name</label>
+          <input type="text" class="rounded-input" id="workout-name" style="font-family: 'Raleway-Bold'; font-size: 40px; color:#8e95e7;"></h2> 
+        
         </div>
         <br>
         <div class="flex-container">
             <div class="flexbox-item-input">
-                <form>
-                    <input type="text" id="workout_name" name="workout_name" value="Name" style="text-align: center; width: 300px; height: 30px; font-size: 30px; padding: 10px;">
-                    <br>
-                </form>
-                <table id="myTable"> 
+                <table class="rounded-table" id="myTable"> 
                   <thead>
                     <th>Delete<br>/Edit</th>
                     <th># Of Sets</th>
@@ -39,32 +46,33 @@
                   
                   
                 </table>
-                <div class="workout_list" id="workout_list" style="font-size:40px;">
-                  
-                </div>
+              
             </div>
         </div>
         <h3>Input all Fields</h3>
         <div class="field-input">
           <label for="sets">Sets</label>
-          <input style="width: 80px; height:30px;" name="sets" id="sets" type="number">
-          <br>
+          <input class="rounded-input" style="width: 80px; height:30px;" name="sets" id="sets" type="number">
+          
           <label for="reps">Reps</label>
-          <input style="width: 80px; height:30px;" name="reps" id="reps" type="number">
+          <input class="rounded-input" style="width: 80px; height:30px;" name="reps" id="reps" type="number">
           <br>
           <label for="nameField">Name</label>
-          <input style="width: 300px; height:30px;" name="name" id="nameField" type="text">
+          <input class="rounded-input" style="width: 300px; height:30px;" name="name" id="nameField" type="text">
           <br>
-          
+    
           <input type="submit" onclick="addToList(); 
+          
           var set = document.getElementById('sets');
           var rep = document.getElementById('reps');
           var my_name = document.getElementById('nameField');
       
           set.value = '';
           rep.value = '';
-          my_name.value = '';">
-
+          my_name.value = '';" value="Add Exercise">
+          <br>
+          <br>
+          <input type="submit" class = "btn-submit" onclick="addWorkout();" value="Save New Workout">
         </div>
 
     </body>

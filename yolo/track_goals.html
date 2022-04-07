@@ -25,71 +25,84 @@
       <li>Update your goal number of calories per day</li>
       <li>Update your goal duration of daily physical activity</li>
       <li>Update your goal weight</li>
+      <li>Input your current stats</li>
     </ol>
    
-    <h3 style="color: #433495"><u><b>Current Goals</b></u></h3>
+    <h3 style="color: #433495"><u><b>Goal Tracking</b></u></h3>
     <table>
       <tr>
-        <td><b>Goal Weight</b></td>
-        <td>205 lbs</td>
+        <th>Tracking</th>
+        <th>Current</th>
+        <th>Goal</th>
       </tr>
       <tr>
-        <td><b>Goal Calories</b></td>
-        <td>2500 Calories</td>
+        <td><b>Weight</b></td>
+        <td id = "weight_p1">135 lbs</td>
+        <td id = "weight_p">150 lbs</td>
       </tr>
       <tr>
-        <td><b>Goal Exercise Time</b></td>
-        <td>100 Minutes</td>
+        <td><b>Calories</b></td>
+        <td id ="cal_p1">2250 Calories</td>
+        <td id ="cal_p">2500 Calories</td>
+      </tr>
+      <tr>
+        <td><b>Exercise Time</b></td>
+        <td id ="exer_p1">90 Minutes</td>
+        <td id ="exer_p">100 Minutes</td>
       </tr>
     </table>
 
-    <h3 style="color: #433495"><u><b>Change Goals</b></u></h3>
-
+    
+    
   
     <!--form for updating goals-->
       
 
 
+  <script type = "text/javascript" src="track_goals.js"></script>  
 
-  <script src="track_goals.js"></script>
+  <h3 style="color: #433495"><u><b>Update Current Statistics</b></u></h3>
 
+  <!--Add few elements to the form-->
+  <p style="font-size: 30px;">Input your Current Weight </p>
+  <input style="font-size: 25px; width: 140px; height:33px;" type="text" id="weight_text1">
+  <input class="goal-text" type ="submit" onclick="myWeightFunction1()">
+  <p id="weight_p1"></p>
 
-        
+  <p style="font-size: 30px;">Input your Current Calorie Intake</p>
+  <input style="font-size: 25px; width: 140px; height:33px;" type="text" id="cal_text1">
+  <input class="goal-text" type ="submit" onclick="myCalFunction1()">
+  <p id="cal_p1"></p>
+
+  <p style="font-size: 30px;">Input your Current Exercise Time</p>
+  <input style="font-size: 25px; width: 140px; height:33px;" type="text" id="exer_text1">
+  <input class="goal-text" type ="submit" onclick="myExerFunction1()">
+  <p id="exer_p1"></p>
+
+  <h3 style="color: #433495"><u><b>Change Goals</b></u></h3>
+
     <!--Add few elements to the form-->
-    <label>First Name:
-      <input type='text' name='firstName' id='firstName' placeholder="First Name">
-    </label>
-    <br>
-    <br>
-    <label>Middle Name:
-      <input type='text' name='middleName' id='middleName' placeholder="Middle Name">
-    </label>
-    <br>
-    <br>
-    <label>Last Name:
-      <input type='text' name='lastName' id='lastName' placeholder="Last Name">
-    </label>
-    <br>
-    <br>
-    <button type="button" id="add">Add to List</button>
-    <button type="button" id="print">Print</button>
-    
-    
+    <p style="font-size: 27px;">Input your Weight Goal</p>
+    <input style="font-size: 25px; width: 140px; height:33px;" type="text" id="weight_text">
+    <input class="goal-text" type ="submit" onclick="myWeightFunction()">
+    <p id="weight_p"></p>
 
-  <div class ="weight">
-      <form action="go to some page">
-        <label for="curr_weight">Input Current Weight:</label><br>
-        <input type="text" id="curr_weight" name="curr_weight" value="120"><br>
-        <input type="submit" value="Submit">
-      </form> <br> 
-  
-      <form action="go to some page">
-        <label for="goal_weight">Input Goal Weight:</label><br>
-        <input type="text" id="goal_weight" name="goal_weight" value="130"><br>
-        <input type="submit" value="Submit">
-      </form>        
-        
- </div>
+    <p style="font-size: 30px;">Input your Calorie Goal</p>
+    <input style="font-size: 25px; width: 140px; height:33px;" type="text" id="cal_text">
+    <input class="goal-text" type ="submit" onclick="myCalFunction()">
+    <p id="cal_p"></p>
+
+    <p style="font-size: 30px;">Input your Exercise Time Goal</p>
+    <input style="font-size: 25px; width: 140px; height:33px;" type="text" id="exer_text">
+    <input class="goal-text" type ="submit" onclick="myExerFunction()">
+    <p id="exer_p"></p>
+
+    
+   
+    
+    <br>
+    <br>
+    <br>
 
 
     

@@ -19,4 +19,25 @@ new Chart(document.getElementById("bar-chart"), {
     }
 });
 
+new Chart(document.getElementById("line-chart"), {
+  type: 'line',
+  data: {
+    text: "Weeks",
+    labels: ['Week 1','Week 2','Week 3','Week 4'],
+    datasets: [{ 
+        label: "Number of Calories",
+        data: [2192,2239, 2432, 2499],
+        borderColor: "#8e95e7",
+        fill: false
+      }
+    ]
+  },
+  options: {
+    title: {
+      display: true,
+      text: 'Monthly Calorie Count'
+    }
+  }
+});
+
 

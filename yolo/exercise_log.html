@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Create a Workout</title>
+        <link href="style_exercise.css" rel="stylesheet" />
+        <script type = "text/javascript" src="exercise.js"></script>  
+        <meta
+          name="viewport"
+          content="width=768px, height=1280px, initial-scale=1"
+        />
+    </head>
+
+    <div class="home"><a href="index.html"><img src="pictures/home.png" height ="35" width="35" /></a> </div>
+    <div class="profile"><a href="profile.html"><img src="pictures/profile.png" height ="40" width="40" /></a> </div>
+  
+    
+    <body onload="logWorkout()">
+      
+        <div class="header">
+            <!-- <a class="icon" ref="something"><img src="pictures/home.png" width="50em" height="50em"/></a> -->
+            <h1 style="font-size: 100px; margin-top: 50px;"><b>LOG</b></h1>
+            
+        
+        </div>
+        <h3>Check off the Exercises You Complete</h3>
+      
+        <!-- <div class="flex-container">
+            <div class="flexbox-item-wide">
+                <h2 style="font-family: 'Raleway-Bold'; font-size: 40px; color: white;">CREATE A WORKOUT</h2> 
+            </div>
+        </div> -->
+        <h2 id="workout-header">Workout Name</h2>
+        
+        <div class="flex-container">
+            <div class="flexbox-item-input">
+                <table class="rounded-table" id="myTable"> 
+                  <thead>
+                    <th>Done?</th>
+                    <th># Of Sets</th>
+                    <th># Of Reps</th>
+                    <th>Name of Exercise</th>
+                  </thead>
+                </table>
+              
+            </div>
+        </div>
+        <br>
+        <div class="roundedButton" id="startStopButton"
+        style="width:300px; height:50px; margin: auto; background-color:#30D158;" onclick="startStop()">Start</div>        
+        <div class="timer">Time Elapsed: 
+          <div id="stopwatch">00:00:00</div>
+        </div>
+        
+    </body>
+
+    <div class="tabs">
+        <a href="#nutrition">
+          <img class="tabicon" src="pictures/apple.png" alt=""/>
+          <br>
+          Nutrition
+        </a>
+      
+        <a href="#exercise">
+          <img class="tabicon" src="pictures/weight.png" alt="" />
+          <br>
+          Exercise
+        </a>
+        <a href="#reminders">
+          <img class="tabicon" src="pictures/clock.png" alt="" />
+          <br>
+          Reminders
+        </a>
+        <a href="#progress">
+          <img class="tabicon" src="pictures/progress.png" alt="" />
+          <br>
+          Progress
+        </a>
+      </div>
+
+</html>

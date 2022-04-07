@@ -7,7 +7,7 @@
       name="viewport"
       content="width=768px, height=1280px, initial-scale=1"
     />
-    <script src="update_progress.js"></script>
+    
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.min.js"></script>
 
@@ -17,6 +17,7 @@
   <div class="profile"><a href="profile.html"><img src="pictures/profile.png" height ="40" width="40" /></a> </div>
   
   <center>
+    
   <body onload = "updateNutritionValues()">
     <br>
     <h1 style="font-size: 100px; margin-top: 50px">NUTRITION</h1>
@@ -34,6 +35,35 @@
       
       </div>
     </div>
+
+    <!---->
+
+    <button class="tablink" onclick="openPage('Home', this, 'red')">Home</button>
+  <button class="tablink" onclick="openPage('News', this, 'green')" id="defaultOpen">News</button>
+  <button class="tablink" onclick="openPage('Contact', this, 'blue')">Contact</button>
+  <button class="tablink" onclick="openPage('About', this, 'orange')">About</button>
+
+  <div id="Home" class="tabcontent">
+    <h3>Home</h3>
+    <p>Home is where the heart is..</p>
+  </div>
+
+  <div id="News" class="tabcontent">
+    <h3>News</h3>
+    <p>Some news this fine day!</p> 
+  </div>
+
+  <div id="Contact" class="tabcontent">
+    <h3>Contact</h3>
+    <p>Get in touch, or swing by for a cup of coffee.</p>
+  </div>
+
+  <div id="About" class="tabcontent">
+    <h3>About</h3>
+    <p>Who we are and what we do.</p>
+  </div>
+
+    <!---->
     <h3 style="color: #433495"><u><b>Daily</b></u></h3>
    
       <div>
@@ -50,7 +80,7 @@
       
       <br>
       <!-- <text class="index-goal"> <b id = "new_curr_cal"> 2,250 </b> of <b id = "new_goal_cal">2,500 </b></text> -->
-      <!-- <p style="font-size:30px"><b id = "new_curr_cal">2250</b> </p> -->
+  
        </div>
       
     </div>
@@ -78,27 +108,27 @@
     <br>
     <br>
 
-
+    <script src="update_progress.js"></script>
   </body>
   
     <div class="tabs">
-      <a href="#nutrition">
+      <a href="nutrition.html">
         <img class ="tabicon" src="pictures/apple.png" alt="" class="icon"/>
         <br>
         Nutrition
       </a>
     
-      <a href="#exercise">
+      <a href="exercise.html">
         <img class ="tabicon" src="pictures/weight.png" alt="" class="icon"/>
         <br>
         Exercise
       </a>
-      <a href="#reminders">
+      <a href="reminders.html">
         <img class ="tabicon" src="pictures/clock.png" alt="" class="icon" />
         <br>
         Reminders
       </a>
-      <a href="#progress">
+      <a href="progress.html">
         <img class ="tabicon" src="pictures/progress.png" alt="" class="icon"/>
         <br>
         Progress

@@ -4,7 +4,7 @@
 }
 
 @font-face {
-  font-family: "Raleway";
+  font-family: "Raleway-Regular";
   src: url("/Raleway/static/Raleway-Regular.ttf");
 }
 
@@ -24,7 +24,7 @@ body {
 
 
 b { 
-  font-family: "Raleway-bold";
+  font-family: "Raleway-Bold";
 }
 
 title {
@@ -341,3 +341,32 @@ div[role="progressbar"]::before {
   counter-reset: percentage var(--value);
   content: counter(percentage) '%';
 }
+
+/* for tabs for graphs */
+.tablink {
+  background-color: #555;
+  color: white;
+  float: left;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  width: 50%;
+  border-radius: 0rem;
+}
+
+.tablink:hover {
+  background-color: #777;
+}
+
+/* Style the tab content (and add height:100% for full page content) */
+.tabcontent {
+  color: white;
+  display: none;
+  padding: 100px 20px;
+  height: 100%;
+}
+
+#Home {background-color: red;}
+#News {background-color: green;}
+#Contact {background-color: blue;}
+#About {background-color: orange;}

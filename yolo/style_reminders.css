@@ -109,3 +109,11 @@
     display: table;
     clear: both;
   }
+
+  .hide { 
+    display: none;
+  }
+
+  .show { 
+    display: block;
+  }

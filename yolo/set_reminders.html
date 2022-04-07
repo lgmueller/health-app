@@ -191,15 +191,15 @@
       var r = document.getElementById("existing-reminders");
       var opt = r.value;
       if (opt == "option1") {
-        document.getElementById("reminder-content").placeholder =
+        document.getElementById("reminder-content").textContent =
           "Make sure to go on a run today!";
         document.getElementById("reminder-time").value = "09:00";
       } else if (opt == "option2") {
-        document.getElementById("reminder-content").placeholder =
+        document.getElementById("reminder-content").textContent =
           "Consistancy is key! Make sure to log all your meals!";
         document.getElementById("reminder-time").value = "12:00";
       } else {
-        document.getElementById("reminder-content").placeholder =
+        document.getElementById("reminder-content").textContent =
           "Get up off your fat a$$ and do something you couch potato >:(";
         document.getElementById("reminder-time").value = "14:00";
       }

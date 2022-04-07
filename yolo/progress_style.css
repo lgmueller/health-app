@@ -244,3 +244,24 @@ img {
   }
 }
 
+
+/* table */ 
+table {
+  font-family: "Raleway";
+  border-collapse: collapse;
+  width: 100%;
+}
+
+td, th {
+  border: 1px solid #dddff7;
+  text-align: left;
+  padding: 8px;
+}
+
+tr:nth-child(odd) {
+  background-color: #a4a8cf;
+}
+
+tr:nth-child(even) {
+  background-color: #b9bac3;
+}

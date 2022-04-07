@@ -1,19 +1,130 @@
-<div class ="weight">
-    <form action="go to some page">
-      <label for="curr_weight">Input Current Weight:</label><br>
-      <input type="text" id="curr_weight" name="curr_weight" value="120"><br>
-      <input type="submit" value="Submit">
-    </form> <br> 
+<!DOCTYPE html>
+<html>
+  <head>
+   
+    <link href="progress_style.css" rel="stylesheet" />
+    <script type = "text/javascript" src="progress.js"></script>
+    <meta
+      name="viewport"
+      content="width=768px, height=1280px, initial-scale=1"
+    />
+  </head>
 
-    <form action="go to some page">
-      <label for="goal_weight">Input Goal Weight:</label><br>
-      <input type="text" id="goal_weight" name="goal_weight" value="130"><br>
-      <input type="submit" value="Submit">
-    </form>
 
-      <ul>
-        <li class="current">Current Weight: <span class="weight_num">120</span> </li>
-        <li class="goal">Goal Weight: <span class="weight_num">130 </span> </li> <br>
-      </ul>
+  
+  <div class="backarrow"><a href="progress.html"><img src="pictures/backarrow.png" height ="40" width="40" /></a> </div>
+  <div class="profile"><a href="profile.html"><img src="pictures/profile.png" height ="40" width="40" /></a> </div>
+
+  
+  <center>
+  <body>
+    <br>
+    <h1 style="font-size: 100px; margin-top: 50px">UPDATE GOALS</h1>
+    <h3 style="color: #433495"><b>Enter any new goals you may have! Possible functions:</b></h3>
+    <ol>
+      <li>Update your goal number of calories per day</li>
+      <li>Update your goal duration of daily physical activity</li>
+      <li>Update your goal weight</li>
+    </ol>
+   
+    <h3 style="color: #433495"><u><b>Current Goals</b></u></h3>
+    <table>
+      <tr>
+        <td><b>Goal Weight</b></td>
+        <td>205 lbs</td>
+      </tr>
+      <tr>
+        <td><b>Goal Calories</b></td>
+        <td>2500 Calories</td>
+      </tr>
+      <tr>
+        <td><b>Goal Exercise Time</b></td>
+        <td>100 Minutes</td>
+      </tr>
+    </table>
+
+    <h3 style="color: #433495"><u><b>Change Goals</b></u></h3>
+
+  
+    <!--form for updating goals-->
       
-  </div>
+
+
+
+  <script src="track_goals.js"></script>
+
+
+        
+    <!--Add few elements to the form-->
+    <label>First Name:
+      <input type='text' name='firstName' id='firstName' placeholder="First Name">
+    </label>
+    <br>
+    <br>
+    <label>Middle Name:
+      <input type='text' name='middleName' id='middleName' placeholder="Middle Name">
+    </label>
+    <br>
+    <br>
+    <label>Last Name:
+      <input type='text' name='lastName' id='lastName' placeholder="Last Name">
+    </label>
+    <br>
+    <br>
+    <button type="button" id="add">Add to List</button>
+    <button type="button" id="print">Print</button>
+    
+    
+
+  <div class ="weight">
+      <form action="go to some page">
+        <label for="curr_weight">Input Current Weight:</label><br>
+        <input type="text" id="curr_weight" name="curr_weight" value="120"><br>
+        <input type="submit" value="Submit">
+      </form> <br> 
+  
+      <form action="go to some page">
+        <label for="goal_weight">Input Goal Weight:</label><br>
+        <input type="text" id="goal_weight" name="goal_weight" value="130"><br>
+        <input type="submit" value="Submit">
+      </form>        
+        
+ </div>
+
+
+    
+    <br>
+    <br>
+    <br>
+    <br></br>
+    
+    
+    <div class="tabs">
+      <a href="nutrition.html">
+        <img class ="tabicon" src="pictures/apple.png" alt="" class="icon"/>
+        <br>
+        Nutrition
+      </a>
+    
+      <a href="exercise.html">
+        <img class ="tabicon" src="pictures/weight.png" alt="" class="icon"/>
+        <br>
+        Exercise
+      </a>
+      <a href="reminders.html">
+        <img class ="tabicon" src="pictures/clock.png" alt="" class="icon" />
+        <br>
+        Reminders
+      </a>
+      <a href="progress.html" class="active">
+        <img class ="tabicon" src="pictures/progress.png" alt="" class="icon"/>
+        <br>
+        Progress
+      </a>
+    </div>
+  </body>
+  </center>
+</html>
+
+
+

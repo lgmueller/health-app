@@ -83,7 +83,7 @@ function addToList() {
     
     table.appendChild(rowNode);
     list.push(rowNode);
-    
+
 }
 
 function addWorkout() {

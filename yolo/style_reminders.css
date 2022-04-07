@@ -1,0 +1,111 @@
+@font-face {
+    font-family: "Raleway";
+    src: url("raleway.woff");
+  }
+
+@font-face {
+  font-family: "Raleway-Bold";
+  src: url("/Raleway/static/Raleway-Bold.ttf")
+}
+  
+/* https://www.geeksforgeeks.org/design-a-calendar-using-html-and-css/ */ 
+  table {
+    background-color: #cbcdd6;
+    border-collapse: collapse;
+    color: black;
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+    justify-content: center;
+  }
+  
+  .center {
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
+  th,
+  td {
+    font-weight: bold;
+    padding: .8rem;
+    align-items: center;
+  }
+  th,
+  td:hover{
+    color: #8e95e7;
+  }
+
+
+.event {
+	position: absolute;
+}
+
+.event:after {
+	content: '•';
+	color: #433495;
+	font-size: 2em;
+	position: absolute;
+	right: -4px;
+	top: -4px;
+}
+
+.link {
+    font-family: "Raleway";
+    font-size: 2.5rem;
+    color: white;
+    width: 25rem;
+    height: 4rem;
+    font-weight: bold;
+    border-radius: 3rem;
+    text-decoration: none;
+  }
+  
+
+  /* Style tab links */
+.tablink {
+    background-color: #8e95e7;
+    color: white;
+    float: left;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    width: 50%;
+    border-radius: 0rem;
+  }
+  
+  .tablink:hover {
+    background-color: #433495;
+  }
+  
+  /* Style the tab content (and add height:100% for full page content) */
+  .tabcontent {
+    color: black;
+    display: none;
+    height: 100%;
+  }
+
+  label { 
+    font-family: "Raleway-bold";
+    font-size: 1rem;
+    color: black;
+    width: 25rem;
+    height: 4rem;
+  }
+
+  .column-left {
+    float: left;
+    width: 20%;
+  }
+
+   .column-right {
+    float: right;
+    width: 80%;
+  }
+
+  
+  /* Clear floats after the columns */
+  .row:after {
+    content: "";
+    display: table;
+    clear: both;
+  }

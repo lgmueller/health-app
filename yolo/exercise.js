@@ -111,10 +111,19 @@ function addWorkout() {
     
 }
 
-function loadWorkout(name) {
-    var workoutObj = JSON.parse(localStorage.getItem(name));
+function saveWorkoutClicked(name) {
+    var workout = localStorage.setItem("lastClicked",name);
+}
+
+function loadWorkout() {
+    var chosen_workout_name = localStorage.getItem("lastClicked");
+    var workoutObj = JSON.parse(localStorage.getItem(chosen_workout_name));
+    localStorage.setItem("lastClicked","");
     var table = document.getElementById("myTable");
 
+    var top_name = document.getElementById("workout-name");
+    top_name.value = chosen_workout_name;
+    
     var set;
     var rep;
     var my_name;
@@ -174,8 +183,6 @@ function loadWorkout(name) {
         rowNode.appendChild(name_cellNode);
         
         table.appendChild(rowNode);
-        var workout_name = document.getElementById('workout-name');
-        workout_name.value = name;
     }
 
 }

@@ -29,7 +29,20 @@ window.onload = function() {
 */
 
 function updateProgressCircles () {
-  
+    var circle1 = document.getElementById("circle1");
+    var nutrition_percentage = localStorage.getItem('CurrCal')/localStorage.getItem('GoalCal');
+    circle1.setAttribute('aria-valuenow',nutrition_percentage);
+    circle1.setAttribute('style','--value:' + nutrition_percentage);
+
+    var circle2 = document.getElementById("circle2");
+    var exercise_percentage = localStorage.getItem('CurrExercise')/localStorage.getItem('GoalExercise');
+    circle2.setAttribute('aria-valuenow',exercise_percentage);
+    circle2.setAttribute('style','--value:' + exercise_percentage);
+
+    var circle3 = document.getElementById("circle3");
+    var weight_percentage = localStorage.getItem('CurrWeight')/localStorage.getItem('GoalWeight');
+    circle3.setAttribute('aria-valuenow',weight_percentage);
+    circle3.setAttribute('style','--value:' + weight_percentage);
 }
 
 
@@ -116,7 +129,7 @@ function myCalFunction() {
     table_curr_cal.innerHTML = x + " Calories";
   }
 
-function myExerFunction() {
+  function myExerFunction() {
     var x = document.getElementById("exer_text").value;
     document.getElementById("exer_p").innerHTML = x + " Minutes";
     localStorage.setItem("GoalExer", x);
@@ -143,7 +156,8 @@ function myExerFunction() {
     NUTRITION PAGE
   */
 
-  new Chart(document.getElementById("bar-chart"), {
+
+new Chart(document.getElementById("bar-chart"), {
     type: 'bar',
     data: {
       labels: ["4/11", "4/12", "4/13", "4/14", "4/15", "4/16", "4/17"],

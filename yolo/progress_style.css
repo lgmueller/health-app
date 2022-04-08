@@ -305,7 +305,7 @@ tr:nth-child(even) {
   font-family: "raleway";
 }
 
-/* https://dev.to/shantanu_jana/circular-progress-bar-using-html-and-css-1oda */
+/* https://dev.to/shantanu_jana/circular-b-bar-using-html-and-css-1oda */
 @keyframes growProgressBar {
   0%, 33% { --pgPercentage: 0; }
   100% { --pgPercentage: var(--value); }
@@ -318,7 +318,7 @@ tr:nth-child(even) {
 }
 
 div[role="progressbar"] {
-  --size: 12rem;
+  --size: 20rem;
   --fg: #433495;
   --bg: #c6c9e7;
   --pgPercentage: var(--value);
@@ -343,30 +343,42 @@ div[role="progressbar"]::before {
 }
 
 /* for tabs for graphs */
+* {box-sizing: border-box}
+
+
+/* Set height of body and the document to 100% */
+body {
+  height: 100%;
+  max-width: 500px;
+  text-align: center;
+  font-size: 2rem;
+  font-family: "raleway";
+  margin: auto;
+}
+
+/* Style tab links */
 .tablink {
-  background-color: #555;
+  background-color: #8e95e7;
   color: white;
   float: left;
   border: none;
   outline: none;
   cursor: pointer;
-  width: 50%;
+  
+  
+  width: 29.1%;
   border-radius: 0rem;
 }
 
 .tablink:hover {
-  background-color: #777;
+  background-color: #433495;
 }
 
 /* Style the tab content (and add height:100% for full page content) */
 .tabcontent {
-  color: white;
+  color: black;
   display: none;
   padding: 100px 20px;
   height: 100%;
 }
 
-#Home {background-color: red;}
-#News {background-color: green;}
-#Contact {background-color: blue;}
-#About {background-color: orange;}

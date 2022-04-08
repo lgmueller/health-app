@@ -63,6 +63,19 @@ button {
   background-color: #8e95e7;
 }
 
+.button1 {
+  font-family: "Raleway";
+  font-size: 1.5rem;
+  color: white;
+  width: 12rem;
+  height: 3rem;
+  font-weight: bold;
+  border-radius: 2rem;
+  margin: 0 5px;
+  background-color: #8e95e7;
+}
+
+
 .profile {
   position: absolute;
   margin-right: 30px;
@@ -221,6 +234,7 @@ img {
   /* You can modify the total time used for the animation here */
   animation: load 3s normal forwards;
   /* 
+
   Add a little spice by having a shadow below the bar.
   Feel free to comment out this line below to have an even LITE version :D 
   */
@@ -280,6 +294,7 @@ tr:nth-child(even) {
   display: flex;
 }
 
+
 /* Create two equal columns that sits next to each other */
 .column {
   flex: 50%;
@@ -307,7 +322,14 @@ tr:nth-child(even) {
 
 /* https://dev.to/shantanu_jana/circular-b-bar-using-html-and-css-1oda */
 @keyframes growProgressBar {
+  
   0%, 33% { --pgPercentage: 0; }
+  100% { --pgPercentage: var(--value); }
+}
+
+@keyframes growProgressLineBar {
+  
+  0% { --pgPercentage: 0; }
   100% { --pgPercentage: var(--value); }
 }
 
@@ -322,7 +344,7 @@ div[role="progressbar"] {
   --fg: #433495;
   --bg: #c6c9e7;
   --pgPercentage: var(--value);
-  animation: growProgressBar 3s 1 forwards;
+  animation: growProgressLineBar 3s 1 forwards;
   width: var(--size);
   height: var(--size);
   border-radius: 50%;
@@ -338,6 +360,31 @@ div[role="progressbar"] {
 }
 
 div[role="progressbar"]::before {
+  counter-reset: percentage var(--value);
+  content: counter(percentage) '%';
+}
+
+div[role="progresslinebar"] {
+  --size: 7rem;
+  --fg: #433495;
+  --bg: #c6c9e7;
+  --pgPercentage: var(--value);
+  animation: growProgressLineBar 3s 1 forwards;
+  width: var(--size);
+  height: var(--size);
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  background: 
+    radial-gradient(closest-side, white 80%, transparent 0 99.9%, white 0),
+    conic-gradient(var(--fg) calc(var(--pgPercentage) * 1%), var(--bg) 0)
+    ;
+  font-family: Helvetica, Arial, sans-serif;
+  font-size: calc(var(--size) / 5);
+  color: var(--fg);
+}
+
+div[role="progresslinebar"]::before {
   counter-reset: percentage var(--value);
   content: counter(percentage) '%';
 }
@@ -382,3 +429,36 @@ body {
   height: 100%;
 }
 
+/* progress bar for progress main page */
+
+* {
+  box-sizing: border-box;
+}
+
+/* Create three equal columns that floats next to each other */
+.column1 {
+  float: left;
+  width: 50%;
+  
+}
+
+/* Clear floats after the columns */
+.row1:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+
+.column2 {
+  float: left;
+  width: 50%;
+  
+}
+
+/* Clear floats after the columns */
+.row2:after {
+  content: "";
+  display: table;
+  clear: both;
+}

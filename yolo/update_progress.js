@@ -56,6 +56,27 @@ function updateProgressCircles () {
     circle3.setAttribute('style','--value:' + weight_percentage);
 }
 
+function updateProgressCircles3 () {
+  var circle3 = document.getElementById("circle3"); 
+  var weight_percentage = 100 * (localStorage.getItem('CurrWeight')/localStorage.getItem('GoalWeight'));
+  if (isNaN(weight_percentage)){
+    weight_percentage = 90;
+  }
+  circle3.setAttribute('aria-valuenow',weight_percentage);
+  circle3.setAttribute('style','--value:' + weight_percentage);
+}
+
+function updateProgressCircles2 () {
+  var circle2 = document.getElementById("circle2"); 
+  var weight_percentage = 100 * (localStorage.getItem('CurrExer')/localStorage.getItem('GoalExer'));
+  if (isNaN(weight_percentage)){
+    weight_percentage = 90;
+  }
+  circle2.setAttribute('aria-valuenow',weight_percentage);
+  circle2.setAttribute('style','--value:' + weight_percentage);
+}
+
+
 
 function updateValues() {
     var get_goal_weight = localStorage.getItem("GoalWeight");
@@ -164,6 +185,20 @@ function myCalFunction() {
     document.getElementById("new_curr_cal").innerHTML =  get_curr_cal + " Calories";
   }
 
+  function updateWeightValues() {
+    var get_goal_weight = localStorage.getItem("GoalWeight");
+    document.getElementById("new_goal_weight").innerHTML =  get_goal_weight + " lbs";
+    var get_curr_weight = localStorage.getItem("CurrWeight");
+    document.getElementById("new_curr_weight").innerHTML =  get_curr_weight + " lbs";
+  }
+
+  function updateExerValues() {
+    var get_goal_exer = localStorage.getItem("GoalExer");
+    document.getElementById("new_goal_exer").innerHTML =  get_goal_exer + " Minutes";
+    var get_curr_exer = localStorage.getItem("CurrExer");
+    document.getElementById("new_curr_exer").innerHTML =  get_curr_exer + " Minutes";
+  }
+
   function openPage(pageName,elmnt,color) {
     var i, tabcontent, tablinks;
     tabcontent = document.getElementsByClassName("tabcontent");
@@ -214,7 +249,7 @@ new Chart(document.getElementById("line-chart"), {
     labels: ['Week 1','Week 2','Week 3','Week 4'],
     datasets: [{ 
         label: "Number of Calories",
-        data: [2192,2239, 2432, 2499],
+        data: [2192, 2239, 2432, 2499],
         borderColor: "#8e95e7",
         fill: false
       }
@@ -228,4 +263,89 @@ new Chart(document.getElementById("line-chart"), {
   }
 });
 
+/* WEIGHT PAGE */
+new Chart(document.getElementById("bar-chart2"), {
+  type: 'bar',
+  data: {
+    labels: ["4/11", "4/12", "4/13", "4/14", "4/15", "4/16", "4/17"],
+    datasets: [
+      {
+        label: "Weight (lbs)",
+        backgroundColor: ["#8e95e7", "#8e95e7", "#8e95e7", "#8e95e7", "#8e95e7","#8e95e7", "#8e95e7"],
+        data: [133, 133, 132, 136, 140, 141, 102]
+      }
+    ]
+  },
+  options: {
+    legend: { display: false },
+    title: {
+      display: true,
+      text: 'Weekly Weight Count'
+    }
+  }
+});
 
+new Chart(document.getElementById("line-chart2"), {
+type: 'line',
+data: {
+  text: "Weeks",
+  labels: ['Week 1','Week 2','Week 3','Week 4'],
+  datasets: [{ 
+      label: "Weight (lbs)",
+      data: [131,134, 133, 136],
+      borderColor: "#8e95e7",
+      fill: false
+    }
+  ]
+},
+options: {
+  title: {
+    display: true,
+    text: 'Monthly Weight Count'
+  }
+}
+});
+
+
+/* EXERCISE PAGE */
+new Chart(document.getElementById("bar-chart3"), {
+  type: 'bar',
+  data: {
+    labels: ["4/11", "4/12", "4/13", "4/14", "4/15", "4/16", "4/17"],
+    datasets: [
+      {
+        label: "Exercise Duration (minutes)",
+        backgroundColor: ["#8e95e7", "#8e95e7", "#8e95e7", "#8e95e7", "#8e95e7","#8e95e7", "#8e95e7"],
+        data: [65, 80, 62, 99, 90, 85, 75]
+      }
+    ]
+  },
+  options: {
+    legend: { display: false },
+    title: {
+      display: true,
+      text: 'Weekly Exercise Duration'
+    }
+  }
+});
+
+new Chart(document.getElementById("line-chart3"), {
+type: 'line',
+data: {
+  text: "Weeks",
+  labels: ['Week 1','Week 2','Week 3','Week 4'],
+  datasets: [{ 
+      label: "Exercise Duration (minutes)",
+      data: [81, 67, 92, 85],
+      borderColor: "#8e95e7",
+      fill: false
+    }
+  ]
+},
+options: {
+  title: {
+    display: true,
+    text: 'Monthly Exercise Duration'
+  }
+}
+});

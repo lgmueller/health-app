@@ -1,130 +1,148 @@
 <!DOCTYPE html>
 <html>
   <head>
+    <title>YOLO</title>
     <link href="progress_style.css" rel="stylesheet" />
-    <link href="style.css" rel="stylesheet" />
     <meta
       name="viewport"
       content="width=768px, height=1280px, initial-scale=1"
     />
+    
 
-
-    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
-    <script type="text/javascript">
-      google.charts.load('current', {'packages':['corechart']});
-      google.charts.setOnLoadCallback(drawChart);
-
-      function drawChart() {
-        var data = google.visualization.arrayToDataTable([
-          ['Date', 'Weight'],
-          ['3/10',  120],
-          ['3/11',  120],
-          ['3/12',  121],
-          ['3/13',  119],
-          ['3/14',  121],
-          ['3/15',  122],
-          ['3/16',  122],
-          ['3/17',  122],
-          ['3/18',  123]
-        ]);
-
-        var options = {
-          title: 'Weight (lbs)',
-          curveType: 'function',
-          legend: 'none',
-          colors: ['#8e95e7']
-        };
-
-        var chart = new google.visualization.LineChart(document.getElementById('curve_chart'));
-
-        chart.draw(data, options);
-      }
-    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.min.js"></script>
 
   </head>
 
+  <div class="backarrow"><a href="progress.html"><img src="pictures/backarrow.png" height ="35" width="35" /></a> </div>
+  <div class="profile"><a href="profile.html"><img src="pictures/profile.png" height ="40" width="40" /></a> </div>
   
-
-  <div class="top_bar"> 
-    <ul>
-      <li class="profile"><a href="something"><img src="pictures/profile.png" height ="120" width="120" /></a> </li>
-      <li class="help"><a href="something"><img src="pictures/help.png" height ="120" width="120" /></a></span> </li> <br>
-    </ul>
-    
-  </div>
   <center>
-    <h1 style="color: #8e95e7">Weight</h1>
-    <h2 class="home"><a href="progress.html">BACK</a> </h2>
-
-    <h2>Track Your Progress!</h2>
     
+  <body onload = "updateWeightValues(); updateProgressCircles3();">
+    <br>
+    <h1 style="font-size: 100px; margin-top: 50px">WEIGHT</h1>
+    <hr>
+    <p>Track your weight goals below!</p>
 
-    <div class ="weight">
-      <form action="go to some page">
-        <label for="curr_weight">Input Current Weight:</label><br>
-        <input type="text" id="curr_weight" name="curr_weight" value="120"><br>
-        <input type="submit" value="Submit">
-      </form> <br> 
-
-      <form action="go to some page">
-        <label for="goal_weight">Input Goal Weight:</label><br>
-        <input type="text" id="goal_weight" name="goal_weight" value="130"><br>
-        <input type="submit" value="Submit">
-      </form>
-
-        <ul>
-          <li class="current">Current Weight: <span class="weight_num">120</span> </li>
-          <li class="goal">Goal Weight: <span class="weight_num">130 </span> </li> <br>
-        </ul>
-        
+    <div class="row">
+      <div class="column">
+        <h2 style="color: #433495"><b>Goal</b></h2>
+        <p style="font-size:30px"><b id = "new_goal_weight">150 </b></p>
+      </div>
+      <div class="column">
+        <h2 style="color: #433495"><b>Current</b></h2>
+        <p style="font-size:30px"><b id = "new_curr_weight">135</b> </p>
+      
+      </div>
     </div>
 
-    <div id="curve_chart" style="width: 900px; height: 500px"></div>
 
+    <!---->
+
+    <button class="tablink" onclick="openPage('Daily', this, '#433495')" id="defaultOpen">Daily</button>
+    <button class="tablink" onclick="openPage('Weekly', this, '#433495')">Weekly</button>
+    <button class="tablink" onclick="openPage('Monthly', this, '#433495')">Monthly</button>
+    
+    <div id="Daily" class="tabcontent">
+      <h3 style="color: #433495"><u><b>Today's Weight Progress</b></u></h3>
+      <br>
+      <div width="2000" height="2000"> 
+       
+       
+      </div>
+      <div class="goal-index">
+      
+      <br>
+      <!-- <text class="index-goal"> <b id = "new_curr_cal"> 2,250 </b> of <b id = "new_goal_cal">2,500 </b></text> -->
+  
+       </div>
+
+       
+        <div>
+          <div
+            id="circle3"
+            role="progressbar"
+            aria-valuenow="95"
+            aria-valuemin="0"
+            aria-valuemax="100"
+            style="--value: 95"
+          ></div>
+        </div>
+        
+      
+    </div>
+
+    
+    <div id="Weekly" class="tabcontent">
+      <h3 style="color: #433495"><u><b>Weekly Weight Progress</b></u></h3>
+      <p style="font-size:25px">Click on the Bars for more information!</p>
+    
+      <div class="chart">
+        <canvas id="bar-chart2" width="2000" height="2000"></canvas>
+      </div>
+    </div>
+    
+    <div id="Monthly" class="tabcontent">
+      <h3 style="color: #433495"><u><b>Monthly Weight Progress</b></u></h3>
+      <div class="chart">
+        <canvas id="line-chart2" width="2000" height="2000"></canvas>
+      </div>
+    </div>
+    
+    <div class="chart">
+      <canvas id="bar-chart" width="0" height="0"></canvas>
+    </div>
+    <div class="chart">
+      <canvas id="line-chart" width="0" height="0"></canvas>
+    </div>
+    
+    <!---->
+    
+    
+
+    
+  
+
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+
+    <script src="update_progress.js"></script>
+    
+    
+  </body>
+  
     <div class="tabs">
-<<<<<<< HEAD
       <a href="nutrition.html">
-        <img class="tabicon" src="pictures/apple.png" alt="" class="icon" />
-        <br />
-        Nutrition
-      </a>
-
-      <a href="exercise.html">
-        <img class="tabicon" src="pictures/weight.png" alt="" class="icon" />
-        <br />
-        Exercise
-      </a>
-      <a href="reminders.html">
-        <img class="tabicon" src="pictures/clock.png" alt="" class="icon" />
-        <br />
-        Reminders
-      </a>
-      <a href="progress.html">
-        <img class="tabicon" src="pictures/progress.png" alt="" class="icon" />
-        <br />
-=======
-      <a href="#nutrition">
         <img class ="tabicon" src="pictures/apple.png" alt="" class="icon"/>
         <br>
         Nutrition
       </a>
     
-      <a href="#exercise">
+      <a href="exercise.html">
         <img class ="tabicon" src="pictures/weight.png" alt="" class="icon"/>
         <br>
         Exercise
       </a>
-      <a href="#reminders">
+      <a href="reminders.html">
         <img class ="tabicon" src="pictures/clock.png" alt="" class="icon" />
         <br>
         Reminders
       </a>
-      <a href="#progress">
+      <a href="progress.html">
         <img class ="tabicon" src="pictures/progress.png" alt="" class="icon"/>
         <br>
->>>>>>> bfd26c6a9cfadddcd6e5fe1b33159e1db2ded67c
         Progress
       </a>
     </div>
   </center>
 </html>
+
+
+

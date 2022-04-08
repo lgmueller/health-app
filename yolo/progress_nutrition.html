@@ -18,11 +18,11 @@
   
   <center>
     
-  <body onload = "updateNutritionValues()">
+  <body onload = "updateNutritionValues(); updateProgressCircles();">
     <br>
     <h1 style="font-size: 100px; margin-top: 50px">NUTRITION</h1>
     <hr>
-    <p>Track your nutrition goals below. Make sure you are reaching your daily calorie goal!</p>
+    <p>Track your nutrition goals below. Make sure you are reaching your calorie goals!</p>
 
     <div class="row">
       <div class="column">
@@ -36,6 +36,7 @@
       </div>
     </div>
 
+
     <!---->
 
     <button class="tablink" onclick="openPage('Daily', this, '#433495')" id="defaultOpen">Daily</button>
@@ -47,14 +48,7 @@
       <br>
       <div width="2000" height="2000"> 
        
-        <div
-          role="progressbar"
-          aria-valuenow="90"
-          aria-valuemin="0"
-          aria-valuemax="100"
-          style="--value: 90"
-          width="2000" height="2000"
-        ></div>
+       
       </div>
       <div class="goal-index">
       
@@ -62,6 +56,19 @@
       <!-- <text class="index-goal"> <b id = "new_curr_cal"> 2,250 </b> of <b id = "new_goal_cal">2,500 </b></text> -->
   
        </div>
+
+       
+        <div>
+          <div
+            id="circle1"
+            role="progressbar"
+            aria-valuenow="95"
+            aria-valuemin="0"
+            aria-valuemax="100"
+            style="--value: 95"
+          ></div>
+        </div>
+        
       
     </div>
 
@@ -103,6 +110,7 @@
     <br>
 
     <script src="update_progress.js"></script>
+    
   </body>
   
     <div class="tabs">

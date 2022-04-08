@@ -31,16 +31,25 @@ window.onload = function() {
 function updateProgressCircles () {
     var circle1 = document.getElementById("circle1");
     var nutrition_percentage = localStorage.getItem('CurrCal')/localStorage.getItem('GoalCal');
+    if (nutrition_percentage == '0') {
+      nutrition_percentage = '90';
+    }
     circle1.setAttribute('aria-valuenow',nutrition_percentage);
     circle1.setAttribute('style','--value:' + nutrition_percentage);
 
     var circle2 = document.getElementById("circle2");
-    var exercise_percentage = localStorage.getItem('CurrExercise')/localStorage.getItem('GoalExercise');
+    var exercise_percentage = localStorage.getItem('CurrExer')/localStorage.getItem('GoalExer');
+    if (exercise_percentage == '0') {
+      exercise_percentage = '90';
+    }
     circle2.setAttribute('aria-valuenow',exercise_percentage);
     circle2.setAttribute('style','--value:' + exercise_percentage);
 
     var circle3 = document.getElementById("circle3");
     var weight_percentage = localStorage.getItem('CurrWeight')/localStorage.getItem('GoalWeight');
+    if (weight_percentage == '0'){
+      weight_percentage = '90';
+    }
     circle3.setAttribute('aria-valuenow',weight_percentage);
     circle3.setAttribute('style','--value:' + weight_percentage);
 }

@@ -151,8 +151,8 @@
 /* Add a green background color to the active link */
 .tabs a.active {
   font: "Raleway-bold";
-  background-color: #433495;
-  /* color: white; */
+  background-color: #797a81;
+  color: white;
 }
 
 /* Hide the link that should open and close the navbar on small screens */
@@ -345,4 +345,17 @@ input {
   align-items: center;
   margin-top: 60px;
   display: inline-block;
+}
+
+.guide_images {
+  margin: auto;
+}
+
+.guide_img {
+  width: 150px;
+  height: 150px;
+  margin-bottom: 30px;
+  background-color: #bdc2f5;
+  padding: 30px;
+  border-radius: 100px;
 }

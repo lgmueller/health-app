@@ -125,7 +125,7 @@ button {
 /* Add a purple background color to the active link */
 .tabs a.active {
   font: "Raleway-bold";
-  background-color: #433495;
+  background-color: #797a81;
   color: white;
   font-style: bold;
 }

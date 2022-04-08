@@ -148,8 +148,8 @@ button {
 /* Add a green background color to the active link */
 .tabs a.active {
   font: "Raleway";
-  background-color: #433495;
-  /* color: white; */
+  background-color: #797a81;
+  color: white;
 }
 
 /* Hide the link that should open and close the navbar on small screens */

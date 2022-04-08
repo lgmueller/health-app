@@ -15,10 +15,17 @@ class Workout {
 }
 
 // Preset Workouts for Arms, Legs, Abs
-
-
+const arm_workout = '{"name":"Beginner Arms","exercises":[{"sets":"4","reps":"8","my_name":"Tricep Dips"},{"sets":"3","reps":"10","my_name":"Bicep Curls"},{"sets":"3","reps":"8","my_name":"Shoulder Press"},{"sets":"3","reps":"8","my_name":"Bench Press"}]}';
+const leg_workout = '{"name":"Beginner Legs","exercises":[{"sets":"3","reps":"8","my_name":"Squats"},{"sets":"3","reps":"8","my_name":"Split Squats"},{"sets":"3","reps":"10","my_name":"Leg Press"},{"sets":"4","reps":"8","my_name":"Reverse Lunges"}]}';
+const back_workout = '{"name":"Beginner Back","exercises":[{"sets":"3","reps":"8","my_name":"Tricep Pulls"},{"sets":"3","reps":"5","my_name":"Bent Over Rows"},{"sets":"3","reps":"8","my_name":"Lateral Raises"}]}';
 
 var list = [];
+
+function savePresetWorkouts(){
+    localStorage.setItem('Arms',arm_workout);
+    localStorage.setItem('Legs',leg_workout);
+    localStorage.setItem('Back',back_workout);
+}
 
 function addToList() {
 
@@ -261,6 +268,10 @@ function logWorkout(name) {
     }
     
 }
+
+// function loadSkillLevel() {
+
+// }
 
 function startStop(){
     var btn = document.getElementById("startStopButton");

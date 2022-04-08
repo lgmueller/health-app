@@ -213,8 +213,8 @@ function myCalFunction() {
     elmnt.style.backgroundColor = color;
   }
   
-  // Get the element with id="defaultOpen" and click on it
-  document.getElementById("defaultOpen").click();
+  //Get the element with id="defaultOpen" and click on it
+  // document.getElementById("defaultOpen").click();
   
   /*
     NUTRITION PAGE

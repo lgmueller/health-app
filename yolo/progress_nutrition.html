@@ -38,35 +38,14 @@
 
     <!---->
 
-    <button class="tablink" onclick="openPage('Home', this, 'red')">Home</button>
-  <button class="tablink" onclick="openPage('News', this, 'green')" id="defaultOpen">News</button>
-  <button class="tablink" onclick="openPage('Contact', this, 'blue')">Contact</button>
-  <button class="tablink" onclick="openPage('About', this, 'orange')">About</button>
-
-  <div id="Home" class="tabcontent">
-    <h3>Home</h3>
-    <p>Home is where the heart is..</p>
-  </div>
-
-  <div id="News" class="tabcontent">
-    <h3>News</h3>
-    <p>Some news this fine day!</p> 
-  </div>
-
-  <div id="Contact" class="tabcontent">
-    <h3>Contact</h3>
-    <p>Get in touch, or swing by for a cup of coffee.</p>
-  </div>
-
-  <div id="About" class="tabcontent">
-    <h3>About</h3>
-    <p>Who we are and what we do.</p>
-  </div>
-
-    <!---->
-    <h3 style="color: #433495"><u><b>Daily</b></u></h3>
-   
-      <div>
+    <button class="tablink" onclick="openPage('Daily', this, '#433495')" id="defaultOpen">Daily</button>
+    <button class="tablink" onclick="openPage('Weekly', this, '#433495')">Weekly</button>
+    <button class="tablink" onclick="openPage('Monthly', this, '#433495')">Monthly</button>
+    
+    <div id="Daily" class="tabcontent">
+      <h3 style="color: #433495"><u><b>Daily Calorie Progress</b></u></h3>
+      <br>
+      <div width="2000" height="2000"> 
        
         <div
           role="progressbar"
@@ -74,6 +53,7 @@
           aria-valuemin="0"
           aria-valuemax="100"
           style="--value: 90"
+          width="2000" height="2000"
         ></div>
       </div>
       <div class="goal-index">
@@ -85,18 +65,32 @@
       
     </div>
 
-    <h3 style="color: #433495"><u><b>Weekly</b></u></h3>
-    <p style="font-size:25px">Click on the Bars for more information!</p>
-
-    <div class="chart">
-        <canvas id="bar-chart" width="2000" height="2000"></canvas>
+      
     </div>
+    
+    <div id="Weekly" class="tabcontent">
+      <h3 style="color: #433495"><u><b>Weekly Calorie Progress</b></u></h3>
+      <p style="font-size:25px">Click on the Bars for more information!</p>
+
+      <div class="chart">
+        <canvas id="bar-chart" width="2000" height="2000"></canvas>
+      </div>
+    </div>
+    
+    <div id="Monthly" class="tabcontent">
+      <h3 style="color: #433495"><u><b>Monthly Calorie Progress</b></u></h3>
+      <div class="chart">
+        <canvas id="line-chart" width="2000" height="2000"></canvas>
+      </div>
+    </div>
+    
+    
+    <!---->
+    
+    
 
     
-    <h3 style="color: #433495"><u><b>Monthly</b></u></h3>
-    <div class="chart">
-      <canvas id="line-chart" width="2000" height="2000"></canvas>
-    </div>
+  
 
     <br>
     <br>

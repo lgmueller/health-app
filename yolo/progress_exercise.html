@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>YOLO</title>
+    <link href="progress_style.css" rel="stylesheet" />
+    <meta
+      name="viewport"
+      content="width=768px, height=1280px, initial-scale=1"
+    />
+    
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.min.js"></script>
+
+  </head>
+
+  <div class="backarrow"><a href="progress.html"><img src="pictures/backarrow.png" height ="35" width="35" /></a> </div>
+  <div class="profile"><a href="profile.html"><img src="pictures/profile.png" height ="40" width="40" /></a> </div>
+  
+  <center>
+    
+  <body onload = "updateExerValues(); updateProgressCircles2();">
+    <br>
+    <h1 style="font-size: 100px; margin-top: 50px">EXERCISE</h1>
+    <hr>
+    <p>Track your exercise goals below. Make sure you are reaching your exercise goals!</p>
+
+    <div class="row">
+      <div class="column">
+        <h2 style="color: #433495"><b>Goal</b></h2>
+        <p style="font-size:30px"><b id = "new_goal_exer">150 </b></p>
+      </div>
+      <div class="column">
+        <h2 style="color: #433495"><b>Current</b></h2>
+        <p style="font-size:30px"><b id = "new_curr_exer">135</b> </p>
+      
+      </div>
+    </div>
+
+
+    <!---->
+
+    <button class="tablink" onclick="openPage('Daily', this, '#433495')" id="defaultOpen">Daily</button>
+    <button class="tablink" onclick="openPage('Weekly', this, '#433495')">Weekly</button>
+    <button class="tablink" onclick="openPage('Monthly', this, '#433495')">Monthly</button>
+    
+    <div id="Daily" class="tabcontent">
+      <h3 style="color: #433495"><u><b>Daily Exercise Progress</b></u></h3>
+      <br>
+      <div width="2000" height="2000"> 
+       
+       
+      </div>
+      <div class="goal-index">
+      
+      <br>
+      <!-- <text class="index-goal"> <b id = "new_curr_cal"> 2,250 </b> of <b id = "new_goal_cal">2,500 </b></text> -->
+  
+       </div>
+
+       
+        <div>
+          <div
+            id="circle2"
+            role="progressbar"
+            aria-valuenow="95"
+            aria-valuemin="0"
+            aria-valuemax="100"
+            style="--value: 95"
+          ></div>
+        </div>
+        
+      
+    </div>
+
+    
+    <div id="Weekly" class="tabcontent">
+      <h3 style="color: #433495"><u><b>Weekly Exercise Progress</b></u></h3>
+      <p style="font-size:25px">Click on the Bars for more information!</p>
+    
+      <div class="chart">
+        <canvas id="bar-chart3" width="2000" height="2000"></canvas>
+      </div>
+    </div>
+    
+    <div id="Monthly" class="tabcontent">
+      <h3 style="color: #433495"><u><b>Monthly Exercise Progress</b></u></h3>
+      <div class="chart">
+        <canvas id="line-chart3" width="2000" height="2000"></canvas>
+      </div>
+    </div>
+    
+    <div class="chart">
+      <canvas id="bar-chart" width="0" height="0"></canvas>
+    </div>
+    <div class="chart">
+      <canvas id="line-chart" width="0" height="0"></canvas>
+    </div>
+
+    <div class="chart">
+        <canvas id="bar-chart2" width="0" height="0"></canvas>
+      </div>
+      <div class="chart">
+        <canvas id="line-chart2" width="0" height="0"></canvas>
+      </div>
+    
+    <!---->
+    
+    
+
+    
+  
+
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+
+    <script src="update_progress.js"></script>
+    
+    
+  </body>
+  
+    <div class="tabs">
+      <a href="nutrition.html">
+        <img class ="tabicon" src="pictures/apple.png" alt="" class="icon"/>
+        <br>
+        Nutrition
+      </a>
+    
+      <a href="exercise.html">
+        <img class ="tabicon" src="pictures/weight.png" alt="" class="icon"/>
+        <br>
+        Exercise
+      </a>
+      <a href="reminders.html">
+        <img class ="tabicon" src="pictures/clock.png" alt="" class="icon" />
+        <br>
+        Reminders
+      </a>
+      <a href="progress.html">
+        <img class ="tabicon" src="pictures/progress.png" alt="" class="icon"/>
+        <br>
+        Progress
+      </a>
+    </div>
+  </center>
+</html>
+
+
+

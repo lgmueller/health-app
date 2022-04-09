@@ -54,7 +54,8 @@
       -->
       <center>
       <script src="Chart.js"></script>
-        <canvas id="myChart" style="width:100%;max-width:750px"></canvas>
+
+        <canvas id="myChart" style="width:100%;min-width:700px;max-width:700px"></canvas>
 
         <script>
 
@@ -88,60 +89,63 @@
             "#2b5797",
           ];
 
+          
           new Chart("myChart", {
-            type: "pie",
-            data: {
-              labels: xValues,
-              datasets: [{
-                backgroundColor: barColors,
-                data: yValues
-              }]
-            },
-            options: {
-              maintainAspectRatio: false,
-              title: {
-                display: true,
-                text: "Your Macronutrient Breakdown"
+          type: "pie",
+          data: {
+            labels: xValues,
+            datasets: [{
+              backgroundColor: barColors,
+              data: yValues
+            }]
+          },
+          options: {
+            legend: {
+              position: "right"
               },
-              animation: {
-                duration: 500,
-                easing: "easeOutQuart",
-                onComplete: function () {
-                  var ctx = this.chart.ctx;
-                  ctx.font = Chart.helpers.fontString(Chart.defaults.global.defaultFontFamily, 'normal', Chart.defaults.global.defaultFontFamily);
-                  ctx.textAlign = 'center';
-                  ctx.textBaseline = 'bottom';
+            title: {
+              display: true,
+              text: "Your Macronutrient Breakdown"
+            },
+            animation: {
+              duration: 500,
+              easing: "easeOutQuart",
+              onComplete: function () {
+                var ctx = this.chart.ctx;
+                ctx.font = Chart.helpers.fontString(Chart.defaults.global.defaultFontFamily, 'normal', Chart.defaults.global.defaultFontFamily);
+                ctx.textAlign = 'center';
+                ctx.textBaseline = 'bottom';
 
-                  this.data.datasets.forEach(function (dataset) {
+                this.data.datasets.forEach(function (dataset) {
 
-                    for (var i = 0; i < dataset.data.length; i++) {
-                      var model = dataset._meta[Object.keys(dataset._meta)[0]].data[i]._model,
-                          total = dataset._meta[Object.keys(dataset._meta)[0]].total,
-                          mid_radius = model.innerRadius + (model.outerRadius - model.innerRadius)/2,
-                          start_angle = model.startAngle,
-                          end_angle = model.endAngle,
-                          mid_angle = start_angle + (end_angle - start_angle)/2;
+                  for (var i = 0; i < dataset.data.length; i++) {
+                    var model = dataset._meta[Object.keys(dataset._meta)[0]].data[i]._model,
+                        total = dataset._meta[Object.keys(dataset._meta)[0]].total,
+                        mid_radius = model.innerRadius + (model.outerRadius - model.innerRadius)/2,
+                        start_angle = model.startAngle,
+                        end_angle = model.endAngle,
+                        mid_angle = start_angle + (end_angle - start_angle)/2;
 
-                      var x = mid_radius * Math.cos(mid_angle);
-                      var y = mid_radius * Math.sin(mid_angle);
+                    var x = mid_radius * Math.cos(mid_angle);
+                    var y = mid_radius * Math.sin(mid_angle);
 
-                      ctx.fillStyle = '#fff';
-                      if (i == 3){ // Darker text color for lighter background
-                        ctx.fillStyle = '#444';
-                      }
-                      var percent = String(Math.round(dataset.data[i]/total*100)) + "%";      
-                      //Don't Display If Legend is hide or value is 0
-                      if(dataset.data[i] != 0 && dataset._meta[0].data[i].hidden != true) {
-                        ctx.fillText(dataset.data[i] + " g", model.x + x, model.y + y);
-                        // Display percent in another line, line break doesn't work for fillText
-                        //ctx.fillText(percent, model.x + x, model.y + y + 15);
-                      }
+                    ctx.fillStyle = '#fff';
+                    if (i == 3){ // Darker text color for lighter background
+                      ctx.fillStyle = '#444';
                     }
-                  });               
-                }
+                    var percent = String(Math.round(dataset.data[i]/total*100)) + "%";      
+                    //Don't Display If Legend is hide or value is 0
+                    if(dataset.data[i] != 0 && dataset._meta[0].data[i].hidden != true) {
+                      ctx.fillText(dataset.data[i] + " g", model.x + x, model.y + y);
+                      // Display percent in another line, line break doesn't work for fillText
+                      //ctx.fillText(percent, model.x + x, model.y + y + 15);
+                    }
+                  }
+                });               
               }
             }
-          });
+          }
+        });
       </script>
       </center>
       <!-- 
@@ -153,9 +157,7 @@
       
 
     <button class="roundedButton" onClick="location.href='input_food.html'"> Click to Add Food</button>
-
-    <br><br><br>
-
+    <br><br>
 
     <div class="flex-container">
       <div class="flexbox-item-input">

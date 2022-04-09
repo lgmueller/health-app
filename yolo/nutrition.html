@@ -65,15 +65,19 @@
           var fetched_food_list = JSON.parse(localStorage.getItem("food_list") || "[]")
           console.log(fetched_food_list)
 
+          var protein
+          var fat
+          var carbs
+
           for (i = 0; i < fetched_food_list.length; i++) {
             food_item = fetched_food_list[i]
             protein = food_item.protein
             fat = food_item.fat
             carbs = food_item.carbs
 
-            current_protein += parseInt(protein)
-            current_fat += parseInt(fat)
-            current_carbs += parseInt(carbs)
+            current_protein += isNaN(parseInt(protein)) ? 0 : parseInt(protein)
+            current_fat += isNaN(parseInt(fat)) ? 0 : parseInt(fat)
+            current_carbs += isNaN(parseInt(carbs)) ? 0 : parseInt(carbs)
           }
 
           var xValues = ["Protein", "Fat", "Carbs"];
@@ -167,6 +171,7 @@
           </table>
       </div>
   </div>
+  <br><br><br><br><br><br><br><br><br><br><br>
 
     <div class="tabs">
       <a href="nutrition.html" class="active">

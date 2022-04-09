@@ -140,11 +140,6 @@ function addFood() {
     if (name != '' && calories != '')  {
         const food = new Food(name, calories, protein, fat, carbs, today)
         food_list.push(food)
-
-        var list = document.getElementById("food_list")
-        var entry = document.createElement("li")
-        entry.appendChild(document.createTextNode(food_list[food_list.length-1].name))
-        list.appendChild(entry)
     }
     else {
         alert("Make sure to insert name, servings, and calories")

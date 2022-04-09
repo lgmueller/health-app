@@ -61,7 +61,7 @@ button {
   height: 4rem;
   font-weight: bold;
   border-radius: 3rem;
-  background-color: #8e95e7;
+  background-color: #433495;
 }
 
 .homeButton {
@@ -71,13 +71,13 @@ button {
 
 .submit_button {
   font-family: "Raleway-semibold";
-  font-size: 1.5rem;
+  font-size: 2rem;
   color: white;
   width: 15rem;
-  height: 2.5rem;
+  height: 4rem;
   font-weight: bold;
-  border-radius: 3rem;
-  background-color: #8e95e7;
+  border-radius: 4rem;
+  background-color: #433495;
 }
 
 .reminders {

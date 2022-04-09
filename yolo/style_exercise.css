@@ -359,3 +359,36 @@ input {
   padding: 30px;
   border-radius: 100px;
 }
+
+
+/* stuff for keyboard taken from https://gist.github.com/itszero/972142 */
+#keyboard {
+  background-color: #b9bac3;
+  padding: 5px 2px;
+}
+
+.row {
+  margin: 15px 2px;
+  text-align: center;
+}
+
+.key {
+  background-color: #ECEDEE;
+  height: 2em;
+  line-height: 2em;
+  font-size: 2em;
+  border-radius: 10px;
+  width: 1.4em;
+  text-align: center;
+  display: inline-block;
+  margin: 0 2px;
+  font-family: Helvetica;
+  font-weight: 800;  
+}
+
+.system_key {
+  background-color: #68717D;
+  color: #FFF;
+  border: 1px solid #515A67;
+  font-weight: 600;
+}

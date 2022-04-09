@@ -140,6 +140,7 @@ function addFood() {
     if (name != '' && calories != '')  {
         const food = new Food(name, calories, protein, fat, carbs, today)
         food_list.push(food)
+        window.location.href = "nutrition.html";
     }
     else {
         alert("Make sure to insert name, servings, and calories")

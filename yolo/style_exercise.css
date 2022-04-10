@@ -32,7 +32,6 @@
   }
   
   h1 {
-    font-size: large;
     font-family: "Raleway";
     margin: auto;
   }
@@ -362,6 +361,24 @@ input {
   border-radius: 100px;
 }
 
+.workout_descriptions {
+  width: fit-content;
+  max-height: 830px;
+  padding-left: 40px;
+  padding-right: 40px;
+  overflow:auto;
+}
+
+.description {
+  font-family: "Raleway-Regular";
+  font-size: 25px;
+  display: block;
+  overflow: auto;
+  padding-right: 20px;
+  padding-left: 20px;
+  text-align: left;
+  line-height: 1.5;
+}
 
 /* stuff for keyboard taken from https://gist.github.com/itszero/972142 */
 #keyboard {

@@ -15,9 +15,9 @@ class Workout {
 }
 
 // Preset Workouts for Arms, Legs, Abs
-const arm_workout = '{"name":"Beginner Arms","exercises":[{"sets":"4","reps":"8","my_name":"Tricep Dips"},{"sets":"3","reps":"10","my_name":"Bicep Curls"},{"sets":"3","reps":"8","my_name":"Shoulder Press"},{"sets":"3","reps":"8","my_name":"Bench Press"}]}';
+const arm_workout = '{"name":"Beginner Arms","exercises":[{"sets":"4","reps":"8","my_name":"Tricep Extensions"},{"sets":"3","reps":"10","my_name":"Bicep Curls"},{"sets":"3","reps":"8","my_name":"Shoulder Press"},{"sets":"3","reps":"8","my_name":"Bench Press"}]}';
 const leg_workout = '{"name":"Beginner Legs","exercises":[{"sets":"3","reps":"8","my_name":"Squats"},{"sets":"3","reps":"8","my_name":"Split Squats"},{"sets":"3","reps":"10","my_name":"Leg Press"},{"sets":"4","reps":"8","my_name":"Reverse Lunges"}]}';
-const back_workout = '{"name":"Beginner Back","exercises":[{"sets":"3","reps":"8","my_name":"Tricep Pulls"},{"sets":"3","reps":"5","my_name":"Bent Over Rows"},{"sets":"3","reps":"8","my_name":"Lateral Raises"}]}';
+const back_workout = '{"name":"Beginner Back","exercises":[{"sets":"3","reps":"8","my_name":"Tricep Press Downs"},{"sets":"3","reps":"5","my_name":"Bent Over Rows"},{"sets":"3","reps":"8","my_name":"Lateral Raises"}]}';
 
 var list = [];
 
@@ -93,7 +93,6 @@ function addToList() {
     rowNode.appendChild(name_cellNode);
     
     table.appendChild(rowNode);
-    list.push(rowNode);
 
 }
 
@@ -152,7 +151,6 @@ function loadWorkout() {
         my_name = exercise.my_name;
 
         var rowNode = document.createElement("tr");
-
         var cellNode = document.createElement("td");
         
         var trash_btn = document.createElement('input');
@@ -160,7 +158,9 @@ function loadWorkout() {
         trash_btn.src = "pictures/trash.png";
         trash_btn.onclick = function() { 
             table.deleteRow(rowNode.rowIndex);
+
         };
+
         cellNode.appendChild(trash_btn);
 
         var edit_btn = document.createElement('input');
@@ -178,9 +178,8 @@ function loadWorkout() {
             table.deleteRow(rowNode.rowIndex);
         };
         cellNode.appendChild(edit_btn);
-
         rowNode.appendChild(cellNode);
-
+        
         var set_cellNode = document.createElement("td");
         var set_textNode = document.createTextNode(set);
         set_cellNode.appendChild(set_textNode);
@@ -197,6 +196,7 @@ function loadWorkout() {
         rowNode.appendChild(name_cellNode);
         
         table.appendChild(rowNode);
+        
     }
 
 }
@@ -231,15 +231,17 @@ function logWorkout(name) {
         done_btn.id = "button-done";
         var clicked = true;
         done_btn.onclick = function() { 
-            if (clicked == true){
-                done_btn.src = "pictures/done2.png";
-                completed += 1;
-                clicked = false;
-            } else {
-                done_btn.src = "pictures/incomplete2.png";
-                completed -= 1;
-                clicked = true;
-            }
+            done_btn.src = "pictures/done2.png";
+            completed +=1;
+            // if (clicked == true){
+            //     done_btn.src = "pictures/done2.png";
+            //     completed += 1;
+            //     clicked = false;
+            // } else {
+            //     done_btn.src = "pictures/incomplete2.png";
+            //     completed -= 1;
+            //     clicked = true;
+            // }
             if (completed == workoutObj.exercises.length) {
                 alert("Congratulations! You Completed your Workout!");
             }

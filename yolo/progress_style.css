@@ -116,7 +116,8 @@ button {
 
   
 .tabs {
-  font-family: "Raleway";
+  font-family: "Raleway-bold";
+  font-size: 1.8rem;
   background-color: #b9bac3;
   overflow: hidden;
   position: fixed;
@@ -130,26 +131,27 @@ button {
 }
 
 .tabs a {
-  font-family: "Raleway";
+  font-family: "Raleway-bold";
   color: black;
   font-style: bold;
   text-align: center;
   padding: 14px 16px;
   text-decoration: none;
-  font-size: 1.2rem;
+  font-size: 1.8rem;
 }
 
 .tabs a:hover {
-  font-family: "Raleway";
+  font-family: "Raleway-bold";
   background-color: #ddd;
   color: black;
 }
 
-/* Add a green background color to the active link */
+/* Add a purple background color to the active link */
 .tabs a.active {
-  font: "Raleway";
+  font: "Raleway-bold";
   background-color: #797a81;
   color: white;
+  font-style: bold;
 }
 
 /* Hide the link that should open and close the navbar on small screens */

@@ -61,7 +61,7 @@ button {
   height: 4rem;
   font-weight: bold;
   border-radius: 3rem;
-  background-color: #8e95e7;
+  background-color: #433495;
 }
 
 .homeButton {
@@ -71,13 +71,13 @@ button {
 
 .submit_button {
   font-family: "Raleway-semibold";
-  font-size: 1.5rem;
+  font-size: 2rem;
   color: white;
   width: 15rem;
-  height: 2.5rem;
+  height: 4rem;
   font-weight: bold;
-  border-radius: 3rem;
-  background-color: #8e95e7;
+  border-radius: 4rem;
+  background-color: #433495;
 }
 
 .reminders {
@@ -94,6 +94,7 @@ button {
   
 .tabs {
   font-family: "Raleway-bold";
+  font-size: 1.8rem;
   background-color: #b9bac3;
   overflow: hidden;
   position: fixed;
@@ -113,7 +114,7 @@ button {
   text-align: center;
   padding: 14px 16px;
   text-decoration: none;
-  font-size: 1.2rem;
+  font-size: 1.8rem;
 }
 
 .tabs a:hover {

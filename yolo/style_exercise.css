@@ -32,7 +32,6 @@
   }
   
   h1 {
-    font-size: large;
     font-family: "Raleway";
     margin: auto;
   }
@@ -121,6 +120,7 @@
 .tabs {
   font-family: "Raleway-bold";
   background-color: #b9bac3;
+  font-size: 1.8rem;
   overflow: hidden;
   position: fixed;
   justify-content: space-around;
@@ -139,7 +139,7 @@
   text-align: center;
   padding: 14px 16px;
   text-decoration: none;
-  font-size: 1.2rem;
+  font-size: 1.8rem;
 }
 
 .tabs a:hover {
@@ -246,6 +246,7 @@ th {
 }
 
 td {
+  font-family: "Raleway-Bold";
   border: 1px solid #999;
   padding: 1rem;
 }
@@ -362,9 +363,10 @@ input {
 
 .workout_descriptions {
   width: fit-content;
+  max-height: 830px;
   padding-left: 40px;
   padding-right: 40px;
-  
+  overflow:auto;
 }
 
 .description {
@@ -372,4 +374,40 @@ input {
   font-size: 25px;
   display: block;
   overflow: auto;
+  padding-right: 20px;
+  padding-left: 20px;
+  text-align: left;
+  line-height: 1.5;
+}
+
+/* stuff for keyboard taken from https://gist.github.com/itszero/972142 */
+#keyboard {
+  background-color: #b9bac3;
+  padding: 5px 2px;
+}
+
+.row {
+  margin: 15px 2px;
+  text-align: center;
+}
+
+.key {
+  background-color: #ECEDEE;
+  height: 2em;
+  line-height: 2em;
+  font-size: 2em;
+  border-radius: 10px;
+  width: 1.4em;
+  text-align: center;
+  display: inline-block;
+  margin: 0 2px;
+  font-family: Helvetica;
+  font-weight: 800;  
+}
+
+.system_key {
+  background-color: #68717D;
+  color: #FFF;
+  border: 1px solid #515A67;
+  font-weight: 600;
 }

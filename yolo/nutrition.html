@@ -3,52 +3,197 @@
   <head>
     <title>Nutrition</title>
     <link href="style_nutrition.css" rel="stylesheet" />
-    <link href="style.css" rel="stylesheet" />
+    <script type = "text/javascript" src="nutrition.js"></script>
+    <meta
+      name="viewport"
+      content="width=768px, height=1280px, initial-scale=1"
+    />
   </head>
 
   <div class="home"><a href="index.html"><img src="pictures/home.png" height ="35" width="35" /></a> </div>
   <div class="profile"><a href="profile.html"><img src="pictures/profile.png" height ="40" width="40" /></a> </div>
   
-  <body>
+  <body onload="loadInfo()">
     <div class="header">
-      <a class="icon" ref="something"
-        ><img src="pictures/home.png" width="20em" height="20em"
-      /></a>
-      <h1><b>Nutrition</b></h1>
+      <!-- <a class="icon" ref="something"><img src="pictures/home.png" width="50em" height="50em"/></a> -->
+      <h1 style="font-size: 100px; margin-top: 50px"><b>NUTRITION</b></h1>
     </div>
-    <br />
 
-    <div class="piechart"></div>
-    <div class="piechart"></div>
+    <!-- <br>
+    <h2 style="margin-top: 70px">Select A Workout</h2>
+    <div class="workoutSelection">
+      <div class="workoutButtons">
+        <button class="buttonA">ARMS</button>
+        <button class="buttonA">LEGS</button>
+        <button class="buttonA">CARDIO</button>
+        <button class="buttonA">CUSTOM</button>
+      </div>
+    </div>
+    <br> -->
+    
+    <!--
 
-    <br /><br /><br /><br /><br /><br /><br /><br /><br />
+    
+    <div class="row1">
 
-    <a href="input_food.html">
-      <button class="log_meal_button">Log a meal</button>
-      </a>
-    <br /><br />
-    <button class="progress_button">Track Progress!</button>
+      <div class="column1" style="background-color:rgb(255, 255, 255);">
+      <div
+          id="circle1"
+          role="progresslinebar"
+          aria-valuenow="95"
+          aria-valuemin="0"
+          aria-valuemax="100"
+          style="--value: 95"
+        ></div>
+
+      <h6 id = "cal_p1">Current: <b id = "new_curr_cal">2,250</b>  <br> Goal: <b id = "new_goal_cal">2,500</b> </h6>
+    </div>
+      
+    <div class="column1" style="background-color:white;">
+
+      -->
+      <center>
+      <script src="Chart.js"></script>
+
+        <canvas id="myChart" style="width:100%;min-width:700px;max-width:700px"></canvas>
+
+        <script>
+
+          var current_protein = 0
+          var current_fat = 0
+          var current_carbs = 0
+
+          var fetched_food_list = JSON.parse(localStorage.getItem("food_list") || "[]")
+          console.log(fetched_food_list)
+
+          var protein
+          var fat
+          var carbs
+
+          for (i = 0; i < fetched_food_list.length; i++) {
+            food_item = fetched_food_list[i]
+            protein = food_item.protein
+            fat = food_item.fat
+            carbs = food_item.carbs
+
+            current_protein += isNaN(parseInt(protein)) ? 0 : parseInt(protein)
+            current_fat += isNaN(parseInt(fat)) ? 0 : parseInt(fat)
+            current_carbs += isNaN(parseInt(carbs)) ? 0 : parseInt(carbs)
+          }
+
+          var xValues = ["Protein", "Fat", "Carbs"];
+          var yValues = [current_protein, current_fat, current_carbs];
+          var barColors = [
+            "#b91d47",
+            "#00aba9",
+            "#2b5797",
+          ];
+
+          
+          new Chart("myChart", {
+          type: "pie",
+          data: {
+            labels: xValues,
+            datasets: [{
+              backgroundColor: barColors,
+              data: yValues
+            }]
+          },
+          options: {
+            legend: {
+              position: "right"
+              },
+            title: {
+              display: true,
+              text: "Your Macronutrient Breakdown"
+            },
+            animation: {
+              duration: 500,
+              easing: "easeOutQuart",
+              onComplete: function () {
+                var ctx = this.chart.ctx;
+                ctx.font = Chart.helpers.fontString(Chart.defaults.global.defaultFontFamily, 'normal', Chart.defaults.global.defaultFontFamily);
+                ctx.textAlign = 'center';
+                ctx.textBaseline = 'bottom';
+
+                this.data.datasets.forEach(function (dataset) {
+
+                  for (var i = 0; i < dataset.data.length; i++) {
+                    var model = dataset._meta[Object.keys(dataset._meta)[0]].data[i]._model,
+                        total = dataset._meta[Object.keys(dataset._meta)[0]].total,
+                        mid_radius = model.innerRadius + (model.outerRadius - model.innerRadius)/2,
+                        start_angle = model.startAngle,
+                        end_angle = model.endAngle,
+                        mid_angle = start_angle + (end_angle - start_angle)/2;
+
+                    var x = mid_radius * Math.cos(mid_angle);
+                    var y = mid_radius * Math.sin(mid_angle);
+
+                    ctx.fillStyle = '#fff';
+                    if (i == 3){ // Darker text color for lighter background
+                      ctx.fillStyle = '#444';
+                    }
+                    var percent = String(Math.round(dataset.data[i]/total*100)) + "%";      
+                    //Don't Display If Legend is hide or value is 0
+                    if(dataset.data[i] != 0 && dataset._meta[0].data[i].hidden != true) {
+                      ctx.fillText(dataset.data[i] + " g", model.x + x, model.y + y);
+                      // Display percent in another line, line break doesn't work for fillText
+                      //ctx.fillText(percent, model.x + x, model.y + y + 15);
+                    }
+                  }
+                });               
+              }
+            }
+          }
+        });
+      </script>
+      </center>
+      <!-- 
+        </div>
+
+    </div>
+
+      -->
+      
+
+    <button class="roundedButton" onClick="location.href='input_food.html'"> Click to Add Food</button>
+    <br><br>
+
+    <div class="flex-container">
+      <div class="flexbox-item-input">
+        <h2 id="table_header">Today's Meals</h2>
+          <table class="rounded-table" id="myTable"> 
+            <thead>
+              <th>Delete</th>
+              <th>Food</th>
+              <th>Calories</th>
+              <th>Date</th>
+            </thead> 
+          </table>
+      </div>
+  </div>
+  <br><br><br><br><br><br><br><br><br><br><br>
 
     <div class="tabs">
       <a href="nutrition.html" class="active">
         <img class="tabicon" src="pictures/apple.png" alt="" class="icon" />
-        <br />
+        <br>
         Nutrition
       </a>
 
       <a href="exercise.html">
         <img class="tabicon" src="pictures/weight.png" alt="" class="icon" />
-        <br />
+        <br>
         Exercise
       </a>
       <a href="reminders.html">
         <img class="tabicon" src="pictures/clock.png" alt="" class="icon" />
-        <br />
+        <br>
         Reminders
       </a>
       <a href="progress.html">
         <img class="tabicon" src="pictures/progress.png" alt="" class="icon" />
-        <br />
+        <br>
         Progress
       </a>
     </div>

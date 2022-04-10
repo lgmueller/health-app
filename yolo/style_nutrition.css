@@ -1,154 +1,473 @@
 @font-face {
-    font-family: "Raleway";
-    src: url("raleway.woff");
-  }
-  
-  body {
-    margin: auto;
-    max-width: 500px;
-    text-align: center;
-    font-family: "Raleway";
-  }
-
-  title {
-    font-family: "Raleway";
-  }
-
-  .header { 
-    display: flex;
-    align-items: center;
-    text-align: center;
-  }
-  
-  h1 {
-    font-family: "Raleway";
-    font-size: 4rem;
-    margin: auto;
-  }
-  
-  button {
-    font-family: "Raleway";
-    font-size: 3rem;
-    /* color: white;
-    width: 25rem;
-    height: 4rem;
-    font-weight: bold;
-    border-radius: 3rem;
-    background-color: #8e95e7; */
-  }
-
-  .icon {
-    border-radius: 25px;
-    background-color: #8e95e7; /* Blue background */
-    border: none; /* Remove borders */
-    color: white; /* White text */
-    padding: 12px 16px; /* Some padding */
-    font-size: 16px; /* Set a font size */
-    cursor: pointer; /* Mouse pointer on hover */
-    position: fixed;
-    left: 0;
-
-  }
-
-  .workoutSelection {
-    border: thin;
-    border-style: solid;
-    border-color: black;
-    margin:auto;
-    padding: 2rem;
-  }
-
-  .workoutButtons {
-    display: inline-flex;
-    flex-wrap: nowrap;
-    gap: .8rem;
-    margin: auto;
-
-  }
-
-  .roundedButton {
-    width: 500px;
-    height: 60px;
-    border-color: black;
-    border-style: solid;
-    background-color: none;
-    font-size: 15px;
-    font-weight: 20px;
-    margin-top: 20px;
-  }
-
-  .buttonA {
-    border-radius: 25px;
-    width: 100px;
-    height: 100px;
-    background-color: #8e95e7;
-    font-size: 15px;
-    font-weight: 10px;
-    font-weight: bolder;
-  }
-
-    
-.tabs {
   font-family: "Raleway";
-  background-color: #b9bac3;
-  overflow: hidden;
+  src: url("raleway.woff");
+}
+
+@font-face {
+  font-family: "Raleway-Regular";
+  src: url("/Raleway/static/Raleway-Regular.ttf")
+}
+
+@font-face {
+font-family: "Raleway-Bold";
+src: url("/Raleway/static/Raleway-Bold.ttf")
+}
+
+body {
+  margin: auto;
+  text-align: center;
+  font-family: "Raleway";
+}
+
+title {
+  font-family: "Raleway";
+  font-size: large;
+}
+
+.header { 
+  font-family: "Raleway";
+  display: flex;
+  align-items: center;
+  text-align: center;
+}
+
+h1 {
+  font-size: large;
+  font-family: "Raleway";
+  margin: auto;
+}
+
+h2 {
+  font-family: "Raleway-Bold";
+  font-size: 35px;
+}
+
+h3 {
+  font-family: "Raleway-Regular";
+  font-size: 25px;
+}
+
+button {
+  font-family: "Raleway";
+  font-size: 3rem;
+  /* color: white;
+  width: 25rem;
+  height: 4rem;
+  font-weight: bold;
+  border-radius: 3rem;
+  background-color: #8e95e7; */
+}
+
+.icon {
+  border-radius: 25px;
+  background-color: #8e95e7; /* Blue background */
+  border: none; /* Remove borders */
+  color: white; /* White text */
+  padding: 12px 16px; /* Some padding */
+  font-size: 16px; /* Set a font size */
+  cursor: pointer; /* Mouse pointer on hover */
   position: fixed;
-  justify-content: space-around;
-  bottom: 0;
   left: 0;
-  right: 0;
-  width: 100%;
-  display: inline-flex;
-  flex-wrap: nowrap;
+
+}
+
+.roundedButton {
+  width: 25rem;
+  height: 4rem;
+  /*padding: 20px;*/
+  font-family: "Raleway-Bold";
+  /* border-color: #433495;
+  border-style: solid; */
+  background-color:#433495;
+  box-shadow: #b9bac3;
+  color:white;
+  font-size: 2.5rem;
+  font-weight: bold;
+  border-radius: 3rem;
+  margin-top: 30px;
+}
+
+
+
+.tabs {
+font-family: "Raleway-bold";
+background-color: #b9bac3;
+font-size: 1.8rem;
+overflow: hidden;
+position: fixed;
+justify-content: space-around;
+bottom: 0;
+left: 0;
+right: 0;
+width: 100%;
+display: inline-flex;
+flex-wrap: nowrap;
 }
 
 .tabs a {
-  font-family: "Raleway";
-  color: black;
-  font-style: bold;
-  text-align: center;
-  padding: 14px 16px;
-  text-decoration: none;
-  font-size: 1.2rem;
+font-family: "Raleway-bold";
+color: black;
+font-style: bold;
+text-align: center;
+padding: 14px 16px;
+text-decoration: none;
+font-size: 1.8rem;
 }
 
 .tabs a:hover {
-  font-family: "Raleway";
-  background-color: #ddd;
-  color: black;
+font-family: "Raleway-bold";
+background-color: #ddd;
+color: #232324;
 }
 
 /* Add a green background color to the active link */
 .tabs a.active {
-  font: "Raleway";
-  background-color: #433495;
-  /* color: white; */
+font: "Raleway-bold";
+background-color: #797a81;
+color: white;
 }
 
 /* Hide the link that should open and close the navbar on small screens */
 .tabs .icon {
-  display: none;
+display: none;
 }
 
 .tabicon {
-  width: 4rem;
-  height: 4rem;
+width: 4rem;
+height: 4rem;
 }
 
 img {
-  max-width: 100%;  
-  height: auto;  
+max-width: 100%;  
+height: auto;  
 }
 
-  .piechart {
-    display: block;
-    width: 150px;
-    height: 150px;
-    float: left;
-    margin: auto;
-    border-radius: 50%;
-    background-image: conic-gradient(
-        pink 70deg, 
-        lightblue 0 235deg, 
-        orange 0);
+.flex-container {
+display: flex;
+justify-content: center;
+gap: 1rem;
+}
+
+.flexbox-item {
+width: 40%;
+height: 600px;
+border-radius: .5em;
+margin:10px;
+border: 2px solid #433495;
+background-color: #433495;
+box-shadow: 15px 15px #bdc2f5;
+font-size: 30px;
+color: white;
+}
+
+.flexbox-item-box {
+width: 40%;
+padding: 10px;
+height: 200px;
+border-radius: .5em;
+margin: 10px;
+border: 2px solid #433495;
+background-color: #433495;
+box-shadow: 15px 15px #bdc2f5;
+font-size: 30px;
+color: white;
+}
+
+.flexbox-item-wide {
+width: 80%;
+height: 100px;
+border-radius: .5em;
+margin:auto;
+border: 2px solid #433495;
+background-color: #433495;
+/* box-shadow: 15px 15px #bdc2f5; */
+font-size: 30px;
+color: white;
+}
+
+.flexbox-item-input {
+width: 80%;
+padding: 10px;
+height: 500px;
+border-radius: 10px;
+margin:auto;
+/* border: 2px solid #232324; */
+background-color: #dddff7;;
+/* box-shadow: 15px 15px #bdc2f5; */
+font-size: 30px;
+color: #232324;
+overflow: auto;
+
+}
+
+.workout_list {
+font-size: 30px;
+}
+
+.rounded-table {
+margin: auto;
+border-collapse:separate;
+/* border:solid #232324 1px; */
+border-radius:6px;
+color: #000000
+}
+
+th {
+font-family: "Raleway-Bold";
+border: 1px solid #999;
+padding: 0.2rem;
+color: #000000
+}
+
+td {
+font-family: "Raleway-Bold";
+border: 1px solid #999;
+padding: 1rem;
+color: #232324;
+}
+
+.trash {
+width: 10px;
+}
+
+.field-input {
+font-size: 30px;
+font-family: "Raleway-Regular";
+}
+
+input {
+font-family: "Raleway-Regular";
+font-size: 30px;
+
+}
+
+.rounded-input {
+font-family: "Raleway-Regular";
+padding: 10px;
+font-size: 30px;
+border-radius: 10px;
+border: 0;
+box-shadow:0 0 15px 4px rgba(0,0,0,0.06);
+}
+
+.header-card {
+width: 200px;
+margin: auto;
+}
+
+.profile {
+position: absolute;
+margin-right: 30px;
+margin-top: 30px;
+right:0;
+top:0;
+}
+
+.home {
+/* float: left; */
+position: absolute;
+margin-left: 30px;
+margin-top: 30px;
+left:0;
+top:0;
+}
+
+.btn-submit {
+width: 300px;
+height: 80px;
+padding: 10px;
+background-color: #433495;
+font-family: "Raleway-Bold";
+color: white;
+border-radius: 10px;
+}
+
+.streak_circle {
+background: linear-gradient(#433495, #bdc2f5);
+border-radius: 50%;
+height: 200px;
+width: 200px;
+margin: auto;
+text-align: center;
+padding: 10px;
+font-family: "Raleway-Bold";
+font-size: 120px;
+color: white;
+align-items:center;
+}
+
+.fire {
+text-align: center;
+display: block;
+margin: auto;
+}
+
+/* span {
+font-size: 100px;
+vertical-align: middle;
+line-height: normal;
+} */
+
+.button-complete {
+width: 40px;
+height: 40px;
+}
+
+.timer {
+width: 400px;
+height: 300px;
+font-family: "Raleway-Regular";
+font-size: 40px;
+align-items: center;
+margin-top: 60px;
+display: inline-block;
+}
+
+.guide_images {
+margin: auto;
+}
+
+.guide_img {
+width: 150px;
+height: 150px;
+margin-bottom: 30px;
+background-color: #bdc2f5;
+padding: 30px;
+border-radius: 100px;
+}
+
+/* stuff for the pie chart stuff*/
+
+@keyframes load {
+  0% {
+      width: 0;
+  }
+  100% {
+      /* You need to change the percentage below to match the value in the corresponding <span> */
+      width: 90%;
+  }
+}
+
+
+.progress_chart {
+  background: #c6c9e7;
+  justify-content: flex-start;
+  border-radius: 100px;
+  align-items: center;
+  position: relative;
+  padding: 0 5px;
+  display: flex;
+  height: 40px;
+  width: 500px;
+}
+  .progress_chart span {
+      /* You can modify the value below to change the distance between the percentage number and the bar */
+      margin-left: 5px;
+      color: #433495;
+      font-weight: bolder;
+  }
+
+.progress_bar {
+  /* You can modify the total time used for the animation here */
+  animation: load 3s normal forwards;
+  /* 
+
+  Add a little spice by having a shadow below the bar.
+  Feel free to comment out this line below to have an even LITE version :D 
+  */
+  box-shadow: 0 10px 40px -10px #433495;
+
+  border-radius: 100px;
+  background: #433495;
+  height: 30px;
+  width: 0;
+} 
+
+
+.column {
+  flex: 50%;
+  padding: 10px;
+  
+}
+
+.column1 {
+  float: left;
+  width: 50%;
+  
+}
+
+.column2 {
+  float: center;
+  width: 50%;
+  
+}
+
+
+/* https://dev.to/shantanu_jana/circular-b-bar-using-html-and-css-1oda */
+@keyframes growProgressBar {
+  
+  0%, 33% { --pgPercentage: 0; }
+  100% { --pgPercentage: var(--value); }
+}
+
+@keyframes growProgressLineBar {
+  
+  0% { --pgPercentage: 0; }
+  100% { --pgPercentage: var(--value); }
+}
+
+@property --pgPercentage {
+  syntax: '<number>';
+  inherits: false;
+  initial-value: 0;
+}
+
+div[role="progressbar"] {
+  --size: 20rem;
+  --fg: #433495;
+  --bg: #c6c9e7;
+  --pgPercentage: var(--value);
+  animation: growProgressLineBar 3s 1 forwards;
+  width: var(--size);
+  height: var(--size);
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  background: 
+    radial-gradient(closest-side, white 80%, transparent 0 99.9%, white 0),
+    conic-gradient(var(--fg) calc(var(--pgPercentage) * 1%), var(--bg) 0)
+    ;
+  font-family: Helvetica, Arial, sans-serif;
+  font-size: calc(var(--size) / 5);
+  color: var(--fg);
+}
+
+div[role="progressbar"]::before {
+  counter-reset: percentage var(--value);
+  content: counter(percentage) '%';
+}
+
+div[role="progresslinebar"] {
+  --size: 7rem;
+  --fg: #433495;
+  --bg: #c6c9e7;
+  --pgPercentage: var(--value);
+  animation: growProgressLineBar 3s 1 forwards;
+  width: var(--size);
+  height: var(--size);
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  background: 
+    radial-gradient(closest-side, white 80%, transparent 0 99.9%, white 0),
+    conic-gradient(var(--fg) calc(var(--pgPercentage) * 1%), var(--bg) 0)
+    ;
+  font-family: Helvetica, Arial, sans-serif;
+  font-size: calc(var(--size) / 5);
+  color: var(--fg);
+}
+
+div[role="progresslinebar"]::before {
+  counter-reset: percentage var(--value);
+  content: counter(percentage) '%';
 }

@@ -60,7 +60,7 @@ function updateProgressCircles () {
 
 function updateProgressCircles1 () {
   var circle1 = document.getElementById("circle1"); 
-  var weight_percentage = 100 * (localStorage.getItem('CurrCal')/localStorage.getItem('GoalCal'));
+  var weight_percentage = Math.round(100 * (localStorage.getItem('CurrCal')/localStorage.getItem('GoalCal')));
   if (isNaN(weight_percentage)){
     weight_percentage = 90;
   }
@@ -70,7 +70,7 @@ function updateProgressCircles1 () {
 
 function updateProgressCircles3 () {
   var circle3 = document.getElementById("circle3"); 
-  var weight_percentage = 100 * (localStorage.getItem('CurrWeight')/localStorage.getItem('GoalWeight'));
+  var weight_percentage = Math.round(100 * (localStorage.getItem('CurrWeight')/localStorage.getItem('GoalWeight')));
   if (isNaN(weight_percentage)){
     weight_percentage = 90;
   }
@@ -80,7 +80,7 @@ function updateProgressCircles3 () {
 
 function updateProgressCircles2 () {
   var circle2 = document.getElementById("circle2"); 
-  var weight_percentage = 100 * (localStorage.getItem('CurrExer')/localStorage.getItem('GoalExer'));
+  var weight_percentage = Math.round(100 * (localStorage.getItem('CurrExer')/localStorage.getItem('GoalExer')));
   if (isNaN(weight_percentage)){
     weight_percentage = 90;
   }

@@ -90,8 +90,8 @@
   }
 
   .roundedButton {
-    width: 500px;
-    height: 150px;
+    width: 400px;
+    height: 130px;
     padding: 20px;
     font-family: "Raleway-Bold";
     /* border-color: #433495;
@@ -186,6 +186,8 @@ img {
   box-shadow: 15px 15px #bdc2f5;
   font-size: 30px;
   color: white;
+  align-items: center;
+  vertical-align: center;
 }
 
 .flexbox-item-box {
@@ -199,6 +201,8 @@ img {
   box-shadow: 15px 15px #bdc2f5;
   font-size: 30px;
   color: white;
+  align-self: center;
+  vertical-align: center;
 }
 
 .flexbox-item-wide {
@@ -363,7 +367,7 @@ input {
 
 .workout_descriptions {
   width: fit-content;
-  max-height: 830px;
+  max-height: 83s0px;
   padding-left: 40px;
   padding-right: 40px;
   overflow:auto;

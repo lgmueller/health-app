@@ -209,17 +209,21 @@ margin: auto;
 border-collapse:separate;
 /* border:solid #232324 1px; */
 border-radius:6px;
+color: #000000
 }
 
 th {
 font-family: "Raleway-Bold";
 border: 1px solid #999;
 padding: 0.2rem;
+color: #000000
 }
 
 td {
+font-family: "Raleway-Bold";
 border: 1px solid #999;
 padding: 1rem;
+color: #232324;
 }
 
 .trash {

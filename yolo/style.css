@@ -4,6 +4,11 @@
 }
 
 @font-face {
+  font-family: "Raleway-Regular";
+  src: url("/Raleway/static/Raleway-Regular.ttf");
+}
+
+@font-face {
   font-family: "Raleway-semibold";
   src: url("/Raleway/static/Raleway-SemiBold.ttf");
 }
@@ -41,10 +46,12 @@ body {
 
 b { 
   font-family: "Raleway-bold";
+  margin: auto;
 }
 
 title {
   font-family: "Raleway";
+  margin: auto;
 }
 
 h1 {
@@ -70,11 +77,12 @@ button {
 }
 
 .submit_button {
-  font-family: "Raleway-semibold";
+  font-family: "Raleway-Bold";
   font-size: 2rem;
   color: white;
-  width: 15rem;
-  height: 4rem;
+  width: 350px;
+  height: 100px;
+  padding: 20px;
   font-weight: bold;
   border-radius: 4rem;
   background-color: #433495;
@@ -210,4 +218,13 @@ div[role="progressbar"] {
 div[role="progressbar"]::before {
   counter-reset: percentage var(--value);
   content: counter(percentage) '%';
+}
+
+.rounded-input {
+  font-family: "Raleway-Regular";
+  padding: 10px;
+  font-size: 30px;
+  border-radius: 10px;
+  border: 0;
+  box-shadow:0 0 15px 4px rgba(0,0,0,0.06);
 }

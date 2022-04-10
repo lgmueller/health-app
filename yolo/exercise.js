@@ -15,9 +15,9 @@ class Workout {
 }
 
 // Preset Workouts for Arms, Legs, Abs
-const arm_workout = '{"name":"Beginner Arms","exercises":[{"sets":"4","reps":"8","my_name":"Tricep Dips"},{"sets":"3","reps":"10","my_name":"Bicep Curls"},{"sets":"3","reps":"8","my_name":"Shoulder Press"},{"sets":"3","reps":"8","my_name":"Bench Press"}]}';
+const arm_workout = '{"name":"Beginner Arms","exercises":[{"sets":"4","reps":"8","my_name":"Tricep Extensions"},{"sets":"3","reps":"10","my_name":"Bicep Curls"},{"sets":"3","reps":"8","my_name":"Shoulder Press"},{"sets":"3","reps":"8","my_name":"Bench Press"}]}';
 const leg_workout = '{"name":"Beginner Legs","exercises":[{"sets":"3","reps":"8","my_name":"Squats"},{"sets":"3","reps":"8","my_name":"Split Squats"},{"sets":"3","reps":"10","my_name":"Leg Press"},{"sets":"4","reps":"8","my_name":"Reverse Lunges"}]}';
-const back_workout = '{"name":"Beginner Back","exercises":[{"sets":"3","reps":"8","my_name":"Tricep Pulls"},{"sets":"3","reps":"5","my_name":"Bent Over Rows"},{"sets":"3","reps":"8","my_name":"Lateral Raises"}]}';
+const back_workout = '{"name":"Beginner Back","exercises":[{"sets":"3","reps":"8","my_name":"Tricep Press Downs"},{"sets":"3","reps":"5","my_name":"Bent Over Rows"},{"sets":"3","reps":"8","my_name":"Lateral Raises"}]}';
 
 var list = [];
 
@@ -93,7 +93,6 @@ function addToList() {
     rowNode.appendChild(name_cellNode);
     
     table.appendChild(rowNode);
-    list.push(rowNode);
 
 }
 
@@ -146,21 +145,28 @@ function loadWorkout() {
     var rep_obj = document.getElementById('reps');
     var my_name_obj = document.getElementById('nameField');
 
-    for (let exercise of workoutObj.exercises){
-        set = exercise.sets;
-        rep = exercise.reps;
-        my_name = exercise.my_name;
+    for (let i = 0; i < workoutObj.exercises.length; i++){
+        set = workoutObj.exercises[i].sets;
+        rep = workoutObj.exercises[i].reps;
+        my_name = workoutObj.exercises[i].my_name;
 
         var rowNode = document.createElement("tr");
-
+        rowNode.id = i + 1;
+        
         var cellNode = document.createElement("td");
         
         var trash_btn = document.createElement('input');
         trash_btn.type = "image";
+        trash_btn.id =  i + 1;
         trash_btn.src = "pictures/trash.png";
+
         trash_btn.onclick = function() { 
-            table.deleteRow(rowNode.rowIndex);
+            var row = document.getElementById(i + 1);
+            
+            table.deleteRow(row.rowIndex);
+            
         };
+
         cellNode.appendChild(trash_btn);
 
         var edit_btn = document.createElement('input');
@@ -175,10 +181,12 @@ function loadWorkout() {
             set_obj.value = num_set;
             rep_obj.value = num_rep;
             my_name_obj.value = exercise_name;
-            table.deleteRow(rowNode.rowIndex);
+            var row = document.getElementById(i + 1);
+            
+            table.deleteRow(row.rowIndex);
+            
         };
         cellNode.appendChild(edit_btn);
-
         rowNode.appendChild(cellNode);
 
         var set_cellNode = document.createElement("td");
@@ -197,6 +205,7 @@ function loadWorkout() {
         rowNode.appendChild(name_cellNode);
         
         table.appendChild(rowNode);
+        
     }
 
 }
@@ -231,15 +240,17 @@ function logWorkout(name) {
         done_btn.id = "button-done";
         var clicked = true;
         done_btn.onclick = function() { 
-            if (clicked == true){
-                done_btn.src = "pictures/done2.png";
-                completed += 1;
-                clicked = false;
-            } else {
-                done_btn.src = "pictures/incomplete2.png";
-                completed -= 1;
-                clicked = true;
-            }
+            done_btn.src = "pictures/done2.png";
+            completed +=1;
+            // if (clicked == true){
+            //     done_btn.src = "pictures/done2.png";
+            //     completed += 1;
+            //     clicked = false;
+            // } else {
+            //     done_btn.src = "pictures/incomplete2.png";
+            //     completed -= 1;
+            //     clicked = true;
+            // }
             if (completed == workoutObj.exercises.length) {
                 alert("Congratulations! You Completed your Workout!");
             }

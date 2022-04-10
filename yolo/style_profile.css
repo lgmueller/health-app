@@ -20,12 +20,12 @@
   }
 
   table, tr, th { 
-    background-color: white;
+    margin: auto;
+    background-color: #d4d2e1;
     border-collapse: collapse;
     color: black;
     width: 100%;
-    margin-left: auto;
-    margin-right: auto;
+    /* margin-left: auto; */
     justify-content: left;
     border-style: groove;
     font-family: "raleway";
@@ -43,22 +43,33 @@
   }
 
   .link {
-    font-family: "Raleway";
+    font-family: "Raleway-Bold";
     font-size: 2.5rem;
     color: white;
     width: 25rem;
-    height: 4rem;
+    height: 80px;
     font-weight: bold;
     border-radius: 3rem;
     text-decoration: none;
   }
 
   input, select, textarea { 
+    margin: auto;
     width: auto;
     padding: .1rem;
     border: 2px solid;
     text-align: center;
     font-size: 1.5rem;
+    font-family: "Raleway-Regular";
+    border-radius: 20px;
   }
 
+  .rounded-input {
+    font-family: "Raleway-Regular";
+    padding: 10px;
+    font-size: 30px;
+    border-radius: 10px;
+    border: 0;
+    box-shadow:0 0 15px 4px rgba(0,0,0,0.06);
+  }
 

@@ -17,7 +17,7 @@
 
   
   <center>
-  <div class = "body1" onload = "updateValues()">
+  <body class = "body" onload = "updateValues();">
     <br>
     <h1 style="font-size: 100px; margin-top: 50px">UPDATE GOALS</h1>
     <h3 style="color: #433495"><b>Enter any new goals you may have! Possible functions:</b></h3>
@@ -27,6 +27,7 @@
       <li>Update your goal weight</li>
       <li>Input your current stats</li>
     </ol>
+   
    
     <h3 style="color: #433495"><u><b>Goal Tracking</b></u></h3>
     <table>
@@ -60,37 +61,37 @@
     <div class="column2" style="background-color:rgb(255, 255, 255);">
       <p style = "font-size: 30px; color: #433495; font-family: Raleway-Bold"><u>Current</u></p>
       <p style = "font-size: 25px">Input your Current Weight</p>
-      <input style="font-size: 22px; width: 140px; height:33px; border-width:medium" type="number" id="weight_text1">
-      <input class="goal-text" style="font-size: 22px; width: 110px; height:33px" type ="submit" onclick="myWeightFunction1()">
+      <input class = "rounded-input" style="font-size: 22px; width: 140px; height:33px; border-width:medium" type="number" id="weight_text1">
+      <input class = "rounded-input" class="goal-text" style="font-size: 22px; width: 110px; height:33px" type ="submit" onclick="myWeightFunction1()">
       
     
       <br></br>
       <p style="font-size: 25px;">Input your Current Calorie Intake</p>
-      <input style="font-size: 22px; width: 140px; height:33px; border-width:medium" type="number" id="cal_text1">
-      <input style="font-size: 22px; width: 110px; height:33px " class="goal-text" type ="submit" onclick="myCalFunction1()">
+      <input class = "rounded-input" style="font-size: 22px; width: 140px; height:33px; border-width:medium" type="number" id="cal_text1">
+      <input class = "rounded-input" style="font-size: 22px; width: 110px; height:33px " class="goal-text" type ="submit" onclick="myCalFunction1()">
       
       <br></br>
       <p style="font-size: 25px;">Input your Current Exercise Time</p>
-      <input style="font-size: 22px; width: 140px; height:33px; border-width:medium;" type="number" id="exer_text1">
-      <input style="font-size: 22px; width: 110px; height:33px; " class="goal-text" type ="submit" onclick="myExerFunction1()">
+      <input class = "rounded-input" style="font-size: 22px; width: 140px; height:33px; border-width:medium;" type="number" id="exer_text1">
+      <input class = "rounded-input" style="font-size: 22px; width: 110px; height:33px; " class="goal-text" type ="submit" onclick="myExerFunction1()">
       
 
     </div>
     <div class="column2" style="background-color:rgb(255, 255, 255);">
       <p style = "font-size: 30px; color: #433495; font-family: Raleway-Bold"><u>Goal</u></p>
       <p style="font-size: 25px;">Input your Goal Weight</p>
-      <input style="font-size: 22px; width: 140px; height:33px; border-width:medium"  type="number" id="weight_text">
-      <input style="font-size: 22px; width: 110px; height:33px; " class="goal-text" type ="submit" onclick="myWeightFunction()">
+      <input class = "rounded-input" style="font-size: 22px; width: 140px; height:33px; border-width:medium"  type="number" id="weight_text">
+      <input class = "rounded-input" style="font-size: 22px; width: 110px; height:33px; " class="goal-text" type ="submit" onclick="myWeightFunction()">
       
       <br></br>
       <p style="font-size: 25px;">Input your Goal Calorie Intake</p>
-      <input style="font-size: 22px; width: 140px; height:33px; border-width:medium" type="number" id="cal_text">
-      <input style="font-size: 22px; width: 110px; height:33px; " class="goal-text" type ="submit" onclick="myCalFunction()">
+      <input class = "rounded-input" style="font-size: 22px; width: 140px; height:33px; border-width:medium" type="number" id="cal_text">
+      <input class = "rounded-input" style="font-size: 22px; width: 110px; height:33px; " class="goal-text" type ="submit" onclick="myCalFunction()">
  
       <br></br>
       <p style="font-size: 25px;">Input your Goal Exercise Time </p>
-      <input style="font-size: 22px; width: 140px; height:33px;border-width:medium" type="number" id="exer_text">
-      <input style="font-size: 22px; width: 110px; height:33px; " class="goal-text" type ="submit" onclick="myExerFunction()">
+      <input class = "rounded-input" style="font-size: 22px; width: 140px; height:33px;border-width:medium" type="number" id="exer_text">
+      <input class = "rounded-input" style="font-size: 22px; width: 110px; height:33px; " class="goal-text" type ="submit" onclick="myExerFunction()">
 
 
     </div>
@@ -98,7 +99,10 @@
 
     <br> </br>
 
-</div>
+</body>
+
+
+
 
 
   <div class = "body2">
@@ -148,11 +152,12 @@
   </div>
 
 
+
  
   
 </div>
 
-  <p id="weight_p1" style="color:white"></p>
+<p id="weight_p1" style="color:white"></p>
   <p id="cal_p1"style="color:white"></p>
   <p id="exer_p1"style="color:white"></p>
   <p id="weight_p"style="color:white"></p>

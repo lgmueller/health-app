@@ -17,7 +17,6 @@
 
 
 
-
 b { 
   font-family: "Raleway-Bold";
 }
@@ -67,8 +66,9 @@ button {
   font-weight: bold;
   border-radius: 2rem;
   margin: 0 5px;
-  background-color: #8e95e7;
+  background-color: #433495;
 }
+
 
 
 .profile {
@@ -391,12 +391,12 @@ div[role="progresslinebar"]::before {
 
 
 /* Set height of body and the document to 100% */
-.body1 {
+body {
   height: 100%;
   max-width: 500px;
   text-align: center;
   font-size: 2rem;
-  font-family: "raleway";
+  font-family: "Raleway";
   margin: auto;
 }
 
@@ -491,7 +491,7 @@ div[role="progresslinebar"]::before {
   background-color: #ECEDEE;
   height: 2em;
   line-height: 2em;
-  font-size: 2em;
+  font-size: 0.75em;
   border-radius: 10px;
   width: 1.4em;
   text-align: center;

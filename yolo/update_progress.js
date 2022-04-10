@@ -32,7 +32,7 @@ window.onload = function() {
 
 function updateProgressCircles () {
     var circle1 = document.getElementById("circle1");
-    var nutrition_percentage = 100 * (localStorage.getItem('CurrCal')/localStorage.getItem('GoalCal'));
+    var nutrition_percentage = Math.round(100 * (localStorage.getItem('CurrCal')/localStorage.getItem('GoalCal')));
     
     if (isNaN(nutrition_percentage)) {
       nutrition_percentage = 90;
@@ -41,7 +41,7 @@ function updateProgressCircles () {
     circle1.setAttribute('style','--value:' + nutrition_percentage );
 
     var circle2 = document.getElementById("circle2");
-    var exercise_percentage = 100 * (localStorage.getItem('CurrExer')/localStorage.getItem('GoalExer'));
+    var exercise_percentage = Math.round(100 * (localStorage.getItem('CurrExer')/localStorage.getItem('GoalExer')));
     
     if (isNaN(exercise_percentage)) {
       exercise_percentage = 90;
@@ -50,12 +50,22 @@ function updateProgressCircles () {
     circle2.setAttribute('style','--value:' + exercise_percentage);
 
     var circle3 = document.getElementById("circle3");
-    var weight_percentage = 100 * (localStorage.getItem('CurrWeight')/localStorage.getItem('GoalWeight'));
+    var weight_percentage = Math.round(100 * (localStorage.getItem('CurrWeight')/localStorage.getItem('GoalWeight')));
     if (isNaN(weight_percentage)){
       weight_percentage = 90;
     }
     circle3.setAttribute('aria-valuenow',weight_percentage);
     circle3.setAttribute('style','--value:' + weight_percentage);
+}
+
+function updateProgressCircles1 () {
+  var circle1 = document.getElementById("circle1"); 
+  var weight_percentage = 100 * (localStorage.getItem('CurrCal')/localStorage.getItem('GoalCal'));
+  if (isNaN(weight_percentage)){
+    weight_percentage = 90;
+  }
+  circle1.setAttribute('aria-valuenow',weight_percentage);
+  circle1.setAttribute('style','--value:' + weight_percentage);
 }
 
 function updateProgressCircles3 () {
@@ -106,16 +116,7 @@ function updateValues() {
     document.getElementById("new_curr_cal").innerHTML =  get_curr_cal + " Calories";
 
     
-    /*
-    document.getElementById("progress_circle_nutrition").setAttribute("aria-valuenow", get_curr_cal.toString());
-    document.getElementById("progress_circle_nutrition").setAttribute("style", "--value: "+get_curr_cal.toString());
-  */ 
- /*
-    var test = document.getElementById("progress_circle_nutrition").getAttribute("aria-valuenow");
-    console.log(test)
-    document.getElementById("progress_circle_nutrition").getAttribute("style", "--value: 78");*/
 
-    
     var get_goal_exer = localStorage.getItem("GoalExer");
     if (localStorage.getItem("GoalExer") == null) {
       get_goal_exer = 100;
@@ -136,13 +137,11 @@ function updateValues() {
 
 
 
-
 function myWeightFunction() {
     var x = document.getElementById("weight_text").value;
     document.getElementById("weight_p").innerHTML = x + " lbs";
     localStorage.setItem("GoalWeight", x);
-    var table_goal_weight = document.getElementById("new_goal_weight");
-    table_goal_weight.innerHTML = x + " lbs";
+    document.getElementById("new_goal_weight").innerHTML = x + " lbs";
 }
 
   function myWeightFunction1() {

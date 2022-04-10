@@ -162,7 +162,7 @@ function loadWorkout() {
 
         trash_btn.onclick = function() { 
             var row = document.getElementById(i + 1);
-            let idx = this.id;
+            
             table.deleteRow(row.rowIndex);
             
         };
@@ -181,7 +181,10 @@ function loadWorkout() {
             set_obj.value = num_set;
             rep_obj.value = num_rep;
             my_name_obj.value = exercise_name;
-            table.deleteRow(rowNode.rowIndex);
+            var row = document.getElementById(i + 1);
+            
+            table.deleteRow(row.rowIndex);
+            
         };
         cellNode.appendChild(edit_btn);
         rowNode.appendChild(cellNode);

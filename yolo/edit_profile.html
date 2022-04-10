@@ -35,20 +35,21 @@
           <table class="profile-table">
             <tr>
               <th class="category-edit">Name</th>
-              <th><input type="text" name="name" placeholder="Average Joe" /></th>
+              <th><input class="rounded-input" type="text" name="name" placeholder="Average Joe" /></th>
             </tr>
             <tr>
               <th class="category-edit">Age</th>
-              <th><input type="text" name="age" placeholder="Age" /></th>
+              <th><input class="rounded-input" type="text" name="age" placeholder="Age" /></th>
             </tr>
             <tr>
               <th class="category-edit">Height</th>
               <th white-space="nowrap">
                 <div class="input-height">
-                  <input type="number" name="height-feet" placeholder="feet" width="50%" />
+                  <input class="rounded-input" type="number" name="height-feet" placeholder="feet" width="50%" />
                 </div>
                 <div class="input-height">
                   <input
+                  class="rounded-input"
                     type="number"
                     name="height-inches"
                     placeholder="inches"
@@ -60,23 +61,23 @@
             <tr>
               <th class="category-edit">Sex</th>
               <th>
-                <select>
+                <select >
                   <option value="sex" selected>Choose Sex</option>
                   <option value="male">Male</option>
                   <option value="female">Female</option>
                   <option value="other">Other</option>
-                </select>
+                </select >
               </th>
             </tr>
             <tr>
               <th class="category-edit">Birthday</th>
-              <th><input type="date" name="bday" /></th>
+              <th><input class="rounded-input" type="date" name="bday" /></th>
             </tr>
             <tr>
               <th class="category-edit">Experience Level</th>
               <th><select>
                 <option value="choose-level" selected>Choose Level</option>
-                <option value="beginner"></option>Beginner</option>
+                <option value="beginner">Beginner</option>
                 <option value="intermediate">Intermediate</option>
                 <option value="advanced">Advanced</option>
               </select></th>

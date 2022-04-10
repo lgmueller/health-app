@@ -124,3 +124,12 @@
   .show { 
     display: block;
   }
+
+  .rounded-input {
+    font-family: "Raleway-Regular";
+    padding: 10px;
+    font-size: 30px;
+    border-radius: 10px;
+    border: 0;
+    box-shadow:0 0 15px 4px rgba(0,0,0,0.06);
+  }

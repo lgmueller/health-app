@@ -3,6 +3,7 @@
     <title>Profile</title>
     <link href="style.css" rel="stylesheet" />
     <link href="style_profile.css" rel="stylesheet" />
+    <script type = "text/javascript" src="profile.js"></script>
     <meta
       name="viewport"
       content="width=768px, height=1280px, initial-scale=1"
@@ -16,7 +17,7 @@
   </head>
 
   <center>
-    <body>
+    <body onload="loadInfo()">
       <div class="main-block">
         <div class="home">
           <a href="index.html"
@@ -33,7 +34,7 @@
 
         <div class="flex-container">
           <div>
-            <h2>Average Joe</h2>
+            <h2 id="username">Average Joe</h2>
           </div>
           <div>
             <img class="profile-pic" src="pictures/profile.png" alt="" />
@@ -43,23 +44,23 @@
         <table class="profile-table">
           <tr>
             <th class="category">Age</th>
-            <th>23</th>
+            <th id="age">23</th>
           </tr>
           <tr>
-            <th class="category">Height</th>
-            <th>5ft 9in</th>
+            <th  class="category">Height (cm)</th>
+            <th id="height">5ft 9in</th>
           </tr>
           <tr>
-            <th class="category">Sex</th>
-            <th>Male</th>
+            <th  class="category">Sex</th>
+            <th id="sex">Male</th>
           </tr>
           <tr>
-            <th class="category">Birthday</th>
-            <th>November 2, 1998</th>
+            <th  class="category">Birthday</th>
+            <th id="birthday">November 2, 1998</th>
           </tr>
           <tr>
-            <th class="category">Experience Level</th>
-            <th>Beginner</th>
+            <th  class="category">Exercise Level</th>
+            <th id="experience">Beginner</th>
           </tr>
         </table>
         <br />

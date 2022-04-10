@@ -48,7 +48,9 @@ function loadInfo() {
     var cellNode
     var name_cellNode 
     var name_textNode
+    var date_cellNode
     var food_item
+    var date
 
     var i
     for (i = 0; i < food_list.length; i++) {
@@ -58,18 +60,36 @@ function loadInfo() {
         protein = food_item.protein
         fat = food_item.fat
         carbs = food_item.carbs
+        date = food_item.date
 
         current_calories += parseInt(calories)
 
         rowNode = document.createElement("tr");
+        rowNode.id = "tr_" + i
 
         cellNode = document.createElement("td");
 
-        var letter_cutoff = 6
-        while (name.length >= letter_cutoff ) {
+        var letter_cutoff = 16
+        while (name.length > letter_cutoff ) {
             name = name.substring(0,letter_cutoff) + "-\n" + name.substring(letter_cutoff,name.length)
-            letter_cutoff = letter_cutoff + 8
+            letter_cutoff = letter_cutoff + 18
         }
+
+        var trash_btn = document.createElement('input');
+        trash_btn.type = "image";
+        trash_btn.src = "pictures/trash.png";
+        trash_btn.id = "trash_" + i
+        trash_btn.onclick = function() { 
+            let idx = this.id.substring(6,this.id.length)
+            console.log(idx)
+            //table.deleteRow(rowNode.rowIndex);
+            table.deleteRow(idx)
+            food_list.splice(idx, 1)
+            saveFoodList()
+            window.location.href = "nutrition.html";
+        };
+        cellNode.appendChild(trash_btn);
+        rowNode.appendChild(cellNode)
 
         name_cellNode = document.createElement("td");
         name_textNode = document.createTextNode(name);
@@ -81,6 +101,12 @@ function loadInfo() {
         calories_cellNode.appendChild(calories_textNode);
         rowNode.appendChild(calories_cellNode);
 
+        date_cellNode = document.createElement("td");
+        date_textNode = document.createTextNode(date);
+        date_cellNode.appendChild(date_textNode);
+        rowNode.appendChild(date_cellNode);
+        
+        /*
         protein_cellNode = document.createElement("td");
         protein_textNode = document.createTextNode(protein);
         protein_cellNode.appendChild(protein_textNode);
@@ -94,7 +120,7 @@ function loadInfo() {
         carbs_cellNode = document.createElement("td");
         carbs_textNode = document.createTextNode(carbs);
         carbs_cellNode.appendChild(carbs_textNode);
-        rowNode.appendChild(carbs_cellNode);
+        rowNode.appendChild(carbs_cellNode);*/
         
         table.appendChild(rowNode);
     }
@@ -149,8 +175,3 @@ function addFood() {
     saveFoodList()
 }
 
-function loadPieChart() {
-
-
-
-}

@@ -28,6 +28,8 @@ window.onload = function() {
 }
 */
 
+
+
 function updateProgressCircles () {
     var circle1 = document.getElementById("circle1");
     var nutrition_percentage = 100 * (localStorage.getItem('CurrCal')/localStorage.getItem('GoalCal'));
@@ -376,9 +378,11 @@ data: {
   ]
 },
 options: {
+  
   title: {
     display: true,
     text: 'Monthly Exercise Duration'
   }
+  
 }
 });

@@ -225,10 +225,10 @@ function logWorkout(name) {
 
     var completed = 0;
 
-    for (let exercise of workoutObj.exercises){
-        set = exercise.sets;
-        rep = exercise.reps;
-        my_name = exercise.my_name;
+    for (let i = 0; i < workoutObj.exercises.length; i++){
+        set = workoutObj.exercises[i].sets;
+        rep = workoutObj.exercises[i].reps;
+        my_name = workoutObj.exercises[i].my_name;
 
         var rowNode = document.createElement("tr");
 
@@ -237,20 +237,19 @@ function logWorkout(name) {
         var done_btn = document.createElement('input');
         done_btn.type = "image";
         done_btn.src = "pictures/incomplete2.png";
-        done_btn.id = "button-done";
-        var clicked = true;
+        done_btn.id = i + 1;
+        
         done_btn.onclick = function() { 
-            done_btn.src = "pictures/done2.png";
-            completed +=1;
-            // if (clicked == true){
-            //     done_btn.src = "pictures/done2.png";
-            //     completed += 1;
-            //     clicked = false;
-            // } else {
-            //     done_btn.src = "pictures/incomplete2.png";
-            //     completed -= 1;
-            //     clicked = true;
-            // }
+            var btn = document.getElementById(i+1);
+            
+            if (btn.src.includes("pictures/done2.png")){
+                btn.src = "pictures/incomplete2.png";
+                completed -=1;
+            } else {
+                btn.src = "pictures/done2.png";
+                completed +=1;
+            }   
+
             if (completed == workoutObj.exercises.length) {
                 alert("Congratulations! You Completed your Workout!");
             }

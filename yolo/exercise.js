@@ -145,20 +145,26 @@ function loadWorkout() {
     var rep_obj = document.getElementById('reps');
     var my_name_obj = document.getElementById('nameField');
 
-    for (let exercise of workoutObj.exercises){
-        set = exercise.sets;
-        rep = exercise.reps;
-        my_name = exercise.my_name;
+    for (let i = 0; i < workoutObj.exercises.length; i++){
+        set = workoutObj.exercises[i].sets;
+        rep = workoutObj.exercises[i].reps;
+        my_name = workoutObj.exercises[i].my_name;
 
         var rowNode = document.createElement("tr");
+        rowNode.id = i + 1;
+        
         var cellNode = document.createElement("td");
         
         var trash_btn = document.createElement('input');
         trash_btn.type = "image";
+        trash_btn.id =  i + 1;
         trash_btn.src = "pictures/trash.png";
-        trash_btn.onclick = function() { 
-            table.deleteRow(rowNode.rowIndex);
 
+        trash_btn.onclick = function() { 
+            var row = document.getElementById(i + 1);
+            let idx = this.id;
+            table.deleteRow(row.rowIndex);
+            
         };
 
         cellNode.appendChild(trash_btn);
@@ -179,7 +185,7 @@ function loadWorkout() {
         };
         cellNode.appendChild(edit_btn);
         rowNode.appendChild(cellNode);
-        
+
         var set_cellNode = document.createElement("td");
         var set_textNode = document.createTextNode(set);
         set_cellNode.appendChild(set_textNode);

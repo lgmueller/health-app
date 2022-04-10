@@ -359,3 +359,17 @@ input {
   padding: 30px;
   border-radius: 100px;
 }
+
+.workout_descriptions {
+  width: fit-content;
+  padding-left: 40px;
+  padding-right: 40px;
+  
+}
+
+.description {
+  font-family: "Raleway-Regular";
+  font-size: 25px;
+  display: block;
+  overflow: auto;
+}

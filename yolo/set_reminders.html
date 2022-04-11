@@ -2,8 +2,8 @@
 
 <html lang="en">
   <head>
-    <title>Set/Edit Reminders</title>
-    <link href="style.css" rel="stylesheet" />
+    <title>Manage Reminders</title>
+    <link href="style_exercise.css" rel="stylesheet" />
     <link href="style_reminders.css" rel="stylesheet" />
     <meta
       name="viewport"
@@ -32,18 +32,22 @@
     <div class="main-block">
       <div class="title">
         <i class="fas fa-pencil-alt"></i>
-        <h1 style="font-size: 100px; margin-top: 50px">Set/Edit Reminders</h1>
+        <h1 style="font-size: 60px; margin-top: 50px">Manage Reminders</h1>
       </div>
 
       <br>
-      <button class="tablink" onclick="openPage('set', this)" id="defaultOpen">
-        Set
-      </button>
-      <button class="tablink" onclick="openPage('edit', this)">Edit</button>
+      <center>
+          <button class="tablink" onclick="openPage('set', this)" id="defaultOpen">
+            Set
+          </button>
+          <button class="tablink" onclick="openPage('edit', this)">Edit</button>
+
+        
+      </center>
+      
 
       <div id="set" class="tabcontent">
-        <br /><br />
-        <h2>Set New Reminder</h2>
+        <br><br>
         <div class="row">
           <div class="column-left">
             <label for="date">Day:</label>
@@ -77,17 +81,61 @@
           </div>
         </div>
 
-        <br />
         <br>
-        <br>
-        <button class="submit_button" type="submit" href="/">
+        <button class="btn-submit" type="submit" href="reminders.html">
           Set Reminder
         </button>
+        <br><br><br><br>
+
+          <!--stuff for keyboard taken from https://gist.github.com/itszero/972142 --> 
+          <div id="keyboard">
+            <div class="row">
+              <div class="key">Q</div>
+              <div class="key">W</div>
+              <div class="key">E</div>
+              <div class="key">R</div>
+              <div class="key">T</div>
+              <div class="key">Y</div>
+              <div class="key">U</div>
+              <div class="key">I</div>
+              <div class="key">O</div>
+              <div class="key">P</div>
+            </div>
+            <div class="row">
+              <div class="key">A</div>
+              <div class="key">S</div>
+              <div class="key">D</div>
+              <div class="key">F</div>
+              <div class="key">G</div>
+              <div class="key">H</div>
+              <div class="key">J</div>
+              <div class="key">K</div>
+              <div class="key">L</div>
+            </div>
+            <div class="row">
+              <div class="key system_key" style="width: 3em">Shift</div>
+              <div class="key">Z</div>
+              <div class="key">X</div>
+              <div class="key">C</div>
+              <div class="key">V</div>
+              <div class="key">B</div>
+              <div class="key">N</div>
+              <div class="key">M</div>
+              <div class="key system_key" style="width: 2em">⌫</div>
+            </div>
+            <div class="row">
+              <div class="key system_key" style="width: 2.25em">123</div>
+              <div class="key" style="width: 6.5em; color: #71717D; font-weight: 600;">space</div>
+              <div class="key system_key" style="width: 4em">Enter</div>
+            </div>
+          </div>
+
+
+
       </div>
 
       <div id="edit" class="tabcontent">
         <br /><br />
-        <h2>Edit Existing Reminder</h2>
         <div class="row">
           <div class="column-left">
             <label for="existing-reminders">Day of Reminder</label>
@@ -132,11 +180,59 @@
           </div>
 
           <br />
-          <br>
           
-          <button class="submit_button" type="submit" href="/">
-            Update Reminder
+          <button class="btn-submit" type="submit" href="/">
+            Update
           </button>
+          <br><br><br><br>
+
+          <!--stuff for keyboard taken from https://gist.github.com/itszero/972142 --> 
+          <div id="keyboard">
+            <div class="row">
+              <div class="key">Q</div>
+              <div class="key">W</div>
+              <div class="key">E</div>
+              <div class="key">R</div>
+              <div class="key">T</div>
+              <div class="key">Y</div>
+              <div class="key">U</div>
+              <div class="key">I</div>
+              <div class="key">O</div>
+              <div class="key">P</div>
+            </div>
+            <div class="row">
+              <div class="key">A</div>
+              <div class="key">S</div>
+              <div class="key">D</div>
+              <div class="key">F</div>
+              <div class="key">G</div>
+              <div class="key">H</div>
+              <div class="key">J</div>
+              <div class="key">K</div>
+              <div class="key">L</div>
+            </div>
+            <div class="row">
+              <div class="key system_key" style="width: 3em">Shift</div>
+              <div class="key">Z</div>
+              <div class="key">X</div>
+              <div class="key">C</div>
+              <div class="key">V</div>
+              <div class="key">B</div>
+              <div class="key">N</div>
+              <div class="key">M</div>
+              <div class="key system_key" style="width: 2em">⌫</div>
+            </div>
+            <div class="row">
+              <div class="key system_key" style="width: 2.25em">123</div>
+              <div class="key" style="width: 6.5em; color: #71717D; font-weight: 600;">space</div>
+              <div class="key system_key" style="width: 4em">Enter</div>
+            </div>
+          </div>
+
+
+
+
+
         </div>
       </div>
     </div>

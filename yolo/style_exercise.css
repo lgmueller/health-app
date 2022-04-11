@@ -416,6 +416,7 @@ input {
   font-weight: 600;
 }
 
+/* not keyboard stuff anymore */
 .select {
   width: 100px;
   margin: 10px;

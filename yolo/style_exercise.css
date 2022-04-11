@@ -90,9 +90,9 @@
   }
 
   .roundedButton {
-    width: 400px;
-    height: 130px;
-    padding: 20px;
+    width: 450px;
+    height: 120px;
+    padding: 10px;
     font-family: "Raleway-Bold";
     /* border-color: #433495;
     border-style: solid; */
@@ -101,7 +101,7 @@
     color:white;
     font-size: 40px;
     font-weight: 40px;
-    margin-top: 30px;
+    margin-top: 22px;
     border-radius: 60px;
   }
 
@@ -180,26 +180,24 @@ img {
   width: 40%;
   height: 600px;
   border-radius: .5em;
-  margin:10px;
   border: 2px solid #433495;
   background-color: #433495;
   box-shadow: 15px 15px #bdc2f5;
-  font-size: 30px;
   color: white;
   align-items: center;
-  vertical-align: center;
+  
 }
 
 .flexbox-item-box {
-  width: 40%;
-  padding: 10px;
-  height: 200px;
-  border-radius: .5em;
-  margin: 10px;
+  width: 30%;
+  padding: 30px;
+  height: 230px;
+  border-radius: 100px;
+  margin: 25px;
   border: 2px solid #433495;
   background-color: #433495;
   box-shadow: 15px 15px #bdc2f5;
-  font-size: 30px;
+  font-size: 50px;
   color: white;
   align-self: center;
   vertical-align: center;

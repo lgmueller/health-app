@@ -18,17 +18,13 @@
   
   <center>
   <body class = "body1" onload = "updateValues(); updateProgressCircles();">
-    <br>
-    <h1 style="font-size: 100px; margin-top: 50px">PROGRESS</h1>
-    <p>
-    <h4>Update your health and fitness goals!</h4>
-    <a href="track_goals.html"><button type="button" class="button1" data-inline="true">Update Goals</button></a>
+    <h1 style="font-size: 100px; ">PROGRESS</h1>
    
-    <p style="font-size: 50px;color: #8e95e7; font-family: Raleway-Bold">Progress Summary</p>
+    <!-- <p style="font-size: 50px; font-family: Raleway-Bold">Progress Summary</p> -->
     <!--Tabs for All Goal Tracking-->
     <div class="row1">
       <div class="column1" style="background-color:rgb(255, 255, 255);">
-        <p style="font-size: 30px ;font-family: Raleway-Bold;">Nutrition <p>
+        <p style="font-size: 1.8rem ;font-family: Raleway-Bold;">Nutrition </p>
 
       <div
           id="circle1"
@@ -39,11 +35,11 @@
           style="--value: 95"
         ></div>
 
-      <h6 id = "cal_p1">Current: <b id = "new_curr_cal">2,250</b>  <br> Goal: <b id = "new_goal_cal">2,500</b> </h6>
+      <h6 style="font-size: 1.6rem" id = "cal_p1"> <b>Current: </b> <b id = "new_curr_cal">2,250</b>  <br> <b>Goal: </b> <b id = "new_goal_cal">2,500</b> </h6>
       <a href="progress_nutrition.html"><button type="button" class = "button1" data-inline="true">Track Nutrition</button></a>
       </div>
       <div class="column1" style="background-color:white;">
-        <p style="font-size: 30px ;font-family: Raleway-Bold;">Exercise<p>
+        <p style="font-size: 30px ;font-family: Raleway-Bold;">Exercise</p>
 
     <div
           id="circle2"
@@ -54,7 +50,7 @@
           style="--value: 95"
         ></div>
 
-    <h6>Current: <b id = "new_curr_exer">90</b> <br> Goal: <b id = "new_goal_exer">100</b>  </h6>
+    <h6 style="font-size: 1.6rem"><b> Current: </b> <b id = "new_curr_exer">90</b> <br> <b>Goal: </b><b id = "new_goal_exer">100</b>  </h6>
     <a href="progress_exercise.html"><button type="button" class="button1" data-inline="true">Track Exercise</button></a>
       </div>
       
@@ -65,24 +61,50 @@
 
     
 
-    <p style="font-size: 30px ;font-family: Raleway-Bold;">Weight<p>
-    <div
-          id="circle3"
-          role="progresslinebar"
-          aria-valuenow="95"
-          aria-valuemin="0"
-          aria-valuemax="100"
-          style="--value: 95"
-        ></div>
-    <h6>Current: <b id = "new_curr_weight"> </b> <br> Goal: <b id = "new_goal_weight"></b> </h6>
-    <a href="progress_weight.html"><button type="button" class="button1" data-inline="true">Track Weight</button></a>
+    <div class="row1">
 
-  </p>
+      <div class="column1" style="background-color:white;">
+      
+        <p style="font-size: 30px ;font-family: Raleway-Bold;">Weight<p>
+          <div
+                id="circle3"
+                role="progresslinebar"
+                aria-valuenow="95"
+                aria-valuemin="0"
+                aria-valuemax="100"
+                style="--value: 95"
+              ></div>
+          <h6 style="font-size: 1.6rem"><b>Current: </b><b id = "new_curr_weight"> </b> <br> <b>Goal: </b><b id = "new_goal_weight"></b> </h6>
+          <a href="progress_weight.html"><button type="button" class="button1" data-inline="true">Track Weight</button></a>
+      
+      </div>
+
+      <div class="column1" style="background-color:white;">
+      
+        <br><br>
+        <h3> <b>Click below to update your goals! </b></h3>
+        <a href="track_goals.html"><button type="button" 
+          class="button1" 
+          data-inline="true" 
+          style="font-size: 1.8rem; font-family: Raleway-Bold"
+          > Update Goals</button></a>
+      
+      </div>
+
+
+
+    </div>
+
+
+    
+
+
+  
     
     <br>
     <br>
     <br>
-    <br></br>
+    <br></br><br>
     
     
     <div class="tabs">

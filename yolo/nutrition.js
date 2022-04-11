@@ -39,48 +39,58 @@ function loadDefaults() {
     default_food_list = '[{"name":"pizza","calories":"600","protein":"14","fat":"30","carbs":"50","date":"04/11/2022"},{"name":"greek yogurt","calories":"200","protein":"30","fat":"10","carbs":"0","date":"04/11/2022"},{"name":"cheeseburger","calories":"500","protein":"10","fat":"40","carbs":"30","date":"04/11/2022"}]'
     default_CurrCal = "1300"
     default_GoalCal = "2500"
+    default_CurrExer = "90"
     default_GoalExer = "100"
-    default_GoalWeight = "200"
+    default_CurrWeight = "135"
+    default_GoalWeight = "150"
+    
     
     default_birthday = "2022-04-09"
     default_experience = "intermediate"
     default_height = "183"
     default_sex = "male"
     default_username = "Eric"
-
-localStorage.setItem("food_list", 
+  
+  localStorage.setItem("food_list", 
     localStorage.getItem("food_list") == null ? default_food_list : localStorage.getItem("food_list")
     )
-localStorage.setItem("CurrCal", 
+  localStorage.setItem("CurrCal", 
     localStorage.getItem("CurrCal") == null ? default_CurrCal : localStorage.getItem("CurrCal")
     )
-localStorage.setItem("GoalCal", 
+  localStorage.setItem("GoalCal", 
     localStorage.getItem("GoalCal") == null ? default_GoalCal : localStorage.getItem("GoalCal")
     )
-    localStorage.setItem("GoalExer", 
-        localStorage.getItem("GoalExer") == null ? default_GoalExer : localStorage.getItem("GoalExer")
-        )
-localStorage.setItem("GoalWeight", 
+  localStorage.setItem("GoalExer", 
+      localStorage.getItem("GoalExer") == null ? default_GoalExer : localStorage.getItem("GoalExer")
+      )
+  localStorage.setItem("CurrExer", 
+      localStorage.getItem("CurrExer") == null ? default_CurrExer : localStorage.getItem("CurrExer")
+      )
+    
+  localStorage.setItem("CurrWeight", 
+      localStorage.getItem("CurrWeight") == null ? default_CurrWeight : localStorage.getItem("CurrWeight")
+      )
+  localStorage.setItem("GoalWeight", 
     localStorage.getItem("GoalWeight") == null ? default_GoalWeight : localStorage.getItem("GoalWeight")
     )
-localStorage.setItem("birthday", 
+  localStorage.setItem("birthday", 
     localStorage.getItem("birthday") == null ? default_birthday : localStorage.getItem("birthday")
     )
-localStorage.setItem("experience", 
+  localStorage.setItem("experience", 
     localStorage.getItem("experience") == null ? default_experience : localStorage.getItem("experience")
     )
-localStorage.setItem("height", 
+  localStorage.setItem("height", 
     localStorage.getItem("height") == null ? default_height : localStorage.getItem("height")
     )
-localStorage.setItem("sex", 
+  localStorage.setItem("sex", 
     localStorage.getItem("sex") == null ? default_sex : localStorage.getItem("sex")
     )
-localStorage.setItem("username", 
+  localStorage.setItem("username", 
     localStorage.getItem("username") == null ? default_username : localStorage.getItem("username")
     )
-
-
-}
+  
+  
+  }
 
 
 

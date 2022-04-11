@@ -416,3 +416,8 @@ function resetTimer() {
     sec = 0;
     min = 0;
 }
+
+function showKeyboard() {
+    var keyboard = document.createElement('img');
+    keyboard.src = "pictures/keyboard.png";
+}

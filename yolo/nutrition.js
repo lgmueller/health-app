@@ -35,6 +35,7 @@ function loadFoodList() {
 
 function loadDefaults() {
     
+  // adding comment to test something
 
     default_food_list = '[{"name":"pizza","calories":"600","protein":"14","fat":"30","carbs":"50","date":"04/11/2022"},{"name":"greek yogurt","calories":"200","protein":"30","fat":"10","carbs":"0","date":"04/11/2022"},{"name":"cheeseburger","calories":"500","protein":"10","fat":"40","carbs":"30","date":"04/11/2022"}]'
     default_CurrCal = "1300"

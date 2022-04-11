@@ -23,6 +23,12 @@
 
   <h1 style="font-size: 100px; margin-top: 50px">REMINDERS</h1>
 
+  <div id="instruction" >
+    <br>
+    <b>Click on a date with an asterisk to see reminder!</b>
+  </div>
+  
+  
   <table>
     <caption align="top">
       <h2>April 2022</h2>
@@ -46,48 +52,48 @@
         <td></td>
         <td></td>
         <td></td>
-        <td>01</td>
-        <td>02</td>
+        <td onclick="showReminder('none')">01</td>
+        <td onclick="showReminder('none')">02</td>
       </tr>
       <tr></tr>
       <tr>
-        <td>03</td>
+        <td onclick="showReminder('none')">03</td>
         <td class="event" onclick="showReminder('option1')">04</td>
-        <td>05</td>
-        <td>06</td>
-        <td>07</td>
-        <td>08</td>
-        <td>09</td>
+        <td onclick="showReminder('none')">05</td>
+        <td onclick="showReminder('none')">06</td>
+        <td onclick="showReminder('none')">07</td>
+        <td onclick="showReminder('none')">08</td>
+        <td onclick="showReminder('none')">09</td>
       </tr>
       <tr>
-        <td>10</td>
-        <td>11</td>
-        <td>12</td>
-        <td>13</td>
-        <td>14</td>
-        <td>15</td>
-        <td>16</td>
+        <td onclick="showReminder('none')">10</td>
+        <td onclick="showReminder('none')">11</td>
+        <td onclick="showReminder('none')">12</td>
+        <td onclick="showReminder('none')">13</td>
+        <td onclick="showReminder('none')">14</td>
+        <td onclick="showReminder('none')">15</td>
+        <td onclick="showReminder('none')">16</td>
       </tr>
       <tr>
-        <td>17</td>
-        <td>18</td>
+        <td onclick="showReminder('none')">17</td>
+        <td onclick="showReminder('none')">18</td>
         <td class="event" onclick="showReminder('option2')">19</td>
-        <td>20</td>
-        <td>21</td>
+        <td onclick="showReminder('none')">20</td>
+        <td onclick="showReminder('none')">21</td>
         <td class="event" onclick="showReminder('option3')">22</td>
-        <td>23</td>
+        <td onclick="showReminder('none')">23</td>
       </tr>
       <tr>
-        <td>24</td>
-        <td>25</td>
-        <td>26</td>
-        <td>27</td>
-        <td>28</td>
-        <td>29</td>
-        <td>30</td>
+        <td onclick="showReminder('none')">24</td>
+        <td onclick="showReminder('none')">25</td>
+        <td onclick="showReminder('none')">26</td>
+        <td onclick="showReminder('none')">27</td>
+        <td onclick="showReminder('none')">28</td>
+        <td onclick="showReminder('none')">29</td>
+        <td onclick="showReminder('none')">30</td>
       </tr>
       <tr>
-        <td>31</td>
+        <td onclick="showReminder('none')">31</td>
         <td></td>
         <td></td>
         <td></td>
@@ -107,6 +113,8 @@
     <h3 id="reminder-content" text-weight="bold"></h3>
     <h4 id="reminder-time"></h4>
   </div>
+
+  <br><br><br><br><br>
 
   <div class="tabs">
     <a href="nutrition.html">
@@ -135,6 +143,8 @@
   <script>
     /* render information for existing reminders */
     function showReminder(opt) {
+      document.getElementById("instruction").innerHTML = ""
+      document.getElementById("reminder").className = "show";
       if (opt == "option1") {
         document.getElementById("reminder-title").textContent = "April 4, 2022";
         document.getElementById("reminder-content").textContent =
@@ -148,15 +158,22 @@
           "Consistancy is key! Make sure to log all your meals!";
         document.getElementById("reminder-time").textContent =
           "Remind at 12:00 PM";
-      } else {
+      } else if (opt == "option3") {
         document.getElementById("reminder-title").textContent =
           "April 22, 2022";
         document.getElementById("reminder-content").textContent =
-          "Get up off your fat a$$ and do something you couch potato >:(";
+          "Make sure to take vitamins!";
         document.getElementById("reminder-time").textContent =
           "Remind at 02:00 PM";
+      } else {
+        document.getElementById("reminder-title").textContent =
+          "";
+        document.getElementById("reminder-content").textContent =
+          "No reminders for this day yet!";
+          document.getElementById("reminder-time").textContent =
+          "";
       }
-      document.getElementById("reminder").className = "show";
+      
     }
   </script>
 </html>

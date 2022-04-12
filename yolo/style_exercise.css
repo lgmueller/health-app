@@ -90,8 +90,8 @@
   }
 
   .roundedButton {
-    width: 500px;
-    height: 150px;
+    width: 400px;
+    height: 130px;
     padding: 20px;
     font-family: "Raleway-Bold";
     /* border-color: #433495;
@@ -186,6 +186,8 @@ img {
   box-shadow: 15px 15px #bdc2f5;
   font-size: 30px;
   color: white;
+  align-items: center;
+  vertical-align: center;
 }
 
 .flexbox-item-box {
@@ -199,6 +201,8 @@ img {
   box-shadow: 15px 15px #bdc2f5;
   font-size: 30px;
   color: white;
+  align-self: center;
+  vertical-align: center;
 }
 
 .flexbox-item-wide {
@@ -363,7 +367,7 @@ input {
 
 .workout_descriptions {
   width: fit-content;
-  max-height: 830px;
+  max-height: 83s0px;
   padding-left: 40px;
   padding-right: 40px;
   overflow:auto;
@@ -410,4 +414,39 @@ input {
   color: #FFF;
   border: 1px solid #515A67;
   font-weight: 600;
+}
+
+/* not keyboard stuff anymore */
+.select {
+  width: 100px;
+  margin: 10px;
+  height: 45px;
+}
+.select:focus {
+  min-width: 150px;
+  width: auto;
+}
+
+
+.tablink {
+  background-color: #8e95e7;
+  font-family: "Raleway-bold";
+  color: white;
+  float: center;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  width: 40%;
+  border-radius: 0rem;
+}
+
+.tablink:hover {
+  background-color: #433495;
+}
+
+/* Style the tab content (and add height:100% for full page content) */
+.tabcontent {
+  color: black;
+  display: none;
+  height: 100%;
 }

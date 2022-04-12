@@ -28,9 +28,11 @@ window.onload = function() {
 }
 */
 
+
+
 function updateProgressCircles () {
     var circle1 = document.getElementById("circle1");
-    var nutrition_percentage = 100 * (localStorage.getItem('CurrCal')/localStorage.getItem('GoalCal'));
+    var nutrition_percentage = Math.round(100 * (localStorage.getItem('CurrCal')/localStorage.getItem('GoalCal')));
     
     if (isNaN(nutrition_percentage)) {
       nutrition_percentage = 90;
@@ -39,7 +41,7 @@ function updateProgressCircles () {
     circle1.setAttribute('style','--value:' + nutrition_percentage );
 
     var circle2 = document.getElementById("circle2");
-    var exercise_percentage = 100 * (localStorage.getItem('CurrExer')/localStorage.getItem('GoalExer'));
+    var exercise_percentage = Math.round(100 * (localStorage.getItem('CurrExer')/localStorage.getItem('GoalExer')));
     
     if (isNaN(exercise_percentage)) {
       exercise_percentage = 90;
@@ -48,12 +50,22 @@ function updateProgressCircles () {
     circle2.setAttribute('style','--value:' + exercise_percentage);
 
     var circle3 = document.getElementById("circle3");
-    var weight_percentage = 100 * (localStorage.getItem('CurrWeight')/localStorage.getItem('GoalWeight'));
+    var weight_percentage = Math.round(100 * (localStorage.getItem('CurrWeight')/localStorage.getItem('GoalWeight')));
     if (isNaN(weight_percentage)){
       weight_percentage = 90;
     }
     circle3.setAttribute('aria-valuenow',weight_percentage);
     circle3.setAttribute('style','--value:' + weight_percentage);
+}
+
+function updateProgressCircles1 () {
+  var circle1 = document.getElementById("circle1"); 
+  var weight_percentage = 100 * (localStorage.getItem('CurrCal')/localStorage.getItem('GoalCal'));
+  if (isNaN(weight_percentage)){
+    weight_percentage = 90;
+  }
+  circle1.setAttribute('aria-valuenow',weight_percentage);
+  circle1.setAttribute('style','--value:' + weight_percentage);
 }
 
 function updateProgressCircles3 () {
@@ -103,14 +115,7 @@ function updateValues() {
     }
     document.getElementById("new_curr_cal").innerHTML =  get_curr_cal + " Calories";
 
-    /*
-    document.getElementById("progress_circle_nutrition").setAttribute("aria-valuenow", get_curr_cal.toString());
-    document.getElementById("progress_circle_nutrition").setAttribute("style", "--value: "+get_curr_cal.toString());
-  */ 
- /*
-    var test = document.getElementById("progress_circle_nutrition").getAttribute("aria-valuenow");
-    console.log(test)
-    document.getElementById("progress_circle_nutrition").getAttribute("style", "--value: 78");*/
+    
 
     var get_goal_exer = localStorage.getItem("GoalExer");
     if (localStorage.getItem("GoalExer") == null) {
@@ -128,12 +133,15 @@ function updateValues() {
     
 }
 
+
+
+
+
 function myWeightFunction() {
     var x = document.getElementById("weight_text").value;
     document.getElementById("weight_p").innerHTML = x + " lbs";
     localStorage.setItem("GoalWeight", x);
-    var table_goal_weight = document.getElementById("new_goal_weight");
-    table_goal_weight.innerHTML = x + " lbs";
+    document.getElementById("new_goal_weight").innerHTML = x + " lbs";
 }
 
   function myWeightFunction1() {
@@ -151,6 +159,7 @@ function myCalFunction() {
     localStorage.setItem("GoalCal", x);
     var table_goal_cal = document.getElementById("new_goal_cal");
     table_goal_cal.innerHTML = x + " Calories";
+    
   }
 
   function myCalFunction1() {
@@ -178,24 +187,49 @@ function myCalFunction() {
   }
 
 
+ 
   function updateNutritionValues() {
     var get_goal_cal = localStorage.getItem("GoalCal");
+    if (localStorage.getItem("GoalCal") == null) {
+      get_goal_cal = 2500;
+    }
     document.getElementById("new_goal_cal").innerHTML =  get_goal_cal + " Calories";
     var get_curr_cal = localStorage.getItem("CurrCal");
+    if (localStorage.getItem("CurrCal") == null) {
+      get_curr_cal = 2250;
+    }
     document.getElementById("new_curr_cal").innerHTML =  get_curr_cal + " Calories";
   }
 
+
+ 
+
   function updateWeightValues() {
     var get_goal_weight = localStorage.getItem("GoalWeight");
+    if (localStorage.getItem("GoalWeight") == null) {
+      get_goal_weight = 150;
+    }
     document.getElementById("new_goal_weight").innerHTML =  get_goal_weight + " lbs";
     var get_curr_weight = localStorage.getItem("CurrWeight");
+    if (localStorage.getItem("CurrWeight") == null) {
+      get_curr_weight = 135;
+    }
     document.getElementById("new_curr_weight").innerHTML =  get_curr_weight + " lbs";
   }
 
+ 
+
+
   function updateExerValues() {
     var get_goal_exer = localStorage.getItem("GoalExer");
+    if (localStorage.getItem("GoalExer") == null) {
+      get_goal_exer = 100;
+    }
     document.getElementById("new_goal_exer").innerHTML =  get_goal_exer + " Minutes";
     var get_curr_exer = localStorage.getItem("CurrExer");
+    if (localStorage.getItem("CurrExer") == null) {
+      get_curr_exer = 90;
+    }
     document.getElementById("new_curr_exer").innerHTML =  get_curr_exer + " Minutes";
   }
 
@@ -214,7 +248,7 @@ function myCalFunction() {
   }
   
   //Get the element with id="defaultOpen" and click on it
-  // document.getElementById("defaultOpen").click();
+  document.getElementById("defaultOpen").click();
   
   /*
     NUTRITION PAGE
@@ -343,9 +377,70 @@ data: {
   ]
 },
 options: {
+  
   title: {
     display: true,
     text: 'Monthly Exercise Duration'
   }
+  
 }
 });
+
+function loadDefaults() {
+    
+
+  default_food_list = '[{"name":"pizza","calories":"600","protein":"14","fat":"30","carbs":"50","date":"04/11/2022"},{"name":"greek yogurt","calories":"200","protein":"30","fat":"10","carbs":"0","date":"04/11/2022"},{"name":"cheeseburger","calories":"500","protein":"10","fat":"40","carbs":"30","date":"04/11/2022"}]'
+  default_CurrCal = "1300"
+  default_GoalCal = "2500"
+  default_CurrExer = "90"
+  default_GoalExer = "100"
+  default_CurrWeight = "135"
+  default_GoalWeight = "150"
+  
+  
+  default_birthday = "2022-04-09"
+  default_experience = "intermediate"
+  default_height = "183"
+  default_sex = "male"
+  default_username = "Eric"
+
+localStorage.setItem("food_list", 
+  localStorage.getItem("food_list") == null ? default_food_list : localStorage.getItem("food_list")
+  )
+localStorage.setItem("CurrCal", 
+  localStorage.getItem("CurrCal") == null ? default_CurrCal : localStorage.getItem("CurrCal")
+  )
+localStorage.setItem("GoalCal", 
+  localStorage.getItem("GoalCal") == null ? default_GoalCal : localStorage.getItem("GoalCal")
+  )
+localStorage.setItem("GoalExer", 
+    localStorage.getItem("GoalExer") == null ? default_GoalExer : localStorage.getItem("GoalExer")
+    )
+localStorage.setItem("CurrExer", 
+    localStorage.getItem("CurrExer") == null ? default_CurrExer : localStorage.getItem("CurrExer")
+    )
+  
+localStorage.setItem("CurrWeight", 
+    localStorage.getItem("CurrWeight") == null ? default_CurrWeight : localStorage.getItem("CurrWeight")
+    )
+localStorage.setItem("GoalWeight", 
+  localStorage.getItem("GoalWeight") == null ? default_GoalWeight : localStorage.getItem("GoalWeight")
+  )
+localStorage.setItem("birthday", 
+  localStorage.getItem("birthday") == null ? default_birthday : localStorage.getItem("birthday")
+  )
+localStorage.setItem("experience", 
+  localStorage.getItem("experience") == null ? default_experience : localStorage.getItem("experience")
+  )
+localStorage.setItem("height", 
+  localStorage.getItem("height") == null ? default_height : localStorage.getItem("height")
+  )
+localStorage.setItem("sex", 
+  localStorage.getItem("sex") == null ? default_sex : localStorage.getItem("sex")
+  )
+localStorage.setItem("username", 
+  localStorage.getItem("username") == null ? default_username : localStorage.getItem("username")
+  )
+
+
+}

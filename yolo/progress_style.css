@@ -14,13 +14,7 @@
 } 
 
 
-body {
-  margin: auto;
-  max-width: 500px;
-  text-align: center;
-  font-size: 2rem;
-  font-family: "raleway";
-}
+
 
 
 b { 
@@ -64,16 +58,17 @@ button {
 }
 
 .button1 {
-  font-family: "Raleway";
-  font-size: 1.5rem;
+  font-family: "Raleway-bold";
+  font-size: 1.8rem;
   color: white;
-  width: 12rem;
-  height: 3rem;
+  width: 15rem;
+  height: 4rem;
   font-weight: bold;
   border-radius: 2rem;
   margin: 0 5px;
-  background-color: #8e95e7;
+  background-color: #433495;
 }
+
 
 
 .profile {
@@ -104,8 +99,8 @@ button {
 
 
 .submit_button {
-  font-family: "Raleway";
-  font-size: 1rem;
+  font-family: "Raleway-bold";
+  font-size: 1.8rem;
   color: white;
   width: 15rem;
   height: 2rem;
@@ -401,9 +396,16 @@ body {
   max-width: 500px;
   text-align: center;
   font-size: 2rem;
-  font-family: "raleway";
+  font-family: "Raleway";
   margin: auto;
 }
+
+.body2 {
+  margin: auto;
+  text-align: center;
+  font-family: "Raleway";
+}
+
 
 /* Style tab links */
 .tablink {
@@ -463,4 +465,55 @@ body {
   content: "";
   display: table;
   clear: both;
+}
+
+.rounded-input {
+  font-family: "Raleway-Regular";
+  padding: 10px;
+  font-size: 30px;
+  border-radius: 10px;
+  border: 0;
+  box-shadow:0 0 15px 4px rgba(0,0,0,0.06);
+}
+
+/* stuff for keyboard taken from https://gist.github.com/itszero/972142 */
+#keyboard {
+  background-color: #b9bac3;
+  padding: 5px 2px;
+}
+
+.row3 {
+  margin: 15px 2px;
+  text-align: center;
+}
+
+.key {
+  background-color: #ECEDEE;
+  height: 2em;
+  line-height: 2em;
+  font-size: 0.75em;
+  border-radius: 10px;
+  width: 1.4em;
+  text-align: center;
+  display: inline-block;
+  margin: 0 2px;
+  font-family: Helvetica;
+  font-weight: 800;  
+}
+
+.system_key {
+  background-color: #68717D;
+  color: #FFF;
+  border: 1px solid #515A67;
+  font-weight: 600;
+}
+
+.select {
+  width: 100px;
+  margin: 10px;
+  height: 45px;
+}
+.select:focus {
+  min-width: 150px;
+  width: auto;
 }

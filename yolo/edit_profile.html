@@ -1,8 +1,8 @@
 <html>
   <head>
     <title>Edit Profile</title>
-    <link href="style.css" rel="stylesheet" />
-    <link href="style_profile.css" rel="stylesheet" />
+    <link href="style_exercise.css" rel="stylesheet" />
+    <script type = "text/javascript" src="profile.js"></script>
     <meta
       name="viewport"
       content="width=768px, height=1280px, initial-scale=1"
@@ -16,7 +16,7 @@
   </head>
 
   <center>
-    <body>
+    <body onload="loadPlaceholders(); hideKeyboard()" onclick="hideKeyboard()">
       <div class="main-block">
         <div class="home">
           <a href="profile.html"
@@ -31,63 +31,102 @@
 
         <h1 style="font-size: 80px; margin-top: 50px">EDIT PROFILE</h1>
         <br />
-        <form action="/">
-          <table class="profile-table">
-            <tr>
-              <th class="category-edit">Name</th>
-              <th><input type="text" name="name" placeholder="Average Joe" /></th>
-            </tr>
-            <tr>
-              <th class="category-edit">Age</th>
-              <th><input type="text" name="age" placeholder="Age" /></th>
-            </tr>
-            <tr>
-              <th class="category-edit">Height</th>
-              <th white-space="nowrap">
-                <div class="input-height">
-                  <input type="number" name="height-feet" placeholder="feet" width="50%" />
-                </div>
-                <div class="input-height">
-                  <input
-                    type="number"
-                    name="height-inches"
-                    placeholder="inches"
-                    width="50%"
-                  />
-                </div>
-              </th>
-            </tr>
-            <tr>
-              <th class="category-edit">Sex</th>
-              <th>
-                <select>
-                  <option value="sex" selected>Choose Sex</option>
-                  <option value="male">Male</option>
-                  <option value="female">Female</option>
-                  <option value="other">Other</option>
-                </select>
-              </th>
-            </tr>
-            <tr>
-              <th class="category-edit">Birthday</th>
-              <th><input type="date" name="bday" /></th>
-            </tr>
-            <tr>
-              <th class="category-edit">Experience Level</th>
-              <th><select>
-                <option value="choose-level" selected>Choose Level</option>
-                <option value="beginner"></option>Beginner</option>
+        
+        
+        <div class="field-input" style="font-size: 30px;">
+          <label for="username">User name:</label>
+          <input onclick = "showKeyboard()" class = "rounded-input" type="text" id="username" name="username" placeholder="">
+          <br><br>
+          <label for="age">Age:</label>
+          <input onclick = "showKeyboard()" class = "rounded-input" type="number" id="age" name="age" placeholder="">
+          <br><br>
+          <label for="height">Height (cm):</label>
+          <input onclick = "showKeyboard()" class = "rounded-input" type="number" id="height" name="height" placeholder="">
+          <br><br>
+          <label for="sex">Gender:</label>
+          <style>
+            select {
+                width: 100px;
+                margin: 10px;
+                height: 45px;
+            }
+            select:focus {
+                min-width: 150px;
+                width: auto;
+            }
+          </style>
+          <select id="sex">
+              <option value=""></option>
+              <option value="male">Male</option>
+              <option value="female">Female</option>
+              <option value="other">Other</option>
+                  
+          </select>
+          <br><br>
+          <label for="birthday">Birthday:</label>
+          <input class = "rounded-input" type="date" id="birthday" name="birthday">
+          <br><br>
+          <label for="experience">Exercise Level:</label>
+          <select id="experience">
+                <option value=""></option>
+                <option value="beginner">Beginner</option>
                 <option value="intermediate">Intermediate</option>
                 <option value="advanced">Advanced</option>
-              </select></th>
-            </tr>
-          </table>
-          <br />
-          <button type="button">
-            <a href="profile.html" class="link">Save Changes</a>
-          </button>
-        </form>
+          </select><br>
+          <br>
+        <button class="btn-submit" type="submit" onclick="saveInfo();">
+          Update
+        </button>
       </div>
+
+      <br><br>
+
+
+      <div id="keyboard">
+        <div class="row">
+          <div class="key">Q</div>
+          <div class="key">W</div>
+          <div class="key">E</div>
+          <div class="key">R</div>
+          <div class="key">T</div>
+          <div class="key">Y</div>
+          <div class="key">U</div>
+          <div class="key">I</div>
+          <div class="key">O</div>
+          <div class="key">P</div>
+        </div>
+        <div class="row">
+          <div class="key">A</div>
+          <div class="key">S</div>
+          <div class="key">D</div>
+          <div class="key">F</div>
+          <div class="key">G</div>
+          <div class="key">H</div>
+          <div class="key">J</div>
+          <div class="key">K</div>
+          <div class="key">L</div>
+        </div>
+        <div class="row">
+          <div class="key system_key" style="width: 3em">Shift</div>
+          <div class="key">Z</div>
+          <div class="key">X</div>
+          <div class="key">C</div>
+          <div class="key">V</div>
+          <div class="key">B</div>
+          <div class="key">N</div>
+          <div class="key">M</div>
+          <div class="key system_key" style="width: 2em">⌫</div>
+        </div>
+        <div class="row">
+          <div class="key system_key" style="width: 2.25em">123</div>
+          <div class="key" style="width: 6.5em; color: #71717D; font-weight: 600;">space</div>
+          <div class="key system_key" style="width: 4em">Enter</div>
+        </div>
+      </div>
+
+      <br><br><br><br><br><br><br><br><br><br><br>
+      
+
     </body>
     <div class="tabs">
       <a href="nutrition.html">

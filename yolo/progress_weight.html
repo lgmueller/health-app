@@ -9,7 +9,7 @@
     />
     
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.min.js"></script>
+    <script src="Chart.js"></script>
 
   </head>
 
@@ -18,23 +18,10 @@
   
   <center>
     
-  <body onload = "updateWeightValues(); updateProgressCircles3();">
+  <body class = "body1" onload = "updateWeightValues(); updateProgressCircles3();">
     <br>
-    <h1 style="font-size: 100px; margin-top: 50px">WEIGHT</h1>
-    <hr>
-    <p>Track your weight goals below!</p>
+    <h1 style="font-size: 60px; margin-top: 50px; font-style: bold">Weight Progress</h1>
 
-    <div class="row">
-      <div class="column">
-        <h2 style="color: #433495"><b>Goal</b></h2>
-        <p style="font-size:30px"><b id = "new_goal_weight">150 </b></p>
-      </div>
-      <div class="column">
-        <h2 style="color: #433495"><b>Current</b></h2>
-        <p style="font-size:30px"><b id = "new_curr_weight">135</b> </p>
-      
-      </div>
-    </div>
 
 
     <!---->
@@ -44,7 +31,7 @@
     <button class="tablink" onclick="openPage('Monthly', this, '#433495')">Monthly</button>
     
     <div id="Daily" class="tabcontent">
-      <h3 style="color: #433495"><u><b>Today's Weight Progress</b></u></h3>
+      <h3 style="color: #433495"><b>Today's Weight Progress</b></h3>
       <br>
       <div width="2000" height="2000"> 
        
@@ -68,13 +55,25 @@
             style="--value: 95"
           ></div>
         </div>
+
+        <div class="row">
+          <div class="column">
+            <h2 style="color: #433495"><b>Goal</b></h2>
+            <p style="font-size:30px"><b id = "new_goal_weight">150 </b></p>
+          </div>
+          <div class="column">
+            <h2 style="color: #433495"><b>Current</b></h2>
+            <p style="font-size:30px"><b id = "new_curr_weight">135</b> </p>
+          
+          </div>
+        </div>
         
       
     </div>
 
     
     <div id="Weekly" class="tabcontent">
-      <h3 style="color: #433495"><u><b>Weekly Weight Progress</b></u></h3>
+      <h3 style="color: #433495"><b>Weekly Weight Progress</b></h3>
       <p style="font-size:25px">Click on the Bars for more information!</p>
     
       <div class="chart">
@@ -83,7 +82,7 @@
     </div>
     
     <div id="Monthly" class="tabcontent">
-      <h3 style="color: #433495"><u><b>Monthly Weight Progress</b></u></h3>
+      <h3 style="color: #433495"><b>Monthly Weight Progress</b></h3>
       <div class="chart">
         <canvas id="line-chart2" width="2000" height="2000"></canvas>
       </div>

@@ -9,7 +9,7 @@
     />
     
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.min.js"></script>
+    <script src="Chart.js"></script>
 
   </head>
 
@@ -18,23 +18,11 @@
   
   <center>
     
-  <body onload = "updateExerValues(); updateProgressCircles2();">
+  <body class = "body1" onload = "updateExerValues(); updateProgressCircles2();">
     <br>
-    <h1 style="font-size: 100px; margin-top: 50px">EXERCISE</h1>
-    <hr>
-    <p>Track your exercise goals below. Make sure you are reaching your exercise goals!</p>
+    <h1 style="font-size: 60px; line-height: 0px; margin-top: 100px"; >Exercise progress</h1>
 
-    <div class="row">
-      <div class="column">
-        <h2 style="color: #433495"><b>Goal</b></h2>
-        <p style="font-size:30px"><b id = "new_goal_exer">150 </b></p>
-      </div>
-      <div class="column">
-        <h2 style="color: #433495"><b>Current</b></h2>
-        <p style="font-size:30px"><b id = "new_curr_exer">135</b> </p>
-      
-      </div>
-    </div>
+    <br>
 
 
     <!---->
@@ -44,7 +32,7 @@
     <button class="tablink" onclick="openPage('Monthly', this, '#433495')">Monthly</button>
     
     <div id="Daily" class="tabcontent">
-      <h3 style="color: #433495"><u><b>Daily Exercise Progress</b></u></h3>
+      <h3 style="color: #433495"><b>Daily Exercise Progress</b></h3>
       <br>
       <div width="2000" height="2000"> 
        
@@ -52,7 +40,6 @@
       </div>
       <div class="goal-index">
       
-      <br>
       <!-- <text class="index-goal"> <b id = "new_curr_cal"> 2,250 </b> of <b id = "new_goal_cal">2,500 </b></text> -->
   
        </div>
@@ -68,14 +55,25 @@
             style="--value: 95"
           ></div>
         </div>
+
+        <div class="row">
+          <div class="column">
+            <h2 style="color: #433495"><b>Goal</b></h2>
+            <p style="font-size:30px"><b id = "new_goal_exer">150 </b></p>
+          </div>
+          <div class="column">
+            <h2 style="color: #433495"><b>Current</b></h2>
+            <p style="font-size:30px"><b id = "new_curr_exer">135</b> </p>
+          
+          </div>
+        </div>
         
       
     </div>
 
     
     <div id="Weekly" class="tabcontent">
-      <h3 style="color: #433495"><u><b>Weekly Exercise Progress</b></u></h3>
-      <p style="font-size:25px">Click on the Bars for more information!</p>
+      <h3 style="color: #433495"><b>Weekly Exercise Progress</b></h3>
     
       <div class="chart">
         <canvas id="bar-chart3" width="2000" height="2000"></canvas>
@@ -83,7 +81,7 @@
     </div>
     
     <div id="Monthly" class="tabcontent">
-      <h3 style="color: #433495"><u><b>Monthly Exercise Progress</b></u></h3>
+      <h3 style="color: #433495"><b>Monthly Exercise Progress</b></h3>
       <div class="chart">
         <canvas id="line-chart3" width="2000" height="2000"></canvas>
       </div>

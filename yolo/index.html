@@ -20,8 +20,13 @@
 
   <center>
     <h1 style="font-size: 100px; margin-top: 50px">YOLO</h1>
+<<<<<<< HEAD
 
     <body onload="updateValues(); updateProgressCircles();">
+=======
+    
+    <body onload = "loadDefaults(); updateValues(); updateProgressCircles();">
+>>>>>>> 1e57ec65a50a7d6c8be06729a0734b4c1070708c
       <!-- <
       Welcome to YOLO! Here you can track your nutrtion, exercise, and overall
       progress!
@@ -37,6 +42,7 @@
       <br />
       <b>You only have one life so live a healthy one!</b>
        -->
+<<<<<<< HEAD
 
       <br />
       <br />
@@ -59,6 +65,43 @@
             <b id="new_goal_cal"> 2500 Calories </b>
           </text>
         </div>
+=======
+    
+       
+    <div class="flex-container">
+      <div>
+        Nutrition
+        <div
+          id="circle1"
+          role="progressbar"
+          aria-valuenow="95"
+          aria-valuemin="0"
+          aria-valuemax="100"
+          style="--value: 95"
+        ></div>
+      </div>
+      <div class="goal-index">
+        Goal: <br />
+        <text class="index-goal"> <b id = "new_curr_cal"> 2250 Calories </b> out of  <b id = "new_goal_cal"> 2500 Calories </b>  </text>
+      </div>
+    </div>
+    <br />
+    <div class="flex-container">
+      <div>
+        Exercise
+        <div
+          id="circle2"
+          role="progressbar"
+          aria-valuenow="50"
+          aria-valuemin="0"
+          aria-valuemax="100"
+          style="--value: 50"
+        ></div>
+      </div>
+      <div class="goal-index">
+        Goal:<br />
+        <text class="index-goal">  <b id = "new_curr_exer"> 90 Minutes </b> out of  <b id = "new_goal_exer"> 100 Minutes </b> </text>
+>>>>>>> 1e57ec65a50a7d6c8be06729a0734b4c1070708c
       </div>
       <br />
       <div class="flex-container">
@@ -103,6 +146,10 @@
         </div>
       </div>
     </body>
+
+    <h3 style="font-family: Raleway-Bold;">Click on the tabs below to navigate!</h3>
+    <br><br><br>
+
   </center>
 
   <div class="tabs">

@@ -1,5 +1,26 @@
 
 
+var click_count = 0
+
+function showKeyboard() {
+  var keyboard = document.getElementById("keyboard")
+  keyboard.style = "display: block"
+  click_count = 0
+}
+
+function hideKeyboard() {
+  var keyboard = document.getElementById("keyboard")
+  if (keyboard.style.display == "block" && click_count == 0) {
+    click_count += 1;
+  }
+  else {
+    click_count = 0
+    keyboard.style = "display: none"
+  }
+  
+}
+
+
 function loadInfo() {
 
     let name = localStorage.getItem("username")

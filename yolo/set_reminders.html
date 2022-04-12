@@ -28,8 +28,8 @@
     /></a>
   </div>
 
-  <body>
-    <div class="main-block">
+  <body onclick="hideKeyboard()">
+    <div class="main-block" >
       <div class="title">
         <i class="fas fa-pencil-alt"></i>
         <h1 style="font-size: 60px; margin-top: 50px">Manage Reminders</h1>
@@ -50,7 +50,7 @@
         <br><br>
         <div class="row">
           <div class="column-left">
-            <label for="date">Day:</label>
+            <label for="date">Day of Reminder:</label>
           </div>
           <div class="column-right">
             <input type="date" id="date" name="date" style="border-radius: 20px;"/>
@@ -60,10 +60,12 @@
 
         <div class="row">
           <div class="column-left">
-            <label for="reminder">Content:</label>
+            <label for="reminder" >Content:</label>
           </div>
           <div>
             <textarea
+              onclick="showKeyboard()"
+              offclick="alert('no longer clicked')"
               id="reminder"
               name="reminder"
               placeholder="Write reminder here.."
@@ -88,7 +90,7 @@
         <br><br><br><br>
 
           <!--stuff for keyboard taken from https://gist.github.com/itszero/972142 --> 
-          <div id="keyboard">
+          <div id="keyboard" style= "display: none">
             <div class="row">
               <div class="key">Q</div>
               <div class="key">W</div>
@@ -138,7 +140,7 @@
         <br /><br />
         <div class="row">
           <div class="column-left">
-            <label for="existing-reminders">Day of Reminder</label>
+            <label for="existing-reminders">Day of Reminder:</label>
           </div>
           <div class="column-right">
             <select
@@ -158,7 +160,7 @@
         <div id="edit-reminders" class="hide">
           <div class="row">
             <div class="column-left">
-              <label for="reminder">Content</label>
+              <label for="reminder">Content:</label>
             </div>
             <div class="column-right">
               <textarea
@@ -172,7 +174,7 @@
           <br />
           <div class="row">
             <div class="column-left">
-              <label for="time">Set time</label>
+              <label for="time">Set time:</label>
             </div>
             <div class="column-right">
               <input type="time" id="reminder-time" name="time" value="00:00"  style="border-radius:20px;"/>
@@ -187,7 +189,7 @@
           <br><br><br><br>
 
           <!--stuff for keyboard taken from https://gist.github.com/itszero/972142 --> 
-          <div id="keyboard">
+          <div id="keyboard" display="none">
             <div class="row">
               <div class="key">Q</div>
               <div class="key">W</div>
@@ -261,6 +263,29 @@
     </a>
   </div>
   <script>
+
+    var click_count = 0
+
+    function showKeyboard() {
+      var keyboard = document.getElementById("keyboard")
+      keyboard.style = "display: block"
+      click_count = 0
+    }
+
+    function hideKeyboard() {
+      var keyboard = document.getElementById("keyboard")
+      if (keyboard.style.display == "block" && click_count == 0) {
+        click_count += 1;
+      }
+      else {
+        click_count = 0
+        keyboard.style = "display: none"
+      }
+      
+    }
+
+
+
     /* render pages corresponding to tabs */
     function openPage(pageName, elmnt) {
       // Hide all elements with class="tabcontent" by default */

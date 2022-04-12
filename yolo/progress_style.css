@@ -515,3 +515,32 @@ body {
   min-width: 150px;
   width: auto;
 }
+
+.shared_text {
+  margin: auto;
+  padding: 10px;
+  width: 550px; 
+  height: 550px; 
+  font-size: 30px; 
+  font-family: 'Raleway-Bold'; 
+  text-align: center;
+  border-radius: 10px;
+  border: 0;
+  box-shadow:0 0 20px 10px rgba(0,0,0,0.06);
+}
+
+.roundedButton {
+  width: 200px;
+  height: 80px;
+  padding: 10px;
+  font-family: "Raleway-Bold";
+  /* border-color: #433495;
+  border-style: solid; */
+  background-color:#433495;
+  box-shadow: #b9bac3;
+  color:white;
+  font-size: 40px;
+  font-weight: 40px;
+  margin-top: 22px;
+  border-radius: 60px;
+}

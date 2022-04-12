@@ -12,6 +12,16 @@ b {
   font-family: "Raleway-Bold";
   font-size: 2.4rem;
 }
+
+h2 {
+  font-family: "Raleway-Bold";
+  font-size: 2.4rem;
+}
+
+h3{
+  font-size: 2.4rem;
+}
+
   
 /* https://www.geeksforgeeks.org/design-a-calendar-using-html-and-css/ */ 
   table {

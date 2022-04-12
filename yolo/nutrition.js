@@ -25,10 +25,15 @@ function hideKeyboard() {
 function openSelection(selection) {
     var i;
     var x = document.getElementsByClassName("custom_vs_preset");
+    var y = document.getElementsByClassName("tablink")
     for (i = 0; i < x.length; i++) {
       x[i].style.display = "none";  
+      y[i].style.backgroundColor = "#8e95e7"
     }
     document.getElementById(selection).style.display = "block";  
+
+    document.getElementById(selection+"_tab").style.backgroundColor = "#433495";
+
   }
 
 
@@ -59,63 +64,62 @@ function loadFoodList() {
 
 function loadDefaults() {
     
-  // adding comment to test something
 
-    default_food_list = '[{"name":"pizza","calories":"600","protein":"14","fat":"30","carbs":"50","date":"04/11/2022"},{"name":"greek yogurt","calories":"200","protein":"30","fat":"10","carbs":"0","date":"04/11/2022"},{"name":"cheeseburger","calories":"500","protein":"10","fat":"40","carbs":"30","date":"04/11/2022"}]'
-    default_CurrCal = "1300"
-    default_GoalCal = "2500"
-    default_CurrExer = "90"
-    default_GoalExer = "100"
-    default_CurrWeight = "135"
-    default_GoalWeight = "150"
-    
-    
-    default_birthday = "2022-04-09"
-    default_experience = "intermediate"
-    default_height = "183"
-    default_sex = "male"
-    default_username = "Eric"
-  
-  localStorage.setItem("food_list", 
-    localStorage.getItem("food_list") == null ? default_food_list : localStorage.getItem("food_list")
-    )
-  localStorage.setItem("CurrCal", 
-    localStorage.getItem("CurrCal") == null ? default_CurrCal : localStorage.getItem("CurrCal")
-    )
-  localStorage.setItem("GoalCal", 
-    localStorage.getItem("GoalCal") == null ? default_GoalCal : localStorage.getItem("GoalCal")
-    )
-  localStorage.setItem("GoalExer", 
-      localStorage.getItem("GoalExer") == null ? default_GoalExer : localStorage.getItem("GoalExer")
-      )
-  localStorage.setItem("CurrExer", 
-      localStorage.getItem("CurrExer") == null ? default_CurrExer : localStorage.getItem("CurrExer")
-      )
-    
-  localStorage.setItem("CurrWeight", 
-      localStorage.getItem("CurrWeight") == null ? default_CurrWeight : localStorage.getItem("CurrWeight")
-      )
-  localStorage.setItem("GoalWeight", 
-    localStorage.getItem("GoalWeight") == null ? default_GoalWeight : localStorage.getItem("GoalWeight")
-    )
-  localStorage.setItem("birthday", 
-    localStorage.getItem("birthday") == null ? default_birthday : localStorage.getItem("birthday")
-    )
-  localStorage.setItem("experience", 
-    localStorage.getItem("experience") == null ? default_experience : localStorage.getItem("experience")
-    )
-  localStorage.setItem("height", 
-    localStorage.getItem("height") == null ? default_height : localStorage.getItem("height")
-    )
-  localStorage.setItem("sex", 
-    localStorage.getItem("sex") == null ? default_sex : localStorage.getItem("sex")
-    )
-  localStorage.setItem("username", 
-    localStorage.getItem("username") == null ? default_username : localStorage.getItem("username")
-    )
+  default_food_list = '[{"name":"pizza","calories":"600","protein":"14","fat":"30","carbs":"50","date":"04/11/2022"},{"name":"greek yogurt","calories":"200","protein":"30","fat":"10","carbs":"0","date":"04/11/2022"},{"name":"cheeseburger","calories":"500","protein":"10","fat":"40","carbs":"30","date":"04/11/2022"}]'
+  default_CurrCal = "1300"
+  default_GoalCal = "2500"
+  default_CurrExer = "90"
+  default_GoalExer = "100"
+  default_CurrWeight = "135"
+  default_GoalWeight = "150"
   
   
-  }
+  default_age = "21"
+  default_experience = "intermediate"
+  default_height = "183"
+  default_sex = "male"
+  default_username = "Eric"
+
+localStorage.setItem("food_list", 
+  localStorage.getItem("food_list") == null ? default_food_list : localStorage.getItem("food_list")
+  )
+localStorage.setItem("CurrCal", 
+  localStorage.getItem("CurrCal") == null ? default_CurrCal : localStorage.getItem("CurrCal")
+  )
+localStorage.setItem("GoalCal", 
+  localStorage.getItem("GoalCal") == null ? default_GoalCal : localStorage.getItem("GoalCal")
+  )
+localStorage.setItem("GoalExer", 
+    localStorage.getItem("GoalExer") == null ? default_GoalExer : localStorage.getItem("GoalExer")
+    )
+localStorage.setItem("CurrExer", 
+    localStorage.getItem("CurrExer") == null ? default_CurrExer : localStorage.getItem("CurrExer")
+    )
+  
+localStorage.setItem("CurrWeight", 
+    localStorage.getItem("CurrWeight") == null ? default_CurrWeight : localStorage.getItem("CurrWeight")
+    )
+localStorage.setItem("GoalWeight", 
+  localStorage.getItem("GoalWeight") == null ? default_GoalWeight : localStorage.getItem("GoalWeight")
+  )
+localStorage.setItem("age", 
+  localStorage.getItem("age") == null ? default_age : localStorage.getItem("age")
+  )
+localStorage.setItem("experience", 
+  localStorage.getItem("experience") == null ? default_experience : localStorage.getItem("experience")
+  )
+localStorage.setItem("height", 
+  localStorage.getItem("height") == null ? default_height : localStorage.getItem("height")
+  )
+localStorage.setItem("sex", 
+  localStorage.getItem("sex") == null ? default_sex : localStorage.getItem("sex")
+  )
+localStorage.setItem("username", 
+  localStorage.getItem("username") == null ? default_username : localStorage.getItem("username")
+  )
+
+
+}
 
 
 
@@ -266,3 +270,156 @@ function addFood() {
     saveFoodList()
 }
 
+
+function clearSelects(curr_idx) {
+  var selects = document.getElementsByClassName("selection")
+  var i
+  for (i = 0; i < selects.length; i++) {
+    if (i != curr_idx) {
+      selects[i].value = ""
+    }
+  }
+
+}
+
+  // eggs, bacon, toast, ham_sandwich, salad, quesadilla
+  // pizza, chicken, steak
+var food_dictionary = {
+  "eggs" : {
+    "preset_food_name" : "eggs",
+    "preset_calories" : 100,
+    "preset_protein" : 10,
+    "preset_fat" : 4,
+    "preset_carbs" : 2
+  },
+  "bacon" : {
+    "preset_food_name" : "bacon",
+    "preset_calories" : 250,
+    "preset_protein" : 12,
+    "preset_fat" : 20,
+    "preset_carbs" : 4
+  },
+  "toast" : {
+    "preset_food_name" : "toast",
+    "preset_calories" : 80,
+    "preset_protein" : 1,
+    "preset_fat" : 1,
+    "preset_carbs" : 5
+  },
+  "ham_sandwich" : {
+    "preset_food_name" : "ham sandwich",
+    "preset_calories" : 400,
+    "preset_protein" : 15,
+    "preset_fat" : 23,
+    "preset_carbs" : 20
+  },
+  "caesar_salad" : {
+    "preset_food_name" : "caesar salad",
+    "preset_calories" : 100,
+    "preset_protein" : 6,
+    "preset_fat" : 5,
+    "preset_carbs" : 6
+  },
+  "quesadilla" : {
+    "preset_food_name" : "quesadilla",
+    "preset_calories" : 350,
+    "preset_protein" : 10,
+    "preset_fat" : 17,
+    "preset_carbs" : 14
+  },
+  "pizza" : {
+    "preset_food_name" : "pizza",
+    "preset_calories" : 220,
+    "preset_protein" : 10,
+    "preset_fat" : 25,
+    "preset_carbs" : 20
+  },
+  "chicken_wings" : {
+    "preset_food_name" : "chicken wings",
+    "preset_calories" : 300,
+    "preset_protein" : 25,
+    "preset_fat" : 17,
+    "preset_carbs" : 8
+  },
+  "steak" : {
+    "preset_food_name" : "steak",
+    "preset_calories" : 400,
+    "preset_protein" : 25,
+    "preset_fat" : 25,
+    "preset_carbs" : 10
+  }
+}
+
+function managePresetView() {
+  var selects = document.getElementsByClassName("selection")
+  var i
+  var value = ""
+  var option_selected = false
+  for (i = 0; i < selects.length; i++) {
+    
+      if (selects[i].value != "") {
+        option_selected = true
+        value = selects[i].value
+        
+      }
+  }
+
+
+
+  if (option_selected) {
+
+    console.log(value)
+    console.log(food_dictionary[value])
+
+    document.getElementById("preset_food_name").innerHTML = "Food name: " + food_dictionary[value]["preset_food_name"]
+    document.getElementById("preset_calories").innerHTML = "Calories per serving: " + food_dictionary[value]["preset_calories"]
+    document.getElementById("preset_protein").innerHTML = "Protein per serving (g): " + food_dictionary[value]["preset_protein"]
+    document.getElementById("preset_fat").innerHTML = "Fats per serving (g): " + food_dictionary[value]["preset_fat"]
+    document.getElementById("preset_carbs").innerHTML = "Carbs per serving (g): " + food_dictionary[value]["preset_carbs"]
+
+  }
+}
+
+
+// value is the name of the food
+function addPresetFood() {
+
+  // to get value
+  var selects = document.getElementsByClassName("selection")
+  var i
+  var value = ""
+  var option_selected = false
+  for (i = 0; i < selects.length; i++) {
+    
+      if (selects[i].value != "") {
+        option_selected = true
+        value = selects[i].value
+        
+      }
+  }
+
+  var today = new Date();
+  var dd = String(today.getDate()).padStart(2, '0');
+  var mm = String(today.getMonth() + 1).padStart(2, '0'); // Jan = 0
+  var yyyy = today.getFullYear();
+
+  today = mm + '/' + dd + '/' + yyyy;
+
+  let servings = document.getElementById('servings').value
+
+
+
+  food_list.push(
+    new Food(food_dictionary[value]["preset_food_name"], 
+    servings*food_dictionary[value]["preset_calories"], 
+    servings*food_dictionary[value]["preset_protein"],
+    servings*food_dictionary[value]["preset_fat"], 
+    servings*food_dictionary[value]["preset_carbs"], today))
+
+  
+  saveFoodList()
+
+  window.location.href = "nutrition.html";
+
+
+}

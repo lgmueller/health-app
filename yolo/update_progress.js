@@ -444,3 +444,12 @@ localStorage.setItem("username",
 
 
 }
+
+
+function loadSharedText() {
+  var text = document.getElementById("shared_text")
+  text.innerHTML = "Greetings! I've been logging my health goals recently with this cool new app called YOLO. You only live once, you know!"
+  text.innerHTML += " I really recommend that you guys download the app and start tracking your nutrition and exercise progress. You can set reminders too!"
+  text.innerHTML += " Just today, I worked out for " + localStorage.getItem("CurrExer") + " minutes and used the app to track it. "
+  text.innerHTML += " It really helps me stay motivated. Let's plan our workouts together!"
+}

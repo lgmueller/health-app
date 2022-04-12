@@ -424,3 +424,27 @@ input {
   min-width: 150px;
   width: auto;
 }
+
+
+.tablink {
+  background-color: #8e95e7;
+  font-family: "Raleway-bold";
+  color: white;
+  float: center;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  width: 40%;
+  border-radius: 0rem;
+}
+
+.tablink:hover {
+  background-color: #433495;
+}
+
+/* Style the tab content (and add height:100% for full page content) */
+.tabcontent {
+  color: black;
+  display: none;
+  height: 100%;
+}

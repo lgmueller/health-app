@@ -13,34 +13,34 @@
   <div class="profile"><a href="profile.html"><img src="pictures/profile.png" height ="40" width="40" /></a> </div>
 
   <center>
-    <body>
+    <body onload="hideKeyboard()" onclick="hideKeyboard()">
       <div class="main-block">
 
 
-        <br><br>
-        <h2 style="margin-top: 50px">Select Custom or Preset Food</h2>
+        <h1 style="font-size: 60px; margin-top: 50px">Select Type to Add: </h1>
+        <br>
 
-        <button class="btn-submit" type="submit" onclick="openSelection('Custom')">Custom Food</button>
-        <button class="btn-submit" type="submit" onclick="openSelection('Preset')">Preset Food</button>
+        <button class="tablink" type="submit" onclick="openSelection('Custom')">Custom Food</button>
+        <button class="tablink" type="submit" onclick="openSelection('Preset')">Preset Food</button>
         
-        <div id="Custom" class="custom_vs_preset">
+        <div id="Custom" class="custom_vs_preset" style="display:none">
           <br>
           <h2>Insert Custom Food Information</h2>
           <div class="field-input" style="font-size: 30px;">
               <label for="food_name">Food name:</label>
-              <input class = "rounded-input" type="text" id="food_name" name="food_name">
+              <input onclick="showKeyboard()" class = "rounded-input" type="text" id="food_name" name="food_name">
               <br>
               <label for="calories">Calories:</label>
-              <input class = "rounded-input" type="number" id="calories" name="calories">
+              <input onclick="showKeyboard()" class = "rounded-input" type="number" id="calories" name="calories">
               <br>
               <label for="protein">Protein (g):</label>
-              <input class = "rounded-input" type="number" id="protein" name="protein">
+              <input onclick="showKeyboard()" class = "rounded-input" type="number" id="protein" name="protein">
               <br>
               <label for="fat">Fats (g):</label>
-              <input class = "rounded-input" type="number" id="fat" name="fat">
+              <input onclick="showKeyboard()" class = "rounded-input" type="number" id="fat" name="fat">
               <br>
               <label for="carbs">Carbs (g):</label>
-              <input class = "rounded-input" type="number" id="carbs" name="carbs">
+              <input onclick="showKeyboard()" class = "rounded-input" type="number" id="carbs" name="carbs">
               <br><br>
             <button class="btn-submit" type="submit" onclick="addFood();">
               Add Food

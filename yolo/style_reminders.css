@@ -7,6 +7,11 @@
   font-family: "Raleway-Bold";
   src: url("/Raleway/static/Raleway-Bold.ttf")
 }
+
+b {
+  font-family: "Raleway-Bold";
+  font-size: 2.4rem;
+}
   
 /* https://www.geeksforgeeks.org/design-a-calendar-using-html-and-css/ */ 
   table {
@@ -24,7 +29,12 @@
     margin-right: auto;
   }
   
-  th,
+  th {
+    font-weight: bold;
+    padding: .8rem;
+    align-items: center;
+    font-family: "Raleway-Bold";
+  }
   td {
     font-weight: bold;
     padding: .8rem;
@@ -32,7 +42,7 @@
   }
   
   td:hover{
-    color: #8e95e7;
+    color: #433495;
   }
 
 
@@ -41,7 +51,7 @@
 }
 
 .event:after {
-	content: '•';
+	content: '*';
 	color: #433495;
 	font-size: 2em;
 	position: absolute;

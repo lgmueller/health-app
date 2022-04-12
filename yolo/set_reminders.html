@@ -5,6 +5,7 @@
     <title>Manage Reminders</title>
     <link href="style_exercise.css" rel="stylesheet" />
     <link href="style_reminders.css" rel="stylesheet" />
+    <script type="text/javascript" src="reminders.js"></script>
     <meta
       name="viewport"
       content="width=768px, height=1280px, initial-scale=1"
@@ -29,38 +30,46 @@
   </div>
 
   <body onclick="hideKeyboard()">
-    <div class="main-block" >
+    <div class="main-block">
       <div class="title">
         <i class="fas fa-pencil-alt"></i>
         <h1 style="font-size: 60px; margin-top: 50px">Manage Reminders</h1>
       </div>
 
-      <br>
+      <br />
       <center>
-          <button class="tablink" onclick="openPage('set', this)" id="defaultOpen">
-            Set
-          </button>
-          <button class="tablink" onclick="openPage('edit', this)">Edit</button>
-
-        
+        <button
+          class="tablink"
+          onclick="openPage('set', this)"
+          id="defaultOpen"
+        >
+          Set
+        </button>
+        <button class="tablink" onclick="openPage('edit', this)">Edit</button>
       </center>
-      
+
+      <br />
 
       <div id="set" class="tabcontent">
-        <br><br>
+        <br /><br />
         <div class="row">
           <div class="column-left">
             <label for="date">Day of Reminder:</label>
           </div>
           <div class="column-right">
-            <input type="date" id="date" name="date" style="border-radius: 20px;"/>
+            <input
+              type="date"
+              id="date"
+              name="date"
+              style="border-radius: 20px"
+            />
           </div>
         </div>
         <br />
 
         <div class="row">
           <div class="column-left">
-            <label for="reminder" >Content:</label>
+            <label for="reminder">Content:</label>
           </div>
           <div>
             <textarea
@@ -68,7 +77,7 @@
               id="reminder"
               name="reminder"
               placeholder="Write reminder here.."
-              style="height: 100px;border-radius: 20px;"
+              style="height: 100px; border-radius: 20px"
             ></textarea>
           </div>
         </div>
@@ -78,20 +87,21 @@
             <label for="time">Time:</label>
           </div>
           <div class="column-right">
-            <input type="time" id="time" name="time" value="00:00" style="border-radius: 20px;"/>
+            <input
+              type="time"
+              id="time"
+              name="time"
+              value="00:00"
+              style="border-radius: 20px"
+            />
           </div>
         </div>
 
-        <br>
-        <button class="btn-submit" type="submit" href="reminders.html">
-          Set Reminder
+        <br />
+        <button class="btn-submit" type="submit" onclick="setReminder()">
+          <a href="reminders.html" class="link">Set Reminder</a>
         </button>
-        <br><br><br><br>
-
-        
-
-
-
+        <br /><br /><br /><br />
       </div>
 
       <div id="edit" class="tabcontent">
@@ -105,12 +115,9 @@
               name="existing-reminders"
               id="existing-reminders"
               onchange="changeVal()"
-              style="border-radius:20px;"
+              style="border-radius: 20px"
             >
               <option value="">--Please choose an option--</option>
-              <option value="option1">04/04/2022</option>
-              <option value="option2">04/19/2022</option>
-              <option value="option3">04/22/2022</option>
             </select>
           </div>
         </div>
@@ -126,7 +133,7 @@
                 id="reminder-content"
                 name="reminder-content"
                 placeholder="Write reminder here.."
-                style="height: 100px; border-radius: 20px;"
+                style="height: 100px; border-radius: 20px"
               ></textarea>
             </div>
           </div>
@@ -136,18 +143,32 @@
               <label for="time">Set time:</label>
             </div>
             <div class="column-right">
-              <input type="time" id="reminder-time" name="time" value="00:00"  style="border-radius:20px;"/>
+              <input
+                type="time"
+                id="reminder-time"
+                name="time"
+                value="00:00"
+                style="border-radius: 20px"
+              />
             </div>
           </div>
 
           <br />
-          
-          <button class="btn-submit" type="submit" href="/">
-            Update
-          </button>
-          <br><br><br><br>
 
-          <!--stuff for keyboard taken from https://gist.github.com/itszero/972142 
+          <button class="btn-submit" type="submit" onclick="editReminder()">
+            <a href="reminders.html" class="link">Update</a>
+          </button>
+          <button
+            class="btn-submit"
+            type="submit"
+            style="color: red"
+            onclick="deleteReminder()"
+          >
+            <a href="reminders.html" class="link">Delete</a>
+          </button>
+          <br /><br /><br /><br />
+
+          <!--stuff for keyboard taken from https://gist.github.com/itszero/972142 -->
           <div id="keyboard_edit" style="display: none">
             <div class="row">
               <div class="key">Q</div>
@@ -185,68 +206,63 @@
             </div>
             <div class="row">
               <div class="key system_key" style="width: 2.25em">123</div>
-              <div class="key" style="width: 6.5em; color: #71717D; font-weight: 600;">space</div>
+              <div
+                class="key"
+                style="width: 6.5em; color: #71717d; font-weight: 600"
+              >
+                space
+              </div>
               <div class="key system_key" style="width: 4em">Enter</div>
             </div>
           </div>
-
-        -->
-
-
-
-
         </div>
       </div>
     </div>
 
-<!--stuff for keyboard taken from https://gist.github.com/itszero/972142 --> 
-<div id="keyboard" style= "display: none">
-  <div class="row">
-    <div class="key">Q</div>
-    <div class="key">W</div>
-    <div class="key">E</div>
-    <div class="key">R</div>
-    <div class="key">T</div>
-    <div class="key">Y</div>
-    <div class="key">U</div>
-    <div class="key">I</div>
-    <div class="key">O</div>
-    <div class="key">P</div>
-  </div>
-  <div class="row">
-    <div class="key">A</div>
-    <div class="key">S</div>
-    <div class="key">D</div>
-    <div class="key">F</div>
-    <div class="key">G</div>
-    <div class="key">H</div>
-    <div class="key">J</div>
-    <div class="key">K</div>
-    <div class="key">L</div>
-  </div>
-  <div class="row">
-    <div class="key system_key" style="width: 3em">Shift</div>
-    <div class="key">Z</div>
-    <div class="key">X</div>
-    <div class="key">C</div>
-    <div class="key">V</div>
-    <div class="key">B</div>
-    <div class="key">N</div>
-    <div class="key">M</div>
-    <div class="key system_key" style="width: 2em">⌫</div>
-  </div>
-  <div class="row">
-    <div class="key system_key" style="width: 2.25em">123</div>
-    <div class="key" style="width: 6.5em; color: #71717D; font-weight: 600;">space</div>
-    <div class="key system_key" style="width: 4em">Enter</div>
-  </div>
-</div>
-
-
-
-
-
-
+    <!--stuff for keyboard taken from https://gist.github.com/itszero/972142 -->
+    <div id="keyboard" style="display: none">
+      <div class="row">
+        <div class="key">Q</div>
+        <div class="key">W</div>
+        <div class="key">E</div>
+        <div class="key">R</div>
+        <div class="key">T</div>
+        <div class="key">Y</div>
+        <div class="key">U</div>
+        <div class="key">I</div>
+        <div class="key">O</div>
+        <div class="key">P</div>
+      </div>
+      <div class="row">
+        <div class="key">A</div>
+        <div class="key">S</div>
+        <div class="key">D</div>
+        <div class="key">F</div>
+        <div class="key">G</div>
+        <div class="key">H</div>
+        <div class="key">J</div>
+        <div class="key">K</div>
+        <div class="key">L</div>
+      </div>
+      <div class="row">
+        <div class="key system_key" style="width: 3em">Shift</div>
+        <div class="key">Z</div>
+        <div class="key">X</div>
+        <div class="key">C</div>
+        <div class="key">V</div>
+        <div class="key">B</div>
+        <div class="key">N</div>
+        <div class="key">M</div>
+        <div class="key system_key" style="width: 2em">⌫</div>
+      </div>
+      <div class="row">
+        <div class="key system_key" style="width: 2.25em">123</div>
+        <div class="key" style="width: 6.5em; color: #71717d; font-weight: 600">
+          space
+        </div>
+        <div class="key system_key" style="width: 4em">Enter</div>
+      </div>
+    </div>
   </body>
   <div class="tabs">
     <a href="nutrition.html">
@@ -272,78 +288,24 @@
     </a>
   </div>
   <script>
-
-    var click_count = 0
-
-    function showKeyboard() {
-      var keyboard = document.getElementById("keyboard")
-      keyboard.style = "display: block"
-      click_count = 0
-
-
-
-
-    }
-
-    function hideKeyboard() {
-      var keyboard = document.getElementById("keyboard")
-      if (keyboard.style.display == "block" && click_count == 0) {
-        click_count += 1;
-      }
-      else {
-        click_count = 0
-        keyboard.style = "display: none"
-      }
-      
-
-      
-    }
-
-
-
-    /* render pages corresponding to tabs */
-    function openPage(pageName, elmnt) {
-      // Hide all elements with class="tabcontent" by default */
-      var i, tabcontent, tablinks;
-      tabcontent = document.getElementsByClassName("tabcontent");
-      for (i = 0; i < tabcontent.length; i++) {
-        tabcontent[i].style.display = "none";
-      }
-
-      // Remove the background color of all tablinks/buttons
-      tablinks = document.getElementsByClassName("tablink");
-      for (i = 0; i < tablinks.length; i++) {
-        tablinks[i].style.backgroundColor = "";
-      }
-
-      // Show the specific tab content
-      document.getElementById(pageName).style.display = "block";
-
-      // Add the specific color to the button used to open the tab content
-      elmnt.style.backgroundColor = "#433495";
-    }
-
-    // Get the element with id="defaultOpen" and click on it
+    // open set tab by default
     document.getElementById("defaultOpen").click();
 
-    /* render information for existing reminders */
-    function changeVal() {
-      var r = document.getElementById("existing-reminders");
-      var opt = r.value;
-      if (opt == "option1") {
-        document.getElementById("reminder-content").textContent =
-          "Make sure to go on a run today!";
-        document.getElementById("reminder-time").value = "09:00";
-      } else if (opt == "option2") {
-        document.getElementById("reminder-content").textContent =
-          "Consistancy is key! Make sure to log all your meals!";
-        document.getElementById("reminder-time").value = "12:00";
-      } else {
-        document.getElementById("reminder-content").textContent =
-          "Get up off your fat a$$ and do something you couch potato >:(";
-        document.getElementById("reminder-time").value = "14:00";
+    // populate existing reminders with existing reminders from localStorage
+    var select = document.getElementById("existing-reminders");
+    var options = [];
+    for (var i = 1; i <= 31; i++) {
+      if (localStorage.getItem(i) != null) {
+        options.push(i);
       }
-      document.getElementById("edit-reminders").className = "show";
+    }
+
+    for (var i = 0; i < options.length; i++) {
+      var opt = options[i];
+      var el = document.createElement("option");
+      el.textContent = opt;
+      el.value = opt;
+      select.appendChild(el);
     }
   </script>
 </html>

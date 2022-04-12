@@ -80,6 +80,10 @@ h3{
     text-decoration: none;
   }
 
+  a, a:visited { 
+    color:inherit;
+  }
+
   /* https://www.w3schools.com/howto/howto_js_full_page_tabs.asp */ 
   /* Style tab links */
 .tablink {

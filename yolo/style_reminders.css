@@ -59,7 +59,7 @@ b {
 	top: -4px;
 }
 
-.link .set_edit{
+.link {
     font-family: "Raleway-bold";
     font-size: 2rem;
     color: white;
@@ -68,6 +68,10 @@ b {
     font-weight: bold;
     border-radius: 3rem;
     text-decoration: none;
+  }
+
+  a, a:visited { 
+    color:inherit;
   }
 
   /* https://www.w3schools.com/howto/howto_js_full_page_tabs.asp */ 

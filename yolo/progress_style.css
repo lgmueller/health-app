@@ -407,17 +407,15 @@ body {
 }
 
 
-/* Style tab links */
 .tablink {
   background-color: #8e95e7;
+  font-family: "Raleway-bold";
   color: white;
-  float: left;
+  float: center;
   border: none;
   outline: none;
   cursor: pointer;
-  
-  
-  width: 29.1%;
+  width: 28%;
   border-radius: 0rem;
 }
 

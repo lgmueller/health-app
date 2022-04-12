@@ -14,7 +14,7 @@
     <div class="profile"><a href="profile.html"><img src="pictures/profile.png" height ="40" width="40" /></a> </div>
   
     
-    <body>
+    <body onload="hideKeyboard();" onclick="hideKeyboard();">
       
         <div class="header">
             <!-- <a class="icon" ref="something"><img src="pictures/home.png" width="50em" height="50em"/></a> -->
@@ -28,12 +28,38 @@
                 <h2 style="font-family: 'Raleway-Bold'; font-size: 40px; color: white;">CREATE A WORKOUT</h2> 
             </div>
         </div> -->
-        <div class="field-input" style="font-size: 30px;">
+        <!-- <div class="field-input" style="font-size: 30px;">
           <label for="workout-name">Workout Name</label>
-          <input type="text" class="rounded-input" onclick="showKeyboard();" id="workout-name" style="font-family: 'Raleway-Bold'; font-size: 40px; color:#8e95e7;"></h2> 
+          <input type="text" class="rounded-input" id="workout-name" style="font-family: 'Raleway-Bold'; font-size: 40px; color:#8e95e7;"></h2> 
         
+        </div> -->
+        <h3 style="margin-top: -10px;">Add to your workout by adding exercises!</h3>
+        <div class="field-input">
+          <label for="sets">Sets</label>
+          <input class="rounded-input" onclick="showKeyboard();" style="width: 80px; height:30px;" name="sets" id="sets" type="number" >
+          
+          <label for="reps">Reps</label>
+          <input class="rounded-input" onclick="showKeyboard();" style="width: 80px; height:30px;" name="reps" id="reps" type="number">
+          <br>
+          <label for="nameField">Name</label>
+          <input class="rounded-input" style="width: 300px; height:30px;" name="name" id="nameField" type="text">
+          <br>
+          <br>
+          <input type="submit" onclick="addToList(); 
+          
+          var set = document.getElementById('sets');
+          var rep = document.getElementById('reps');
+          // var my_name = document.getElementById('nameField');
+      
+          set.value = '';
+          rep.value = '';" value="Add Exercise">
+          
+          
+          <br>
+          
         </div>
         <br>
+        
         <div class="flex-container">
             <div class="flexbox-item-input">
                 <table class="rounded-table" id="myTable"> 
@@ -42,40 +68,59 @@
                     <th># Of Sets</th>
                     <th># Of Reps</th>
                     <th>Name of Exercise</th>
-                  </thead>
-                  
-                  
+                  </thead> 
                 </table>
-              
             </div>
         </div>
-        <h3>Input all Fields</h3>
-        <div class="field-input">
-          <label for="sets">Sets</label>
-          <input class="rounded-input" style="width: 80px; height:30px;" name="sets" id="sets" type="number" >
-          
-          <label for="reps">Reps</label>
-          <input class="rounded-input" style="width: 80px; height:30px;" name="reps" id="reps" type="number">
-          <br>
-          <label for="nameField">Name</label>
-          <input class="rounded-input" style="width: 300px; height:30px;" name="name" id="nameField" type="text">
-          <br>
-    
-          <input type="submit" onclick="addToList(); 
-          
-          var set = document.getElementById('sets');
-          var rep = document.getElementById('reps');
-          var my_name = document.getElementById('nameField');
-      
-          set.value = '';
-          rep.value = '';
-          my_name.value = '';" value="Add Exercise">
-          <br>
-          <br>
-          <input type="submit" class = "btn-submit" onclick="addWorkout();" value="Save New Workout">
-        </div>
-
+        
+        <br>
+        <input type="submit" class = "btn-submit" onclick="addWorkout('Custom','');" value="Save New Workout" style="z-index: 0; position: relative;">
+        
     </body>
+
+    <div id="keyboard">
+      <div class="row">
+        <div class="key">Q</div>
+        <div class="key">W</div>
+        <div class="key">E</div>
+        <div class="key">R</div>
+        <div class="key">T</div>
+        <div class="key">Y</div>
+        <div class="key">U</div>
+        <div class="key">I</div>
+        <div class="key">O</div>
+        <div class="key">P</div>
+      </div>
+      <div class="row">
+        <div class="key">A</div>
+        <div class="key">S</div>
+        <div class="key">D</div>
+        <div class="key">F</div>
+        <div class="key">G</div>
+        <div class="key">H</div>
+        <div class="key">J</div>
+        <div class="key">K</div>
+        <div class="key">L</div>
+      </div>
+      <div class="row">
+        <div class="key system_key" style="width: 3em">Shift</div>
+        <div class="key">Z</div>
+        <div class="key">X</div>
+        <div class="key">C</div>
+        <div class="key">V</div>
+        <div class="key">B</div>
+        <div class="key">N</div>
+        <div class="key">M</div>
+        <div class="key system_key" style="width: 2em">⌫</div>
+      </div>
+      <div class="row">
+        <div class="key system_key" style="width: 2.25em">123</div>
+        <div class="key" style="width: 6.5em; color: #71717D; font-weight: 600;">space</div>
+        <div class="key system_key" style="width: 4em">Enter</div>
+      </div>
+    </div>
+
+    
 
     <div class="tabs">
         <a href="nutrition.html">

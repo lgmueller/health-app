@@ -218,8 +218,8 @@ img {
 .flexbox-item-input {
   width: 80%;
   padding: 10px;
-  height: 540px;
-  border-radius: 10px;
+  height: 500px;
+  border-radius: 10px; 
   margin:auto;
   /* border: 2px solid #232324; */
   background-color: #dddff7;;
@@ -227,6 +227,7 @@ img {
   font-size: 30px;
   color: #232324;
   overflow: auto;
+  margin-bottom: 10px;
   
 }
 

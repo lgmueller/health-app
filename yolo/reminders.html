@@ -4,6 +4,7 @@
     <title>YOLO - Reminders</title>
     <link href="style.css" rel="stylesheet" />
     <link href="style_reminders.css" rel="stylesheet" />
+    <script type="text/javascript" src="reminders.js"></script>
     <meta
       name="viewport"
       content="width=768px, height=1280px, initial-scale=1"
@@ -21,101 +22,108 @@
     /></a>
   </div>
 
-    <h1 style="font-size: 100px; margin-top: 50px">REMINDERS</h1>
-  
+  <h1 style="font-size: 100px; margin-top: 50px">REMINDERS</h1>
 
-  <div id="instruction" >
-    <br>
+  <div id="instruction">
+    <br />
     <b>Click on a date with an asterisk to see reminder!</b>
   </div>
-  
-  
-  <table>
-    <caption align="top">
-      <h2>April 2022</h2>
-    </caption>
-    <thead>
-      <tr>
-        <th>Sun</th>
-        <th>Mon</th>
-        <th>Tue</th>
-        <th>Wed</th>
-        <th>Thu</th>
-        <th>Fri</th>
-        <th>Sat</th>
-      </tr>
-    </thead>
+  <body onload="loadData()">
+    <table>
+      <caption align="top">
+        <h2>April 2022</h2>
+      </caption>
+      <thead>
+        <tr>
+          <th>Sun</th>
+          <th>Mon</th>
+          <th>Tue</th>
+          <th>Wed</th>
+          <th>Thu</th>
+          <th>Fri</th>
+          <th>Sat</th>
+        </tr>
+      </thead>
 
-    <tbody>
-      <tr>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td onclick="showReminder('none')">01</td>
-        <td onclick="showReminder('none')">02</td>
-      </tr>
-      <tr></tr>
-      <tr>
-        <td onclick="showReminder('none')">03</td>
-        <td class="event" onclick="showReminder('option1')">04</td>
-        <td onclick="showReminder('none')">05</td>
-        <td onclick="showReminder('none')">06</td>
-        <td onclick="showReminder('none')">07</td>
-        <td onclick="showReminder('none')">08</td>
-        <td onclick="showReminder('none')">09</td>
-      </tr>
-      <tr>
-        <td onclick="showReminder('none')">10</td>
-        <td onclick="showReminder('none')">11</td>
-        <td onclick="showReminder('none')">12</td>
-        <td onclick="showReminder('none')">13</td>
-        <td onclick="showReminder('none')">14</td>
-        <td onclick="showReminder('none')">15</td>
-        <td onclick="showReminder('none')">16</td>
-      </tr>
-      <tr>
-        <td onclick="showReminder('none')">17</td>
-        <td onclick="showReminder('none')">18</td>
-        <td class="event" onclick="showReminder('option2')">19</td>
-        <td onclick="showReminder('none')">20</td>
-        <td onclick="showReminder('none')">21</td>
-        <td class="event" onclick="showReminder('option3')">22</td>
-        <td onclick="showReminder('none')">23</td>
-      </tr>
-      <tr>
-        <td onclick="showReminder('none')">24</td>
-        <td onclick="showReminder('none')">25</td>
-        <td onclick="showReminder('none')">26</td>
-        <td onclick="showReminder('none')">27</td>
-        <td onclick="showReminder('none')">28</td>
-        <td onclick="showReminder('none')">29</td>
-        <td onclick="showReminder('none')">30</td>
-      </tr>
-      <tr>
-        <td onclick="showReminder('none')">31</td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <br />
-  <button type="button">
-    <a href="set_reminders.html" class="link">Set/Edit Reminders</a>
-  </button>
+      <tbody>
+        <tr>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td id="1" onclick="showReminder('1')">1</td>
+          <td id="2" onclick="showReminder('2')">2</td>
+        </tr>
+        <tr></tr>
+        <tr>
+          <td id="3" onclick="showReminder('3')">3</td>
+          <td id="4" class="event" onclick="showReminder('4')">4</td>
+          <td id="5" onclick="showReminder('5')">5</td>
+          <td id="6" onclick="showReminder('6')">6</td>
+          <td id="7" onclick="showReminder('7')">7</td>
+          <td id="8" onclick="showReminder('8')">8</td>
+          <td id="9" onclick="showReminder('9')">9</td>
+        </tr>
+        <tr>
+          <td id="10" onclick="showReminder('10')">10</td>
+          <td id="11" onclick="showReminder('11')">11</td>
+          <td id="12" onclick="showReminder('12')">12</td>
+          <td id="13" onclick="showReminder('13')">13</td>
+          <td id="14" onclick="showReminder('14')">14</td>
+          <td id="15" onclick="showReminder('15')">15</td>
+          <td id="16" onclick="showReminder('16')">16</td>
+        </tr>
+        <tr>
+          <td id="17" onclick="showReminder('17')">17</td>
+          <td id="18" onclick="showReminder('18')">18</td>
+          <td id="19" class="event" onclick="showReminder('19')">19</td>
+          <td id="20" onclick="showReminder('20')">20</td>
+          <td id="21" onclick="showReminder('21')">21</td>
+          <td id="22" class="event" onclick="showReminder('22')">22</td>
+          <td id="23" onclick="showReminder('23')">23</td>
+        </tr>
+        <tr>
+          <td id="24" onclick="showReminder('24')">24</td>
+          <td id="25" onclick="showReminder('25')">25</td>
+          <td id="26" onclick="showReminder('26')">26</td>
+          <td id="27" onclick="showReminder('27')">27</td>
+          <td id="28" onclick="showReminder('28')">28</td>
+          <td id="29" onclick="showReminder('29')">29</td>
+          <td id="30" onclick="showReminder('30')">30</td>
+        </tr>
+        <tr>
+          <td id="31" onclick="showReminder('31')">31</td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+        </tr>
+      </tbody>
+    </table>
+    <br />
+    <button type="button">
+      <a href="set_reminders.html" class="link">Set/Edit Reminders</a>
+    </button>
 
+<<<<<<< HEAD
+    <div id="reminder" class="hide">
+      <h2 id="reminder-title"></h2>
+      <h3 id="reminder-content" text-weight="bold"></h3>
+      <h4 id="reminder-time"></h4>
+    </div>
+  </body>
+=======
   <div id="reminder" class="hide">
     <h2 id="reminder-title"></h2>
     <h3 id="reminder-content" text-weight="bold"></h3>
     <h3 id="reminder-time"></h3>
   </div>
+>>>>>>> 0a577582fa26a591981ca78f4e65ac0c94c370b7
 
-  <br><br><br><br><br>
+  <br /><br /><br /><br /><br />
 
   <div class="tabs">
     <a href="nutrition.html">
@@ -140,6 +148,8 @@
       Progress
     </a>
   </div>
+<<<<<<< HEAD
+=======
 
   <script>
     /* render information for existing reminders */
@@ -177,4 +187,5 @@
       
     }
   </script>
+>>>>>>> 0a577582fa26a591981ca78f4e65ac0c94c370b7
 </html>

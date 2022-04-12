@@ -3,17 +3,21 @@
   <head>
     <title>YOLO</title>
     <link href="style.css" rel="stylesheet" />
-    <script type = "text/javascript" src="update_progress.js"></script>
-    
+    <script type="text/javascript" src="update_progress.js"></script>
+
     <meta
       name="viewport"
       content="width=768px, height=1280px, initial-scale=1"
     />
   </head>
 
-  <div class="home"><a href="index.html"><img src="pictures/home.png" height ="35" width="35" /></a> </div>
-  <div class="profile"><a href="profile.html"><img src="pictures/profile.png" height ="40" width="40" /></a> </div>
-  
+  <div class="home"></div>
+  <div class="profile">
+    <a href="profile.html"
+      ><img src="pictures/profile.png" height="40" width="40"
+    /></a>
+  </div>
+
   <center>
     <h1 style="font-size: 100px; margin-top: 50px">YOLO</h1>
     
@@ -69,25 +73,48 @@
         Goal:<br />
         <text class="index-goal">  <b id = "new_curr_exer"> 90 Minutes </b> out of  <b id = "new_goal_exer"> 100 Minutes </b> </text>
       </div>
-    </div>
-    <br />
-    <div class="flex-container">
-      <div>
-        Weight
-        <div
-          id="circle3"
-          role="progressbar"
-          aria-valuenow="90"
-          aria-valuemin="0"
-          aria-valuemax="100"
-          style="--value: 90"
-        ></div>
+      <br />
+      <div class="flex-container">
+        <div>
+          Exercise
+          <div
+            id="circle2"
+            role="progressbar"
+            aria-valuenow="50"
+            aria-valuemin="0"
+            aria-valuemax="100"
+            style="--value: 50"
+          ></div>
+        </div>
+        <div class="goal-index">
+          Goal:<br />
+          <text class="index-goal">
+            <b id="new_curr_exer"> 90 Minutes </b> out of
+            <b id="new_goal_exer"> 100 Minutes </b>
+          </text>
+        </div>
       </div>
-      <div class="goal-index">
-        Goal: <br />
-        <text class="index-goal"> <b id = "new_curr_weight"> 135 lbs </b> out of <b id = "new_goal_weight"> 150 lbs </b> </text>
+      <br />
+      <div class="flex-container">
+        <div>
+          Weight
+          <div
+            id="circle3"
+            role="progressbar"
+            aria-valuenow="90"
+            aria-valuemin="0"
+            aria-valuemax="100"
+            style="--value: 90"
+          ></div>
+        </div>
+        <div class="goal-index">
+          Goal: <br />
+          <text class="index-goal">
+            <b id="new_curr_weight"> 135 lbs </b> out of
+            <b id="new_goal_weight"> 150 lbs </b>
+          </text>
+        </div>
       </div>
-    </div>
     </body>
 
     <h3 style="font-family: Raleway-Bold;">Click on the tabs below to navigate!</h3>

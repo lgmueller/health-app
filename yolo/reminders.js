@@ -149,3 +149,16 @@
         localStorage.setItem(day, document.getElementById("reminder-content").value);
         localStorage.setItem(day + "_time", document.getElementById("reminder-time").value);
     }
+
+    /* 
+       * update existing reminder
+       */ 
+    function deleteReminder() { 
+        var r = document.getElementById("existing-reminders");
+        var day = r.value;
+        
+        localStorage.removeItem(day);
+        localStorage.removeItem(day + "_time");
+
+        cosole.log(localStorage.getItem(day));
+    }

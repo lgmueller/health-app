@@ -453,3 +453,13 @@ function loadSharedText() {
   text.innerHTML += " Just today, I worked out for " + localStorage.getItem("CurrExer") + " minutes and used the app to track it. "
   text.innerHTML += " It really helps me stay motivated. Let's plan our workouts together!"
 }
+
+function copyToClipBoard() {
+
+  var content = document.getElementById('shared_text');
+  
+  content.select();
+  document.execCommand('copy');
+
+  alert("Copied!");
+}

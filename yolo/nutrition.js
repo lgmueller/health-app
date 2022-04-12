@@ -350,6 +350,31 @@ var food_dictionary = {
   }
 }
 
+var preset_click_count = 0
+
+function showPresetKeyboard() {
+  var keyboard = document.getElementById("keyboard_preset")
+  keyboard.style = "display: block"
+  preset_click_count = 0
+
+  document.getElementById("preset_information").style = "font-size: 30px; display: none"
+}
+
+function hidePresetKeyboard() {
+  var keyboard = document.getElementById("keyboard_preset")
+  if (keyboard.style.display == "block" && preset_click_count == 0) {
+    preset_click_count += 1;
+  }
+  else {
+    preset_click_count = 0
+    keyboard.style = "display: none"
+    document.getElementById("preset_information").style = "font-size: 30px; display: block"
+  }
+  
+}
+
+
+
 function managePresetView() {
   var selects = document.getElementsByClassName("selection")
   var i
@@ -398,28 +423,36 @@ function addPresetFood() {
       }
   }
 
-  var today = new Date();
-  var dd = String(today.getDate()).padStart(2, '0');
-  var mm = String(today.getMonth() + 1).padStart(2, '0'); // Jan = 0
-  var yyyy = today.getFullYear();
+  if (option_selected) {
 
-  today = mm + '/' + dd + '/' + yyyy;
-
-  let servings = document.getElementById('servings').value
-
-
-
-  food_list.push(
-    new Food(food_dictionary[value]["preset_food_name"], 
-    servings*food_dictionary[value]["preset_calories"], 
-    servings*food_dictionary[value]["preset_protein"],
-    servings*food_dictionary[value]["preset_fat"], 
-    servings*food_dictionary[value]["preset_carbs"], today))
-
+    var today = new Date();
+    var dd = String(today.getDate()).padStart(2, '0');
+    var mm = String(today.getMonth() + 1).padStart(2, '0'); // Jan = 0
+    var yyyy = today.getFullYear();
   
-  saveFoodList()
+    today = mm + '/' + dd + '/' + yyyy;
+  
+    let servings = document.getElementById('servings').value
+  
+  
+  
+    food_list.push(
+      new Food(food_dictionary[value]["preset_food_name"], 
+      servings*food_dictionary[value]["preset_calories"], 
+      servings*food_dictionary[value]["preset_protein"],
+      servings*food_dictionary[value]["preset_fat"], 
+      servings*food_dictionary[value]["preset_carbs"], today))
+  
+    
+    saveFoodList()
+  
+    window.location.href = "nutrition.html";
+  }
+  else {
+    alert("Make sure to select a single food item!")
+  }
 
-  window.location.href = "nutrition.html";
+ 
 
 
 }

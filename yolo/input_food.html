@@ -13,7 +13,7 @@
   <div class="profile"><a href="profile.html"><img src="pictures/profile.png" height ="40" width="40" /></a> </div>
 
   <center>
-    <body onload="hideKeyboard();" onclick="hideKeyboard(); managePresetView()">
+    <body onload="hideKeyboard();" onclick="hideKeyboard(); hidePresetKeyboard(); managePresetView()">
       <div class="main-block">
 
 
@@ -162,15 +162,58 @@
           
           <h2>Edit number of servings:</h2>
           <label for="servings">Servings:</label>
-              <input id="servings" value="1" onclick="showKeyboard()" style = "width : 12%" class = "rounded-input" type="number" id="servings" name="servings">
+              <input id="servings" value="1" onclick="showPresetKeyboard()" style = "width : 12%" class = "rounded-input" type="number" id="servings" name="servings">
 
-          
+        
+        </div>
+
+        <!--stuff for keyboard taken from https://gist.github.com/itszero/972142 --> 
+        <div id="keyboard_preset" style="display: none">
+          <div class="row">
+            <div class="key">Q</div>
+            <div class="key">W</div>
+            <div class="key">E</div>
+            <div class="key">R</div>
+            <div class="key">T</div>
+            <div class="key">Y</div>
+            <div class="key">U</div>
+            <div class="key">I</div>
+            <div class="key">O</div>
+            <div class="key">P</div>
+          </div>
+          <div class="row">
+            <div class="key">A</div>
+            <div class="key">S</div>
+            <div class="key">D</div>
+            <div class="key">F</div>
+            <div class="key">G</div>
+            <div class="key">H</div>
+            <div class="key">J</div>
+            <div class="key">K</div>
+            <div class="key">L</div>
+          </div>
+          <div class="row">
+            <div class="key system_key" style="width: 3em">Shift</div>
+            <div class="key">Z</div>
+            <div class="key">X</div>
+            <div class="key">C</div>
+            <div class="key">V</div>
+            <div class="key">B</div>
+            <div class="key">N</div>
+            <div class="key">M</div>
+            <div class="key system_key" style="width: 2em">⌫</div>
+          </div>
+          <div class="row">
+            <div class="key system_key" style="width: 2.25em">123</div>
+            <div class="key" style="width: 6.5em; color: #71717D; font-weight: 600;">space</div>
+            <div class="key system_key" style="width: 4em">Enter</div>
+          </div>
         </div>
 
 
         
 
-        <div class="field-input" style="font-size: 30px;">
+        <div id="preset_information" class="field-input" style="font-size: 30px; display: block">
           <h2> Details of Option selected:</h2>
               <label id="preset_food_name">Food name:</label>
               

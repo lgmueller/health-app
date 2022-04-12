@@ -398,7 +398,7 @@ function loadDefaults() {
   default_GoalWeight = "150"
   
   
-  default_birthday = "2022-04-09"
+  default_age = "21"
   default_experience = "intermediate"
   default_height = "183"
   default_sex = "male"
@@ -426,8 +426,8 @@ localStorage.setItem("CurrWeight",
 localStorage.setItem("GoalWeight", 
   localStorage.getItem("GoalWeight") == null ? default_GoalWeight : localStorage.getItem("GoalWeight")
   )
-localStorage.setItem("birthday", 
-  localStorage.getItem("birthday") == null ? default_birthday : localStorage.getItem("birthday")
+localStorage.setItem("age", 
+  localStorage.getItem("age") == null ? default_age : localStorage.getItem("age")
   )
 localStorage.setItem("experience", 
   localStorage.getItem("experience") == null ? default_experience : localStorage.getItem("experience")

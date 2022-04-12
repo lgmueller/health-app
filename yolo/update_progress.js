@@ -398,7 +398,7 @@ function loadDefaults() {
   default_GoalWeight = "150"
   
   
-  default_birthday = "2022-04-09"
+  default_age = "21"
   default_experience = "intermediate"
   default_height = "183"
   default_sex = "male"
@@ -426,8 +426,8 @@ localStorage.setItem("CurrWeight",
 localStorage.setItem("GoalWeight", 
   localStorage.getItem("GoalWeight") == null ? default_GoalWeight : localStorage.getItem("GoalWeight")
   )
-localStorage.setItem("birthday", 
-  localStorage.getItem("birthday") == null ? default_birthday : localStorage.getItem("birthday")
+localStorage.setItem("age", 
+  localStorage.getItem("age") == null ? default_age : localStorage.getItem("age")
   )
 localStorage.setItem("experience", 
   localStorage.getItem("experience") == null ? default_experience : localStorage.getItem("experience")
@@ -443,4 +443,13 @@ localStorage.setItem("username",
   )
 
 
+}
+
+
+function loadSharedText() {
+  var text = document.getElementById("shared_text")
+  text.innerHTML = "Greetings! I've been logging my health goals recently with this cool new app called YOLO. You only live once, you know!"
+  text.innerHTML += " I really recommend that you guys download the app and start tracking your nutrition and exercise progress. You can set reminders too!"
+  text.innerHTML += " Just today, I worked out for " + localStorage.getItem("CurrExer") + " minutes and used the app to track it. "
+  text.innerHTML += " It really helps me stay motivated. Let's plan our workouts together!"
 }

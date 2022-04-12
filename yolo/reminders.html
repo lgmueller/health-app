@@ -108,12 +108,20 @@
       <a href="set_reminders.html" class="link">Set/Edit Reminders</a>
     </button>
 
+<<<<<<< HEAD
     <div id="reminder" class="hide">
       <h2 id="reminder-title"></h2>
       <h3 id="reminder-content" text-weight="bold"></h3>
       <h4 id="reminder-time"></h4>
     </div>
   </body>
+=======
+  <div id="reminder" class="hide">
+    <h2 id="reminder-title"></h2>
+    <h3 id="reminder-content" text-weight="bold"></h3>
+    <h3 id="reminder-time"></h3>
+  </div>
+>>>>>>> 0a577582fa26a591981ca78f4e65ac0c94c370b7
 
   <br /><br /><br /><br /><br />
 
@@ -140,4 +148,44 @@
       Progress
     </a>
   </div>
+<<<<<<< HEAD
+=======
+
+  <script>
+    /* render information for existing reminders */
+    function showReminder(opt) {
+      document.getElementById("instruction").innerHTML = ""
+      document.getElementById("reminder").className = "show";
+      if (opt == "option1") {
+        document.getElementById("reminder-title").textContent = "Reminder for April 4, 2022";
+        document.getElementById("reminder-content").textContent =
+          "Make sure to go on a run today!";
+        document.getElementById("reminder-time").textContent =
+          "Remind at 09:00 AM";
+      } else if (opt == "option2") {
+        document.getElementById("reminder-title").textContent =
+          "Reminder for April 19, 2022";
+        document.getElementById("reminder-content").textContent =
+          "Consistancy is key! Make sure to log all your meals!";
+        document.getElementById("reminder-time").textContent =
+          "Remind at 12:00 PM";
+      } else if (opt == "option3") {
+        document.getElementById("reminder-title").textContent =
+          "Reminder for April 22, 2022";
+        document.getElementById("reminder-content").textContent =
+          "Make sure to take vitamins!";
+        document.getElementById("reminder-time").textContent =
+          "Remind at 02:00 PM";
+      } else {
+        document.getElementById("reminder-title").textContent =
+          "";
+        document.getElementById("reminder-content").textContent =
+          "No reminders for this day yet!";
+          document.getElementById("reminder-time").textContent =
+          "";
+      }
+      
+    }
+  </script>
+>>>>>>> 0a577582fa26a591981ca78f4e65ac0c94c370b7
 </html>

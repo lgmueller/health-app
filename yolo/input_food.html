@@ -13,15 +13,15 @@
   <div class="profile"><a href="profile.html"><img src="pictures/profile.png" height ="40" width="40" /></a> </div>
 
   <center>
-    <body onload="hideKeyboard()" onclick="hideKeyboard()">
+    <body onload="hideKeyboard();" onclick="hideKeyboard(); managePresetView()">
       <div class="main-block">
 
 
         <h1 style="font-size: 60px; margin-top: 50px">Select Type to Add: </h1>
         <br>
 
-        <button class="tablink" type="submit" onclick="openSelection('Custom')">Custom Food</button>
-        <button class="tablink" type="submit" onclick="openSelection('Preset')">Preset Food</button>
+        <button id="Custom_tab" class="tablink" type="submit" onclick="openSelection('Custom')">Custom Food</button>
+        <button id="Preset_tab" class="tablink" type="submit" onclick="openSelection('Preset')">Preset Food</button>
         
         <div id="Custom" class="custom_vs_preset" style="display:none">
           <br>
@@ -95,8 +95,107 @@
         </div>
         
         <div id="Preset" class="custom_vs_preset" style="display:none">
-          <h3>Select Presect Food</h3>
-          <p>Preset stuff goes here.</p> 
+          <h2>Select a Single Preset Food:</h2>
+
+
+          <div class="field-input" style="font-size: 30px;">
+            <label for="name">Breakfast:</label>
+            <style>
+              select {
+                  width: 100px;
+                  margin: 10px;
+                  height: 45px;
+              }
+              select:focus {
+                  min-width: 150px;
+                  width: auto;
+              }
+            </style>
+            <select class="selection" id="breakfast" onchange="managePresetView()" onclick="clearSelects(0); managePresetView()">
+                <option value=""></option>
+                <option value="eggs">Eggs</option>
+                <option value="bacon">Bacon</option>
+                <option value="toast">Toast</option>
+                    
+            </select>
+
+            <label for="name">Lunch:</label>
+            <style>
+              select {
+                  width: 100px;
+                  margin: 10px;
+                  height: 45px;
+              }
+              select:focus {
+                  min-width: 150px;
+                  width: auto;
+              }
+            </style>
+            <select class="selection" id="lunch" onchange="managePresetView()" onclick="clearSelects(1); managePresetView()">
+                <option value=""></option>
+                <option value="ham_sandwich">Ham Sandwich</option>
+                <option value="caesar_salad">Caeser Salad</option>
+                <option value="quesadilla">Quesadilla</option>
+                    
+            </select>
+
+          </select>
+
+          <label for="name">Dinner:</label>
+          <style>
+            select {
+                width: 100px;
+                margin: 10px;
+                height: 45px;
+            }
+            select:focus {
+                min-width: 150px;
+                width: auto;
+            }
+          </style>
+          <select class="selection" id="dinner" onchange="managePresetView()" onclick="clearSelects(2);">
+              <option value=""></option>
+              <option value="pizza">Pizza</option>
+              <option value="chicken_wings">Chicken Wings</option>
+              <option value="steak">Steak</option>
+          </select> <br>
+          
+          <h2>Edit number of servings:</h2>
+          <label for="servings">Servings:</label>
+              <input id="servings" value="1" onclick="showKeyboard()" style = "width : 12%" class = "rounded-input" type="number" id="servings" name="servings">
+
+          
+        </div>
+
+
+        
+
+        <div class="field-input" style="font-size: 30px;">
+          <h2> Details of Option selected:</h2>
+              <label id="preset_food_name">Food name:</label>
+              
+              <br>
+              <label id="preset_calories">Calories per serving:</label>
+              
+              <br>
+              <label id="preset_protein">Protein per serving (g):</label>
+              
+              <br>
+              <label id="preset_fat">Fats per serving (g):</label>
+              
+              <br>
+              <label id="preset_carbs">Carbs per serving (g):</label>
+              
+              <br><br>
+            <button class="btn-submit" type="submit" onclick="addPresetFood();">
+              Add Food
+            </button>
+          </div>
+
+
+
+
+
         </div>
       </div>
 

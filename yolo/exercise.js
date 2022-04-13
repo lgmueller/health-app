@@ -145,20 +145,20 @@ function addWorkout(name, experience) {
     var num_rep;
     var exercise_name;
     var new_name; 
-
+    
     if (name != 'Custom'){
         switch (experience){
             case "beginner": 
-                new_name = name;
+                name = name;
                 break;
             case "intermediate":
-                new_name = 'Inter_' + name;
+                name = 'Inter_' + name;
                 break;
             case "advanced":
-                new_name = 'Adv_' + name;
+                name = 'Adv_' + name;
                 break;
             default:
-                new_name = name;
+                name = name;
                 break;
         }
     }
@@ -174,7 +174,7 @@ function addWorkout(name, experience) {
     var new_workout = new Workout(name, exercises);
     const data = JSON.stringify(new_workout);
     
-    localStorage.setItem(new_name, data);
+    localStorage.setItem(name, data);
     
 }
 

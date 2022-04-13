@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>YOLO</title>
+    <link href="progress_style.css" rel="stylesheet" />
+    <meta
+      name="viewport"
+      content="width=768px, height=1280px, initial-scale=1"
+    />
+    <script type = "text/javascript" src="update_progress.js"></script>
+    
+
+  </head>
+
+  <div class="backarrow"><a href="progress.html"><img src="pictures/backarrow.png" height ="35" width="35" /></a> </div>
+  <div class="profile"><a href="profile.html"><img src="pictures/profile.png" height ="40" width="40" /></a> </div>
+  
+  <center>
+    
+  <body onload="loadSharedText()">
+    <h1 style="font-size: 60px; margin-top: 50px; font-style: bold">Share Progress!</h1>
+    <br>
+    <h2 style="font-style: bold">Copy the following text and post it on social media:</h2>
+
+    <textarea class="shared_text" id="shared_text">Hey queen</textarea>
+    <br>
+    <button class="roundedButton" onclick="copyToClipBoard()">Copy</button>
+    
+  </body>
+  
+    <div class="tabs">
+      <a href="nutrition.html">
+        <img class ="tabicon" src="pictures/apple.png" alt="" class="icon"/>
+        <br>
+        Nutrition
+      </a>
+    
+      <a href="exercise.html">
+        <img class ="tabicon" src="pictures/weight.png" alt="" class="icon"/>
+        <br>
+        Exercise
+      </a>
+      <a href="reminders.html">
+        <img class ="tabicon" src="pictures/clock.png" alt="" class="icon" />
+        <br>
+        Reminders
+      </a>
+      <a href="progress.html">
+        <img class ="tabicon" src="pictures/progress.png" alt="" class="icon"/>
+        <br>
+        Progress
+      </a>
+    </div>
+  </center>
+</html>
+
+
+

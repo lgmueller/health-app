@@ -58,11 +58,11 @@ button {
 }
 
 .button1 {
-  font-family: "Raleway";
-  font-size: 1.5rem;
+  font-family: "Raleway-bold";
+  font-size: 1.8rem;
   color: white;
-  width: 12rem;
-  height: 3rem;
+  width: 15rem;
+  height: 4rem;
   font-weight: bold;
   border-radius: 2rem;
   margin: 0 5px;
@@ -99,8 +99,8 @@ button {
 
 
 .submit_button {
-  font-family: "Raleway";
-  font-size: 1rem;
+  font-family: "Raleway-bold";
+  font-size: 1.8rem;
   color: white;
   width: 15rem;
   height: 2rem;
@@ -407,17 +407,15 @@ body {
 }
 
 
-/* Style tab links */
 .tablink {
   background-color: #8e95e7;
+  font-family: "Raleway-bold";
   color: white;
-  float: left;
+  float: center;
   border: none;
   outline: none;
   cursor: pointer;
-  
-  
-  width: 29.1%;
+  width: 28%;
   border-radius: 0rem;
 }
 
@@ -518,4 +516,31 @@ body {
   width: auto;
 }
 
+.shared_text {
+  margin: auto;
+  padding: 10px;
+  width: 550px; 
+  height: 550px; 
+  font-size: 30px; 
+  font-family: 'Raleway-Bold'; 
+  text-align: center;
+  border-radius: 10px;
+  border: 0;
+  box-shadow:0 0 20px 10px rgba(0,0,0,0.06);
+}
 
+.roundedButton {
+  width: 200px;
+  height: 80px;
+  padding: 10px;
+  font-family: "Raleway-Bold";
+  /* border-color: #433495;
+  border-style: solid; */
+  background-color:#433495;
+  box-shadow: #b9bac3;
+  color:white;
+  font-size: 40px;
+  font-weight: 40px;
+  margin-top: 22px;
+  border-radius: 60px;
+}

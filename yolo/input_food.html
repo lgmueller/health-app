@@ -13,33 +13,34 @@
   <div class="profile"><a href="profile.html"><img src="pictures/profile.png" height ="40" width="40" /></a> </div>
 
   <center>
-    <body>
+    <body onload="hideKeyboard();" onclick="hideKeyboard(); hidePresetKeyboard(); managePresetView()">
       <div class="main-block">
 
 
-        <h2 style="margin-top: 50px">Select Custom or Preset Food</h2>
+        <h1 style="font-size: 60px; margin-top: 50px">Select Type to Add: </h1>
+        <br>
 
-        <button class="btn-submit" type="submit" onclick="openSelection('Custom')">Custom Food</button>
-        <button class="btn-submit" type="submit" onclick="openSelection('Preset')">Preset Food</button>
+        <button id="Custom_tab" class="tablink" type="submit" onclick="openSelection('Custom')">Custom Food</button>
+        <button id="Preset_tab" class="tablink" type="submit" onclick="openSelection('Preset')">Preset Food</button>
         
-        <div id="Custom" class="custom_vs_preset">
+        <div id="Custom" class="custom_vs_preset" style="display:none">
           <br>
-          <h3>Insert Custom Food Information</h3>
+          <h2>Insert Custom Food Information</h2>
           <div class="field-input" style="font-size: 30px;">
               <label for="food_name">Food name:</label>
-              <input class = "rounded-input" type="text" id="food_name" name="food_name">
+              <input onclick="showKeyboard()" class = "rounded-input" type="text" id="food_name" name="food_name">
               <br>
               <label for="calories">Calories:</label>
-              <input class = "rounded-input" type="number" id="calories" name="calories">
+              <input onclick="showKeyboard()" class = "rounded-input" type="number" id="calories" name="calories">
               <br>
               <label for="protein">Protein (g):</label>
-              <input class = "rounded-input" type="number" id="protein" name="protein">
+              <input onclick="showKeyboard()" class = "rounded-input" type="number" id="protein" name="protein">
               <br>
               <label for="fat">Fats (g):</label>
-              <input class = "rounded-input" type="number" id="fat" name="fat">
+              <input onclick="showKeyboard()" class = "rounded-input" type="number" id="fat" name="fat">
               <br>
               <label for="carbs">Carbs (g):</label>
-              <input class = "rounded-input" type="number" id="carbs" name="carbs">
+              <input onclick="showKeyboard()" class = "rounded-input" type="number" id="carbs" name="carbs">
               <br><br>
             <button class="btn-submit" type="submit" onclick="addFood();">
               Add Food
@@ -94,8 +95,150 @@
         </div>
         
         <div id="Preset" class="custom_vs_preset" style="display:none">
-          <h3>Select Presect Food</h3>
-          <p>Preset stuff goes here.</p> 
+          <h2>Select a Single Preset Food:</h2>
+
+
+          <div class="field-input" style="font-size: 30px;">
+            <label for="name">Breakfast:</label>
+            <style>
+              select {
+                  width: 100px;
+                  margin: 10px;
+                  height: 45px;
+              }
+              select:focus {
+                  min-width: 150px;
+                  width: auto;
+              }
+            </style>
+            <select class="selection" id="breakfast" onchange="managePresetView()" onclick="clearSelects(0); managePresetView()">
+                <option value=""></option>
+                <option value="eggs">Eggs</option>
+                <option value="bacon">Bacon</option>
+                <option value="toast">Toast</option>
+                    
+            </select>
+
+            <label for="name">Lunch:</label>
+            <style>
+              select {
+                  width: 100px;
+                  margin: 10px;
+                  height: 45px;
+              }
+              select:focus {
+                  min-width: 150px;
+                  width: auto;
+              }
+            </style>
+            <select class="selection" id="lunch" onchange="managePresetView()" onclick="clearSelects(1); managePresetView()">
+                <option value=""></option>
+                <option value="ham_sandwich">Ham Sandwich</option>
+                <option value="caesar_salad">Caeser Salad</option>
+                <option value="quesadilla">Quesadilla</option>
+                    
+            </select>
+
+          </select>
+
+          <label for="name">Dinner:</label>
+          <style>
+            select {
+                width: 100px;
+                margin: 10px;
+                height: 45px;
+            }
+            select:focus {
+                min-width: 150px;
+                width: auto;
+            }
+          </style>
+          <select class="selection" id="dinner" onchange="managePresetView()" onclick="clearSelects(2);">
+              <option value=""></option>
+              <option value="pizza">Pizza</option>
+              <option value="chicken_wings">Chicken Wings</option>
+              <option value="steak">Steak</option>
+          </select> <br>
+          
+          <h2>Edit number of servings:</h2>
+          <label for="servings">Servings:</label>
+              <input id="servings" value="1" onclick="showPresetKeyboard()" style = "width : 12%" class = "rounded-input" type="number" id="servings" name="servings">
+
+        
+        </div>
+
+        <!--stuff for keyboard taken from https://gist.github.com/itszero/972142 --> 
+        <div id="keyboard_preset" style="display: none">
+          <div class="row">
+            <div class="key">Q</div>
+            <div class="key">W</div>
+            <div class="key">E</div>
+            <div class="key">R</div>
+            <div class="key">T</div>
+            <div class="key">Y</div>
+            <div class="key">U</div>
+            <div class="key">I</div>
+            <div class="key">O</div>
+            <div class="key">P</div>
+          </div>
+          <div class="row">
+            <div class="key">A</div>
+            <div class="key">S</div>
+            <div class="key">D</div>
+            <div class="key">F</div>
+            <div class="key">G</div>
+            <div class="key">H</div>
+            <div class="key">J</div>
+            <div class="key">K</div>
+            <div class="key">L</div>
+          </div>
+          <div class="row">
+            <div class="key system_key" style="width: 3em">Shift</div>
+            <div class="key">Z</div>
+            <div class="key">X</div>
+            <div class="key">C</div>
+            <div class="key">V</div>
+            <div class="key">B</div>
+            <div class="key">N</div>
+            <div class="key">M</div>
+            <div class="key system_key" style="width: 2em">⌫</div>
+          </div>
+          <div class="row">
+            <div class="key system_key" style="width: 2.25em">123</div>
+            <div class="key" style="width: 6.5em; color: #71717D; font-weight: 600;">space</div>
+            <div class="key system_key" style="width: 4em">Enter</div>
+          </div>
+        </div>
+
+
+        
+
+        <div id="preset_information" class="field-input" style="font-size: 30px; display: block">
+          <h2> Details of Option selected:</h2>
+              <label id="preset_food_name">Food name:</label>
+              
+              <br>
+              <label id="preset_calories">Calories per serving:</label>
+              
+              <br>
+              <label id="preset_protein">Protein per serving (g):</label>
+              
+              <br>
+              <label id="preset_fat">Fats per serving (g):</label>
+              
+              <br>
+              <label id="preset_carbs">Carbs per serving (g):</label>
+              
+              <br><br>
+            <button class="btn-submit" type="submit" onclick="addPresetFood();">
+              Add Food
+            </button>
+          </div>
+
+
+
+
+
         </div>
       </div>
 

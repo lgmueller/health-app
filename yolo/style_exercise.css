@@ -90,9 +90,9 @@
   }
 
   .roundedButton {
-    width: 400px;
-    height: 130px;
-    padding: 20px;
+    width: 450px;
+    height: 120px;
+    padding: 10px;
     font-family: "Raleway-Bold";
     /* border-color: #433495;
     border-style: solid; */
@@ -101,7 +101,7 @@
     color:white;
     font-size: 40px;
     font-weight: 40px;
-    margin-top: 30px;
+    margin-top: 22px;
     border-radius: 60px;
   }
 
@@ -180,26 +180,24 @@ img {
   width: 40%;
   height: 600px;
   border-radius: .5em;
-  margin:10px;
   border: 2px solid #433495;
   background-color: #433495;
   box-shadow: 15px 15px #bdc2f5;
-  font-size: 30px;
   color: white;
   align-items: center;
-  vertical-align: center;
+  
 }
 
 .flexbox-item-box {
-  width: 40%;
-  padding: 10px;
-  height: 200px;
-  border-radius: .5em;
-  margin: 10px;
+  width: 30%;
+  padding: 30px;
+  height: 230px;
+  border-radius: 100px;
+  margin: 25px;
   border: 2px solid #433495;
   background-color: #433495;
   box-shadow: 15px 15px #bdc2f5;
-  font-size: 30px;
+  font-size: 50px;
   color: white;
   align-self: center;
   vertical-align: center;
@@ -221,7 +219,7 @@ img {
   width: 80%;
   padding: 10px;
   height: 500px;
-  border-radius: 10px;
+  border-radius: 10px; 
   margin:auto;
   /* border: 2px solid #232324; */
   background-color: #dddff7;;
@@ -229,6 +227,7 @@ img {
   font-size: 30px;
   color: #232324;
   overflow: auto;
+  margin-bottom: 10px;
   
 }
 
@@ -277,6 +276,7 @@ input {
   border-radius: 10px;
   border: 0;
   box-shadow:0 0 15px 4px rgba(0,0,0,0.06);
+
 }
 
 .header-card {
@@ -416,6 +416,7 @@ input {
   font-weight: 600;
 }
 
+/* not keyboard stuff anymore */
 .select {
   width: 100px;
   margin: 10px;
@@ -424,4 +425,28 @@ input {
 .select:focus {
   min-width: 150px;
   width: auto;
+}
+
+
+.tablink {
+  background-color: #8e95e7;
+  font-family: "Raleway-bold";
+  color: white;
+  float: center;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  width: 40%;
+  border-radius: 0rem;
+}
+
+.tablink:hover {
+  background-color: #433495;
+}
+
+/* Style the tab content (and add height:100% for full page content) */
+.tabcontent {
+  color: black;
+  display: none;
+  height: 100%;
 }

@@ -16,7 +16,7 @@
   </head>
 
   <center>
-    <body onload="loadPlaceholders()">
+    <body onload="loadPlaceholders(); hideKeyboard()" onclick="hideKeyboard()">
       <div class="main-block">
         <div class="home">
           <a href="profile.html"
@@ -35,15 +35,18 @@
         
         <div class="field-input" style="font-size: 30px;">
           <label for="username">User name:</label>
-          <input class = "rounded-input" type="text" id="username" name="username" placeholder="">
-          <br><br>
-          <label for="age">Age:</label>
-          <input class = "rounded-input" type="number" id="age" name="age" placeholder="">
+          <input onclick = "showKeyboard()" class = "rounded-input" type="text" id="username" name="username" placeholder="">
           <br><br>
           <label for="height">Height (cm):</label>
-          <input class = "rounded-input" type="number" id="height" name="height" placeholder="">
+          <input onclick = "showKeyboard()" class = "rounded-input" type="number" id="height" name="height" placeholder="">
           <br><br>
-          <label for="sex">Sex:</label>
+          <label for="weight">Weight (kg):</label>
+          <input onclick = "showKeyboard()" class = "rounded-input" type="number" id="weight" name="weight" placeholder="">
+          <br><br>
+          <label for="age">Age:</label>
+          <input onclick = "showKeyboard()" class = "rounded-input" type="number" id="age" name="age" placeholder="">
+          <br><br>
+          <label for="sex">Gender:</label>
           <style>
             select {
                 width: 100px;
@@ -62,9 +65,6 @@
               <option value="other">Other</option>
                   
           </select>
-          <br><br>
-          <label for="birthday">Birthday:</label>
-          <input class = "rounded-input" type="date" id="birthday" name="birthday">
           <br><br>
           <label for="experience">Exercise Level:</label>
           <select id="experience">
@@ -124,7 +124,7 @@
         </div>
       </div>
 
-      <br><br><br><br><br>
+      <br><br><br><br><br><br><br><br><br><br><br>
       
 
     </body>

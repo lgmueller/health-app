@@ -71,9 +71,10 @@ function addToList() {
     var rep = document.getElementById('reps').value;
     var my_name = document.getElementById('nameField').value;
     
-    if (set != null && rep != null && my_name != null){
+    if (set != '' && rep != '' && my_name != ''){
 
         list.push(new Exercise(set,rep,my_name));
+        document.getElementById('nameField').value = '';
         
     } else {
         alert("Sorry! Double check that you've filled out all of the fields.")
@@ -175,6 +176,7 @@ function addWorkout(name, experience) {
     const data = JSON.stringify(new_workout);
     
     localStorage.setItem(name, data);
+    window.location.href = 'exercise.html';
     
 }
 

@@ -1,0 +1,465 @@
+@font-face {
+    font-family: "Raleway";
+    src: url("raleway.woff");
+  }
+
+@font-face {
+    font-family: "Raleway-Regular";
+    src: url("/Raleway/static/Raleway-Regular.ttf")
+  }
+
+@font-face {
+  font-family: "Raleway-Bold";
+  src: url("/Raleway/static/Raleway-Bold.ttf")
+}
+  
+  body {
+    margin: auto;
+    text-align: center;
+    font-family: "Raleway";
+  }
+
+  title {
+    font-family: "Raleway";
+    font-size: large;
+  }
+
+  .header { 
+    font-family: "Raleway";
+    display: flex;
+    align-items: center;
+    text-align: center;
+  }
+  
+  h1 {
+    font-family: "Raleway";
+    margin: auto;
+  }
+
+  h2 {
+    font-family: "Raleway-Bold";
+    font-size: 35px;
+  }
+
+  h3 {
+    font-family: "Raleway-Regular";
+    font-size: 25px;
+  }
+  
+  button {
+    font-family: "Raleway";
+    font-size: 3rem;
+    /* color: white;
+    width: 25rem;
+    height: 4rem;
+    font-weight: bold;
+    border-radius: 3rem;
+    background-color: #8e95e7; */
+  }
+
+  .icon {
+    border-radius: 25px;
+    background-color: #8e95e7; /* Blue background */
+    border: none; /* Remove borders */
+    color: white; /* White text */
+    padding: 12px 16px; /* Some padding */
+    font-size: 16px; /* Set a font size */
+    cursor: pointer; /* Mouse pointer on hover */
+    position: fixed;
+    left: 0;
+
+  }
+
+  .workoutSelection {
+    border: thin;
+    border-style: solid;
+    border-color: #232324;
+    width: fit-content;
+    padding: 2rem;
+    display: block;
+    margin:0 auto;
+    
+  }
+
+  .workoutButtons {
+    display: inline-flex;
+    margin: auto;
+    flex-wrap: nowrap;
+    gap: 1rem;
+
+  }
+
+  .roundedButton {
+    width: 450px;
+    height: 120px;
+    padding: 10px;
+    font-family: "Raleway-Bold";
+    /* border-color: #433495;
+    border-style: solid; */
+    background-color:#433495;
+    box-shadow: #b9bac3;
+    color:white;
+    font-size: 40px;
+    font-weight: 40px;
+    margin-top: 22px;
+    border-radius: 60px;
+  }
+
+  .buttonA {
+    border-radius: 25px;
+    width: 150px;
+    height: 150px;
+    
+    background-color: #8e95e7;
+    font-size: 30px;
+    font-weight: 20px;
+    font-weight: bold;
+  }
+
+  
+.tabs {
+  font-family: "Raleway-bold";
+  background-color: #b9bac3;
+  font-size: 1.8rem;
+  overflow: hidden;
+  position: fixed;
+  justify-content: space-around;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  display: inline-flex;
+  flex-wrap: nowrap;
+}
+
+.tabs a {
+  font-family: "Raleway-bold";
+  color: black;
+  font-style: bold;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 1.8rem;
+}
+
+.tabs a:hover {
+  font-family: "Raleway-bold";
+  background-color: #ddd;
+  color: #232324;
+}
+
+/* Add a green background color to the active link */
+.tabs a.active {
+  font: "Raleway-bold";
+  background-color: #797a81;
+  color: white;
+}
+
+/* Hide the link that should open and close the navbar on small screens */
+.tabs .icon {
+  display: none;
+}
+
+.tabicon {
+  width: 4rem;
+  height: 4rem;
+}
+
+img {
+  max-width: 100%;  
+  height: auto;  
+}
+
+.flex-container {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.flexbox-item {
+  width: 40%;
+  height: 600px;
+  border-radius: .5em;
+  border: 2px solid #433495;
+  background-color: #433495;
+  box-shadow: 15px 15px #bdc2f5;
+  color: white;
+  align-items: center;
+  
+}
+
+.flexbox-item-box {
+  width: 30%;
+  padding: 30px;
+  height: 230px;
+  border-radius: 100px;
+  margin: 25px;
+  border: 2px solid #433495;
+  background-color: #433495;
+  box-shadow: 15px 15px #bdc2f5;
+  font-size: 50px;
+  color: white;
+  align-self: center;
+  vertical-align: center;
+}
+
+.flexbox-item-wide {
+  width: 80%;
+  height: 100px;
+  border-radius: .5em;
+  margin:auto;
+  border: 2px solid #433495;
+  background-color: #433495;
+  /* box-shadow: 15px 15px #bdc2f5; */
+  font-size: 30px;
+  color: white;
+}
+
+.flexbox-item-input {
+  width: 75%;
+  padding: 45px;
+  height: 250px;
+  border-radius: 20px; 
+  margin:auto;
+  /* border: 2px solid #232324; */
+  background-color: #dddff7;;
+  /* box-shadow: 15px 15px #bdc2f5; */
+  font-size: 27px;
+  color: #232324;
+  overflow: auto;
+  margin-bottom: 10px;
+  
+}
+
+.workout_list {
+  font-size: 30px;
+}
+
+.rounded-table {
+  margin: auto;
+  border-collapse:separate;
+  /* border:solid #232324 1px; */
+  border-radius:6px;
+}
+
+th {
+  font-family: "Raleway-Bold";
+  border: 1px solid #999;
+  padding: 0.2rem;
+}
+
+td {
+  font-family: "Raleway-Bold";
+  border: 1px solid #999;
+  padding: 1rem;
+}
+
+.trash {
+  width: 10px;
+}
+
+.field-input {
+  font-size: 30px;
+  font-family: "Raleway-Regular";
+}
+
+input {
+  font-family: "Raleway-Regular";
+  font-size: 30px;
+  
+}
+
+.rounded-input {
+  font-family: "Raleway-Regular";
+  padding: 10px;
+  font-size: 30px;
+  border-radius: 10px;
+  border: 0;
+  box-shadow:0 0 15px 4px rgba(0,0,0,0.06);
+
+}
+
+.header-card {
+  width: 200px;
+  margin: auto;
+}
+
+.profile {
+  position: absolute;
+  margin-right: 30px;
+  margin-top: 30px;
+  right:0;
+  top:0;
+}
+
+.home {
+  /* float: left; */
+  position: absolute;
+  margin-left: 30px;
+  margin-top: 30px;
+  left:0;
+  top:0;
+}
+
+.btn-submit {
+  width: 300px;
+  height: 80px;
+  padding: 10px;
+  background-color: #433495;
+  font-family: "Raleway-Bold";
+  color: white;
+  border-radius: 10px;
+}
+
+.streak_circle {
+  background: linear-gradient(#433495, #bdc2f5);
+  border-radius: 50%;
+  height: 200px;
+  width: 200px;
+  margin: auto;
+  text-align: center;
+  padding: 10px;
+  font-family: "Raleway-Bold";
+  font-size: 120px;
+  color: white;
+  align-items:center;
+}
+
+.fire {
+  text-align: center;
+  display: block;
+  margin: auto;
+}
+
+/* span {
+  font-size: 100px;
+  vertical-align: middle;
+  line-height: normal;
+} */
+
+.button-complete {
+  width: 40px;
+  height: 40px;
+}
+
+.timer {
+  width: 400px;
+  height: 300px;
+  font-family: "Raleway-Regular";
+  font-size: 40px;
+  align-items: center;
+  margin-top: 60px;
+  display: inline-block;
+}
+
+.guide_images {
+  margin: auto;
+}
+
+.guide_img {
+  width: 150px;
+  height: 150px;
+  margin-bottom: 30px;
+  background-color: #bdc2f5;
+  padding: 30px;
+  border-radius: 100px;
+}
+
+.workout_descriptions {
+  width: fit-content;
+  max-height: 83s0px;
+  padding-left: 40px;
+  padding-right: 40px;
+  overflow:auto;
+}
+
+.description {
+  font-family: "Raleway-Regular";
+  font-size: 25px;
+  display: block;
+  overflow: auto;
+  padding-right: 20px;
+  padding-left: 20px;
+  text-align: left;
+  line-height: 1.5;
+}
+
+/* stuff for keyboard taken from https://gist.github.com/itszero/972142 */
+#keyboard {
+  background-color: #b9bac3;
+  padding: 5px 2px;
+}
+
+.row {
+  margin: 15px 2px;
+  text-align: center;
+}
+
+.key {
+  background-color: #ECEDEE;
+  height: 2em;
+  line-height: 2em;
+  font-size: 2em;
+  border-radius: 10px;
+  width: 1.4em;
+  text-align: center;
+  display: inline-block;
+  margin: 0 2px;
+  font-family: Helvetica;
+  font-weight: 800;  
+}
+
+.system_key {
+  background-color: #68717D;
+  color: #FFF;
+  border: 1px solid #515A67;
+  font-weight: 600;
+}
+
+/* not keyboard stuff anymore */
+.select {
+  width: 100px;
+  margin: 10px;
+  height: 45px;
+}
+.select:focus {
+  min-width: 150px;
+  width: auto;
+}
+
+
+.tablink {
+  background-color: #8e95e7;
+  font-family: "Raleway-bold";
+  color: white;
+  float: center;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  width: 40%;
+  border-radius: 0rem;
+}
+
+.tablink:hover {
+  background-color: #433495;
+}
+
+/* Style the tab content (and add height:100% for full page content) */
+.tabcontent {
+  color: black;
+  display: none;
+  height: 100%;
+}
+
+.column2 {
+  float: left;
+  width: 50%;
+  
+}
+
+/* Clear floats after the columns */
+.row2:after {
+  content: "";
+  display: table;
+  clear: both;
+}

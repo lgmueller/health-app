@@ -306,7 +306,7 @@ new Chart(document.getElementById("bar-chart2"), {
       {
         label: "Weight (lbs)",
         backgroundColor: ["#8e95e7", "#8e95e7", "#8e95e7", "#8e95e7", "#8e95e7","#8e95e7", "#8e95e7"],
-        data: [133, 133, 132, 136, 140, 141, 102]
+        data: [133, 132, 131, 134, 137, 135, 138]
       }
     ]
   },
@@ -315,6 +315,16 @@ new Chart(document.getElementById("bar-chart2"), {
     title: {
       display: true,
       text: 'Weekly Weight Count'
+    }, 
+    scales: {
+      yAxes : [{
+        ticks : {
+          min : 130,   
+          steps: 10,
+          stepValue: 1, 
+          max : 140
+        }
+      }]
     }
   }
 });
@@ -462,4 +472,22 @@ function copyToClipBoard() {
   document.execCommand('copy');
 
   alert("Copied!");
+}
+
+function showKeyboard() {
+  var keyboard = document.getElementById("keyboard")
+  keyboard.style = "display: block; position:relative; margin-top:-260px;"
+  click_count = 0
+}
+
+function hideKeyboard() {
+  var keyboard = document.getElementById("keyboard")
+  if (keyboard.style.display == "block" && click_count == 0) {
+    click_count += 1;
+  }
+  else {
+    click_count = 0
+    keyboard.style = "display: none"
+  }
+  
 }

@@ -1,0 +1,557 @@
+@font-face {
+    font-family: "Raleway";
+    src: url("raleway.woff");
+  }
+  
+  @font-face {
+    font-family: "Raleway-Regular";
+    src: url("/Raleway/static/Raleway-Regular.ttf");
+  }
+  
+  @font-face {
+    font-family: "Raleway-Bold";
+    src: url("/Raleway/static/Raleway-Bold.ttf");
+  } 
+  
+  
+  
+  
+  
+  b { 
+    font-family: "Raleway-Bold";
+  }
+  
+  title {
+    font-family: "Raleway";
+  }
+  
+  h1 {
+    font-size: large;
+    font-family: "Raleway";
+  }
+  
+  .flex-container {
+    display: flex;
+    background-color: #8e95e7;
+  }
+  
+  .flex-container > div {
+    background-color: #433495;
+    color: #8e95e7;
+    width: 1500px;
+    margin: 10px;
+    text-align: center;
+    line-height: 75px;
+    font-size: 30px;
+  }
+  
+  button {
+    font-family: "Raleway";
+    font-size: 2rem;
+    color: white;
+    width: 15rem;
+    height: 5rem;
+    font-weight: bold;
+    border-radius: 3rem;
+    margin: 0 10px;
+    background-color: #8e95e7;
+  }
+  
+  .button1 {
+    font-family: "Raleway-bold";
+    font-size: 1.8rem;
+    color: white;
+    width: 15rem;
+    height: 4rem;
+    font-weight: bold;
+    border-radius: 2rem;
+    margin: 0 5px;
+    background-color: #433495;
+  }
+  
+  
+  
+  .profile {
+    position: absolute;
+    margin-right: 30px;
+    margin-top: 30px;
+    right:0;
+    top:0;
+  }
+  
+  .home {
+    /* float: left; */
+    position: absolute;
+    margin-left: 30px;
+    margin-top: 30px;
+    left:0;
+    top:0;
+  }
+  
+  .backarrow {
+    /* float: left; */
+    position: absolute;
+    margin-left: 30px;
+    margin-top: 30px;
+    left:0;
+    top:0;
+  }
+  
+  
+  .submit_button {
+    font-family: "Raleway-bold";
+    font-size: 1.8rem;
+    color: white;
+    width: 15rem;
+    height: 2rem;
+    font-weight: bold;
+    border-radius: 3rem;
+    background-color: #8e95e7;
+  }
+  
+    
+  .tabs {
+    font-family: "Raleway-bold";
+    font-size: 1.8rem;
+    background-color: #b9bac3;
+    overflow: hidden;
+    position: fixed;
+    justify-content: space-around;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    display: inline-flex;
+    flex-wrap: nowrap;
+  }
+  
+  .tabs a {
+    font-family: "Raleway-bold";
+    color: black;
+    font-style: bold;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 1.8rem;
+  }
+  
+  .tabs a:hover {
+    font-family: "Raleway-bold";
+    background-color: #ddd;
+    color: black;
+  }
+  
+  /* Add a purple background color to the active link */
+  .tabs a.active {
+    font: "Raleway-bold";
+    background-color: #797a81;
+    color: white;
+    font-style: bold;
+  }
+  
+  /* Hide the link that should open and close the navbar on small screens */
+  .tabs .icon {
+    display: none;
+  }
+  
+  .tabicon {
+    width: 4rem;
+    height: 4rem;
+  }
+  
+  img {
+    max-width: 100%;  
+    height: auto;  
+  }
+  
+  
+  
+  
+  .weight {
+      font-size: 20px;
+  }
+  
+  .weight .current {
+      float: left;
+      margin-left: 250px;
+  }
+  
+  .weight .goal {
+      float: right;
+      margin-right: 250px;
+  }
+    
+  .weight .goal .weight_num {
+      font-size: 25px;
+      font-family: Verdana, sans-serif;
+      color: #8e95e7
+  }
+  
+  .weight .current .weight_num {
+      font-size: 25px;
+      font-family: Verdana, sans-serif;
+      color: #8e95e7
+  }
+  
+    .curve_chart {
+      stroke: #8e95e7;
+  }  
+  
+  
+  
+  .chart {
+    max-width: 1000px;
+    margin: 20px auto;
+  }
+  
+  
+  /* Flex */ 
+  
+  
+  
+  .progress_chart {
+    background: #c6c9e7;
+    justify-content: flex-start;
+    border-radius: 100px;
+    align-items: center;
+    position: relative;
+    padding: 0 5px;
+    display: flex;
+    height: 40px;
+    width: 500px;
+  }
+    .progress_chart span {
+        /* You can modify the value below to change the distance between the percentage number and the bar */
+        margin-left: 5px;
+        color: #433495;
+        font-weight: bolder;
+    }
+  
+  .progress_bar {
+    /* You can modify the total time used for the animation here */
+    animation: load 3s normal forwards;
+    /* 
+  
+    Add a little spice by having a shadow below the bar.
+    Feel free to comment out this line below to have an even LITE version :D 
+    */
+    box-shadow: 0 10px 40px -10px #433495;
+  
+    border-radius: 100px;
+    background: #433495;
+    height: 30px;
+    width: 0;
+  } 
+  
+  
+  
+  @keyframes load {
+    0% {
+        width: 0;
+    }
+    100% {
+        /* You need to change the percentage below to match the value in the corresponding <span> */
+        width: 90%;
+    }
+  }
+  
+  
+  /* table */ 
+  table {
+    font-family: "Raleway";
+    border-collapse: collapse;
+    width: 100%;
+  }
+  
+  td, th {
+    border: 1px solid #dddff7;
+    text-align: left;
+    padding: 8px;
+  }
+  
+  tr:nth-child(odd) {
+    background-color: #a4a8cf;
+  }
+  
+  tr:nth-child(even) {
+    background-color: #b9bac3;
+  }
+  
+  .field-input {
+    font-size: 30px;
+    font-family: "Raleway-Regular";
+  }
+  
+  .goal-text {
+    font-size: 30px;
+    font-family: "Raleway-Regular";
+  }
+  
+  .row {
+    display: flex;
+  }
+  
+  
+  /* Create two equal columns that sits next to each other */
+  .column {
+    flex: 50%;
+    padding: 10px;
+    
+  }
+  
+  
+  
+  .flex-container { 
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    font-size: 3rem;
+    gap: 5rem;
+    font-weight: bold;
+    font-family: "raleway";
+  }
+  
+  .goal-index { 
+    text-align: center;
+    font-size: 2rem;
+    font-family: "raleway";
+  }
+  
+  /* https://dev.to/shantanu_jana/circular-b-bar-using-html-and-css-1oda */
+  @keyframes growProgressBar {
+    
+    0%, 33% { --pgPercentage: 0; }
+    100% { --pgPercentage: var(--value); }
+  }
+  
+  @keyframes growProgressLineBar {
+    
+    0% { --pgPercentage: 0; }
+    100% { --pgPercentage: var(--value); }
+  }
+  
+  @property --pgPercentage {
+    syntax: '<number>';
+    inherits: false;
+    initial-value: 0;
+  }
+  
+  div[role="progressbar"] {
+    --size: 20rem;
+    --fg: #433495;
+    --bg: #c6c9e7;
+    --pgPercentage: var(--value);
+    animation: growProgressLineBar 3s 1 forwards;
+    width: var(--size);
+    height: var(--size);
+    border-radius: 50%;
+    display: grid;
+    place-items: center;
+    background: 
+      radial-gradient(closest-side, white 80%, transparent 0 99.9%, white 0),
+      conic-gradient(var(--fg) calc(var(--pgPercentage) * 1%), var(--bg) 0)
+      ;
+    font-family: Helvetica, Arial, sans-serif;
+    font-size: calc(var(--size) / 5);
+    color: var(--fg);
+  }
+  
+  div[role="progressbar"]::before {
+    counter-reset: percentage var(--value);
+    content: counter(percentage) '%';
+  }
+  
+  div[role="progresslinebar"] {
+    --size: 7rem;
+    --fg: #433495;
+    --bg: #c6c9e7;
+    --pgPercentage: var(--value);
+    animation: growProgressLineBar 3s 1 forwards;
+    width: var(--size);
+    height: var(--size);
+    border-radius: 50%;
+    display: grid;
+    place-items: center;
+    background: 
+      radial-gradient(closest-side, white 80%, transparent 0 99.9%, white 0),
+      conic-gradient(var(--fg) calc(var(--pgPercentage) * 1%), var(--bg) 0)
+      ;
+    font-family: Helvetica, Arial, sans-serif;
+    font-size: calc(var(--size) / 5);
+    color: var(--fg);
+  }
+  
+  div[role="progresslinebar"]::before {
+    counter-reset: percentage var(--value);
+    content: counter(percentage) '%';
+  }
+  
+  /* for tabs for graphs */
+  * {box-sizing: border-box}
+  
+  
+  /* Set height of body and the document to 100% */
+  
+  body {
+    height: 100%;
+    max-width: 600px;
+    text-align: center;
+    font-size: 2rem;
+    font-family: "Raleway";
+    margin: auto;
+  }
+  
+  /*body {
+    margin: auto;
+    text-align: center;
+    font-family: "Raleway";
+  }*/
+  
+  .body2 {
+    margin: auto;
+    text-align: center;
+    font-family: "Raleway";
+  }
+  
+  
+  
+  .tablink {
+    background-color: #8e95e7;
+    font-family: "Raleway-bold";
+    color: white;
+    float: center;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    width: 28%;
+    border-radius: 0rem;
+  }
+  
+  .tablink:hover {
+    background-color: #433495;
+  }
+  
+  /* Style the tab content (and add height:100% for full page content) */
+  .tabcontent {
+    color: black;
+    display: none;
+    padding: 100px 20px;
+    height: 100%;
+  }
+  
+  /* progress bar for progress main page */
+  
+  * {
+    box-sizing: border-box;
+  }
+  
+  /* Create three equal columns that floats next to each other */
+  .column1 {
+    float: left;
+    width: 50%; 
+    padding: 0px;
+    
+    height: 500px; /* Should be removed. Only for demonstration */
+  }
+  
+  /* Clear floats after the columns */
+  .row1:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+  
+  
+  .column2 {
+    float: left;
+    width: 50%;
+    
+  }
+  
+  /* Clear floats after the columns */
+  .row2:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+  
+  .rounded-input {
+    font-family: "Raleway-Regular";
+    padding: 10px;
+    font-size: 30px;
+    border-radius: 10px;
+    border: 0;
+    box-shadow:0 0 15px 4px rgba(0,0,0,0.06);
+  }
+  
+  /* stuff for keyboard taken from https://gist.github.com/itszero/972142 */
+  #keyboard {
+    background-color: #b9bac3;
+    padding: 5px 2px;
+  }
+  
+  .row3 {
+    margin: 15px 2px;
+    text-align: center;
+  }
+  
+  .key {
+    background-color: #ECEDEE;
+    height: 2em;
+    line-height: 2em;
+    font-size: 0.75em;
+    border-radius: 10px;
+    width: 1.4em;
+    text-align: center;
+    display: inline-block;
+    margin: 0 2px;
+    font-family: Helvetica;
+    font-weight: 800;  
+  }
+  
+  .system_key {
+    background-color: #68717D;
+    color: #FFF;
+    border: 1px solid #515A67;
+    font-weight: 600;
+  }
+  
+  .select {
+    width: 100px;
+    margin: 10px;
+    height: 45px;
+  }
+  .select:focus {
+    min-width: 150px;
+    width: auto;
+  }
+  
+  .shared_text {
+    margin: auto;
+    padding: 10px;
+    width: 550px; 
+    height: 550px; 
+    font-size: 30px; 
+    font-family: 'Raleway-Bold'; 
+    text-align: center;
+    border-radius: 10px;
+    border: 0;
+    box-shadow:0 0 20px 10px rgba(0,0,0,0.06);
+  }
+  
+  .roundedButton {
+    width: 200px;
+    height: 80px;
+    padding: 10px;
+    font-family: "Raleway-Bold";
+    /* border-color: #433495;
+    border-style: solid; */
+    background-color:#433495;
+    box-shadow: #b9bac3;
+    color:white;
+    font-size: 40px;
+    font-weight: 40px;
+    margin-top: 22px;
+    border-radius: 60px;
+  }
+  

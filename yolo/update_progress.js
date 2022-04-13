@@ -561,7 +561,7 @@ function copyToClipBoard() {
 
 function showKeyboard() {
   var keyboard = document.getElementById("keyboard")
-  keyboard.style = "display: block; position:relative; margin-top:-260px;"
+  keyboard.style = "display: block; "
   click_count = 0
 }
 

@@ -17,7 +17,7 @@
 
   
   <center>
-  <body class = "body" onload = "updateValues();" >
+  <body class = "body" onload = "updateValues(); hideKeyboard()" onclick = "hideKeyboard();" >
     
     <div class="header">
       <!-- <a class="icon" ref="something"><img src="pictures/home.png" width="50em" height="50em"/></a> -->
@@ -63,29 +63,29 @@
     <div class="column2" style="background-color:rgb(255, 255, 255);">
       <p style = "font-size: 30px; color: #433495; font-family: Raleway-Bold">Current</p>
       
-      <input class = "rounded-input" style="font-size: 22px; width: 140px; height:33px; border-width:medium" placeholder="Weight (lbs)" type="number" id="weight_text1">
-      <input class = "rounded-input" class="goal-text" style="font-size: 22px; width: 110px; height:33px" type ="submit" onclick="myWeightFunction1()">
+      <input onclick="showKeyboard()" class = "rounded-input" style="font-size: 22px; width: 140px; height:33px; border-width:medium" placeholder="Weight (lbs)" type="number" id="weight_text1">
+      <input onclick="showKeyboard()" class = "rounded-input" class="goal-text" style="font-size: 22px; width: 110px; height:33px" type ="submit" onclick="myWeightFunction1()">
       
-      <input class = "rounded-input" style="font-size: 22px; width: 140px; height:33px; border-width:medium" placeholder="Calories (cal)" type="number" id="cal_text1">
-      <input class = "rounded-input" style="font-size: 22px; width: 110px; height:33px " class="goal-text" type ="submit" onclick="myCalFunction1()">
+      <input onclick="showKeyboard()" class = "rounded-input" style="font-size: 22px; width: 140px; height:33px; border-width:medium" placeholder="Calories (cal)" type="number" id="cal_text1">
+      <input onclick="showKeyboard()" class = "rounded-input" style="font-size: 22px; width: 110px; height:33px " class="goal-text" type ="submit" onclick="myCalFunction1()">
       
-      <input class = "rounded-input" style="font-size: 22px; width: 140px; height:33px; border-width:medium;" placeholder="Exercise (min)" type="number" id="exer_text1">
-      <input class = "rounded-input" style="font-size: 22px; width: 110px; height:33px; " class="goal-text" type ="submit" onclick="myExerFunction1()">
+      <input onclick="showKeyboard()" class = "rounded-input" style="font-size: 22px; width: 140px; height:33px; border-width:medium;" placeholder="Exercise (min)" type="number" id="exer_text1">
+      <input onclick="showKeyboard()" class = "rounded-input" style="font-size: 22px; width: 110px; height:33px; " class="goal-text" type ="submit" onclick="myExerFunction1()">
       
 
     </div>
     <div class="column2" style="background-color:rgb(255, 255, 255);">
       <p style = "font-size: 30px; color: #433495; font-family: Raleway-Bold">Goal</p>
-      <input class = "rounded-input" style="font-size: 22px; width: 140px; height:33px; border-width:medium"  placeholder="Weight (lbs)" type="number" id="weight_text">
-      <input class = "rounded-input" style="font-size: 22px; width: 110px; height:33px; " class="goal-text" type ="submit" onclick="myWeightFunction()">
+      <input onclick="showKeyboard()" class = "rounded-input" style="font-size: 22px; width: 140px; height:33px; border-width:medium"  placeholder="Weight (lbs)" type="number" id="weight_text">
+      <input onclick="showKeyboard()" class = "rounded-input" style="font-size: 22px; width: 110px; height:33px; " class="goal-text" type ="submit" onclick="myWeightFunction()">
       
      
-      <input class = "rounded-input" style="font-size: 22px; width: 140px; height:33px; border-width:medium" placeholder="Calories (cal)" type="number" id="cal_text">
-      <input class = "rounded-input" style="font-size: 22px; width: 110px; height:33px; " class="goal-text" type ="submit" onclick="myCalFunction()">
+      <input onclick="showKeyboard()" class = "rounded-input" style="font-size: 22px; width: 140px; height:33px; border-width:medium" placeholder="Calories (cal)" type="number" id="cal_text">
+      <input onclick="showKeyboard()" class = "rounded-input" style="font-size: 22px; width: 110px; height:33px; " class="goal-text" type ="submit" onclick="myCalFunction()">
  
      
-      <input class = "rounded-input" style="font-size: 22px; width: 140px; height:33px;border-width:medium" placeholder="Exercise (min)" type="number" id="exer_text">
-      <input class = "rounded-input" style="font-size: 22px; width: 110px; height:33px; " class="goal-text" type ="submit" onclick="myExerFunction()">
+      <input onclick="showKeyboard()" class = "rounded-input" style="font-size: 22px; width: 140px; height:33px;border-width:medium" placeholder="Exercise (min)" type="number" id="exer_text">
+      <input onclick="showKeyboard()" class = "rounded-input" style="font-size: 22px; width: 110px; height:33px; " class="goal-text" type ="submit" onclick="myExerFunction()">
 
 
     </div>

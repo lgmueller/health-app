@@ -271,7 +271,22 @@ new Chart(document.getElementById("bar-chart"), {
       legend: { display: false },
       title: {
         display: true,
-        text: 'Weekly Number of Calories'
+        text: 'Weekly Number of Calories',
+      },
+      scales: {
+        yAxes : [{
+          
+           scaleLabel: {
+            display: true,
+            labelString: 'Calories'
+          }
+        }],
+        xAxes : [{
+          scaleLabel: {
+           display: true,
+           labelString: 'Date'
+         }
+       }]
       }
     }
 });
@@ -280,9 +295,9 @@ new Chart(document.getElementById("line-chart"), {
   type: 'line',
   data: {
     text: "Weeks",
-    labels: ['Week 1','Week 2','Week 3','Week 4'],
+    labels: ['1','2','3','4'],
     datasets: [{ 
-        label: "Number of Calories",
+        label: "Calorie Intake",
         data: [2192, 2239, 2432, 2499],
         borderColor: "#8e95e7",
         fill: false
@@ -292,8 +307,24 @@ new Chart(document.getElementById("line-chart"), {
   options: {
     title: {
       display: true,
-      text: 'Monthly Calorie Count'
+      text: 'Monthly Calorie Count',
+    },
+    scales: {
+      yAxes : [{
+         scaleLabel: {
+          display: true,
+          labelString: 'Calories'
+        }
+      }],
+      xAxes : [{
+        scaleLabel: {
+         display: true,
+         labelString: 'Weeks'
+       }
+     }]
     }
+    
+    
   }
 });
 
@@ -323,8 +354,18 @@ new Chart(document.getElementById("bar-chart2"), {
           steps: 10,
           stepValue: 1, 
           max : 140
+        },
+         scaleLabel: {
+          display: true,
+          labelString: 'Weight (lbs)'
         }
-      }]
+      }],
+      xAxes : [{
+        scaleLabel: {
+         display: true,
+         labelString: 'Date'
+       }
+     }]
     }
   }
 });
@@ -333,7 +374,7 @@ new Chart(document.getElementById("line-chart2"), {
 type: 'line',
 data: {
   text: "Weeks",
-  labels: ['Week 1','Week 2','Week 3','Week 4'],
+  labels: ['1','2','3','4'],
   datasets: [{ 
       label: "Weight (lbs)",
       data: [131,134, 133, 136],
@@ -345,7 +386,22 @@ data: {
 options: {
   title: {
     display: true,
-    text: 'Monthly Weight Count'
+    text: 'Monthly Weight Count',
+    
+  },
+  scales: {
+    yAxes : [{
+       scaleLabel: {
+        display: true,
+        labelString: 'Weight (lbs)'
+      }
+    }],
+    xAxes : [{
+      scaleLabel: {
+       display: true,
+       labelString: 'Weeks'
+     }
+   }]
   }
 }
 });
@@ -369,6 +425,21 @@ new Chart(document.getElementById("bar-chart3"), {
     title: {
       display: true,
       text: 'Weekly Exercise Duration'
+    },
+    scales: {
+      yAxes : [{
+        
+         scaleLabel: {
+          display: true,
+          labelString: 'Exercise Time (min)'
+        }
+      }],
+      xAxes : [{
+        scaleLabel: {
+         display: true,
+         labelString: 'Date'
+       }
+     }]
     }
   }
 });
@@ -377,9 +448,9 @@ new Chart(document.getElementById("line-chart3"), {
 type: 'line',
 data: {
   text: "Weeks",
-  labels: ['Week 1','Week 2','Week 3','Week 4'],
+  labels: ['1','2','3','4'],
   datasets: [{ 
-      label: "Exercise Duration (minutes)",
+      label: "Exercise Time (min)",
       data: [81, 67, 92, 85],
       borderColor: "#8e95e7",
       fill: false
@@ -391,6 +462,20 @@ options: {
   title: {
     display: true,
     text: 'Monthly Exercise Duration'
+  }, 
+  scales: {
+    yAxes : [{
+       scaleLabel: {
+        display: true,
+        labelString: 'Exercise Time (min)'
+      }
+    }],
+    xAxes : [{
+      scaleLabel: {
+       display: true,
+       labelString: 'Weeks'
+     }
+   }]
   }
   
 }

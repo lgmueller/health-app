@@ -156,6 +156,7 @@ function myWeightFunction() {
 
 
 function myCalFunction() {
+ 
     var x = document.getElementById("cal_text").value;
     document.getElementById("cal_p").innerHTML = x + " Calories";
     localStorage.setItem("GoalCal", x);
@@ -199,7 +200,11 @@ function myCalFunction() {
     if (localStorage.getItem("GoalCal") == null) {
       get_goal_cal = 2500;
     }
-    document.getElementById("new_goal_cal").innerHTML =  get_goal_cal + " Calories";
+    
+      document.getElementById("new_goal_cal").innerHTML =  get_goal_cal + " Calories";
+   
+    
+    
     var get_curr_cal = localStorage.getItem("CurrCal");
     if (localStorage.getItem("CurrCal") == null) {
       get_curr_cal = 2250;

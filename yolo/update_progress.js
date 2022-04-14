@@ -142,6 +142,7 @@ function myWeightFunction() {
     document.getElementById("weight_p").innerHTML = x + " lbs";
     localStorage.setItem("GoalWeight", x);
     document.getElementById("new_goal_weight").innerHTML = x + " lbs";
+    document.getElementById("weight_text").value = ''
 }
 
   function myWeightFunction1() {
@@ -150,6 +151,7 @@ function myWeightFunction() {
     localStorage.setItem("CurrWeight", x);
     var table_curr_weight = document.getElementById("new_curr_weight");
     table_curr_weight.innerHTML = x + " lbs";
+    document.getElementById("weight_text1").value = ''
   }
 
 
@@ -159,7 +161,8 @@ function myCalFunction() {
     localStorage.setItem("GoalCal", x);
     var table_goal_cal = document.getElementById("new_goal_cal");
     table_goal_cal.innerHTML = x + " Calories";
-    
+    document.getElementById("cal_text").value = ''
+
   }
 
   function myCalFunction1() {
@@ -168,6 +171,7 @@ function myCalFunction() {
     localStorage.setItem("CurrCal", x);
     var table_curr_cal = document.getElementById("new_curr_cal");
     table_curr_cal.innerHTML = x + " Calories";
+    document.getElementById("cal_text1").value = ''
   }
 
   function myExerFunction() {
@@ -176,6 +180,7 @@ function myCalFunction() {
     localStorage.setItem("GoalExer", x);
     var table_goal_exer = document.getElementById("new_goal_exer");
     table_goal_exer.innerHTML = x + " Minutes";
+    document.getElementById("exer_text").value = ''
   }
 
   function myExerFunction1() {
@@ -184,6 +189,7 @@ function myCalFunction() {
     localStorage.setItem("CurrExer", x);
     var table_curr_exer = document.getElementById("new_curr_exer");
     table_curr_exer.innerHTML = x + " Minutes";
+    document.getElementById("exer_text1").value = ''
   }
 
 

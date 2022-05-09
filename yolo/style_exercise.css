@@ -120,7 +120,7 @@
 .tabs {
   font-family: "Raleway-bold";
   background-color: #b9bac3;
-  font-size: 1.8rem;
+  font-size: 2.2rem;
   overflow: hidden;
   position: fixed;
   justify-content: space-around;
@@ -139,7 +139,7 @@
   text-align: center;
   padding: 14px 16px;
   text-decoration: none;
-  font-size: 1.8rem;
+  font-size: 2.2rem;
 }
 
 .tabs a:hover {

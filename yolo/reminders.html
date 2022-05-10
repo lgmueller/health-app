@@ -104,14 +104,26 @@
       </tbody>
     </table>
     <br />
-    <button type="button">
-      <a href="set_reminders.html" class="link">Set/Edit Reminders</a>
+    <button type="button" class="submit_button" style="width: 75%;">
+      <a href="set_reminders.html" class="link">Set Reminders</a>
     </button>
 
   <div id="reminder" class="hide">
     <h2 id="reminder-title"></h2>
-    <h3 id="reminder-content" text-weight="bold"></h3>
+    <h3 id="reminder-content"></h3>
     <h3 id="reminder-time"></h3>
+    <div class="flex-container">
+      <div>
+        <button class="submit_button" type="submit"  style="border-radius: .5rem;">
+        <a href="set_reminders.html" class="link">Edit</a>
+      </button>
+      </div>
+      <div>
+        <button class="submit_button" type="submit" style="border-radius: .5rem;">
+          <a href="reminders.html" class="link">Delete</a>
+        </button>
+      </div>
+    </div>
   </div>
 
   <br /><br /><br /><br /><br />

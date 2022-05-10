@@ -2,7 +2,7 @@
 <html>
   <head>
    
-    <link href="progress_style.css" rel="stylesheet" />
+    <link href="track_goals_style.css" rel="stylesheet" />
     <script type = "text/javascript" src="update_progress.js"></script>
     <meta
       name="viewport"
@@ -12,18 +12,24 @@
 
 
   
-  <div class="backarrow"><a href="profile.html"><img src="pictures/backarrow.png" height ="40" width="40" /></a> </div>
-  <div class="profile"><a href="profile.html"><img src="pictures/profile.png" height ="40" width="40" /></a> </div>
+  <div class="home"><a href="progress.html"><img src="pictures/backarrow.png" height ="60" width="60" /></a> </div>
+  <div class="profile"><a href="profile.html"><img src="pictures/profile.png" height ="65" width="65" /></a> </div>
 
   
   <center>
-  <body class = "body" onload = "updateValues();">
-    <br>
-    <h1 style="font-size: 60px; margin-top: 50px">Update Goals</h1>
+  <body class = "body" onload = "updateValues(); hideKeyboard()" onclick = "hideKeyboard();" >
+    
+    <div class="header">
+      <!-- <a class="icon" ref="something"><img src="pictures/home.png" width="50em" height="50em"/></a> -->
+      <h1 style="font-size: 75px; margin-top: 80px;"><b>UPDATE GOALS</b></h1>
+  
+  </div>
    
-   
-    <h3 style="color: #433495"><b>Goal Tracking</b></h3>
-    <table>
+   <br></br>
+   <h3 style="margin: -10px 50px 20px 50px; font-family:Raleway-Bold">View your current & goal weight, calorie intake, and exercise time in the table below!</h3>
+    <div class="flex-container">
+      <div class="flexbox-item-input">
+          <table class="rounded-table" id="myTable">
       <tr>
         <th></th>
         <th><b>Current</b></th>
@@ -45,45 +51,40 @@
         <td id ="new_goal_exer">100 Minutes</td>
       </tr>
     </table>
+  </div>
+</div>
 
     
+
+<p style="margin: 10px 50px 20px 50px; font-size:30px; font-family:Raleway-Bold">Input your current and/or goal weight, calorie intake, and exercise time below!</p>
     
-  
    
-    <div class="row2">
+    <div style="margin: -35px 50px 20px 50px" class="row2" >
     <div class="column2" style="background-color:rgb(255, 255, 255);">
-      <p style = "font-size: 30px; color: #433495; font-family: Raleway-Bold"><u>Current</u></p>
-      <p style = "font-size: 25px">Input your Current Weight</p>
-      <input class = "rounded-input" style="font-size: 22px; width: 140px; height:33px; border-width:medium" type="number" id="weight_text1">
+      <p style = "font-size: 30px; color: #433495; font-family: Raleway-Bold">Current</p>
+      
+      <input onclick="showKeyboard()" class = "rounded-input" style="font-size: 22px; width: 140px; height:33px; border-width:medium" placeholder="Weight (lbs)" type="number" id="weight_text1">
       <input class = "rounded-input" class="goal-text" style="font-size: 22px; width: 110px; height:33px" type ="submit" onclick="myWeightFunction1()">
       
-    
-      <br></br>
-      <p style="font-size: 25px;">Input your Current Calorie Intake</p>
-      <input class = "rounded-input" style="font-size: 22px; width: 140px; height:33px; border-width:medium" type="number" id="cal_text1">
+      <input onclick="showKeyboard()" class = "rounded-input" style="font-size: 22px; width: 140px; height:33px; border-width:medium" placeholder="Calories (cal)" type="number" id="cal_text1">
       <input class = "rounded-input" style="font-size: 22px; width: 110px; height:33px " class="goal-text" type ="submit" onclick="myCalFunction1()">
       
-      <br></br>
-      <p style="font-size: 25px;">Input your Current Exercise Time</p>
-      <input class = "rounded-input" style="font-size: 22px; width: 140px; height:33px; border-width:medium;" type="number" id="exer_text1">
+      <input onclick="showKeyboard()" class = "rounded-input" style="font-size: 22px; width: 140px; height:33px; border-width:medium;" placeholder="Exercise (min)" type="number" id="exer_text1">
       <input class = "rounded-input" style="font-size: 22px; width: 110px; height:33px; " class="goal-text" type ="submit" onclick="myExerFunction1()">
       
 
     </div>
     <div class="column2" style="background-color:rgb(255, 255, 255);">
-      <p style = "font-size: 30px; color: #433495; font-family: Raleway-Bold"><u>Goal</u></p>
-      <p style="font-size: 25px;">Input your Goal Weight</p>
-      <input class = "rounded-input" style="font-size: 22px; width: 140px; height:33px; border-width:medium"  type="number" id="weight_text">
+      <p style = "font-size: 30px; color: #433495; font-family: Raleway-Bold">Goal</p>
+      <input onclick="showKeyboard()" class = "rounded-input" style="font-size: 22px; width: 140px; height:33px; border-width:medium"  placeholder="Weight (lbs)" type="number" id="weight_text">
       <input class = "rounded-input" style="font-size: 22px; width: 110px; height:33px; " class="goal-text" type ="submit" onclick="myWeightFunction()">
       
-      <br></br>
-      <p style="font-size: 25px;">Input your Goal Calorie Intake</p>
-      <input class = "rounded-input" style="font-size: 22px; width: 140px; height:33px; border-width:medium" type="number" id="cal_text">
+     
+      <input onclick="showKeyboard()" class = "rounded-input" style="font-size: 22px; width: 140px; height:33px; border-width:medium" placeholder="Calories (cal)" type="number" id="cal_text">
       <input class = "rounded-input" style="font-size: 22px; width: 110px; height:33px; " class="goal-text" type ="submit" onclick="myCalFunction()">
  
-      <br></br>
-      <p style="font-size: 25px;">Input your Goal Exercise Time </p>
-      <input class = "rounded-input" style="font-size: 22px; width: 140px; height:33px;border-width:medium" type="number" id="exer_text">
+     
+      <input onclick="showKeyboard()" class = "rounded-input" style="font-size: 22px; width: 140px; height:33px;border-width:medium" placeholder="Exercise (min)" type="number" id="exer_text">
       <input class = "rounded-input" style="font-size: 22px; width: 110px; height:33px; " class="goal-text" type ="submit" onclick="myExerFunction()">
 
 
@@ -98,57 +99,52 @@
 
 
 
-  <div class = "body2">
-  <div id="keyboard">
-  
-    <div class="row3" >
-      <div class="key">Q</div>
-      <div class="key">W</div>
-      <div class="key">E</div>
-      <div class="key">R</div>
-      <div class="key">T</div>
-      <div class="key">Y</div>
-      <div class="key">U</div>
-      <div class="key">I</div>
-      <div class="key">O</div>
-      <div class="key">P</div>
-    </div>
-  
-    <div class="row3">
-      <div class="key">A</div>
-      <div class="key">S</div>
-      <div class="key">D</div>
-      <div class="key">F</div>
-      <div class="key">G</div>
-      <div class="key">H</div>
-      <div class="key">J</div>
-      <div class="key">K</div>
-      <div class="key">L</div>
-    </div>
-    <div class="row3">
-      <div class="key system_key" style="width: 3em">Shift</div>
-      <div class="key">Z</div>
-      <div class="key">X</div>
-      <div class="key">C</div>
-      <div class="key">V</div>
-      <div class="key">B</div>
-      <div class="key">N</div>
-      <div class="key">M</div>
-      <div class="key system_key" style="width: 2em">⌫</div>
-    </div>
-    <div class="row3">
-      <div class="key system_key" style="width: 2.25em">123</div>
-      <div class="key" style="width: 6.5em; color: #71717D; font-weight: 600;">space</div>
-      <div class="key system_key" style="width: 4em">Enter</div>
-    </div>
-    
+<div id="keyboard">
+  <div class="row">
+    <div class="key">Q</div>
+    <div class="key">W</div>
+    <div class="key">E</div>
+    <div class="key">R</div>
+    <div class="key">T</div>
+    <div class="key">Y</div>
+    <div class="key">U</div>
+    <div class="key">I</div>
+    <div class="key">O</div>
+    <div class="key">P</div>
   </div>
-
+  <div class="row">
+    <div class="key">A</div>
+    <div class="key">S</div>
+    <div class="key">D</div>
+    <div class="key">F</div>
+    <div class="key">G</div>
+    <div class="key">H</div>
+    <div class="key">J</div>
+    <div class="key">K</div>
+    <div class="key">L</div>
+  </div>
+  <div class="row">
+    <div class="key system_key" style="width: 3em">Shift</div>
+    <div class="key">Z</div>
+    <div class="key">X</div>
+    <div class="key">C</div>
+    <div class="key">V</div>
+    <div class="key">B</div>
+    <div class="key">N</div>
+    <div class="key">M</div>
+    <div class="key system_key" style="width: 2em">⌫</div>
+  </div>
+  <div class="row">
+    <div class="key system_key" style="width: 2.25em">123</div>
+    <div class="key" style="width: 6.5em; color: #71717D; font-weight: 600;">space</div>
+    <div class="key system_key" style="width: 4em">Enter</div>
+  </div>
+</div>
 
 
  
   
-</div>
+
 
 <p id="weight_p1" style="color:white"></p>
   <p id="cal_p1"style="color:white"></p>

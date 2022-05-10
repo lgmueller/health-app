@@ -2,7 +2,7 @@
 <html>
   <head>
    
-    <link href="progress_style.css" rel="stylesheet" />
+    <link href="progress_main.css" rel="stylesheet" />
     <script type = "text/javascript" src="update_progress.js"></script>
     <meta
       name="viewport"
@@ -12,19 +12,20 @@
 
 
   
-  <div class="home"><a href="index.html"><img src="pictures/home.png" height ="35" width="35" /></a> </div>
-  <div class="profile"><a href="profile.html"><img src="pictures/profile.png" height ="40" width="40" /></a> </div>
+  <div class="home"><a href="index.html"><img src="pictures/home.png" height ="60" width="60" /></a> </div>
+  <div class="profile"><a href="profile.html"><img src="pictures/profile.png" height ="65" width="65" /></a> </div>
 
   
   <center>
   <body class = "body1" onload = "updateValues(); updateProgressCircles();">
-    <h1 style="font-size: 100px; line-height: 0px; margin-top: 110px; ">PROGRESS</h1>
+    <h1 style="font-size: 100px; font-family: Raleway; line-height: 0px; margin-top: 110px; ">PROGRESS</h1>
+
    
     <!-- <p style="font-size: 50px; font-family: Raleway-Bold">Progress Summary</p> -->
     <!--Tabs for All Goal Tracking-->
     <div class="row1">
       <div class="column1" style="background-color:rgb(255, 255, 255);">
-        <p style="font-size: 1.8rem ;font-family: Raleway-Bold;">Nutrition </p>
+        <p style="font-size: 1.8rem ;font-family: Raleway-Bold;">Today's Nutrition</p>
 
       <div
           id="circle1"
@@ -35,11 +36,11 @@
           style="--value: 95"
         ></div>
 
-      <h6 style="font-size: 1.6rem" id = "cal_p1"> <b>Current: </b> <b id = "new_curr_cal">2,250</b>  <br> <b>Goal: </b> <b id = "new_goal_cal">2,500</b> </h6>
+      <h6 style=" font-family: Raleway; font-size: 1.6rem" id = "cal_p1"> <b>Today: </b> <b id = "new_curr_cal">2,250</b>  <br> <b>Goal: </b> <b id = "new_goal_cal">2,500</b> </h6>
       <a href="progress_nutrition.html"><button type="button" class = "button1" data-inline="true">Track Nutrition</button></a>
       </div>
       <div class="column1" style="background-color:white;">
-        <p style="font-size: 30px ;font-family: Raleway-Bold;">Exercise</p>
+        <p style="font-size: 30px ;font-family: Raleway-Bold;">Today's Exercise</p>
 
     <div
           id="circle2"
@@ -50,7 +51,7 @@
           style="--value: 95"
         ></div>
 
-    <h6 style="font-size: 1.6rem"><b> Current: </b> <b id = "new_curr_exer">90</b> <br> <b>Goal: </b><b id = "new_goal_exer">100</b>  </h6>
+    <h6 style=" font-family: Raleway; font-size: 1.6rem"><b> Today: </b> <b id = "new_curr_exer">90</b> <br> <b>Goal: </b><b id = "new_goal_exer">100</b>  </h6>
     <a href="progress_exercise.html"><button type="button" class="button1" data-inline="true">Track Exercise</button></a>
       </div>
       
@@ -65,7 +66,7 @@
 
       <div class="column1" style="background-color:white;">
       
-        <p style="font-size: 30px ;font-family: Raleway-Bold;">Weight<p>
+        <p style="font-family: Raleway;  font-size: 30px ;font-family: Raleway-Bold;">Today's Weight<p>
           <div
                 id="circle3"
                 role="progresslinebar"
@@ -74,20 +75,27 @@
                 aria-valuemax="100"
                 style="--value: 95"
               ></div>
-          <h6 style="font-size: 1.6rem"><b>Current: </b><b id = "new_curr_weight"> </b> <br> <b>Goal: </b><b id = "new_goal_weight"></b> </h6>
+          <h6 style="font-size: 1.6rem"><b>Today: </b><b id = "new_curr_weight"> </b> <br> <b>Goal: </b><b id = "new_goal_weight"></b> </h6>
           <a href="progress_weight.html"><button type="button" class="button1" data-inline="true">Track Weight</button></a>
       
       </div>
 
       <div class="column1" style="background-color:white;">
       
-        <br><br>
-        <h3> <b>Click below to share your progress! </b></h3>
+        <h3> <b>Click to share progress! </b></h3>
         <a href="share_progress.html"><button type="button" 
           class="button1" 
           data-inline="true" 
-          style="font-size: 1.8rem; font-family: Raleway-Bold"
+          style=" font-size: 1.8rem; font-family: Raleway-Bold"
           > Share Progress</button></a>
+          <br></br>
+          <p style="font-size: 0.2rem; color: white;"> space </p>
+          <h3> <b>Click to edit goals! </b></h3>
+        <a href="track_goals.html"><button type="button" 
+          class="button1" 
+          data-inline="true" 
+          style="font-size: 1.8rem; font-family: Raleway-Bold"
+          > Edit Goals</button></a>
       
       </div>
 
@@ -133,3 +141,4 @@
   </body>
   </center>
 </html>
+

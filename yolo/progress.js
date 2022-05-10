@@ -7,6 +7,15 @@ function openSelection(selection) {
     document.getElementById(selection).style.display = "block";  
   }
 
+  function copyToClipBoard() {
+
+    var content = document.getElementById('textArea');
+    
+    content.select();
+    document.execCommand('copy');
+
+    alert("Copied!");
+}
 
 
 /*var calorie_goal = 2000

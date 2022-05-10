@@ -60,7 +60,7 @@ function updateProgressCircles () {
 
 function updateProgressCircles1 () {
   var circle1 = document.getElementById("circle1"); 
-  var weight_percentage = 100 * (localStorage.getItem('CurrCal')/localStorage.getItem('GoalCal'));
+  var weight_percentage = Math.round(100 * (localStorage.getItem('CurrCal')/localStorage.getItem('GoalCal')));
   if (isNaN(weight_percentage)){
     weight_percentage = 90;
   }
@@ -70,7 +70,7 @@ function updateProgressCircles1 () {
 
 function updateProgressCircles3 () {
   var circle3 = document.getElementById("circle3"); 
-  var weight_percentage = 100 * (localStorage.getItem('CurrWeight')/localStorage.getItem('GoalWeight'));
+  var weight_percentage = Math.round(100 * (localStorage.getItem('CurrWeight')/localStorage.getItem('GoalWeight')));
   if (isNaN(weight_percentage)){
     weight_percentage = 90;
   }
@@ -80,7 +80,7 @@ function updateProgressCircles3 () {
 
 function updateProgressCircles2 () {
   var circle2 = document.getElementById("circle2"); 
-  var weight_percentage = 100 * (localStorage.getItem('CurrExer')/localStorage.getItem('GoalExer'));
+  var weight_percentage = Math.round(100 * (localStorage.getItem('CurrExer')/localStorage.getItem('GoalExer')));
   if (isNaN(weight_percentage)){
     weight_percentage = 90;
   }
@@ -142,6 +142,7 @@ function myWeightFunction() {
     document.getElementById("weight_p").innerHTML = x + " lbs";
     localStorage.setItem("GoalWeight", x);
     document.getElementById("new_goal_weight").innerHTML = x + " lbs";
+    document.getElementById("weight_text").value = ''
 }
 
   function myWeightFunction1() {
@@ -150,16 +151,19 @@ function myWeightFunction() {
     localStorage.setItem("CurrWeight", x);
     var table_curr_weight = document.getElementById("new_curr_weight");
     table_curr_weight.innerHTML = x + " lbs";
+    document.getElementById("weight_text1").value = ''
   }
 
 
 function myCalFunction() {
+ 
     var x = document.getElementById("cal_text").value;
     document.getElementById("cal_p").innerHTML = x + " Calories";
     localStorage.setItem("GoalCal", x);
     var table_goal_cal = document.getElementById("new_goal_cal");
     table_goal_cal.innerHTML = x + " Calories";
-    
+    document.getElementById("cal_text").value = ''
+
   }
 
   function myCalFunction1() {
@@ -168,6 +172,7 @@ function myCalFunction() {
     localStorage.setItem("CurrCal", x);
     var table_curr_cal = document.getElementById("new_curr_cal");
     table_curr_cal.innerHTML = x + " Calories";
+    document.getElementById("cal_text1").value = ''
   }
 
   function myExerFunction() {
@@ -176,6 +181,7 @@ function myCalFunction() {
     localStorage.setItem("GoalExer", x);
     var table_goal_exer = document.getElementById("new_goal_exer");
     table_goal_exer.innerHTML = x + " Minutes";
+    document.getElementById("exer_text").value = ''
   }
 
   function myExerFunction1() {
@@ -184,6 +190,7 @@ function myCalFunction() {
     localStorage.setItem("CurrExer", x);
     var table_curr_exer = document.getElementById("new_curr_exer");
     table_curr_exer.innerHTML = x + " Minutes";
+    document.getElementById("exer_text1").value = ''
   }
 
 
@@ -193,7 +200,11 @@ function myCalFunction() {
     if (localStorage.getItem("GoalCal") == null) {
       get_goal_cal = 2500;
     }
-    document.getElementById("new_goal_cal").innerHTML =  get_goal_cal + " Calories";
+    
+      document.getElementById("new_goal_cal").innerHTML =  get_goal_cal + " Calories";
+   
+    
+    
     var get_curr_cal = localStorage.getItem("CurrCal");
     if (localStorage.getItem("CurrCal") == null) {
       get_curr_cal = 2250;
@@ -271,7 +282,22 @@ new Chart(document.getElementById("bar-chart"), {
       legend: { display: false },
       title: {
         display: true,
-        text: 'Weekly Number of Calories'
+        text: 'Weekly Number of Calories',
+      },
+      scales: {
+        yAxes : [{
+          
+           scaleLabel: {
+            display: true,
+            labelString: 'Calories'
+          }
+        }],
+        xAxes : [{
+          scaleLabel: {
+           display: true,
+           labelString: 'Date'
+         }
+       }]
       }
     }
 });
@@ -280,9 +306,9 @@ new Chart(document.getElementById("line-chart"), {
   type: 'line',
   data: {
     text: "Weeks",
-    labels: ['Week 1','Week 2','Week 3','Week 4'],
+    labels: ['1','2','3','4'],
     datasets: [{ 
-        label: "Number of Calories",
+        label: "Calorie Intake",
         data: [2192, 2239, 2432, 2499],
         borderColor: "#8e95e7",
         fill: false
@@ -292,8 +318,24 @@ new Chart(document.getElementById("line-chart"), {
   options: {
     title: {
       display: true,
-      text: 'Monthly Calorie Count'
+      text: 'Monthly Calorie Count',
+    },
+    scales: {
+      yAxes : [{
+         scaleLabel: {
+          display: true,
+          labelString: 'Calories'
+        }
+      }],
+      xAxes : [{
+        scaleLabel: {
+         display: true,
+         labelString: 'Weeks'
+       }
+     }]
     }
+    
+    
   }
 });
 
@@ -306,7 +348,7 @@ new Chart(document.getElementById("bar-chart2"), {
       {
         label: "Weight (lbs)",
         backgroundColor: ["#8e95e7", "#8e95e7", "#8e95e7", "#8e95e7", "#8e95e7","#8e95e7", "#8e95e7"],
-        data: [133, 133, 132, 136, 140, 141, 102]
+        data: [133, 132, 131, 134, 137, 135, 138]
       }
     ]
   },
@@ -315,6 +357,26 @@ new Chart(document.getElementById("bar-chart2"), {
     title: {
       display: true,
       text: 'Weekly Weight Count'
+    }, 
+    scales: {
+      yAxes : [{
+        ticks : {
+          min : 130,   
+          steps: 10,
+          stepValue: 1, 
+          max : 140
+        },
+         scaleLabel: {
+          display: true,
+          labelString: 'Weight (lbs)'
+        }
+      }],
+      xAxes : [{
+        scaleLabel: {
+         display: true,
+         labelString: 'Date'
+       }
+     }]
     }
   }
 });
@@ -323,7 +385,7 @@ new Chart(document.getElementById("line-chart2"), {
 type: 'line',
 data: {
   text: "Weeks",
-  labels: ['Week 1','Week 2','Week 3','Week 4'],
+  labels: ['1','2','3','4'],
   datasets: [{ 
       label: "Weight (lbs)",
       data: [131,134, 133, 136],
@@ -335,7 +397,22 @@ data: {
 options: {
   title: {
     display: true,
-    text: 'Monthly Weight Count'
+    text: 'Monthly Weight Count',
+    
+  },
+  scales: {
+    yAxes : [{
+       scaleLabel: {
+        display: true,
+        labelString: 'Weight (lbs)'
+      }
+    }],
+    xAxes : [{
+      scaleLabel: {
+       display: true,
+       labelString: 'Weeks'
+     }
+   }]
   }
 }
 });
@@ -359,6 +436,21 @@ new Chart(document.getElementById("bar-chart3"), {
     title: {
       display: true,
       text: 'Weekly Exercise Duration'
+    },
+    scales: {
+      yAxes : [{
+        
+         scaleLabel: {
+          display: true,
+          labelString: 'Exercise Time (min)'
+        }
+      }],
+      xAxes : [{
+        scaleLabel: {
+         display: true,
+         labelString: 'Date'
+       }
+     }]
     }
   }
 });
@@ -367,9 +459,9 @@ new Chart(document.getElementById("line-chart3"), {
 type: 'line',
 data: {
   text: "Weeks",
-  labels: ['Week 1','Week 2','Week 3','Week 4'],
+  labels: ['1','2','3','4'],
   datasets: [{ 
-      label: "Exercise Duration (minutes)",
+      label: "Exercise Time (min)",
       data: [81, 67, 92, 85],
       borderColor: "#8e95e7",
       fill: false
@@ -381,6 +473,20 @@ options: {
   title: {
     display: true,
     text: 'Monthly Exercise Duration'
+  }, 
+  scales: {
+    yAxes : [{
+       scaleLabel: {
+        display: true,
+        labelString: 'Exercise Time (min)'
+      }
+    }],
+    xAxes : [{
+      scaleLabel: {
+       display: true,
+       labelString: 'Weeks'
+     }
+   }]
   }
   
 }
@@ -452,4 +558,32 @@ function loadSharedText() {
   text.innerHTML += " I really recommend that you guys download the app and start tracking your nutrition and exercise progress. You can set reminders too!"
   text.innerHTML += " Just today, I worked out for " + localStorage.getItem("CurrExer") + " minutes and used the app to track it. "
   text.innerHTML += " It really helps me stay motivated. Let's plan our workouts together!"
+}
+
+function copyToClipBoard() {
+
+  var content = document.getElementById('shared_text');
+  
+  content.select();
+  document.execCommand('copy');
+
+  alert("Copied!");
+}
+
+function showKeyboard() {
+  var keyboard = document.getElementById("keyboard")
+  keyboard.style = "display: block; "
+  click_count = 0
+}
+
+function hideKeyboard() {
+  var keyboard = document.getElementById("keyboard")
+  if (keyboard.style.display == "block" && click_count == 0) {
+    click_count += 1;
+  }
+  else {
+    click_count = 0
+    keyboard.style = "display: none"
+  }
+  
 }

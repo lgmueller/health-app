@@ -51,7 +51,6 @@
                 document.getElementById(i).className = "event";
             }
         }
-
     }
 
     /* 

@@ -25,18 +25,40 @@ const adv_arm_workout = '{"name":"Advanced Arm","exercises":[{"sets":"4","reps":
 const adv_leg_workout = '{"name":"Advanced Leg","exercises":[{"sets":"4","reps":"12","my_name":"Barbell Squats"},{"sets":"4","reps":"12","my_name":"Split Squats"},{"sets":"4","reps":"12","my_name":"Leg Press"},{"sets":"4","reps":"12","my_name":"Hip Thrusts"},{"sets":"4","reps":"12","my_name":"Romanian Dead Lifts"}]}';
 const adv_back_workout = '{"name":"Advanced Back","exercises":[{"sets":"4","reps":"10","my_name":"Bent Over Rows"},{"sets":"4","reps":"12","my_name":"Pull Ups"},{"sets":"4","reps":"10","my_name":"Tricep Press Downs"},{"sets":"4","reps":"12","my_name":"Lateral Raises"},{"sets":"4","reps":"10","my_name":"Face Pulls"}]}';
 
+localStorage.setItem('firstVisit',true);
+
 var list = [];
 
+
+
 function savePresetWorkouts(){
-    localStorage.setItem('Arms',arm_workout);
-    localStorage.setItem('Legs',leg_workout);
-    localStorage.setItem('Back',back_workout);
-    localStorage.setItem('Inter_Arms',inter_arm_workout);
-    localStorage.setItem('Inter_Legs',inter_leg_workout);
-    localStorage.setItem('Inter_Back',inter_back_workout);
-    localStorage.setItem('Adv_Arms',adv_arm_workout);
-    localStorage.setItem('Adv_Legs',adv_leg_workout);
-    localStorage.setItem('Adv_Back',adv_back_workout);
+    if (localStorage.getItem('Arms') === null){
+        localStorage.setItem('Arms',arm_workout);
+    }
+    if (localStorage.getItem('Legs') === null){
+        localStorage.setItem('Legs',leg_workout);
+    }
+    if (localStorage.getItem('Back') === null){
+        localStorage.setItem('Back',back_workout);
+    }
+    if (localStorage.getItem('Inter_Arms') === null){
+        localStorage.setItem('Inter_Arms',inter_arm_workout);
+    }
+    if (localStorage.getItem('Inter_Legs') === null){
+        localStorage.setItem('Inter_Legs',inter_leg_workout);
+    }
+    if (localStorage.getItem('Inter_Back') === null){
+        localStorage.setItem('Inter_Back',inter_back_workout);
+    }
+    if (localStorage.getItem('Adv_Arms') === null){
+        localStorage.setItem('Adv_Arms',adv_arm_workout);
+    }
+    if (localStorage.getItem('Adv_Legs') === null){
+        localStorage.setItem('Adv_Legs',adv_leg_workout);
+    }
+    if (localStorage.getItem('Adv_Back') === null){
+        localStorage.setItem('Adv_Back',adv_back_workout);
+    }
 }
 
 function addToList() {
@@ -49,9 +71,10 @@ function addToList() {
     var rep = document.getElementById('reps').value;
     var my_name = document.getElementById('nameField').value;
     
-    if (set != null && rep != null && my_name != null){
+    if (set != '' && rep != '' && my_name != ''){
 
         list.push(new Exercise(set,rep,my_name));
+        document.getElementById('nameField').value = '';
         
     } else {
         alert("Sorry! Double check that you've filled out all of the fields.")
@@ -108,14 +131,38 @@ function addToList() {
 
 }
 
-function addWorkout() {
-
+localStorage.setItem('currCustomWorkout', '');
+function currCustomWorkout() {
     var name = document.getElementById('workout-name').value;
+    localStorage.setItem('currCustomWorkout', name);
+}
+
+function addWorkout(name, experience) {
+
+    // var name = document.getElementById('workout-name').value;
     var exercises = [];
     var table = document.getElementById('myTable');
     var num_set;
     var num_rep;
     var exercise_name;
+    var new_name; 
+    
+    if (name != 'Custom'){
+        switch (experience){
+            case "beginner": 
+                name = name;
+                break;
+            case "intermediate":
+                name = 'Inter_' + name;
+                break;
+            case "advanced":
+                name = 'Adv_' + name;
+                break;
+            default:
+                name = name;
+                break;
+        }
+    }
 
     for (var i = 1, row; row = table.rows[i]; i++) {
         //iterate through rows
@@ -129,6 +176,7 @@ function addWorkout() {
     const data = JSON.stringify(new_workout);
     
     localStorage.setItem(name, data);
+    window.location.href = 'exercise.html';
     
 }
 
@@ -147,7 +195,7 @@ function loadWorkout() {
     
     if (chosen_workout_name != 'Custom'){
         switch (experience){
-            case "beginnner": 
+            case "beginner": 
                 workoutObj = JSON.parse(localStorage.getItem(chosen_workout_name));
                 break;
             case "intermediate":
@@ -167,8 +215,8 @@ function loadWorkout() {
     localStorage.setItem("lastClicked","");
     var table = document.getElementById("myTable");
 
-    var top_name = document.getElementById("workout-name");
-    top_name.value = chosen_workout_name;
+    var top_name = document.getElementById("workout-header");
+    top_name.innerHTML = chosen_workout_name;
     
     var set;
     var rep;
@@ -418,6 +466,19 @@ function resetTimer() {
 }
 
 function showKeyboard() {
-    var keyboard = document.createElement('img');
-    keyboard.src = "pictures/keyboard.png";
-}
+    var keyboard = document.getElementById("keyboard")
+    keyboard.style = "display: block; position:relative; margin-top:-260px;"
+    click_count = 0
+  }
+  
+  function hideKeyboard() {
+    var keyboard = document.getElementById("keyboard")
+    if (keyboard.style.display == "block" && click_count == 0) {
+      click_count += 1;
+    }
+    else {
+      click_count = 0
+      keyboard.style = "display: none"
+    }
+    
+  }

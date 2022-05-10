@@ -112,7 +112,7 @@ button {
   
 .tabs {
   font-family: "Raleway-bold";
-  font-size: 1.8rem;
+  font-size: 2.2rem;
   background-color: #b9bac3;
   overflow: hidden;
   position: fixed;
@@ -132,7 +132,7 @@ button {
   text-align: center;
   padding: 14px 16px;
   text-decoration: none;
-  font-size: 1.8rem;
+  font-size: 2.2rem;
 }
 
 .tabs a:hover {
@@ -407,6 +407,7 @@ body {
 }
 
 
+
 .tablink {
   background-color: #8e95e7;
   font-family: "Raleway-bold";
@@ -441,6 +442,7 @@ body {
 .column1 {
   float: left;
   width: 50%;
+  
   
 }
 
@@ -514,4 +516,33 @@ body {
 .select:focus {
   min-width: 150px;
   width: auto;
+}
+
+.shared_text {
+  margin: auto;
+  padding: 10px;
+  width: 550px; 
+  height: 550px; 
+  font-size: 30px; 
+  font-family: 'Raleway-Bold'; 
+  text-align: center;
+  border-radius: 10px;
+  border: 0;
+  box-shadow:0 0 20px 10px rgba(0,0,0,0.06);
+}
+
+.roundedButton {
+  width: 200px;
+  height: 80px;
+  padding: 10px;
+  font-family: "Raleway-Bold";
+  /* border-color: #433495;
+  border-style: solid; */
+  background-color:#433495;
+  box-shadow: #b9bac3;
+  color:white;
+  font-size: 40px;
+  font-weight: 40px;
+  margin-top: 22px;
+  border-radius: 60px;
 }
